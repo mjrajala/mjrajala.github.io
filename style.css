@@ -1,14 +1,14 @@
 /* AI Generation — Portfolio Site */
 
 :root {
-    --bg: #0a0a0f;
-    --bg-dark: #06060a;
-    --text: #e8e8f0;
-    --text-muted: #8888a0;
-    --accent: #4466ff;
-    --accent-glow: rgba(68, 102, 255, 0.15);
-    --card-bg: #12121a;
-    --card-border: #1a1a2a;
+    --bg: #ffffff;
+    --bg-dark: #f5f5f7;
+    --text: #1a1a1a;
+    --text-muted: #666666;
+    --accent: #1a1a1a;
+    --accent-glow: rgba(0, 0, 0, 0.04);
+    --card-bg: #ffffff;
+    --card-border: #e0e0e0;
     --radius: 12px;
 }
 
@@ -36,7 +36,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(10, 10, 15, 0.85);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--card-border);
 }
@@ -133,8 +133,8 @@ body {
 
 .hero-tagline {
     font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-    color: var(--accent);
-    font-weight: 500;
+    color: #444;
+    font-weight: 400;
     margin-bottom: 24px;
 }
 
@@ -169,7 +169,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: #5577ff;
+    background: #333;
     transform: translateY(-1px);
 }
 
@@ -208,9 +208,9 @@ body {
 }
 
 .section-sub em {
-    color: var(--accent);
+    color: #1a1a1a;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* Cards */
@@ -268,20 +268,20 @@ body {
     content: '→';
     position: absolute;
     left: 0;
-    color: var(--accent);
+    color: #999;
 }
 
 .card-badge {
     position: absolute;
     top: 16px;
     right: 16px;
-    background: var(--accent-glow);
-    color: var(--accent);
+    background: #f0f0f0;
+    color: #666;
     font-size: 0.75rem;
     font-weight: 600;
     padding: 4px 12px;
     border-radius: 20px;
-    border: 1px solid rgba(68, 102, 255, 0.3);
+    border: 1px solid #ddd;
 }
 
 .card-tool h3 {

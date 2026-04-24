@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aigen Blogi — AI Generation Oy</title>
+  <meta name="description" content="Aigenin blogi EU-compliancesta, AI-työkaluista, automaatiosta ja käytännön tavoista helpottaa yritysten arkea.">
+  <link rel="canonical" href="https://aigen.fi/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aigen Blogi — AI Generation Oy">
+  <meta property="og:description" content="Aigenin blogi EU-compliancesta, AI-työkaluista, automaatiosta ja käytännön tavoista helpottaa yritysten arkea.">
+  <meta property="og:url" content="https://aigen.fi/blog/">
+  <meta property="og:site_name" content="AI Generation Oy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aigen Blogi — AI Generation Oy">
+  <meta name="twitter:description" content="Aigenin blogi EU-compliancesta, AI-työkaluista, automaatiosta ja käytännön tavoista helpottaa yritysten arkea.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Aigen Blogi","url":"https://aigen.fi/blog/","publisher":{"@type":"Organization","name":"AI Generation Oy"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #dbeafe;
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: var(--bg-alt); line-height: 1.6; }
+    nav {
+      position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    nav a { text-decoration: none; }
+    .nav-logo { font-weight: 800; color: var(--primary); font-size: 1.2rem; }
+    .nav-links { display: flex; gap: 1.25rem; align-items: center; }
+    .nav-links a { color: var(--text-muted); font-weight: 500; }
+    .nav-links a:hover { color: var(--primary); }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.1rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .hero {
+      padding: 5rem 2rem 3rem;
+      background: linear-gradient(135deg, var(--primary-light) 0%, #f0f9ff 55%, #ffffff 100%);
+      text-align: center;
+    }
+    .hero .badge {
+      display: inline-block; background: white; border: 1px solid var(--border); color: var(--primary);
+      border-radius: 999px; padding: 0.4rem 0.8rem; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem;
+    }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; margin-bottom: 1rem; }
+    .hero p { max-width: 760px; margin: 0 auto; color: var(--text-muted); font-size: 1.1rem; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+    .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
+    .card {
+      background: white; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: 2rem;
+    }
+    .empty-state { display: grid; gap: 1rem; }
+    .empty-state h2 { font-size: 1.5rem; }
+    .muted { color: var(--text-muted); }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
+    .pill { background: #eef2ff; color: #4338ca; border-radius: 999px; padding: 0.35rem 0.75rem; font-size: 0.85rem; font-weight: 600; }
+    .list { display: grid; gap: 0.9rem; }
+    .list-item {
+      border: 1px solid var(--border); border-radius: 10px; padding: 1rem; background: #fff;
+    }
+    .list-item h3 { font-size: 1rem; margin-bottom: 0.3rem; }
+    footer { text-align: center; color: var(--text-muted); padding: 2rem; font-size: 0.9rem; }
+    @media (max-width: 800px) {
+      nav { padding: 1rem; }
+      .nav-links { gap: 0.75rem; }
+      .grid { grid-template-columns: 1fr; }
+      .container, .hero { padding-left: 1rem; padding-right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo">AI Gen Oy</a>
+    <div class="nav-links">
+      <a href="/">Etusivu</a>
+      <a href="/tuotteet/tasapay/">Tuotteet</a>
+      <a href="mailto:info@aigen.fi">Yhteys</a>
+      <a href="mailto:info@aigen.fi?subject=Aigen%20blogi" class="btn btn-primary">Ehdota aihetta</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="badge">Aigen Blogi</div>
+    <h1>Blogi on nyt pystyssä.</h1>
+    <p>Julkaisut eivät ole vielä sisällä, mutta rakenne on valmis. Tänne tulee käytännöllisiä kirjoituksia EU-compliancesta, AI-agenteista, automaatiosta ja siitä, miten rakennamme suomalaisille yrityksille hyödyllisiä tuotteita ilman konsulttiteatteria.</p>
+  </section>
+
+  <main class="container">
+    <div class="grid">
+      <section class="card empty-state">
+        <div style="display:inline-flex;width:fit-content;background:#eff6ff;color:var(--primary);padding:0.35rem 0.8rem;border-radius:999px;font-weight:700;font-size:0.85rem;">Ei vielä julkaisuja</div>
+        <h2>Ensimmäiset postaukset lisätään seuraavaksi</h2>
+        <p class="muted">Tämä osio toimii nyt oikeana blogin laskeutumissivuna. Seuraavaksi sinne voidaan nostaa ensimmäiset kirjoitukset, kategoriat, artikkelisivut ja hakukoneita varten tarvittavat metatiedot.</p>
+        <div class="pill-row">
+          <span class="pill">Palkka-avoimuus</span>
+          <span class="pill">CBAM</span>
+          <span class="pill">AI-agentit</span>
+          <span class="pill">Automaatio</span>
+          <span class="pill">Tuoterakentaminen</span>
+        </div>
+        <div class="pill-row">
+          <a class="pill" href="/tuotteet/tasapay/" style="text-decoration:none;">TasaPay</a>
+          <a class="pill" href="/tuotteet/cbam-tool/" style="text-decoration:none;">CBAM Tool</a>
+          <a class="pill" href="/tuotteet/ilmoita/" style="text-decoration:none;">Ilmoita</a>
+          <a class="pill" href="/tuotteet/gpsrdocs/" style="text-decoration:none;">GPSRdocs</a>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2 style="font-size:1.2rem; margin-bottom:0.75rem;">Tulossa</h2>
+        <div class="list">
+          <div class="list-item">
+            <h3>Mitä palkka-avoimuusdirektiivi tarkoittaa suomalaiselle yritykselle?</h3>
+            <p class="muted">Konkreettinen opas siihen, mitä pitää tehdä ennen 2026 määräaikoja.</p>
+          </div>
+          <div class="list-item">
+            <h3>CBAM ilman excelihelvettiä</h3>
+            <p class="muted">Käytännön näkökulma siihen, missä yritykset oikeasti jumittavat raportoinnissa.</p>
+          </div>
+          <div class="list-item">
+            <h3>Miksi rakennamme AI-työkaluja, emme AI-demoja</h3>
+            <p class="muted">Suora kanta siihen, mikä on hypeä ja mikä oikeasti säästää aikaa.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 AI Generation Oy · Blogirunko valmis, sisältö seuraavaksi.
+  </footer>
+</body>
+</html>

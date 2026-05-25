@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tekoälyagentit arjessa — Aigen Blogi</title>
+  <meta name="description" content="Tekoälyagentit eivät ole vain demoja. Aigenilla agentit tekevät jo markkinaseurantaa, tiedonhakua, raportointia, viestintää, koodausta ja automaatiota.">
+  <link rel="canonical" href="https://aigen.fi/blog/tekoalyagentit-arjessa/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Tekoälyagentit arjessa">
+  <meta property="og:description" content="Mitä olemme oppineet, kun AI-agentit ovat mukana oikeissa työtehtävissä eivätkä vain demoissa?">
+  <meta property="og:url" content="https://aigen.fi/blog/tekoalyagentit-arjessa/">
+  <meta property="og:site_name" content="AI Generation Oy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tekoälyagentit arjessa">
+  <meta name="twitter:description" content="Mitä olemme oppineet, kun AI-agentit ovat mukana oikeissa työtehtävissä eivätkä vain demoissa?">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Tekoälyagentit arjessa","datePublished":"2026-05-25","dateModified":"2026-05-25","author":{"@type":"Organization","name":"AI Generation Oy"},"publisher":{"@type":"Organization","name":"AI Generation Oy"},"mainEntityOfPage":"https://aigen.fi/blog/tekoalyagentit-arjessa/"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-dark: #f5f5f7;
+      --text: #1a1a1a;
+      --text-muted: #666666;
+      --accent: #1a1a1a;
+      --card-border: #e0e0e0;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo-img { height: 28px; width: auto; max-width: 120px; }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] { color: var(--text); }
+    .nav-lang {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--card-border);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-left: 16px;
+    }
+    .hero {
+      padding: 136px 24px 56px;
+      background: linear-gradient(180deg, #ffffff 0%, #f7f7f8 100%);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .hero-inner,
+    .article,
+    .related,
+    .footer-content {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      padding: 0.35rem 0.8rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 3.6rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+      margin-bottom: 1rem;
+    }
+    .lead {
+      color: var(--text-muted);
+      font-size: 1.16rem;
+      max-width: 760px;
+    }
+    .article {
+      padding: 56px 24px 72px;
+    }
+    .article p,
+    .article li {
+      font-size: 1.03rem;
+      color: #2d2d2d;
+    }
+    .article p + p { margin-top: 1.15rem; }
+    .article h2 {
+      font-size: 1.55rem;
+      line-height: 1.25;
+      margin: 2.4rem 0 0.8rem;
+    }
+    .article ul {
+      margin: 1rem 0 1.25rem;
+      padding-left: 1.25rem;
+    }
+    .article li + li { margin-top: 0.5rem; }
+    .callout {
+      background: var(--bg-dark);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 1.3rem;
+      margin: 1.6rem 0;
+    }
+    .callout strong { display: block; margin-bottom: 0.35rem; }
+    .source {
+      border-top: 1px solid var(--card-border);
+      margin-top: 2.4rem;
+      padding-top: 1rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .related {
+      padding: 0 24px 72px;
+    }
+    .related-card {
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.05rem;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    footer {
+      border-top: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 32px 24px;
+      font-size: 0.9rem;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .footer-logo-img { height: 24px; width: auto; }
+    @media (max-width: 800px) {
+      .nav-links { display: none; }
+      .hero { padding: 108px 20px 44px; }
+      .article { padding: 40px 20px 56px; }
+      .related { padding: 0 20px 56px; }
+      .related-card { display: block; }
+      .btn { margin-top: 1rem; width: 100%; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo"><img src="/assets/logo-black.png" alt="AI Generation" class="nav-logo-img"></a>
+      <div class="nav-links">
+        <a href="/#services">Palvelut</a>
+        <a href="/#tools">EU-työkalut</a>
+        <a href="/blog/" aria-current="page">Blogi</a>
+        <a href="/#products">Tuotteet</a>
+        <a href="/#about">Meistä</a>
+        <a href="/#contact">Yhteystiedot</a>
+        <a href="/en/" class="nav-lang">EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">AI-agentit · 25.5.2026</div>
+      <h1>Tekoälyagentit eivät ole meille demoja. Ne ovat osa arkea.</h1>
+      <p class="lead">Kun agentti toimii oikeissa kanavissa ja oikeilla työkaluilla, kysymys ei ole enää siitä, osaako malli vastata hienosti. Kysymys on siitä, pysyykö koko työjärjestelmä luotettavana.</p>
+    </div>
+  </header>
+
+  <main class="article">
+    <p>AI Generationilla käytämme tekoälyagentteja päivittäin oikeisiin työtehtäviin: markkinaseurantaan, tiedonhakuun, raportointiin, viestintään, koodaukseen ja toistuvien prosessien automatisointiin.</p>
+
+    <p>Käytössämme ovat OpenClaw-pohjaiset agentit Ash ja Jarvis, jotka toimivat omissa ympäristöissään. Uutena kokeilussa ovat myös Hermes-agentit Sofia ja Agent Cooper. Nämä eivät ole irrallisia chatbotteja, vaan työtä tekeviä agentteja samoissa kanavissa kuin ihmisetkin: WhatsAppissa, Discordissa, Teamsissa ja sähköpostissa.</p>
+
+    <h2>Mistä agentti oikeasti koostuu?</h2>
+    <p>Agentti ei ole yksi valmis tekoäly. Käytännössä se on yhdistelmä kolmesta osasta:</p>
+    <ul>
+      <li>agenttialusta, joka hallitsee muistia, sessioita, työkaluja ja viestintää</li>
+      <li>kielimalli, joka tuottaa päättelyn ja luonnollisen kielen</li>
+      <li>työkalut ja integraatiot, joiden avulla agentti voi tehdä asioita eikä vain puhua niistä</li>
+    </ul>
+
+    <p>Meillä agenttialustoina toimivat tällä hetkellä avoimen lähdekoodin OpenClaw ja Hermes. Niiden päälle voidaan kytkeä eri kielimalleja, kuten OpenAI:n, Anthropicin tai Googlen malleja. Malli tuo älykerroksen, mutta alusta ratkaisee miten agentti muistaa, käyttää työkaluja, keskustelee kanavissa ja vie tehtäviä loppuun.</p>
+
+    <div class="callout">
+      <strong>Keskeinen havainto</strong>
+      <p>Agenttien suurimmat ongelmat eivät synny vain mallista. Ne syntyvät usein siitä, miten malli, muisti, sessio, plugin, käyttöliittymä ja työkaluketju pelaavat yhteen.</p>
+    </div>
+
+    <h2>Sama tehtävä, eri malli, eri käytös</h2>
+    <p>Olemme nähneet käytännössä, että mallikerroksen vaihtaminen muuttaa agentin käytöstä. Eri mallit painottavat eri tavoin varovaisuutta, aloitteellisuutta, rakennetta ja työkalujen käyttöä. Sama tehtävä, sama alusta ja samat työkalut voivat tuottaa eri lopputuloksen, kun alla oleva malli vaihtuu.</p>
+
+    <p>Tämä on yrityskäytössä iso asia. Agentin ei riitä olla yksittäisessä demossa vaikuttava. Sen pitää toimia toistuvasti, samoilla säännöillä, ymmärrettävästi ja niin, että ihminen pystyy valvomaan lopputulosta.</p>
+
+    <h2>Luotettavuus on seuraava kilpailuetu</h2>
+    <p>Välillä agentti voi väittää, että jokin tehtävä on mahdoton. Hetkeä myöhemmin sama tehtävä onnistuu normaalisti. Usein ongelma ei ole varsinaisessa älyssä, vaan muistissa, sessiossa, työkalussa, käyttöoikeuksissa tai siinä, miten koko ketju on rakennettu.</p>
+
+    <p>Siksi testaamme rinnakkain eri alustoja ja eri agentteja. OpenClaw on ollut meille tärkeä osa arjen tekemistä, mutta sen muisti- ja luotettavuushaasteet ovat antaneet hyvän syyn kokeilla myös Hermes-pohjaisia agentteja oikeassa työssä.</p>
+
+    <p>Suurin oppi tähän mennessä on yksinkertainen: tekoälyagenttien seuraava todellinen kilpailuetu ei ole pelkkä äly. Se on luotettavuus ja helppokäyttöisyys.</p>
+
+    <h2>Mitä seuraavaksi?</h2>
+    <p>Jatkossa avaamme tarkemmin, mitä agentit oikeasti tekevät arjessamme, missä ne toimivat hyvin, missä ne vielä hajoavat ja mitä tästä kaikesta voi oppia yrityskäytössä. Agenttien arvo ei löydy esityskalvoista. Se löytyy siitä, mitä ne saavat tehtyä tiistaina iltapäivällä, kun työkalut, ihmiset ja deadline ovat kaikki samassa sotkussa.</p>
+
+    <p class="source">Pohjana on AI Generation Oy:n LinkedIn-päivitys: <a href="https://www.linkedin.com/posts/ai-generation-oy_tekoaeuly-agenttitekoaeuly-opensource-activity-7449735768463265793-LuGv" rel="noopener">#tekoäly #agenttitekoäly #opensource</a>.</p>
+  </main>
+
+  <section class="related">
+    <div class="related-card">
+      <div>
+        <strong>Aigen Blogi</strong>
+        <p class="source" style="border-top:0;margin:0.2rem 0 0;padding:0;">Lue muut kirjoitukset EU-compliancesta, automaatiosta ja AI-työkaluista.</p>
+      </div>
+      <a class="btn" href="/blog/">Takaisin blogiin</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <img src="/assets/logo-black.png" alt="AI Generation" class="footer-logo-img">
+      <span>© 2026 AI Generation Oy · Aigen Blogi</span>
+    </div>
+  </footer>
+</body>
+</html>

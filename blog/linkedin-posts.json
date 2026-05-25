@@ -1,0 +1,83 @@
+[
+  {
+    "id": "c6238d53-86ad-4f7b-8bc1-1b532ae2a78c",
+    "slug": "when-ai-agents-become-useful-boring-paperwork-gazom7",
+    "title": "Annoimme AI-agentin tehdä yrityksen veroilmoituksen",
+    "status": "published",
+    "createdAt": "2026-05-21T18:17:24.695Z",
+    "updatedAt": "2026-05-25T05:18:51.684Z",
+    "publishedAt": "2026-05-25T05:18:51.714Z",
+    "content": "Annoimme OpenAI:n Codexille täyden pääsyn Mac-työpöytäämme ja pyysimme sitä tekemään yrityksen veroilmoituksen OmaVeron kautta. Kirjautuminen oli etukäteen hoidettu valmiiksi. Sitä ennen Claude ja Codex olivat yhdessä käyneet kirjanpidon läpi ja täsmäyttäneet luvut.\n\nJa se toimi.\n\nJuuri tällainen alkuvuoden veroilmoitusrumba on täydellinen testi AI-agenteille. Ei demona. Ei \"katsotaanpa mitä tämä osaa\" -leikkinä. Vaan ihan oikeana toimistotyönä: kirjanpidon luvut, PDF:t, viranomaislomake, liitteet, päivämäärät — ja se tuttu tunne, että yksi väärä kenttä voi pilata koko iltapäivän.\n\nJuuri tässä kohtaa agentit alkavat tuntua oikeasti hyödyllisiltä.\n\nEivät siksi, että ne kirjoittaisivat parempia sloganeita, vaan siksi, että ne jaksavat istua sotkuisen työnkulun keskellä:\n\n- yksi raportti täällä, toinen PDF tuolla\n- OmaVero välissä\n- luvut pitää täsmätä\n- liitteet pitää nimetä oikein\n- eikä konteksti saa kadota puolivälissä\n\nTämä on aivan eri laji kuin chatissa kysymyksiin vastaaminen.\n\nHyödyllinen agentti on ennen kaikkea kärsivällinen, tarkka numeroiden kanssa, tiedostoja ymmärtävä ja tarpeeksi pitkäjänteinen viedäkseen homman maaliin saakka.\n\nSiksi uskomme, että agenttien lähiajan arvo löytyy yllättävän usein juuri tylsästä back office -työstä.\n\nEi robot-CEO-fantasiasta, vaan siitä, että tiimi selviää viranomaislomakkeesta ilman viittä lisävälilehteä, kolmea kahvia ja yhtä eksistentiaalista kriisiä.\n\nRehellisesti sanottuna: otamme tämän ilolla vastaan.",
+    "hashtags": [
+      "AI",
+      "Agentit",
+      "Tekoäly",
+      "Automaatio"
+    ],
+    "imageUrl": "/uploads/draft-images/c6238d53-86ad-4f7b-8bc1-1b532ae2a78c-0dc059df-adc5-472a-ab32-7dc40fc2eeca.png",
+    "targetUrl": ""
+  },
+  {
+    "id": "1addaf02-61c8-4d3c-a42a-0d8d237b952c",
+    "slug": "agents-turn-multi-day-tax-grunt-work-into-a-5-minute-workflow-ala4hq",
+    "title": "Agentit tekevät monivaiheisesta selvitystyöstä 5 minuutin workflow’n",
+    "status": "published",
+    "createdAt": "2026-04-19T05:59:56.764Z",
+    "updatedAt": "2026-05-22T12:44:31.805Z",
+    "publishedAt": "2026-04-20T11:49:48.105Z",
+    "content": "Tarkoituksemme on jakaa käytännön kokemuksia siitä, miten hyödynnämme tekoälyagentteja omassa tekemisessämme ja missä niistä syntyy oikeaa ajansäästöä.\n\nYksi selkeimmistä hyödyistä ei liity sisällöntuotantoon vaan monivaiheiseen selvitystyöhön, joka on ihmiselle hidasta, toisteista ja helposti lykkääntyy.\n\nHyvä esimerkki tästä on kryptotransaktioiden verotus.\n\nTilasin Binancesta transaktiodatan CSV:nä ja lähetin sen suoraan sähköpostilla agentille. Mukana olivat ohjeet käydä transaktiot läpi, tarkistaa uusimmat verottajan ohjeet, erotella verotettavat tapahtumat siirroista, laskea ilmoitettavat luvut ja palauttaa minulle yhteenveto PDF:nä WhatsAppiin.\n\nTässä kohtaa olennaista on myös mittakaava: rivejä voi olla helposti satoja tai tuhansia, jos on treidannut aktiivisemmin. Ja juuri kryptojen verotuksessa pitää lisäksi tarkistaa ajantasainen ohjeistus ja käytännöt, koska ne voivat muuttua vuosittain.\n\nTässä tapauksessa viesti ja raportti tulivat noin viidessä minuutissa. Niistä pystyi käytännössä syöttämään tiedot suoraan verosivuille.\n\nTässä agenttien oikea arvo näkyy. Ei siinä, että ne juttelevat nätisti, vaan siinä, että ne puristavat sotkuisen monivaiheisen tietotyön nopeaksi ja toistettavaksi workflowksi.\n\nSuurimmat voitot eivät yleensä ole näyttäviä. Ne löytyvät töistä, joita ihmiset välttelevät, lykkäävät ja inhoavat, mutta jotka pitää silti tehdä oikein.",
+    "hashtags": [],
+    "imageUrl": "",
+    "targetUrl": ""
+  },
+  {
+    "id": "0c873e03-5da0-4582-9731-a421e96d4795",
+    "slug": "malli-ei-yksin-ratkaise-orchestration-ja-workflow-ratkaisevat-yll-tt-v-n-paljon-f82hpa",
+    "title": "Mallivertailu on helppo tarina. Agenttityössä workflow ratkaisee.",
+    "status": "published",
+    "createdAt": "2026-04-20T12:51:55.634Z",
+    "updatedAt": "2026-05-22T12:05:25.184Z",
+    "publishedAt": "2026-05-22T12:05:00.902Z",
+    "content": "Mallivertailu on helppo tarina.\n\nGPT vastaan Claude. Uusi malli vastaan vanha malli. Kuka voitti benchmarkin tällä viikolla.\n\nMutta käytännön agenttityössä tuo on usein väärä ensimmäinen kysymys.\n\nSama malli voi näyttää kömpelöltä yhdessä ympäristössä ja erittäin käyttökelpoiselta toisessa. Ei siksi, että malli muuttui. Vaan siksi, että työnkulku sen ympärillä muuttui.\n\nOtetaan yksinkertainen esimerkki.\n\nHuono ohje agentille:\n\n“Seuraa kilpailijoita ja tee meille raportti.”\n\nTämä kuulostaa järkevältä, mutta agentille se on sumua. Mitä kilpailijoita? Mistä lähteistä? Kuinka usein? Mitä muutoksia etsitään? Mikä on hyvä raportti? Milloin ihmisen pitää reagoida?\n\nHyvä ohje agentille:\n\n“Seuraa nämä 12 kilpailijaa kerran viikossa. Tarkista niiden verkkosivut, LinkedIn-päivitykset, uutiset, tuotelanseeraukset, hinnoittelumuutokset ja avoimet työpaikat. Tee maanantaiaamuksi 10 rivin tiivistelmä: mikä muuttui, miksi sillä on väliä ja vaatiiko se meiltä toimenpiteen. Nosta erikseen vain asiat, jotka voivat vaikuttaa myyntiin, positiointiin tai tuotekehityksen prioriteetteihin. Palauta raportti PDF:nä sähköpostiin ja verkkolevylle, ja lähetä tiimin WhatsApp-ryhmään lyhyt tekstitiivistelmä.”\n\nEro ei ole mallissa. Ero on työn rajauksessa.\n\nAgentin laatu syntyy yllättävän usein näistä asioista:\n→ mikä tehtävä sillä oikeasti on\n→ mitä lähteitä sen pitää seurata\n→ mitä muutoksia sen pitää etsiä\n→ missä muodossa lopputulos annetaan\n→ milloin asia on vain havainto ja milloin se vaatii ihmiseltä päätöksen\n\nTämä on vähemmän seksikäs tarina kuin “uusi paras malli”, mutta paljon hyödyllisempi tarina yritykselle, joka yrittää saada AI:sta oikeaa työtä ulos ensi viikolla.\n\nJos agentti epäonnistuu, ensimmäinen johtopäätös ei aina ole “malli on huono”. Usein parempi kysymys on: oliko työ ohjeistettu niin selkeästi, että agentilla oli edes mahdollisuus onnistua?\n\nAI Generationin näkökulmasta suurin käytännön arvo ei synny mallihypessä, vaan siinä, että yksi oikea työprosessi rakennetaan agentille niin selkeästi, että se alkaa tuottaa käyttökelpoista jälkeä.",
+    "hashtags": [
+      "tekoäly",
+      "agentit",
+      "workflow",
+      "orchestration",
+      "llm"
+    ],
+    "imageUrl": "/uploads/draft-images/0c873e03-5da0-4582-9731-a421e96d4795-99c197f1-d5a2-491a-81d8-a218b00a62df.png",
+    "targetUrl": "https://www.linkedin.com/posts/mallivertailu-on-helppo-tarina-gpt-vastaan-share-7463559903656271872-6_1a?utm_source=share&utm_medium=member_ios&rcm=ACoAAAnfBmIBVk-luyq862zXW-1i9Lgt04beSOI"
+  },
+  {
+    "id": "fd0af6d9-3502-4200-b6c6-6ecf2a879e9d",
+    "slug": "ai-agents-are-not-magic-they-are-leverage-liluzn",
+    "title": "Tekoäly lakkasi olemasta hakukone. Useimmat eivät huomanneet.",
+    "status": "published",
+    "createdAt": "2026-04-18T08:04:59.413Z",
+    "updatedAt": "2026-05-06T16:50:15.003Z",
+    "publishedAt": "2026-05-06T16:50:15.032Z",
+    "content": "\"Käytätkö ChatGPT:tä?\" on jo väärä kysymys.\n\nOikea kysymys on: mitä annat sen tehdä puolestasi sillä aikaa kun nukut?\n\nSuurin osa AI-keskustelusta jumittaa edelleen vuoden 2023 vaiheessa. Yksi kysymys, yksi vastaus, \"vau aika fiksu juttu\", takaisin töihin.\n\nSe ei ole enää se kiinnostava osa.\n\nKiinnostava osa on se, että AI on lakannut olemasta hakukone ja muuttunut työvoimaksi. Agentti ei vastaa kysymyksiin — se hoitaa tehtäviä. Useamman vaiheen läpi. Itsenäisesti. Raameissa, jotka sinä asetat.\n\nMitä se tarkoittaa käytännössä? Hyvin rajattu agentti hoitaa juuri nyt:\n→ ajastetut markkinatutkimukset\n→ asiakasseurannan ja olennaisten muutosten nostot\n→ kilpailijaseurannan ja tiivistelmät\n→ kalenterin ja muistutukset\n→ sähköpostit: lukee, tiivistää, valmistelee vastaukset\n→ ensimmäiset luonnokset sisällöistä ja raporteista\n\nSaalis: agentti on yhtä hyvä kuin ohjeesi. Selkeä tavoite, selkeät rajat, ihmisen arviointi loppuun → toimii. Sumea ohje → sumeaa jälkeä, nopeasti ja paljon.\n\nMutta kun se rajaus on kunnossa, sinulla on käytännössä digitaalinen kollega, joka tekee niitä ärsyttäviä, toistuvia, kitkaisia hommia johdonmukaisesti ja väsymättä.\n\nTässä on se oikea avaus pienille tiimeille. Ei hypeä. Ei scifiä. Vipuvoimaa.\n\nJa jos tämä kuulostaa vielä joltain kaukaiselta tulevaisuuden jutulta — olet yhden käyttöliittymäsukupolven jäljessä. Et viittä vuotta. Yhden.",
+    "hashtags": [
+      "AI",
+      "AIagentit",
+      "automaatio",
+      "yrittäjyys"
+    ],
+    "imageUrl": "",
+    "targetUrl": ""
+  },
+  {
+    "id": "4061d0c7-8c42-4a47-9c04-739add92a4d1",
+    "slug": "teko-lyagentit-eiv-t-ole-meille-demoja-ne-ovat-osa-arkea-5kp18d",
+    "title": "Tekoälyagentit eivät ole meille demoja. Ne ovat osa arkea.",
+    "status": "published",
+    "createdAt": "2026-04-20T11:43:19.462Z",
+    "updatedAt": "2026-04-20T11:49:41.376Z",
+    "publishedAt": "2026-04-20T11:49:41.400Z",
+    "content": "Tekoälyagentit eivät ole meille demoja. Ne ovat osa arkea.\n\nAI Generationilla käytämme päivittäin useita tekoälyagentteja oikeisiin työtehtäviin, kuten markkinaseurantaan, tiedonhakuun, raportointiin, viestintään, koodaukseen ja toistuvien prosessien automatisointiin.\n\nKäytössämme ovat OpenClaw-pohjaiset agentit Ash ja Jarvis, jotka pyörivät omissa ympäristöissämme. Uutena kokeilussa ovat myös Hermes-agentit Sofia ja Agent Cooper. Agentit kommunikoivat kanssamme samoissa kanavissa kuin ihmiskollegat: WhatsAppissa, Discordissa, Teamsissa ja sähköpostitse.\n\nMonelle nämä termit ovat vielä vieraita, joten avataan ne yksinkertaisesti.\n\nAgentti ei ole yksi valmis tekoäly, vaan yhdistelmä kolmesta osasta: agenttialusta, kielimalli ja työkalut. Meillä agenttialustoina toimivat tällä hetkellä avoimen lähdekoodin OpenClaw ja Hermes. Ne kytketään ulkoisiin kielimalleihin, kuten OpenAI:n GPT-malleihin tai Anthropicin tai Googlen vastaaviin. Malli tuottaa älykkyyden, mutta alusta hoitaa muistin, työkalujen käytön, viestinnän ja tehtävien suorittamisen. Käytännössä työkaluja voi integroida rajattomasti, kuten kalentereita, sähköposteja, puheominaisuuksia, tietokantoja, kaupankäyntialustoja ja sisäisiä järjestelmiä.\n\nJuuri tässä kohtaa todellisuus alkaa kiinnostaa.\n\nOlemme oppineet viime viikkoina, että agenttien suurimmat ongelmat eivät synny vain mallista, vaan siitä miten koko kokonaisuus toimii yhdessä. Kun mallikerros muuttuu, myös agentin käytös muuttuu. Eri mallit eroavat toisistaan myös toimintatavoiltaan: ne painottavat eri tavoin varovaisuutta, aloitteellisuutta, rakennetta ja työkalujen käyttöä. Sama tehtävä, sama alusta ja samat työkalut voivat tuottaa hyvin erilaisen lopputuloksen eri mallilla.\n\nSamalla olemme nähneet konkreettisesti myös luotettavuushaasteet. Välillä agentti kertoo, että jokin tehtävä on mahdoton, ja hetkeä myöhemmin sama asia onnistuu normaalisti. Ongelma ei välttämättä ole älykkyydessä, vaan muistissa, sessiossa, pluginissa tai työkaluketjussa.\n\nSiksi testaamme rinnakkain eri alustoja ja eri agentteja. OpenClaw on ollut tärkeä osa omaa tekemistämme, mutta sen muisti- ja luotettavuushaasteet ovat antaneet hyvän syyn kokeilla myös Hermes-pohjaisia agentteja käytännössä.\n\nSuurin oppimme tähän mennessä on yksinkertainen: tekoälyagenttien seuraava todellinen kilpailuetu ei ole pelkkä älykkyys. Se on luotettavuus ja helppokäyttöisyys.\n\nJatkossa avaamme lisää sitä, mitä agentit oikeasti tekevät meidän arjessamme, missä ne toimivat hyvin, missä ne vielä hajoavat ja mitä tästä kaikesta voi oppia yrityskäytössä.\n\nAI Generation Oy\n\nhashtag#tekoäly hashtag#agenttitekoäly hashtag#opensource\n\n",
+    "hashtags": [],
+    "imageUrl": "",
+    "targetUrl": ""
+  }
+]

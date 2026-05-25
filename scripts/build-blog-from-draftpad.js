@@ -480,7 +480,7 @@ ${renderContent(post)}
 function renderIndex(posts) {
   const featured = posts[0];
   const desc =
-    "Aigenin blogi tekoälyagenteista, automaatiosta, EU-compliancesta ja käytännön tavoista tehdä yrityksen arjesta vähemmän tahmeaa.";
+    "Aigenin blogi tekoälyagenteista, automaatiosta, EU-compliancesta ja käytännön tavoista kehittää yrityksen arjen prosesseja.";
   const listSchema = {
     "@context": "https://schema.org",
     "@graph": [

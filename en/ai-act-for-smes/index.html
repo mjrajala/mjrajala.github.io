@@ -16,15 +16,55 @@
   <meta property="og:image" content="https://aigen.fi/assets/logo-slogan.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://aigen.fi/assets/logo-slogan.png">
-  <link rel="stylesheet" href="/seo-page.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/product-page.css">
 </head>
 <body>
-  <nav><a href="/en/">AI Generation Oy</a><div class="nav-links"><a href="/en/ai-agent-for-business/">AI agent</a><a href="/en/ai-automation-for-smes/">Automation</a><a href="/en/blog/">Blog</a><a href="mailto:contact@aigen.fi">Contact</a><a href="/ai-act-pk-yritys/" class="nav-lang" hreflang="fi">FI</a><a href="/en/ai-act-for-smes/" class="nav-lang" hreflang="en" aria-current="page">EN</a></div></nav>
-  <main>
-    <section class="hero"><div class="panel"><span class="eyebrow">AI Act</span><h1>The AI Act does not ban AI. It forces companies to manage it.</h1><p class="lead">For an SME, the most important task is not memorizing the whole regulation. It is knowing where AI is used, for what purpose, with which data, and under whose responsibility.</p><p class="source">Checked on 25 May 2026 against the latest information from the European Commission, the AI Act Service Desk, and the Council of the EU.</p><div class="cta"><a class="btn primary" href="mailto:contact@aigen.fi">Request a mapping</a><a class="btn secondary" href="/en/ai-agent-for-business/">AI agent for business</a></div></div><aside class="panel"><h2>Timeline</h2><ul><li>1 Aug 2024: the AI Act entered into force.</li><li>2 Feb 2025: prohibited practices and AI literacy obligations started to apply.</li><li>2 Aug 2025: obligations for GPAI model providers and the governance structure started to apply.</li><li>2 Aug 2026: most other rules start to apply, including general transparency obligations and market surveillance.</li><li>2 Dec 2027: under the political agreement, rules for stand-alone high-risk AI systems start to apply.</li><li>2 Aug 2028: under the political agreement, rules for high-risk AI systems embedded in products start to apply.</li></ul></aside></section>
-    <section class="grid"><div class="panel"><h2>Management minimum checklist</h2><ul><li>List the AI tools and agents in use.</li><li>Record purpose, users, data, and decision authority.</li><li>Identify whether use relates to HR, biometrics, critical infrastructure, education, or other higher-risk areas.</li><li>Define where a human reviews the output.</li><li>Store instructions, logs, and changes for later audit.</li></ul></div><div class="panel"><h2>How Aigen helps</h2><p>We build AI agents so that purpose, tool permissions, limits, logging, and approval are part of the implementation from the start. That makes deployment faster and less like guesswork as regulation tightens.</p></div></section>
-    <section class="panel"><h2>Sources</h2><p class="source">European Commission AI Act page: <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">digital-strategy.ec.europa.eu</a>. AI Act Service Desk timeline: <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act">ai-act-service-desk.ec.europa.eu</a>. Council of the EU press release from 7 May 2026 on the political agreement: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">consilium.europa.eu</a>. This content is a general technical and business summary, not legal advice.</p></section>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="/en/" class="nav-logo" aria-label="AI Generation home"><img src="/assets/logo-black.png" alt="AI Generation" class="nav-logo-img" width="120" height="28"></a>
+      <div class="nav-links">
+        <a href="/en/">Home</a>
+        <a href="/en/ai-agent-for-business/">AI agent</a>
+        <a href="/en/ai-automation-for-smes/">Automation</a>
+        <a href="/en/blog/">Blog</a>
+        <a href="mailto:contact@aigen.fi">Contact</a>
+        <a href="/ai-act-pk-yritys/" class="nav-lang" hreflang="fi">FI</a>
+        <a href="/en/ai-act-for-smes/" class="nav-lang" hreflang="en" aria-current="page">EN</a>
+      </div>
+    </div>
+  </nav>
+  <main class="product-main">
+    <section class="product-hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">AI Act for SMEs</span>
+          <h1>The AI Act does not ban AI. It forces companies to manage it.</h1>
+          <p class="lead">For an SME, the most important task is not memorizing the whole regulation. It is knowing where AI is used, for what purpose, with which data, and under whose responsibility.</p>
+          <p class="lead source">Checked on 25 May 2026 against the latest information from the European Commission, the AI Act Service Desk, and the Council of the EU.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="mailto:contact@aigen.fi">Request a mapping</a><a class="btn btn-secondary" href="/en/ai-agent-for-business/">AI agent for business</a></div>
+        </div>
+        <aside class="summary-card"><h2>Timeline</h2><ul class="summary-list"><li>1 Aug 2024: the AI Act entered into force.</li><li>2 Feb 2025: prohibited practices and AI literacy obligations started to apply.</li><li>2 Aug 2025: obligations for GPAI model providers and the governance structure started to apply.</li><li>2 Aug 2026: most other rules start to apply.</li><li>2 Dec 2027: stand-alone high-risk AI systems under the political agreement.</li><li>2 Aug 2028: high-risk AI systems embedded in products under the political agreement.</li></ul></aside>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Management minimum checklist</h2>
+        <div class="grid-3">
+          <div class="feature"><h3>Map usage</h3><p>List the AI tools and agents in use, their purpose, users, data and decision authority.</p></div>
+          <div class="feature"><h3>Identify risk areas</h3><p>Check whether AI use touches HR, biometrics, critical infrastructure, education or other higher-risk areas.</p></div>
+          <div class="feature"><h3>Keep evidence</h3><p>Define human review points and store instructions, logs and changes for later audit.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-soft">
+      <div class="container grid-2">
+        <div class="content-card"><h2>How Aigen helps</h2><p>We build AI agents so that purpose, tool permissions, limits, logging, and approval are part of the implementation from the start.</p><p>That makes deployment faster and less like guesswork as regulation tightens.</p></div>
+        <div class="content-card"><h2>Sources</h2><p class="source">European Commission AI Act page: <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">digital-strategy.ec.europa.eu</a>. AI Act Service Desk timeline: <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act">ai-act-service-desk.ec.europa.eu</a>. Council of the EU press release from 7 May 2026 on the political agreement: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">consilium.europa.eu</a>. This content is a general technical and business summary, not legal advice.</p></div>
+      </div>
+    </section>
   </main>
-  <footer>&copy; 2026 AI Generation Oy</footer>
+  <footer>&copy; 2026 AI Generation Oy &middot; <a href="/en/ai-act-for-smes/">AI Act for SMEs</a></footer>
 </body>
 </html>

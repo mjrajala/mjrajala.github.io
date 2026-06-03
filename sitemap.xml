@@ -13,10 +13,88 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://aigen.fi/blog/vakuutusten-kilpailutus-ai-agentilla/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/blog/ai-agentti-veroilmoitus/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/blog/agenttityossa-workflow-ratkaisee/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/blog/tekoaly-ei-ole-hakukone/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/blog/agentit-selvitystyo-workflow/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/blog/tekoalyagentit-arjessa/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aigen.fi/en/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/en/blog/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/en/blog/insurance-tendering-ai-agent/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/en/blog/ai-agent-company-tax-return/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/en/blog/workflow-decides-agent-work/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/en/blog/ai-stopped-being-a-search-engine/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/en/blog/agents-turn-research-into-five-minute-workflows/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/en/blog/ai-agents-in-daily-work/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aigen.fi/tekoalyagentti-yritykselle/</loc>

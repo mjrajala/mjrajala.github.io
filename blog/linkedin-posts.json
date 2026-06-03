@@ -1,5 +1,22 @@
 [
   {
+    "id": "ae90c2d8-b32f-41ca-99aa-5c72136de8b8",
+    "slug": "vakuutusten-kilpailutus-ai-agentilla",
+    "title": "Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse",
+    "status": "published",
+    "createdAt": "2026-06-03T15:35:52.000Z",
+    "updatedAt": "2026-06-03T15:35:52.000Z",
+    "publishedAt": "2026-06-03T15:35:52.000Z",
+    "content": "Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse.\n\nKuka tahansa vakuutuksia kilpailuttanut tietää sen suon: viisi eri tarjousta, jokainen omassa muodossaan, ja jossain rivien välissä piilee vastaus siihen mikä niistä on oikeasti paras. Yleensä tähän palaa ilta. Tällä kertaa ei palanut.\n\nHeitin tarjoukset AI-agentille ja pyysin selvittämään, mistä oikeasti maksan.\n\nAgentti haki jokaisen yhtiön voimassa olevat vakuutusehdot, vertaili kattavuudet, omavastuut ja rajoitukset keskenään ja merkitsi ne kohdat, joissa halvin hinta tarkoitti käytännössä huonointa turvaa. Lopputuloksena oli yksi selkeä Excel, josta näki yhdellä silmäyksellä mitä kukin tarjous sisältää.\n\nEikä minun tarvinnut edes etsiä sitä mistään. Valmis vertailu tuli suoraan WhatsAppiin ja sähköpostiin.\n\nAikaa meni muutama minuutti sen sijaan että olisin tapellut PDF-tiedostojen kanssa koko illan. Ja rehellisesti sanottuna lopputulos oli huolellisempi kuin mihin itse olisin jaksanut.\n\nTässä on koko pointti: useimmat meistä eivät tarvitse tekoälyä tekemään hienoja juttuja. Me tarvitsemme sitä hoitamaan ne tylsät, aikaa vievät hommat, joita kukaan ei oikeasti halua tehdä. Tietojen kerääminen, vertailu, raportin kasaaminen. Juuri sitä agentti tekee.\n\nMikä on se sinun tiimisi tylsä rutiini, jonka antaisit mielelläsi koneen hoidettavaksi?",
+    "hashtags": [
+      "tekoäly",
+      "automaatio",
+      "AIagentit"
+    ],
+    "imageUrl": "/assets/blog/vakuutusten-kilpailutus-ai-agentilla.png",
+    "targetUrl": ""
+  },
+  {
     "id": "c6238d53-86ad-4f7b-8bc1-1b532ae2a78c",
     "slug": "when-ai-agents-become-useful-boring-paperwork-gazom7",
     "title": "Annoimme AI-agentin tehdä yrityksen veroilmoituksen",

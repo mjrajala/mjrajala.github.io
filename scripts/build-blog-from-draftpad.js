@@ -7,6 +7,8 @@ const sourcePath =
 const siteUrl = "https://aigen.fi";
 
 const slugMap = {
+  "Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse":
+    "vakuutusten-kilpailutus-ai-agentilla",
   "Annoimme AI-agentin tehdä yrityksen veroilmoituksen":
     "ai-agentti-veroilmoitus",
   "Agentit tekevät monivaiheisesta selvitystyöstä 5 minuutin workflow’n":
@@ -20,6 +22,8 @@ const slugMap = {
 };
 
 const imageMap = {
+  "Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse":
+    "/assets/blog/vakuutusten-kilpailutus-ai-agentilla.png",
   "Annoimme AI-agentin tehdä yrityksen veroilmoituksen":
     "/assets/blog/veroilmoitus-ai-agentti.jpg",
   "Mallivertailu on helppo tarina. Agenttityössä workflow ratkaisee.":
@@ -29,6 +33,8 @@ const imageMap = {
 const fallbackImage = "/assets/logo-slogan.png";
 
 const descriptions = {
+  "Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse":
+    "Käytännön esimerkki siitä, miten AI-agentti muutti viisi vakuutustarjousta ja ehdot yhdeksi selkeäksi vertailuksi.",
   "Annoimme AI-agentin tehdä yrityksen veroilmoituksen":
     "Mitä tapahtuu, kun AI-agentti viedään oikeaan viranomaislomakkeeseen, kirjanpidon lukuihin ja monivaiheiseen back office -työhön.",
   "Agentit tekevät monivaiheisesta selvitystyöstä 5 minuutin workflow’n":
@@ -664,12 +670,19 @@ ${nav}
 
 function renderSitemap(posts) {
   const staticUrls = [
-    ["/", "daily", "1.0"],
-    ["/blog/", "weekly", "0.9"],
-    ["/tuotteet/tasapay/", "monthly", "0.8"],
-    ["/tuotteet/cbam-tool/", "monthly", "0.8"],
-    ["/tuotteet/ilmoita/", "monthly", "0.8"],
-    ["/tuotteet/gpsrdocs/", "monthly", "0.8"],
+    ["/", "daily", "1.0", "2026-05-25"],
+    ["/blog/", "weekly", "0.9", "2026-06-03"],
+    ["/en/", "monthly", "0.7", "2026-05-25"],
+    ["/tekoalyagentti-yritykselle/", "monthly", "0.9", "2026-05-25"],
+    ["/tekoalyautomaatio-pk-yrityksille/", "monthly", "0.9", "2026-05-25"],
+    ["/ai-act-pk-yritys/", "monthly", "0.9", "2026-05-25"],
+    ["/palkka-avoimuusdirektiivi/", "monthly", "0.9", "2026-05-25"],
+    ["/cbam-raportointi/", "monthly", "0.9", "2026-05-25"],
+    ["/whistleblowing-kanava/", "monthly", "0.9", "2026-05-25"],
+    ["/tuotteet/tasapay/", "monthly", "0.8", "2026-05-25"],
+    ["/tuotteet/cbam-tool/", "monthly", "0.8", "2026-05-25"],
+    ["/tuotteet/ilmoita/", "monthly", "0.8", "2026-05-25"],
+    ["/tuotteet/gpsrdocs/", "monthly", "0.8", "2026-05-25"],
   ];
   const articleUrls = posts.map((post) => [
     `/blog/${postSlug(post)}/`,
@@ -678,11 +691,11 @@ function renderSitemap(posts) {
     isoDate(post.updatedAt || post.publishedAt || post.createdAt),
   ]);
   const allUrls = [
-    ...staticUrls.map(([loc, changefreq, priority]) => [
+    ...staticUrls.map(([loc, changefreq, priority, lastmod]) => [
       loc,
       changefreq,
       priority,
-      isoDate(new Date()),
+      lastmod,
     ]),
     ...articleUrls,
   ];

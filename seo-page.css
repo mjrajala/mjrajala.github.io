@@ -4,8 +4,10 @@ body {margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Seg
 a {color:inherit}
 nav {display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.5rem;background:#fff;border-bottom:1px solid var(--border)}
 nav a {text-decoration:none;font-weight:700}
-.nav-links {display:flex;gap:1rem;flex-wrap:wrap}
+.nav-links {display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
 .nav-links a {color:var(--muted);font-weight:600}
+.nav-lang {border:1px solid var(--border);border-radius:999px;padding:.25rem .55rem;font-size:.82rem;line-height:1}
+.nav-lang[aria-current="page"] {color:var(--text);background:#f3f4f6}
 main {max-width:1120px;margin:0 auto;padding:3rem 1.5rem}
 .hero {display:grid;grid-template-columns:1.3fr .8fr;gap:1.5rem;align-items:start;margin-bottom:1.5rem}
 .panel {background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem}

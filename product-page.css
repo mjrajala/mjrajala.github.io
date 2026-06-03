@@ -82,6 +82,19 @@ a {
     color: var(--text);
 }
 
+.nav-lang {
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 0.82rem;
+    line-height: 1;
+}
+
+.nav-lang[aria-current="page"] {
+    color: var(--text);
+    background: var(--bg-soft);
+}
+
 .product-main {
     padding-top: 64px;
 }

@@ -93,6 +93,7 @@ body {
 .nav-links {
     display: flex;
     gap: 32px;
+    align-items: center;
 }
 
 .nav-links a {
@@ -104,6 +105,35 @@ body {
 }
 
 .nav-links a:hover { color: var(--text); }
+
+.nav-language {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 24px;
+}
+
+.nav-language-label {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+}
+
+.nav-lang {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--card-border);
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.nav-lang:hover,
+.nav-lang[aria-current="page"] {
+    color: var(--text);
+    border-color: var(--text);
+}
 
 /* Hero */
 .hero {
@@ -434,6 +464,9 @@ body {
 /* Mobile */
 @media (max-width: 768px) {
     .nav-links { display: none; }
+    .nav-container { height: 64px; }
+    .nav-language { margin-left: auto; }
+    .nav-language-label { display: none; }
     
     .hero { min-height: 80vh; padding: 100px 24px 60px; }
     
@@ -455,23 +488,6 @@ body {
     .section { padding: 60px 0; }
 }
 
-
-.nav-lang {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border: 1px solid var(--card-border);
-    padding: 4px 10px;
-    border-radius: 4px;
-    margin-left: 16px;
-    transition: all 0.2s;
-}
-.nav-lang:hover {
-    color: var(--text);
-    border-color: var(--text);
-}
-
 </style>
 </head>
 <body>
@@ -487,7 +503,11 @@ body {
             <a href="#products">Tuotteet</a>
             <a href="#about">Meistä</a>
             <a href="#contact">Yhteystiedot</a>
-            <a href="/en/" class="nav-lang">EN</a>
+        </div>
+        <div class="nav-language" aria-label="Kielivalinta">
+            <span class="nav-language-label">Kieli</span>
+            <a href="/" class="nav-lang" hreflang="fi" aria-current="page">FI</a>
+            <a href="/en/" class="nav-lang" hreflang="en">EN</a>
         </div>
     </div>
 </nav>

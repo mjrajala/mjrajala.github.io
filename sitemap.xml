@@ -62,9 +62,15 @@
   </url>
   <url>
     <loc>https://aigen.fi/en/blog/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aigen.fi/en/blog/ai-is-moving-onto-your-own-computer/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aigen.fi/en/blog/insurance-tendering-ai-agent/</loc>

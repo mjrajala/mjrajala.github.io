@@ -7,6 +7,8 @@ const sourcePath =
 const siteUrl = "https://aigen.fi";
 
 const slugMap = {
+  "Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.":
+    "tekoalyn-suurin-riski-huono-johtaminen",
   "Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse":
     "vakuutusten-kilpailutus-ai-agentilla",
   "Annoimme AI-agentin tehdä yrityksen veroilmoituksen":
@@ -22,6 +24,8 @@ const slugMap = {
 };
 
 const imageMap = {
+  "Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.":
+    "/assets/blog/tekoalyn-riski-huono-johtaminen.png",
   "Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse":
     "/assets/blog/vakuutusten-kilpailutus-ai-agentilla.png",
   "Annoimme AI-agentin tehdä yrityksen veroilmoituksen":
@@ -33,6 +37,8 @@ const imageMap = {
 const fallbackImage = "/assets/logo-slogan.png";
 
 const descriptions = {
+  "Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.":
+    "Tekoälyn suurin riski ei ole vain hallusinointi, vaan se, että organisaatiot käyttävät sitä kuin vastauskonetta eivätkä johda sen tekemää työtä.",
   "Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse":
     "Käytännön esimerkki siitä, miten AI-agentti muutti viisi vakuutustarjousta ja ehdot yhdeksi selkeäksi vertailuksi.",
   "Annoimme AI-agentin tehdä yrityksen veroilmoituksen":

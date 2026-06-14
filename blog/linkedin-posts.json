@@ -1,5 +1,24 @@
 [
   {
+    "id": "473a2d87-48d3-46dd-a150-c93982fdd525",
+    "slug": "tekoalyn-suurin-riski-huono-johtaminen",
+    "title": "Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.",
+    "status": "published",
+    "createdAt": "2026-06-14T06:17:55.346Z",
+    "updatedAt": "2026-06-14T11:49:43.376Z",
+    "publishedAt": "2026-06-14T17:45:00.000Z",
+    "content": "Jos tekoälyltä kysytään suoraan \"oikea vastaus\", ongelmat alkavat nopeasti: sujuva teksti tuntuu luotettavalta, vaikka pohja olisi heikko. Tämä ei kerro vain tekoälyn rajoista, vaan siitä, miten huonosti olemme oppineet johtamaan sen tekemää työtä.\n\nHelsingin Sanomien HS Visio käsitteli sunnuntaina (14.6.2026) tekoälyä pitkälti riskien kautta: hallusinaatiot, harhaanjohtava sujuvuus, vahvistusharha, automaatioharha ja ajattelun rapautuminen. Kognitiotieteen dosentti Anna-Mari Wallenberg käy läpi viisi harhaa, jotka voivat syntyä ihmismielen ja koneen kohdatessa.\n\nHyviä ja tärkeitä huomioita. Hallusinointi on todellinen ilmiö, ja osaamisen rapautuminen aito riski, jos prosesseja ulkoistetaan ajattelematta. Silti kuva jää vajaaksi, jos tekoäly nähdään vain oraakkelimaisena chat-palveluna, jolta kysytään yksittäisiä vastauksia. Juuri se on vanhentunut käyttötapa.\n\nJos pyydät suoraan vastauksen, saat usein vakuuttavan kuuloisen tekstin. Se ei vielä tarkoita, että vastaus on totta, riittävä tai käyttökelpoinen.\n\nParempi tapa on antaa tekoälylle tehtävä, rajat ja laatukriteerit:\n\n- tarkista faktat lähteistä\n- kerro, mikä on epävarmaa\n- merkitse oletukset\n- jätä pois väitteet, joita et voi varmistaa\n- etsi vasta-argumentit\n- sano suoraan, jos jokin johtopäätös ei kestä tarkistusta\n\nHuono tekoälyn käyttö on kyselyä.\n\nHyvä tekoälyn käyttö on työn johtamista.\n\nTämä näkyy myös jutun omissa havainnoissa. Automaatioharha iskee kovimmin keskivertokäyttäjään: ei epäilevään aloittelijaan eikä asiantuntijaan, joka tunnistaa virheet. Vastaus ei siksi ole vähemmän tekoälyä, vaan parempia työnkulkuja. Tarkistus rakennetaan sisään, ihminen säilyttää ohjauksen ja asiantuntemus valjastetaan koneen johtamiseen, ei sen korvaamiseen.\n\nJuttu peräänkuuluttaa vastuuta myös teknologiayhtiöiltä. Perustellusti, mutta kenenkään ei tarvitse jäädä odottamaan täydellisiä järjestelmiä. Vastuullisen käytön välineet ovat jo arkea: lähdehaku, työkalujen käyttö, itsetarkistus ja auditointi.\n\nRatkaisevaa ei ole vain se, varoittaako malli tarpeeksi, vaan se, kouluttaako organisaatio ihmiset käyttämään tekoälyä vaativasti, kriittisesti ja tavoitteellisesti.\n\nMeille AI Generationilla tekoäly ei ole enää vain keskusteluikkuna. Se on työvoimaa, järjestelmiä ja agentteja.\n\nAgentteja, jotka koodaavat, testaavat ja korjaavat bugeja.\n\nAgentteja, jotka tukevat markkinointia ideoinnissa, sisällöissä ja analyysissä.\n\nAgentteja, jotka lukevat dokumentaatiota, rakentavat raportteja ja tekevät tylsän taustatyön, johon ihmisellä ei muuten ole aikaa.\n\nKonkreettinen esimerkki: yksi agenteistamme käy joka viikko läpi jokaisen kilpailijamme: verkkosivut, kaikki somekanavat ja uutiset ja kokoaa muutokset yhteen. Mukaan tulevat automaattisesti myös kaikki kilpailijoita koskevat uutismaininnat ja mahdolliset pörssikurssimuutokset. Raportti saapuu joka maanantaiaamu WhatsAppiin ammattimaisesti muotoiltuna PDF:nä.\n\nTämä ei tarkoita, että ihminen lopettaa ajattelun. Päinvastoin. Hän oppii jakamaan työn oikein: mitä antaa koneelle, mitä arvioida itse ja missä laatu varmistetaan. Oikein käytettynä tekoäly tekee ihmisestä vaativamman, ei laiskemman. Se pakottaa parempiin kysymyksiin, tarkistamaan oletukset ja rakentamaan työnkulut, joissa faktat ja lähteet eivät jää fiiliksen varaan.\n\nTästä muutoksesta pitäisi puhua enemmän. Ei vain siitä, mitä tekoäly vastaa, vaan mitä se tekee. Ja kilpailuetu syntyy siitä, miten hyvin osaamme johtaa sitä.\n\nLähde: Helsingin Sanomat, HS Visio, \"Harhainen cocktail\" (14.6.2026): https://www.hs.fi/visio/art-2000011998543.html",
+    "hashtags": [
+      "tekoäly",
+      "AI",
+      "agentit",
+      "työelämä",
+      "Aigen"
+    ],
+    "imageUrl": "/assets/blog/tekoalyn-riski-huono-johtaminen.png",
+    "targetUrl": ""
+  },
+  {
     "id": "local-ai-rtx-spark-2026-06-10",
     "slug": "tekoaly-muuttaa-omalle-koneelle",
     "title": "Tekoäly muuttaa omalle koneellesi",

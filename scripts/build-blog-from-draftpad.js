@@ -248,6 +248,42 @@ function postImage(post) {
   return imageMap[post.title] || fallbackImage;
 }
 
+function imageMeta(imagePath) {
+  const assetPath = path.join(root, imagePath.replace(/^\//, ""));
+  const fallback = { width: 1536, height: 1024, className: "" };
+
+  if (!fs.existsSync(assetPath)) return fallback;
+
+  const buffer = fs.readFileSync(assetPath);
+  let width = fallback.width;
+  let height = fallback.height;
+
+  if (buffer.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]))) {
+    width = buffer.readUInt32BE(16);
+    height = buffer.readUInt32BE(20);
+  } else if (buffer[0] === 0xff && buffer[1] === 0xd8) {
+    let offset = 2;
+    while (offset < buffer.length) {
+      if (buffer[offset] !== 0xff) break;
+      const marker = buffer[offset + 1];
+      const length = buffer.readUInt16BE(offset + 2);
+      if (marker >= 0xc0 && marker <= 0xc3) {
+        height = buffer.readUInt16BE(offset + 5);
+        width = buffer.readUInt16BE(offset + 7);
+        break;
+      }
+      offset += 2 + length;
+    }
+  }
+
+  return {
+    width,
+    height,
+    className: height > width ? "portrait" : "",
+    frameClass: height > width ? "portrait-frame" : "",
+  };
+}
+
 function absolute(pathname) {
   return `${siteUrl}${pathname}`;
 }
@@ -296,6 +332,7 @@ function articleJsonLd(post, slug, image, relatedPosts) {
 function renderArticle(post, posts) {
   const slug = postSlug(post);
   const image = postImage(post);
+  const imageInfo = imageMeta(image);
   const url = absolute(`/blog/${slug}/`);
   const title = `${post.title} | Aigen Blogi`;
   const desc = descriptions[post.title] || excerpt(post);
@@ -379,11 +416,19 @@ ${sharedCss}
       display: grid;
       place-items: center;
     }
+    .hero-image.portrait-frame {
+      max-width: 680px;
+      aspect-ratio: 2 / 3;
+    }
     .hero-image img {
       width: 100%;
       height: 100%;
       object-fit: ${image === fallbackImage ? "contain" : "cover"};
       padding: ${image === fallbackImage ? "8%" : "0"};
+    }
+    .hero-image img.portrait {
+      object-fit: contain;
+      padding: 0;
     }
     .article {
       padding: 54px 24px 70px;
@@ -448,8 +493,8 @@ ${nav}
       </div>
       <h1>${esc(post.title)}</h1>
       <p class="lead">${esc(desc)}</p>
-      <figure class="hero-image">
-        <img src="${image}" alt="${esc(post.title)}" width="1536" height="1024" fetchpriority="high" decoding="async">
+      <figure class="hero-image ${imageInfo.frameClass}">
+        <img class="${imageInfo.className}" src="${image}" alt="${esc(post.title)}" width="${imageInfo.width}" height="${imageInfo.height}" fetchpriority="high" decoding="async">
       </figure>
     </div>
   </header>
@@ -607,6 +652,7 @@ ${sharedCss}
     }
     .post-thumb img { width: 100%; height: 100%; object-fit: cover; }
     .post-thumb img.logo { object-fit: contain; padding: 10%; }
+    .post-thumb img.portrait { object-fit: contain; padding: 0; }
     .post-card h2 { font-size: 1.28rem; line-height: 1.22; margin: 0.55rem 0 0.55rem; }
     .post-card p { color: var(--text-muted); }
     .aside {
@@ -644,8 +690,10 @@ ${nav}
         .map((post, index) => {
           const image = postImage(post);
           const isFallback = image === fallbackImage;
+          const imageInfo = imageMeta(image);
+          const imageClass = [isFallback ? "logo" : "", imageInfo.className].filter(Boolean).join(" ");
           return `<a class="post-card" href="/blog/${postSlug(post)}/">
-        <div class="post-thumb"><img class="${isFallback ? "logo" : ""}" src="${image}" alt="${esc(post.title)}" width="1536" height="1024" ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></div>
+        <div class="post-thumb"><img class="${imageClass}" src="${image}" alt="${esc(post.title)}" width="${imageInfo.width}" height="${imageInfo.height}" ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></div>
         <div>
           <div class="meta-row"><span>${esc(fiDate(post.publishedAt || post.createdAt))}</span><span class="tag">LinkedIn</span></div>
           <h2>${esc(post.title)}</h2>

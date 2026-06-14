@@ -171,10 +171,18 @@
       display: grid;
       place-items: center;
     }
+    .hero-image.portrait-frame {
+      max-width: 680px;
+      aspect-ratio: 2 / 3;
+    }
     .hero-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      padding: 0;
+    }
+    .hero-image img.portrait {
+      object-fit: contain;
       padding: 0;
     }
     .article {
@@ -257,8 +265,8 @@
       </div>
       <h1>Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.</h1>
       <p class="lead">Tekoälyn suurin riski ei ole vain hallusinointi, vaan se, että organisaatiot käyttävät sitä kuin vastauskonetta eivätkä johda sen tekemää työtä.</p>
-      <figure class="hero-image">
-        <img src="/assets/blog/tekoalyn-riski-huono-johtaminen.png" alt="Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen." width="1536" height="1024" fetchpriority="high" decoding="async">
+      <figure class="hero-image portrait-frame">
+        <img class="portrait" src="/assets/blog/tekoalyn-riski-huono-johtaminen.png" alt="Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen." width="1024" height="1536" fetchpriority="high" decoding="async">
       </figure>
     </div>
   </header>

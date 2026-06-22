@@ -1,5 +1,22 @@
 [
   {
+    "id": "478d7487-695c-44d5-858a-84c7fb4c9546",
+    "slug": "ai-agenttien-suurin-ongelma-on-muisti",
+    "title": "AI-agenttien suurin ongelma ei ole älykkyys. Se on muisti.",
+    "status": "published",
+    "createdAt": "2026-06-22T07:47:59.798Z",
+    "updatedAt": "2026-06-22T12:00:00.000Z",
+    "publishedAt": "2026-06-22T12:00:00.000Z",
+    "content": "Kaikki tuijottavat mallien benchmarkeja, mutta käytännössä agentti kompastuu johonkin paljon arkisempaan: se ei muista, mitä viime viikolla sovittiin. Oikea agentti ei tyydy vastaamaan yhteen promptiin, vaan sen pitäisi pysyä kärryillä siitä, mitä ollaan rakentamassa ja mitä on jo päätetty, ketkä asiaan liittyvät ja mikä meni viimeksi pieleen, mitkä tiedot pätevät yhä ja mitkä vanhat muistiinpanot kannattaisi osata ohittaa.\n\nHelpolta kuulostaa, kunnes sitä yrittää oikeasti rakentaa. Juuri nyt \"muisti\" on useimmiten sekalainen kasa chat-historiaa, tallennettuja faktoja, vektorihakua, projektitiedostoja, tiivistelmiä ja muutama käsin kirjoitettu sääntö. Se toimii juuri sen verran hyvin, että tekee vaikutuksen, ja pettää juuri sen verran usein, ettei siihen uskalla täysin nojata.\n\nVaikein osa ei ole tekstin tallentaminen. Vaikein osa on nopea, muokattava ja luotettava muistikerros, joka ymmärtää, mikä on olennaista juuri nyt. Ja yhtä tärkeää kuin muistaminen on osata unohtaa: ihmismuistikin toimii nimenomaan siksi, että se päästää suurimman osan irti ja pitää kiinni vain siitä, millä on merkitystä.\n\nHyvä esimerkki on OpenAI. Se kutsuu omaa taustaprosessiaan dreamingiksi ja julkaisi siitä kesäkuussa uuden version, jonka koko lupaus on juuri tämä: pidä konteksti tuoreena, anna käyttäjän nähdä ja korjata, mitä malli muistaa, ja tunnista, milloin vanha tieto on vanhentunut. Silti se muistaa yhtiön omien testien mukaan oikein monilla mittareilla vain noin kolme kertaa neljästä. Se kertoo ongelman vaikeudesta enemmän kuin mikään juhlapuhe.\n\nOmassa työssämme OpenClaw’n, Hermeksen ja muiden agenttien parissa ero chatbotin ja agentin välillä ei ole se, että agentti kirjoittaa parempia kappaleita. Ero on siinä, että agentti voi palata projektiin päiviä myöhemmin ja muistaa päätökset, rajoitteet, ihmiset, linkit, tiedostot ja seuraavat askeleet. Kun se toimii, agentti tuntuu hyödylliseltä. Kun se ei toimi, se on kuin äärimmäisen itsevarma harjoittelija, joka kärsii muistinmenetyksestä.\n\nUskomme, että seuraavat vakavasti otettavat agenttituotteet eivät kilpaile pelkillä prompteilla tai mallivalinnoilla. Ne kilpailevat muistilla. Näkeekö käyttäjä, mitä agentti muistaa? Voiko hän korjata sitä? Osaako agentti unohtaa turvallisesti? Erottaako se vanhan kontekstin nykyhetken totuudesta? Löytääkö se oikean tiedon nopeasti ilman, että koko ullakko kaatuu niskaan?\n\nEnnen kuin tämä kerros on luotettava, agentit jäävät helposti vaikuttaviksi demoiksi, joihin ei vielä uskalleta nojata 100 % ihan kaikessa. Muisti ei ole sivuominaisuus. Se on se kohta, jossa luottamus agenttiin joko syntyy tai kuolee.",
+    "hashtags": [
+      "AIagentit",
+      "muisti",
+      "OpenClaw"
+    ],
+    "imageUrl": "/assets/blog/ai-agenttien-muistikerros.png",
+    "targetUrl": "https://www.linkedin.com/posts/ai-agenttien-suurin-ongelma-ei-ole-%C3%A4lykkyys-share-7474792114380292096-0iYh/"
+  },
+  {
     "id": "473a2d87-48d3-46dd-a150-c93982fdd525",
     "slug": "tekoalyn-suurin-riski-huono-johtaminen",
     "title": "Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.",

@@ -24,6 +24,8 @@ const slugMap = {
 };
 
 const imageMap = {
+  "AI-agenttien suurin ongelma ei ole älykkyys. Se on muisti.":
+    "/assets/blog/ai-agenttien-muistikerros.png",
   "Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.":
     "/assets/blog/tekoalyn-riski-huono-johtaminen.png",
   "Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse":
@@ -37,6 +39,8 @@ const imageMap = {
 const fallbackImage = "/assets/logo-slogan.png";
 
 const descriptions = {
+  "AI-agenttien suurin ongelma ei ole älykkyys. Se on muisti.":
+    "AI-agenttien käytännön pullonkaula ei ole enää pelkkä älykkyys, vaan nopea, luotettava ja käyttäjän korjattavissa oleva muistikerros.",
   "Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.":
     "Tekoälyn suurin riski ei ole vain hallusinointi, vaan se, että organisaatiot käyttävät sitä kuin vastauskonetta eivätkä johda sen tekemää työtä.",
   "Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse":

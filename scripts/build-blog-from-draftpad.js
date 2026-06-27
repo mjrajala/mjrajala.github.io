@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { execFileSync } = require("child_process");
 
 const root = path.resolve(__dirname, "..");
 const sourcePath =
@@ -746,47 +747,93 @@ ${nav}
 `;
 }
 
-function renderSitemap(posts) {
-  const staticUrls = [
-    ["/", "daily", "1.0", "2026-05-25"],
-    ["/blog/", "weekly", "0.9", "2026-06-03"],
-    ["/en/", "monthly", "0.7", "2026-05-25"],
-    ["/tekoalyagentti-yritykselle/", "monthly", "0.9", "2026-05-25"],
-    ["/tekoalyautomaatio-pk-yrityksille/", "monthly", "0.9", "2026-05-25"],
-    ["/ai-act-pk-yritys/", "monthly", "0.9", "2026-05-25"],
-    ["/palkka-avoimuusdirektiivi/", "monthly", "0.9", "2026-05-25"],
-    ["/cbam-raportointi/", "monthly", "0.9", "2026-05-25"],
-    ["/whistleblowing-kanava/", "monthly", "0.9", "2026-05-25"],
-    ["/tuotteet/tasapay/", "monthly", "0.8", "2026-05-25"],
-    ["/tuotteet/cbam-tool/", "monthly", "0.8", "2026-05-25"],
-    ["/tuotteet/ilmoita/", "monthly", "0.8", "2026-05-25"],
-    ["/tuotteet/gpsrdocs/", "monthly", "0.8", "2026-05-25"],
-  ];
-  const articleUrls = posts.map((post) => [
-    `/blog/${postSlug(post)}/`,
-    "monthly",
-    "0.85",
-    isoDate(post.updatedAt || post.publishedAt || post.createdAt),
-  ]);
-  const allUrls = [
-    ...staticUrls.map(([loc, changefreq, priority, lastmod]) => [
-      loc,
-      changefreq,
-      priority,
-      lastmod,
-    ]),
-    ...articleUrls,
-  ];
+function xmlEsc(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
+}
+
+function walkIndexFiles(dir) {
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    if (entry.name.startsWith(".") || entry.name === "node_modules") return [];
+
+    const entryPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) return walkIndexFiles(entryPath);
+    if (entry.isFile() && entry.name === "index.html") return [entryPath];
+    return [];
+  });
+}
+
+function locForIndexFile(filePath) {
+  const relative = path.relative(root, filePath).replaceAll(path.sep, "/");
+  if (relative === "index.html") return "/";
+  return `/${relative.replace(/index\.html$/, "")}`;
+}
+
+function shouldIncludeInSitemap(filePath) {
+  return !fs.readFileSync(filePath, "utf8").match(/<meta\s+name=["']robots["'][^>]*noindex/i);
+}
+
+function lastModifiedDate(filePath) {
+  const relative = path.relative(root, filePath);
+
+  try {
+    const result = execFileSync("git", ["log", "-1", "--format=%cs", "--", relative], {
+      cwd: root,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim();
+    if (result) return result;
+  } catch {
+    // Fall back to file mtime when git metadata is unavailable.
+  }
+
+  return isoDate(fs.statSync(filePath).mtime);
+}
+
+function sitemapHints(loc) {
+  if (loc === "/") return { changefreq: "daily", priority: "1.0" };
+  if (loc === "/blog/") return { changefreq: "weekly", priority: "0.9" };
+  if (loc === "/en/") return { changefreq: "monthly", priority: "0.8" };
+  if (loc.includes("/blog/")) return { changefreq: "weekly", priority: "0.7" };
+  return { changefreq: "monthly", priority: "0.8" };
+}
+
+function sitemapSortKey(item) {
+  if (item.loc === "/") return "00";
+  if (item.loc === "/blog/") return "01";
+  if (item.loc === "/en/") return "02";
+  if (item.loc.startsWith("/blog/")) return `10${item.loc}`;
+  if (item.loc.startsWith("/en/blog/")) return `11${item.loc}`;
+  if (item.loc.startsWith("/en/")) return `20${item.loc}`;
+  return `30${item.loc}`;
+}
+
+function renderSitemap() {
+  const allUrls = walkIndexFiles(root)
+    .filter(shouldIncludeInSitemap)
+    .map((filePath) => {
+      const loc = locForIndexFile(filePath);
+      return {
+        loc,
+        lastmod: lastModifiedDate(filePath),
+        ...sitemapHints(loc),
+      };
+    })
+    .sort((a, b) => sitemapSortKey(a).localeCompare(sitemapSortKey(b)));
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allUrls
   .map(
-    ([loc, changefreq, priority, lastmod]) => `  <url>
-    <loc>${absolute(loc)}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
+    ({ loc, lastmod, changefreq, priority }) => `  <url>
+    <loc>${xmlEsc(absolute(loc))}</loc>
+    <lastmod>${xmlEsc(lastmod)}</lastmod>
+    <changefreq>${xmlEsc(changefreq)}</changefreq>
+    <priority>${xmlEsc(priority)}</priority>
   </url>`
   )
   .join("\n")}

@@ -485,6 +485,16 @@ ${sharedCss}
       .article li { font-size: 1rem; }
     }
   </style>
+
+  <meta name="google-site-verification" content="-WtFkMpIXZlK3wpWNQvvrmWk1nLpZdkneqXFo_pVtn0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YFF8RBFBP3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-YFF8RBFBP3");
+  </script>
 </head>
 <body>
 ${nav}
@@ -677,6 +687,16 @@ ${sharedCss}
       .aside { position: static; }
     }
   </style>
+
+  <meta name="google-site-verification" content="-WtFkMpIXZlK3wpWNQvvrmWk1nLpZdkneqXFo_pVtn0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YFF8RBFBP3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-YFF8RBFBP3");
+  </script>
 </head>
 <body>
 ${nav}

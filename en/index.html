@@ -273,6 +273,47 @@ body {
     font-weight: 600;
 }
 
+.content-block {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.content-block p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+
+.content-block p:first-of-type {
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.use-case-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+}
+
+.use-case-list li {
+    color: var(--text-muted);
+    border-left: 3px solid var(--text);
+    padding-left: 20px;
+}
+
+.use-case-list strong {
+    color: var(--text);
+}
+
+.use-case-note {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-top: 32px;
+    text-align: center;
+}
+
 /* Cards */
 .cards {
     display: grid;
@@ -577,6 +618,34 @@ body {
                     <li>Implementation planning</li>
                 </ul>
             </a>
+        </div>
+    </div>
+</section>
+
+<!-- AI Agent Explainer -->
+<section class="section section-dark">
+    <div class="container">
+        <h2 class="section-title">What is an AI agent — and how is it different from a chatbot?</h2>
+        <div class="content-block">
+            <p>A chatbot answers questions. An AI agent takes action.</p>
+            <p>An AI agent connects to your existing tools — your CRM, inbox, calendar, or database — and completes tasks on its own: booking appointments, updating records, sending follow-ups, or routing support tickets. It runs around the clock without needing someone to press a button each time.</p>
+            <p>At AI Generation, we build AI agents for business that handle specific, repeatable workflows from start to finish. You define the rules; the agent does the work.</p>
+        </div>
+    </div>
+</section>
+
+<!-- AI Agent Use Cases -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">What Finnish businesses use AI agents for</h2>
+        <div class="content-block">
+            <ul class="use-case-list">
+                <li><strong>Customer service triage</strong> — the agent reads incoming messages, answers common questions, and escalates complex issues to a human, cutting response time from hours to minutes.</li>
+                <li><strong>Back-office data entry</strong> — the agent pulls information from emails or forms and updates your system automatically, removing manual copy-paste work.</li>
+                <li><strong>Lead qualification</strong> — the agent contacts new enquiries, asks qualifying questions, and books a meeting in your calendar when the lead is ready.</li>
+                <li><strong>Compliance reporting</strong> — the agent collects the required data and generates draft reports for EU regulations such as the AI Act or pay-transparency rules.</li>
+            </ul>
+            <p class="use-case-note">Every agent we build is scoped, tested, and handed over with clear documentation so your team stays in control.</p>
         </div>
     </div>
 </section>

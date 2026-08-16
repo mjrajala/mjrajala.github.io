@@ -18,6 +18,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url><loc>https://aigen.fi/blog/grok-bot-tekoalyagentti-tyokaverina/</loc><lastmod>2026-08-16</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://aigen.fi/en/blog/grok-bot-ai-agent-as-coworker/</loc><lastmod>2026-08-16</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url>
     <loc>https://aigen.fi/blog/agentit-selvitystyo-workflow/</loc>
     <lastmod>2026-06-27</lastmod>

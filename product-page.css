@@ -284,6 +284,18 @@ footer {
     color: var(--text-muted);
 }
 
+/* Long-form regulation guides */
+.update-note {max-width:720px;margin:-12px 0 28px;padding-left:14px;border-left:3px solid #94a3b8;color:var(--text-muted);font-size:.9rem}
+.article-layout {display:grid;grid-template-columns:220px minmax(0,760px);gap:56px;align-items:start;justify-content:center}
+.toc {position:sticky;top:96px;display:grid;gap:8px;padding:20px;border:1px solid var(--card-border);border-radius:var(--radius);background:#fff;font-size:.88rem}
+.toc strong {margin-bottom:4px}.toc a {color:var(--text-muted);text-decoration:none}.toc a:hover {color:var(--text)}
+.article-body>section {margin-bottom:64px;scroll-margin-top:92px}.article-body h2 {font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.2;margin-bottom:18px}.article-body h3 {margin:28px 0 8px;font-size:1.15rem}.article-body p {margin-bottom:16px;color:#3f3f46}.article-body a {text-decoration-thickness:1px;text-underline-offset:3px}
+.callout,.disclaimer {margin:24px 0;padding:20px 22px;border-left:4px solid #334155;border-radius:0 8px 8px 0;background:#f8fafc}
+.timeline {display:grid;gap:0;margin:28px 0}.timeline>div {display:grid;grid-template-columns:130px 1fr;gap:20px;padding:16px 0;border-top:1px solid var(--card-border)}.timeline>div:last-child {border-bottom:1px solid var(--card-border)}.timeline time {font-weight:700}.timeline p {margin:0}
+.risk-list {display:grid;gap:16px}.risk-card {padding:22px;border:1px solid var(--card-border);border-left:5px solid #94a3b8;border-radius:8px;background:#fff}.risk-card h3 {margin-top:0}.risk-card p {margin-bottom:0}.risk-prohibited {border-left-color:#b91c1c;background:#fffafa}.risk-high {border-left-color:#c2410c;background:#fffbf7}.risk-transparent {border-left-color:#ca8a04;background:#fffef7}
+.checklist {display:grid;gap:12px;padding-left:24px}.checklist li {padding-left:6px;color:#3f3f46}.source-list {display:grid;gap:10px;padding-left:20px}.source-list a {overflow-wrap:anywhere}
+.cta-band {display:flex;align-items:center;justify-content:space-between;gap:32px}.cta-band h2 {margin-bottom:8px}.cta-band p {color:var(--text-muted);max-width:720px}
+
 @media (max-width: 840px) {
     .nav-container {
         align-items: flex-start;
@@ -318,6 +330,12 @@ footer {
     .section {
         padding: 48px 0;
     }
+
+    .article-layout {grid-template-columns:1fr;gap:36px}
+    .toc {position:static}
+    .timeline>div {grid-template-columns:1fr;gap:4px}
+    .article-body>section {margin-bottom:48px}
+    .cta-band {align-items:flex-start;flex-direction:column}
 
     .btn {
         width: 100%;

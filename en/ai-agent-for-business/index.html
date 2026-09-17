@@ -1,146 +1,139 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="192x192">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI agent for business | Aigen</title>
-  <meta name="description" content="What an AI agent does in a company, when to build one, and how to deploy it with clear limits and auditability.">
-  <link rel="canonical" href="https://aigen.fi/en/ai-agent-for-business/">
-  <link rel="alternate" hreflang="fi" href="https://aigen.fi/tekoalyagentti-yritykselle/">
-  <link rel="alternate" hreflang="en" href="https://aigen.fi/en/ai-agent-for-business/">
-  <link rel="alternate" hreflang="x-default" href="https://aigen.fi/tekoalyagentti-yritykselle/">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="AI agent for business | Aigen">
-  <meta property="og:description" content="Practical guide to building AI agents for companies.">
-  <meta property="og:url" content="https://aigen.fi/en/ai-agent-for-business/">
-  <meta property="og:image" content="https://aigen.fi/assets/logo-slogan.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://aigen.fi/assets/logo-slogan.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/product-page.css">
+<link href="/favicon.ico" rel="icon" sizes="16x16 32x32 48x48 64x64"/>
+<link href="/favicon.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI agent for business | Aigen</title>
+<meta content="What an AI agent does in a company, when to build one, and how to deploy it with clear limits and auditability." name="description"/>
+<link href="https://aigen.fi/en/ai-agent-for-business/" rel="canonical"/>
+<link href="https://aigen.fi/tekoalyagentti-yritykselle/" hreflang="fi" rel="alternate"/>
+<link href="https://aigen.fi/en/ai-agent-for-business/" hreflang="en" rel="alternate"/>
+<link href="https://aigen.fi/tekoalyagentti-yritykselle/" hreflang="x-default" rel="alternate"/>
+<meta content="article" property="og:type"/>
+<meta content="AI agent for business | Aigen" property="og:title"/>
+<meta content="Practical guide to building AI agents for companies." property="og:description"/>
+<meta content="https://aigen.fi/en/ai-agent-for-business/" property="og:url"/>
+<meta content="https://aigen.fi/assets/logo-slogan.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://aigen.fi/assets/logo-slogan.png" name="twitter:image"/>
 
-  <meta name="google-site-verification" content="-WtFkMpIXZlK3wpWNQvvrmWk1nLpZdkneqXFo_pVtn0">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YFF8RBFBP3"></script>
-  <script>
+
+
+<meta content="-WtFkMpIXZlK3wpWNQvvrmWk1nLpZdkneqXFo_pVtn0" name="google-site-verification"/>
+<!-- Google tag (gtag.js) -->
+
+
+<link href="/assets/aigen-preview.css" rel="stylesheet"/><script>
+    if (["aigen.fi", "www.aigen.fi"].includes(location.hostname)) {
+    const analytics = document.createElement("script");
+    analytics.async = true;
+    analytics.src = "https://www.googletagmanager.com/gtag/js?id=G-YFF8RBFBP3";
+    document.head.appendChild(analytics);
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
     gtag("config", "G-YFF8RBFBP3");
-  </script>
-</head>
-<body>
-  <nav class="nav" aria-label="Main navigation">
-    <div class="nav-container">
-      <a href="/en/" class="nav-logo" aria-label="AI Generation home"><img src="/assets/logo-black.png" alt="AI Generation" class="nav-logo-img" width="120" height="28"></a>
-      <div class="nav-links">
-        <a href="/en/">Home</a>
-        <a href="/en/ai-automation-for-smes/">Automation</a>
-        <a href="/en/ai-act-for-smes/">AI Act</a>
-        <a href="/en/blog/">Blog</a>
-        <a href="mailto:contact@aigen.fi">Contact</a>
-        <a href="/tekoalyagentti-yritykselle/" class="nav-lang" hreflang="fi">FI</a>
-        <a href="/en/ai-agent-for-business/" class="nav-lang" hreflang="en" aria-current="page">EN</a>
-      </div>
-    </div>
-  </nav>
+    }
+  </script><script defer="" src="/assets/aigen-preview.js"></script></head>
+<body class="aigen-preview service-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><nav aria-label="Main navigation" class="nav-container">
+<a class="nav-logo" href="/en/"><img alt="AI Generation" height="36" src="/assets/logo-black.png" width="152"/></a>
+<button aria-controls="main-nav" aria-expanded="false" class="menu-toggle" type="button">Menu <span aria-hidden="true">＋</span></button>
+<div class="nav-links" id="main-nav"><a href="/en/products/cbam-tool/">Aigen CBAM</a><a href="/en/#services">Services</a><a href="/en/#products">Products</a><a href="/en/#tools">Guides &amp; tools</a><a href="/en/blog/">Blog</a><a href="/en/#about">About</a><a class="nav-contact" href="/en/#contact">Let’s talk <span aria-hidden="true">↗</span></a></div>
+<div aria-label="Language" class="nav-language"><a href="/tekoalyagentti-yritykselle/" hreflang="fi" lang="fi">FI</a><span aria-hidden="true">/</span><a aria-current="page" href="/en/ai-agent-for-business/" hreflang="en" lang="en">EN</a></div></nav></header>
 
-  <main class="product-main">
-    <section class="product-hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">AI agents for companies</span>
-          <h1>An AI agent does bounded work, not just chat.</h1>
-          <p class="lead">A well-built agent reads background information, uses approved tools, prepares decisions, and leaves an auditable trail of what it did and why.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:contact@aigen.fi">Ask about a use case</a>
-            <a class="btn btn-secondary" href="/en/ai-automation-for-smes/">Read about automation</a>
-          </div>
-        </div>
-        <aside class="summary-card">
-          <h2>A good first use case</h2>
-          <ul class="summary-list">
-            <li>Repeated work with a clear input and output.</li>
-            <li>Data and tools whose permissions can be bounded.</li>
-            <li>A human reviewer for exceptions before broader rollout.</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">What does an AI agent actually do?</h2>
-        <p class="section-intro">An agent is useful when a chatbot or a single integration is not enough. It handles several steps inside agreed limits and escalates unclear cases to a human.</p>
-        <div class="grid-3">
-          <div class="feature">
-            <h3>Finds and combines information</h3>
-            <p>The agent reads instructions, documents, spreadsheets, and system data without forcing employees to copy everything into a chat.</p>
-          </div>
-          <div class="feature">
-            <h3>Uses tools</h3>
-            <p>It can fill forms, call APIs, update systems, and prepare replies only with the permissions it has been given.</p>
-          </div>
-          <div class="feature">
-            <h3>Leaves an audit trail</h3>
-            <p>A good implementation shows what the agent did, which data it used, and where a human approved or corrected the result.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="container grid-2">
-        <div class="content-card">
-          <h2>Set the limits before building</h2>
-          <ul>
-            <li>Which data the agent may read and where it may write.</li>
-            <li>What it may do independently and where approval is required.</li>
-            <li>How errors, logs, privacy, and responsibilities are handled.</li>
-            <li>How value is measured: time, throughput, quality, or reduced risk.</li>
-          </ul>
-        </div>
-        <div class="content-card">
-          <h2>Aigen implementation model</h2>
-          <p>We start with one bounded workflow, not a massive transformation program. First we describe the current work, then we build the agent tools and limits, and finally we test with real data before expanding.</p>
-          <p>That keeps the agent from becoming a demo that looks good in a meeting but disappears from daily work.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid-2">
-        <div>
-          <h2 class="section-title">Typical first agents</h2>
-          <div class="faq-list">
-            <div class="faq-item">
-              <h3>RFP and document pre-processing</h3>
-              <p>The agent extracts key details, spots missing information, and prepares a summary for a human reviewer.</p>
-            </div>
-            <div class="faq-item">
-              <h3>Report and authority-material preparation</h3>
-              <p>The agent combines data, checks it against rules, and drafts material for the responsible person to approve.</p>
-            </div>
-            <div class="faq-item">
-              <h3>Customer-service back office work</h3>
-              <p>The agent finds contracts, history, and instructions so a human can respond faster and more accurately.</p>
-            </div>
-          </div>
-        </div>
-        <aside class="content-card">
-          <h2>Next step</h2>
-          <p>Choose one workflow where manual work repeats weekly and the output is easy to review. That quickly shows whether an agent is worth taking into production.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:contact@aigen.fi">Contact us</a>
-            <a class="btn btn-secondary" href="/en/blog/">Read the blog</a>
-          </div>
-        </aside>
-      </div>
-    </section>
-  </main>
-  <footer>&copy; 2026 AI Generation Oy · <a href="/en/ai-agent-for-business/">AI agent for business</a></footer>
+<main class="product-main" id="main" tabindex="-1"><nav aria-label="Related pages" class="page-links container"><a href="/en/ai-act-for-smes/">AI Act</a></nav>
+<section class="product-hero">
+<div class="container hero-grid">
+<div>
+<span class="eyebrow">AI agents for companies</span>
+<h1>An AI agent does bounded work, not just chat.</h1>
+<p class="lead">A well-built agent reads background information, uses approved tools, prepares decisions, and leaves an auditable trail of what it did and why.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="mailto:contact@aigen.fi">Ask about a use case</a>
+<a class="btn btn-secondary" href="/en/ai-automation-for-smes/">Read about automation</a>
+</div>
+</div>
+<aside class="summary-card">
+<h2>A good first use case</h2>
+<ul class="summary-list">
+<li>Repeated work with a clear input and output.</li>
+<li>Data and tools whose permissions can be bounded.</li>
+<li>A human reviewer for exceptions before broader rollout.</li>
+</ul>
+</aside>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<h2 class="section-title">What does an AI agent actually do?</h2>
+<p class="section-intro">An agent is useful when a chatbot or a single integration is not enough. It handles several steps inside agreed limits and escalates unclear cases to a human.</p>
+<div class="grid-3">
+<div class="feature">
+<h3>Finds and combines information</h3>
+<p>The agent reads instructions, documents, spreadsheets, and system data without forcing employees to copy everything into a chat.</p>
+</div>
+<div class="feature">
+<h3>Uses tools</h3>
+<p>It can fill forms, call APIs, update systems, and prepare replies only with the permissions it has been given.</p>
+</div>
+<div class="feature">
+<h3>Leaves an audit trail</h3>
+<p>A good implementation shows what the agent did, which data it used, and where a human approved or corrected the result.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-soft">
+<div class="container grid-2">
+<div class="content-card">
+<h2>Set the limits before building</h2>
+<ul>
+<li>Which data the agent may read and where it may write.</li>
+<li>What it may do independently and where approval is required.</li>
+<li>How errors, logs, privacy, and responsibilities are handled.</li>
+<li>How value is measured: time, throughput, quality, or reduced risk.</li>
+</ul>
+</div>
+<div class="content-card">
+<h2>Aigen implementation model</h2>
+<p>We start with one bounded workflow, not a massive transformation program. First we describe the current work, then we build the agent tools and limits, and finally we test with real data before expanding.</p>
+<p>That keeps the agent from becoming a demo that looks good in a meeting but disappears from daily work.</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container grid-2">
+<div>
+<h2 class="section-title">Typical first agents</h2>
+<div class="faq-list">
+<details class="faq-item">
+<summary>RFP and document pre-processing</summary>
+<p>The agent extracts key details, spots missing information, and prepares a summary for a human reviewer.</p>
+</details>
+<details class="faq-item">
+<summary>Report and authority-material preparation</summary>
+<p>The agent combines data, checks it against rules, and drafts material for the responsible person to approve.</p>
+</details>
+<details class="faq-item">
+<summary>Customer-service back office work</summary>
+<p>The agent finds contracts, history, and instructions so a human can respond faster and more accurately.</p>
+</details>
+</div>
+</div>
+<aside class="content-card">
+<h2>Next step</h2>
+<p>Choose one workflow where manual work repeats weekly and the output is easy to review. That quickly shows whether an agent is worth taking into production.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="mailto:contact@aigen.fi">Contact us</a>
+<a class="btn btn-secondary" href="/en/blog/">Read the blog</a>
+</div>
+</aside>
+</div>
+</section>
+</main>
+<footer class="site-footer">© 2026 AI Generation Oy · <a href="/en/ai-agent-for-business/">AI agent for business</a></footer>
 </body>
 </html>

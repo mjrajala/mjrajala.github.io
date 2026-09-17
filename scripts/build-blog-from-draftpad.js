@@ -69,123 +69,23 @@ const keywords = [
   "Hermes",
 ];
 
-const nav = `
-  <nav class="nav" aria-label="Päänavigaatio">
-    <div class="nav-container">
-      <a href="/" class="nav-logo" aria-label="AI Generation etusivu"><img src="/assets/logo-black.png" alt="AI Generation" class="nav-logo-img" width="120" height="28"></a>
-      <div class="nav-links">
-        <a href="/#services">Palvelut</a>
-        <a href="/#tools">EU-työkalut</a>
-        <a href="/blog/" aria-current="page">Blogi</a>
-        <a href="/#products">Tuotteet</a>
-        <a href="/#about">Meistä</a>
-        <a href="/#contact">Yhteystiedot</a>
-        <a href="/en/" class="nav-lang" hreflang="en">EN</a>
-      </div>
-    </div>
-  </nav>`;
-
-const sharedCss = `
-    :root {
-      --bg: #ffffff;
-      --bg-soft: #f6f7f8;
-      --text: #171717;
-      --text-muted: #5f6368;
-      --accent: #171717;
-      --border: #dedede;
-      --card: #ffffff;
-      --radius: 8px;
+function renderNav(route) {
+  const existingPath = path.join(root, route.replace(/^\//, ""), "index.html");
+  let html = "<a class=\"skip-link\" href=\"#main\">Siirry sisältöön</a><header class=\"site-header\"><nav aria-label=\"Päänavigaatio\" class=\"nav-container\">\n<a class=\"nav-logo\" href=\"/\"><img alt=\"AI Generation\" height=\"36\" src=\"/assets/logo-black.png\" width=\"152\"/></a>\n<button aria-controls=\"main-nav\" aria-expanded=\"false\" class=\"menu-toggle\" type=\"button\">Valikko <span aria-hidden=\"true\">＋</span></button>\n<div class=\"nav-links\" id=\"main-nav\"><a href=\"/tuotteet/cbam-tool/\">Aigen CBAM</a><a href=\"/#services\">Palvelut</a><a href=\"/#products\">Tuotteet</a><a href=\"/#tools\">Oppaat ja työkalut</a><a href=\"/blog/\">Blogi</a><a href=\"/#about\">Meistä</a><a class=\"nav-contact\" href=\"/#contact\">Ota yhteyttä <span aria-hidden=\"true\">↗</span></a></div>\n<div aria-label=\"Kieli\" class=\"nav-language\"><a aria-current=\"page\" href=\"/blog/\" hreflang=\"fi\" lang=\"fi\">FI</a><span aria-hidden=\"true\">/</span><a href=\"/en/blog/\" hreflang=\"en\" lang=\"en\">EN</a></div></nav></header>";
+  html = html.replace(/href="[^"]+" hreflang="fi"/, `href="${esc(route)}" hreflang="fi"`);
+  if (fs.existsSync(existingPath)) {
+    const existing = fs.readFileSync(existingPath, "utf8");
+    for (const language of ["fi", "en"]) {
+      const alternate = (existing.match(/<link\b[^>]*>/g) || []).find(tag => tag.includes(`hreflang="${language}"`));
+      const href = alternate?.match(/href="([^"]+)"/)?.[1];
+      if (href) {
+        const destination = new URL(href, siteUrl).pathname;
+        html = html.replace(new RegExp(`href="[^"]+" hreflang="${language}"`), `href="${esc(destination)}" hreflang="${language}"`);
+      }
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-    img { max-width: 100%; height: auto; }
-    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    .nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 64px;
-    }
-    .nav-logo { display: flex; align-items: center; text-decoration: none; }
-    .nav-logo-img { height: 28px; width: auto; max-width: 120px; }
-    .nav-links { display: flex; gap: 30px; align-items: center; }
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover,
-    .nav-links a[aria-current="page"] { color: var(--text); }
-    .nav-lang {
-      font-size: 0.82rem;
-      font-weight: 700;
-      border: 1px solid var(--border);
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-left: 10px;
-    }
-    .site-footer {
-      border-top: 1px solid var(--border);
-      color: var(--text-muted);
-      padding: 32px 24px;
-      font-size: 0.9rem;
-    }
-    .footer-content {
-      max-width: 1120px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-    .footer-logo-img { height: 24px; width: auto; }
-    .meta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      align-items: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      font-weight: 650;
-    }
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      border: 1px solid var(--border);
-      background: #fff;
-      border-radius: 999px;
-      padding: 0.28rem 0.65rem;
-      color: var(--text-muted);
-      font-size: 0.82rem;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-    @media (max-width: 820px) {
-      .nav-links { display: none; }
-      .nav-container { padding: 0 20px; }
-      .footer-content { flex-direction: column; text-align: center; }
-    }`;
+  }
+  return html;
+}
 
 function esc(value) {
   return String(value ?? "")
@@ -352,6 +252,8 @@ function renderArticle(post, posts) {
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="192x192">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(desc)}">
@@ -374,132 +276,28 @@ function renderArticle(post, posts) {
   <meta name="twitter:title" content="${esc(post.title)}">
   <meta name="twitter:description" content="${esc(desc)}">
   <meta name="twitter:image" content="${absolute(image)}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <script type="application/ld+json">${JSON.stringify(articleJsonLd(post, slug, image, relatedPosts))}</script>
-  <style>
-${sharedCss}
-    .hero {
-      padding: 136px 24px 44px;
-      background: linear-gradient(180deg, #ffffff 0%, #f5f6f7 100%);
-      border-bottom: 1px solid var(--border);
-    }
-    .hero-inner,
-    .article,
-    .related-inner {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .breadcrumb {
-      margin-bottom: 1rem;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-    .breadcrumb a { text-decoration: none; color: var(--text-muted); }
-    h1 {
-      max-width: 860px;
-      font-size: clamp(2.05rem, 5vw, 3.55rem);
-      line-height: 1.08;
-      letter-spacing: 0;
-      margin: 1rem 0;
-    }
-    .lead {
-      color: var(--text-muted);
-      font-size: 1.15rem;
-      max-width: 760px;
-      margin-top: 1rem;
-    }
-    .hero-image {
-      max-width: 900px;
-      margin: 28px auto 0;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--bg-soft);
-      aspect-ratio: 3 / 2;
-      display: grid;
-      place-items: center;
-    }
-    .hero-image.portrait-frame {
-      max-width: 680px;
-      aspect-ratio: 2 / 3;
-    }
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: ${image === fallbackImage ? "contain" : "cover"};
-      padding: ${image === fallbackImage ? "8%" : "0"};
-    }
-    .hero-image img.portrait {
-      object-fit: contain;
-      padding: 0;
-    }
-    .article {
-      padding: 54px 24px 70px;
-    }
-    .article p,
-    .article li {
-      color: #2a2d2f;
-      font-size: 1.04rem;
-    }
-    .article p + p { margin-top: 1.1rem; }
-    .article ul {
-      margin: 1.1rem 0 1.35rem;
-      padding-left: 1.3rem;
-    }
-    .article li + li { margin-top: 0.45rem; }
-    .source-box {
-      margin-top: 2.3rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-    .related {
-      padding: 0 24px 76px;
-    }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .related-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1rem;
-      text-decoration: none;
-      background: #fff;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .related-card:hover { transform: translateY(-2px); border-color: #171717; }
-    .related-card span { display: block; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.35rem; }
-    .related-card strong { display: block; line-height: 1.25; }
-    @media (max-width: 820px) {
-      .hero { padding: 108px 20px 36px; }
-      .article { padding: 38px 20px 54px; }
-      .related { padding: 0 20px 56px; }
-      .related-grid { grid-template-columns: 1fr; }
-      .hero-image { margin-top: 22px; }
-      .article p,
-      .article li { font-size: 1rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/aigen-preview.css">
+  <script defer src="/assets/aigen-preview.js"></script>
 
   <meta name="google-site-verification" content="-WtFkMpIXZlK3wpWNQvvrmWk1nLpZdkneqXFo_pVtn0">
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YFF8RBFBP3"></script>
-  <script>
+<script>
+    if (["aigen.fi", "www.aigen.fi"].includes(location.hostname)) {
+    const analytics = document.createElement("script");
+    analytics.async = true;
+    analytics.src = "https://www.googletagmanager.com/gtag/js?id=G-YFF8RBFBP3";
+    document.head.appendChild(analytics);
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
     gtag("config", "G-YFF8RBFBP3");
+    }
   </script>
 </head>
-<body>
-${nav}
-  <header class="hero">
+<body class="aigen-preview blog-article-page">
+${renderNav(`/blog/${slug}/`)}
+  <header class="blog-hero">
     <div class="hero-inner">
       <div class="breadcrumb"><a href="/">Etusivu</a> / <a href="/blog/">Blogi</a></div>
       <div class="meta-row">
@@ -514,7 +312,7 @@ ${nav}
     </div>
   </header>
 
-  <main class="article">
+  <main class="article" id="main" tabindex="-1">
 ${renderContent(post)}
 
     <div class="source-box">
@@ -586,6 +384,8 @@ function renderIndex(posts) {
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="192x192">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aigen Blogi | AI-agentit, automaatio ja EU-compliance</title>
   <meta name="description" content="${esc(desc)}">
@@ -605,103 +405,28 @@ function renderIndex(posts) {
   <meta name="twitter:title" content="Aigen Blogi">
   <meta name="twitter:description" content="${esc(desc)}">
   <meta name="twitter:image" content="${absolute(postImage(featured))}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <script type="application/ld+json">${JSON.stringify(listSchema)}</script>
-  <style>
-${sharedCss}
-    .hero {
-      padding: 144px 24px 58px;
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-    }
-    .hero-inner,
-    .blog-list {
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-    .hero h1 {
-      max-width: 840px;
-      font-size: clamp(2.2rem, 5vw, 3.7rem);
-      line-height: 1.05;
-      letter-spacing: 0;
-      margin: 1rem 0;
-    }
-    .hero p {
-      max-width: 760px;
-      color: var(--text-muted);
-      font-size: 1.13rem;
-    }
-    .blog-list {
-      padding: 54px 24px 78px;
-      display: grid;
-      grid-template-columns: 1.7fr 0.8fr;
-      gap: 1.4rem;
-      align-items: start;
-    }
-    .posts {
-      display: grid;
-      gap: 1rem;
-    }
-    .post-card {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 1.2rem;
-      padding: 1rem;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: #fff;
-      text-decoration: none;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .post-card:hover { transform: translateY(-2px); border-color: #171717; }
-    .post-thumb {
-      aspect-ratio: 3 / 2;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--bg-soft);
-      overflow: hidden;
-      display: grid;
-      place-items: center;
-    }
-    .post-thumb img { width: 100%; height: 100%; object-fit: cover; }
-    .post-thumb img.logo { object-fit: contain; padding: 10%; }
-    .post-thumb img.portrait { object-fit: contain; padding: 0; }
-    .post-card h2 { font-size: 1.28rem; line-height: 1.22; margin: 0.55rem 0 0.55rem; }
-    .post-card p { color: var(--text-muted); }
-    .aside {
-      position: sticky;
-      top: 88px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--bg-soft);
-      padding: 1.2rem;
-    }
-    .aside h2 { font-size: 1.05rem; margin-bottom: 0.65rem; }
-    .aside p { color: var(--text-muted); font-size: 0.95rem; }
-    .aside a { font-weight: 750; }
-    @media (max-width: 900px) {
-      .hero { padding: 110px 20px 42px; }
-      .blog-list { grid-template-columns: 1fr; padding: 38px 20px 58px; }
-      .post-card { grid-template-columns: 1fr; }
-      .aside { position: static; }
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/aigen-preview.css">
+  <script defer src="/assets/aigen-preview.js"></script>
 
   <meta name="google-site-verification" content="-WtFkMpIXZlK3wpWNQvvrmWk1nLpZdkneqXFo_pVtn0">
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YFF8RBFBP3"></script>
-  <script>
+<script>
+    if (["aigen.fi", "www.aigen.fi"].includes(location.hostname)) {
+    const analytics = document.createElement("script");
+    analytics.async = true;
+    analytics.src = "https://www.googletagmanager.com/gtag/js?id=G-YFF8RBFBP3";
+    document.head.appendChild(analytics);
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
     gtag("config", "G-YFF8RBFBP3");
+    }
   </script>
 </head>
-<body>
-${nav}
-  <header class="hero">
+<body class="aigen-preview blog-index-page">
+${renderNav("/blog/")}
+  <header class="blog-hero">
     <div class="hero-inner">
       <div class="tag">Aigen Blogi</div>
       <h1>AI-agentit, automaatio ja oikea työ yrityksen arjessa.</h1>
@@ -709,7 +434,7 @@ ${nav}
     </div>
   </header>
 
-  <main class="blog-list">
+  <main class="blog-list" id="main" tabindex="-1">
     <section class="posts" aria-label="Blogikirjoitukset">
       ${posts
         .map((post, index) => {
@@ -729,11 +454,6 @@ ${nav}
         .join("\n      ")}
     </section>
 
-    <aside class="aside">
-      <h2>Mistä nämä tekstit tulevat?</h2>
-      <p>Nämä ovat AI Generation Oy:n julkaistuja LinkedIn-sisältöjä, nostettuna blogiin pysyväksi hakukoneystävälliseksi sisällöksi kuvien, metadatan, canonical-linkkien ja schema-merkintöjen kanssa.</p>
-      <p style="margin-top:0.8rem;"><a href="/#contact">Kysy, miten sama tehdään omalle yritykselle.</a></p>
-    </aside>
   </main>
 
   <footer class="site-footer">
@@ -758,7 +478,7 @@ function xmlEsc(value) {
 
 function walkIndexFiles(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
-    if (entry.name.startsWith(".") || entry.name === "node_modules") return [];
+    if (entry.name.startsWith(".") || entry.name === "node_modules" || entry.name.startsWith("review")) return [];
 
     const entryPath = path.join(dir, entry.name);
     if (entry.isDirectory()) return walkIndexFiles(entryPath);
@@ -841,22 +561,38 @@ ${allUrls
 `;
 }
 
-const posts = JSON.parse(fs.readFileSync(sourcePath, "utf8"))
-  .filter((post) => post.status === "published")
-  .sort(
-    (a, b) =>
-      new Date(b.publishedAt || b.updatedAt || b.createdAt) -
-      new Date(a.publishedAt || a.updatedAt || a.createdAt)
-  );
-
-for (const post of posts) {
-  const slug = postSlug(post);
-  const dir = path.join(root, "blog", slug);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "index.html"), renderArticle(post, posts));
+function preserveExistingSeo(filePath, generated) {
+  if (!fs.existsSync(filePath)) return generated;
+  const oldHead = fs.readFileSync(filePath, "utf8").match(/<head>([\s\S]*?)<\/head>/i)?.[1];
+  if (!oldHead) return generated;
+  const seoTags = /<title>[\s\S]*?<\/title>|<meta\b[^>]*>|<link\b(?=[^>]*\brel=["'](?:canonical|alternate|icon)["'])[^>]*>|<script\b(?=[^>]*\btype=["']application\/ld\+json["'])[^>]*>[\s\S]*?<\/script>/gi;
+  const tags = oldHead.match(seoTags) || [];
+  return generated.replace(/<head>([\s\S]*?)<\/head>/i, (_, head) => `<head>\n${tags.join("\n")}\n${head.replace(seoTags, "")}\n</head>`);
 }
 
-fs.writeFileSync(path.join(root, "blog", "index.html"), renderIndex(posts));
-fs.writeFileSync(path.join(root, "sitemap.xml"), renderSitemap(posts));
+function build() {
+  const posts = JSON.parse(fs.readFileSync(sourcePath, "utf8"))
+    .filter((post) => post.status === "published")
+    .sort(
+      (a, b) =>
+        new Date(b.publishedAt || b.updatedAt || b.createdAt) -
+        new Date(a.publishedAt || a.updatedAt || a.createdAt)
+    );
 
-console.log(`Built ${posts.length} blog posts from Draftpad published LinkedIn data.`);
+  for (const post of posts) {
+    const slug = postSlug(post);
+    const dir = path.join(root, "blog", slug);
+    fs.mkdirSync(dir, { recursive: true });
+    const filePath = path.join(dir, "index.html");
+    fs.writeFileSync(filePath, preserveExistingSeo(filePath, renderArticle(post, posts)));
+  }
+
+  const indexPath = path.join(root, "blog", "index.html");
+  fs.writeFileSync(indexPath, preserveExistingSeo(indexPath, renderIndex(posts)));
+  fs.writeFileSync(path.join(root, "sitemap.xml"), renderSitemap(posts));
+
+  console.log(`Built ${posts.length} blog posts from Draftpad published LinkedIn data.`);
+}
+
+if (require.main === module) build();
+module.exports = { renderArticle, renderIndex, renderSitemap, preserveExistingSeo, walkIndexFiles };

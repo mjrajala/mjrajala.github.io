@@ -1,345 +1,144 @@
 <!DOCTYPE html>
+
 <html lang="fi">
 <head>
-    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="192x192">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aigen Blogi | AI-agentit, automaatio ja EU-compliance</title>
-  <meta name="description" content="Aigenin blogi tekoälyagenteista, automaatiosta, EU-compliancesta ja käytännön tavoista kehittää yrityksen arjen prosesseja.">
-  <meta name="keywords" content="tekoälyagentit, AI-agentit, agenttitekoäly, automaatio, AI Generation Oy, Aigen, OpenClaw, Hermes">
-  <meta name="author" content="AI Generation Oy">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="canonical" href="https://aigen.fi/blog/">
-  <link rel="alternate" hreflang="fi" href="https://aigen.fi/blog/">
-  <link rel="alternate" hreflang="en" href="https://aigen.fi/en/blog/">
-  <link rel="alternate" hreflang="x-default" href="https://aigen.fi/blog/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="fi_FI">
-  <meta property="og:title" content="Aigen Blogi">
-  <meta property="og:description" content="Aigenin blogi tekoälyagenteista, automaatiosta, EU-compliancesta ja käytännön tavoista kehittää yrityksen arjen prosesseja.">
-  <meta property="og:url" content="https://aigen.fi/blog/">
-  <meta property="og:site_name" content="AI Generation Oy">
-  <meta property="og:image" content="https://aigen.fi/assets/blog/ai-agenttien-muistikerros.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Aigen Blogi">
-  <meta name="twitter:description" content="Aigenin blogi tekoälyagenteista, automaatiosta, EU-compliancesta ja käytännön tavoista kehittää yrityksen arjen prosesseja.">
-  <meta name="twitter:image" content="https://aigen.fi/assets/blog/ai-agenttien-muistikerros.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Blog","@id":"https://aigen.fi/blog/#blog","name":"Aigen Blogi","description":"Aigenin blogi tekoälyagenteista, automaatiosta, EU-compliancesta ja käytännön tavoista kehittää yrityksen arjen prosesseja.","url":"https://aigen.fi/blog/","inLanguage":"fi-FI","publisher":{"@id":"https://aigen.fi/#organization"},"blogPost":[{"@type":"BlogPosting","headline":"Agentti kirjautuu. Mallin ei tarvitse nähdä salasanaa.","url":"https://aigen.fi/blog/chatgpt-work-kirjautuu-ilman-salasanaa/","datePublished":"2026-08-26","image":"https://aigen.fi/assets/blog/chatgpt-work-kirjautuminen.png"},{"@type":"BlogPosting","headline":"Liian valmis teksti paljastaa itsensä","url":"https://aigen.fi/blog/mallit-kehittyvat-tekstin-tunnistaa/","datePublished":"2026-08-19","image":"https://aigen.fi/assets/blog/mallit-kehittyvat-teksti-paljastaa.png"},{"@type":"BlogPosting","headline":"Grok Bot tekee tekoälyagentista työkaverin","url":"https://aigen.fi/blog/grok-bot-tekoalyagentti-tyokaverina/","datePublished":"2026-08-16","image":"https://aigen.fi/assets/blog/ai-agenttien-muistikerros.png"},{"@type":"BlogPosting","headline":"AI-agenttien suurin ongelma ei ole älykkyys. Se on muisti.","url":"https://aigen.fi/blog/ai-agenttien-suurin-ongelma-on-muisti/","datePublished":"2026-06-22","image":"https://aigen.fi/assets/blog/ai-agenttien-muistikerros.png"},{"@type":"BlogPosting","headline":"Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.","url":"https://aigen.fi/blog/tekoalyn-suurin-riski-huono-johtaminen/","datePublished":"2026-06-14","image":"https://aigen.fi/assets/blog/tekoalyn-riski-huono-johtaminen.png"},{"@type":"BlogPosting","headline":"Tekoäly muuttaa omalle koneellesi","url":"https://aigen.fi/blog/tekoaly-muuttaa-omalle-koneelle/","datePublished":"2026-06-10","image":"https://aigen.fi/assets/blog/rtx-spark-paikallinen-tekoaly.png"},{"@type":"BlogPosting","headline":"Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse","url":"https://aigen.fi/blog/vakuutusten-kilpailutus-ai-agentilla/","datePublished":"2026-06-03","image":"https://aigen.fi/assets/blog/vakuutusten-kilpailutus-ai-agentilla.png"},{"@type":"BlogPosting","headline":"Annoimme AI-agentin tehdä yrityksen veroilmoituksen","url":"https://aigen.fi/blog/ai-agentti-veroilmoitus/","datePublished":"2026-05-25","image":"https://aigen.fi/assets/blog/veroilmoitus-ai-agentti.jpg"},{"@type":"BlogPosting","headline":"Mallivertailu on helppo tarina. Agenttityössä workflow ratkaisee.","url":"https://aigen.fi/blog/agenttityossa-workflow-ratkaisee/","datePublished":"2026-05-22","image":"https://aigen.fi/assets/blog/agenttityo-workflow.jpg"},{"@type":"BlogPosting","headline":"Tekoäly lakkasi olemasta hakukone. Useimmat eivät huomanneet.","url":"https://aigen.fi/blog/tekoaly-ei-ole-hakukone/","datePublished":"2026-05-06","image":"https://aigen.fi/assets/logo-slogan.png"},{"@type":"BlogPosting","headline":"Agentit tekevät monivaiheisesta selvitystyöstä 5 minuutin workflow’n","url":"https://aigen.fi/blog/agentit-selvitystyo-workflow/","datePublished":"2026-04-20","image":"https://aigen.fi/assets/logo-slogan.png"},{"@type":"BlogPosting","headline":"Tekoälyagentit eivät ole meille demoja. Ne ovat osa arkea.","url":"https://aigen.fi/blog/tekoalyagentit-arjessa/","datePublished":"2026-04-20","image":"https://aigen.fi/assets/logo-slogan.png"}]},{"@type":"Organization","@id":"https://aigen.fi/#organization","name":"AI Generation Oy","url":"https://aigen.fi","logo":"https://aigen.fi/assets/logo-black.png"}]}</script>
-  <style>
-
-    :root {
-      --bg: #ffffff;
-      --bg-soft: #f6f7f8;
-      --text: #171717;
-      --text-muted: #5f6368;
-      --accent: #171717;
-      --border: #dedede;
-      --card: #ffffff;
-      --radius: 8px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-    img { max-width: 100%; height: auto; }
-    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    .nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 64px;
-    }
-    .nav-logo { display: flex; align-items: center; text-decoration: none; }
-    .nav-logo-img { height: 28px; width: auto; max-width: 120px; }
-    .nav-links { display: flex; gap: 30px; align-items: center; }
-    .nav-language { display: inline-flex; align-items: center; gap: 6px; margin-left: 8px; }
-    .nav-language-label { color: var(--text-muted); font-size: 0.82rem; font-weight: 650; }
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover,
-    .nav-links a[aria-current="page"] { color: var(--text); }
-    .nav-lang {
-      font-size: 0.82rem;
-      font-weight: 700;
-      border: 1px solid var(--border);
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-left: 10px;
-    }
-    .nav-lang[aria-current="page"] { color: var(--text); background: #f3f4f6; }
-    .site-footer {
-      border-top: 1px solid var(--border);
-      color: var(--text-muted);
-      padding: 32px 24px;
-      font-size: 0.9rem;
-    }
-    .footer-content {
-      max-width: 1120px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-    .footer-logo-img { height: 24px; width: auto; }
-    .meta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      align-items: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      font-weight: 650;
-    }
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      border: 1px solid var(--border);
-      background: #fff;
-      border-radius: 999px;
-      padding: 0.28rem 0.65rem;
-      color: var(--text-muted);
-      font-size: 0.82rem;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-    @media (max-width: 820px) {
-      .nav-links { display: none; }
-      .nav-language { margin-left: auto; }
-      .nav-language-label { display: none; }
-      .nav-container { padding: 0 20px; }
-      .footer-content { flex-direction: column; text-align: center; }
-    }
-    .hero {
-      padding: 144px 24px 58px;
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-    }
-    .hero-inner,
-    .blog-list {
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-    .hero h1 {
-      max-width: 840px;
-      font-size: clamp(2.2rem, 5vw, 3.7rem);
-      line-height: 1.05;
-      letter-spacing: 0;
-      margin: 1rem 0;
-    }
-    .hero p {
-      max-width: 760px;
-      color: var(--text-muted);
-      font-size: 1.13rem;
-    }
-    .blog-list {
-      padding: 54px 24px 78px;
-      display: grid;
-      grid-template-columns: 1.7fr 0.8fr;
-      gap: 1.4rem;
-      align-items: start;
-    }
-    .posts {
-      display: grid;
-      gap: 1rem;
-    }
-    .post-card {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 1.2rem;
-      padding: 1rem;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: #fff;
-      text-decoration: none;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .post-card:hover { transform: translateY(-2px); border-color: #171717; }
-    .post-thumb {
-      aspect-ratio: 3 / 2;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--bg-soft);
-      overflow: hidden;
-      display: grid;
-      place-items: center;
-    }
-    .post-thumb img { width: 100%; height: 100%; object-fit: cover; }
-    .post-thumb img.logo { object-fit: contain; padding: 10%; }
-    .post-thumb img.portrait { object-fit: contain; padding: 0; }
-    .post-card h2 { font-size: 1.28rem; line-height: 1.22; margin: 0.55rem 0 0.55rem; }
-    .post-card p { color: var(--text-muted); }
-    .aside {
-      position: sticky;
-      top: 88px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--bg-soft);
-      padding: 1.2rem;
-    }
-    .aside h2 { font-size: 1.05rem; margin-bottom: 0.65rem; }
-    .aside p { color: var(--text-muted); font-size: 0.95rem; }
-    .aside a { font-weight: 750; }
-    @media (max-width: 900px) {
-      .hero { padding: 110px 20px 42px; }
-      .blog-list { grid-template-columns: 1fr; padding: 38px 20px 58px; }
-      .post-card { grid-template-columns: 1fr; }
-      .aside { position: static; }
-    }
-  </style>
-
-  <meta name="google-site-verification" content="-WtFkMpIXZlK3wpWNQvvrmWk1nLpZdkneqXFo_pVtn0">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YFF8RBFBP3"></script>
-  <script>
+<link href="/favicon.ico" rel="icon" sizes="16x16 32x32 48x48 64x64"/>
+<link href="/favicon.png" rel="icon" sizes="192x192" type="image/png"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aigen Blogi | AI-agentit, automaatio ja EU-compliance</title>
+<meta content="Aigenin blogi tekoälyagenteista, automaatiosta, EU-compliancesta ja käytännön tavoista kehittää yrityksen arjen prosesseja." name="description"/>
+<meta content="tekoälyagentit, AI-agentit, agenttitekoäly, automaatio, AI Generation Oy, Aigen, OpenClaw, Hermes" name="keywords"/>
+<meta content="AI Generation Oy" name="author"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="https://aigen.fi/blog/" rel="canonical"/>
+<link href="https://aigen.fi/blog/" hreflang="fi" rel="alternate"/>
+<link href="https://aigen.fi/en/blog/" hreflang="en" rel="alternate"/>
+<link href="https://aigen.fi/blog/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="fi_FI" property="og:locale"/>
+<meta content="Aigen Blogi" property="og:title"/>
+<meta content="Aigenin blogi tekoälyagenteista, automaatiosta, EU-compliancesta ja käytännön tavoista kehittää yrityksen arjen prosesseja." property="og:description"/>
+<meta content="https://aigen.fi/blog/" property="og:url"/>
+<meta content="AI Generation Oy" property="og:site_name"/>
+<meta content="https://aigen.fi/assets/blog/ai-agenttien-muistikerros.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Aigen Blogi" name="twitter:title"/>
+<meta content="Aigenin blogi tekoälyagenteista, automaatiosta, EU-compliancesta ja käytännön tavoista kehittää yrityksen arjen prosesseja." name="twitter:description"/>
+<meta content="https://aigen.fi/assets/blog/ai-agenttien-muistikerros.png" name="twitter:image"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Blog","@id":"https://aigen.fi/blog/#blog","name":"Aigen Blogi","description":"Aigenin blogi tekoälyagenteista, automaatiosta, EU-compliancesta ja käytännön tavoista kehittää yrityksen arjen prosesseja.","url":"https://aigen.fi/blog/","inLanguage":"fi-FI","publisher":{"@id":"https://aigen.fi/#organization"},"blogPost":[{"@type":"BlogPosting","headline":"Agentti kirjautuu. Mallin ei tarvitse nähdä salasanaa.","url":"https://aigen.fi/blog/chatgpt-work-kirjautuu-ilman-salasanaa/","datePublished":"2026-08-26","image":"https://aigen.fi/assets/blog/chatgpt-work-kirjautuminen.png"},{"@type":"BlogPosting","headline":"Liian valmis teksti paljastaa itsensä","url":"https://aigen.fi/blog/mallit-kehittyvat-tekstin-tunnistaa/","datePublished":"2026-08-19","image":"https://aigen.fi/assets/blog/mallit-kehittyvat-teksti-paljastaa.png"},{"@type":"BlogPosting","headline":"Grok Bot tekee tekoälyagentista työkaverin","url":"https://aigen.fi/blog/grok-bot-tekoalyagentti-tyokaverina/","datePublished":"2026-08-16","image":"https://aigen.fi/assets/blog/ai-agenttien-muistikerros.png"},{"@type":"BlogPosting","headline":"AI-agenttien suurin ongelma ei ole älykkyys. Se on muisti.","url":"https://aigen.fi/blog/ai-agenttien-suurin-ongelma-on-muisti/","datePublished":"2026-06-22","image":"https://aigen.fi/assets/blog/ai-agenttien-muistikerros.png"},{"@type":"BlogPosting","headline":"Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.","url":"https://aigen.fi/blog/tekoalyn-suurin-riski-huono-johtaminen/","datePublished":"2026-06-14","image":"https://aigen.fi/assets/blog/tekoalyn-riski-huono-johtaminen.png"},{"@type":"BlogPosting","headline":"Tekoäly muuttaa omalle koneellesi","url":"https://aigen.fi/blog/tekoaly-muuttaa-omalle-koneelle/","datePublished":"2026-06-10","image":"https://aigen.fi/assets/blog/rtx-spark-paikallinen-tekoaly.png"},{"@type":"BlogPosting","headline":"Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse","url":"https://aigen.fi/blog/vakuutusten-kilpailutus-ai-agentilla/","datePublished":"2026-06-03","image":"https://aigen.fi/assets/blog/vakuutusten-kilpailutus-ai-agentilla.png"},{"@type":"BlogPosting","headline":"Annoimme AI-agentin tehdä yrityksen veroilmoituksen","url":"https://aigen.fi/blog/ai-agentti-veroilmoitus/","datePublished":"2026-05-25","image":"https://aigen.fi/assets/blog/veroilmoitus-ai-agentti.jpg"},{"@type":"BlogPosting","headline":"Mallivertailu on helppo tarina. Agenttityössä workflow ratkaisee.","url":"https://aigen.fi/blog/agenttityossa-workflow-ratkaisee/","datePublished":"2026-05-22","image":"https://aigen.fi/assets/blog/agenttityo-workflow.jpg"},{"@type":"BlogPosting","headline":"Tekoäly lakkasi olemasta hakukone. Useimmat eivät huomanneet.","url":"https://aigen.fi/blog/tekoaly-ei-ole-hakukone/","datePublished":"2026-05-06","image":"https://aigen.fi/assets/logo-slogan.png"},{"@type":"BlogPosting","headline":"Agentit tekevät monivaiheisesta selvitystyöstä 5 minuutin workflow’n","url":"https://aigen.fi/blog/agentit-selvitystyo-workflow/","datePublished":"2026-04-20","image":"https://aigen.fi/assets/logo-slogan.png"},{"@type":"BlogPosting","headline":"Tekoälyagentit eivät ole meille demoja. Ne ovat osa arkea.","url":"https://aigen.fi/blog/tekoalyagentit-arjessa/","datePublished":"2026-04-20","image":"https://aigen.fi/assets/logo-slogan.png"}]},{"@type":"Organization","@id":"https://aigen.fi/#organization","name":"AI Generation Oy","url":"https://aigen.fi","logo":"https://aigen.fi/assets/logo-black.png"}]}</script>
+<meta content="-WtFkMpIXZlK3wpWNQvvrmWk1nLpZdkneqXFo_pVtn0" name="google-site-verification"/>
+<!-- Google tag (gtag.js) -->
+<link href="/assets/aigen-preview.css" rel="stylesheet"/><script>
+    if (["aigen.fi", "www.aigen.fi"].includes(location.hostname)) {
+    const analytics = document.createElement("script");
+    analytics.async = true;
+    analytics.src = "https://www.googletagmanager.com/gtag/js?id=G-YFF8RBFBP3";
+    document.head.appendChild(analytics);
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
     gtag("config", "G-YFF8RBFBP3");
-  </script>
-</head>
-<body>
+    }
+  </script><script defer="" src="/assets/aigen-preview.js"></script></head>
+<body class="aigen-preview blog-index-page"><a class="skip-link" href="#main">Siirry sisältöön</a><header class="site-header"><nav aria-label="Päänavigaatio" class="nav-container">
+<a class="nav-logo" href="/"><img alt="AI Generation" height="36" src="/assets/logo-black.png" width="152"/></a>
+<button aria-controls="main-nav" aria-expanded="false" class="menu-toggle" type="button">Valikko <span aria-hidden="true">＋</span></button>
+<div class="nav-links" id="main-nav"><a href="/tuotteet/cbam-tool/">Aigen CBAM</a><a href="/#services">Palvelut</a><a href="/#products">Tuotteet</a><a href="/#tools">Oppaat ja työkalut</a><a href="/blog/">Blogi</a><a href="/#about">Meistä</a><a class="nav-contact" href="/#contact">Ota yhteyttä <span aria-hidden="true">↗</span></a></div>
+<div aria-label="Kieli" class="nav-language"><a aria-current="page" href="/blog/" hreflang="fi" lang="fi">FI</a><span aria-hidden="true">/</span><a href="/en/blog/" hreflang="en" lang="en">EN</a></div></nav></header>
+<header class="blog-hero">
+<div class="hero-inner">
+<div class="tag">Aigen Blogi</div>
+<h1>AI-agentit, automaatio ja oikea työ yrityksen arjessa.</h1>
+<p>Julkaistuja kirjoituksia siitä, miten AI-agentit muuttuvat demoista käyttökelpoisiksi työnkuluiksi: veroihin, raportointiin, tiedonhakuun, kilpailijaseurantaan ja luotettavuuden rakentamiseen.</p>
+</div>
+</header>
+<main class="blog-list" id="main" tabindex="-1">
+<section aria-label="Blogikirjoitukset" class="posts">
+<a class="post-card" href="/blog/chatgpt-work-kirjautuu-ilman-salasanaa/"><div class="post-thumb"><img alt="Agentti kirjautuu. Mallin ei tarvitse nähdä salasanaa." decoding="async" fetchpriority="high" height="1024" src="/assets/blog/chatgpt-work-kirjautuminen.png" width="1536"/></div><div><div class="meta-row"><span>26.8.2026</span><span class="tag">Tekoälyagentit</span><span class="tag">ChatGPT Work</span></div><h2>Agentti kirjautuu. Mallin ei tarvitse nähdä salasanaa.</h2><p>ChatGPT Work osaa nyt kirjautua sivuille ilman, että malli näkee tunnuksia. Raja on itse ominaisuus.</p></div></a>
+<a class="post-card" href="/blog/mallit-kehittyvat-tekstin-tunnistaa/"><div class="post-thumb"><img alt="Liian valmis teksti paljastaa itsensä" decoding="async" fetchpriority="high" height="1122" src="/assets/blog/mallit-kehittyvat-teksti-paljastaa.png" width="1402"/></div><div><div class="meta-row"><span>19.8.2026</span><span class="tag">Kirjoittaminen</span><span class="tag">Tekoälyagentit</span></div><h2>Liian valmis teksti paljastaa itsensä</h2><p>Mallit kirjoittavat sujuvammin kuin ennen. Samalla niiden äänen oppii huomaamaan nopeammin.</p></div></a>
+<a class="post-card" href="/blog/grok-bot-tekoalyagentti-tyokaverina/"><div class="post-thumb"><img alt="Grok Bot tekee tekoälyagentista työkaverin" decoding="async" fetchpriority="high" height="941" src="/assets/blog/ai-agenttien-muistikerros.png" width="1672"/></div><div><div class="meta-row"><span>16.8.2026</span><span class="tag">Tekoälyagentit</span><span class="tag">Grok Bot</span></div><h2>Grok Bot tekee tekoälyagentista työkaverin</h2><p>Mitä tapahtuu, kun agentille annetaan chat-ikkunan sijaan oma tietokone ja oikea työtehtävä?</p></div></a>
+<a class="post-card" href="/blog/ai-agenttien-suurin-ongelma-on-muisti/">
+<div class="post-thumb"><img alt="AI-agenttien suurin ongelma ei ole älykkyys. Se on muisti." class="" decoding="async" fetchpriority="high" height="941" src="/assets/blog/ai-agenttien-muistikerros.png" width="1672"/></div>
+<div>
+<div class="meta-row"><span>22.6.2026</span><span class="tag">LinkedIn</span></div>
+<h2>AI-agenttien suurin ongelma ei ole älykkyys. Se on muisti.</h2>
+<p>AI-agenttien käytännön pullonkaula ei ole enää pelkkä älykkyys, vaan nopea, luotettava ja käyttäjän korjattavissa oleva muistikerros.</p>
+</div>
+</a>
+<a class="post-card" href="/blog/tekoalyn-suurin-riski-huono-johtaminen/">
+<div class="post-thumb"><img alt="Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen." class="portrait" decoding="async" fetchpriority="high" height="1536" src="/assets/blog/tekoalyn-riski-huono-johtaminen.png" width="1024"/></div>
+<div>
+<div class="meta-row"><span>14.6.2026</span><span class="tag">LinkedIn</span></div>
+<h2>Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.</h2>
+<p>Tekoälyn suurin riski ei ole vain hallusinointi, vaan se, että organisaatiot käyttävät sitä kuin vastauskonetta eivätkä johda sen tekemää työtä.</p>
+</div>
+</a>
+<a class="post-card" href="/blog/tekoaly-muuttaa-omalle-koneelle/">
+<div class="post-thumb"><img alt="Tekoäly muuttaa omalle koneellesi" class="" decoding="async" height="941" loading="lazy" src="/assets/blog/rtx-spark-paikallinen-tekoaly.png" width="1672"/></div>
+<div>
+<div class="meta-row"><span>10.6.2026</span><span class="tag">Blogi</span></div>
+<h2>Tekoäly muuttaa omalle koneellesi</h2>
+<p>Paikallinen tekoäly tuo suuret mallit lähemmäs yrityksen omaa dataa, kustannuksia ja arjen työnkulkuja.</p>
+</div>
+</a>
+<a class="post-card" href="/blog/vakuutusten-kilpailutus-ai-agentilla/">
+<div class="post-thumb"><img alt="Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse" class="" decoding="async" height="1024" loading="lazy" src="/assets/blog/vakuutusten-kilpailutus-ai-agentilla.png" width="1536"/></div>
+<div>
+<div class="meta-row"><span>3.6.2026</span><span class="tag">LinkedIn</span></div>
+<h2>Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse</h2>
+<p>Käytännön esimerkki siitä, miten AI-agentti muutti viisi vakuutustarjousta ja ehdot yhdeksi selkeäksi vertailuksi.</p>
+</div>
+</a>
+<a class="post-card" href="/blog/ai-agentti-veroilmoitus/">
+<div class="post-thumb"><img alt="Annoimme AI-agentin tehdä yrityksen veroilmoituksen" class="" decoding="async" height="1024" loading="lazy" src="/assets/blog/veroilmoitus-ai-agentti.jpg" width="1536"/></div>
+<div>
+<div class="meta-row"><span>25.5.2026</span><span class="tag">LinkedIn</span></div>
+<h2>Annoimme AI-agentin tehdä yrityksen veroilmoituksen</h2>
+<p>Mitä tapahtuu, kun AI-agentti viedään oikeaan viranomaislomakkeeseen, kirjanpidon lukuihin ja monivaiheiseen back office -työhön.</p>
+</div>
+</a>
+<a class="post-card" href="/blog/agenttityossa-workflow-ratkaisee/">
+<div class="post-thumb"><img alt="Mallivertailu on helppo tarina. Agenttityössä workflow ratkaisee." class="" decoding="async" height="1024" loading="lazy" src="/assets/blog/agenttityo-workflow.jpg" width="1536"/></div>
+<div>
+<div class="meta-row"><span>22.5.2026</span><span class="tag">LinkedIn</span></div>
+<h2>Mallivertailu on helppo tarina. Agenttityössä workflow ratkaisee.</h2>
+<p>Miksi yrityksen kannattaa katsoa mallihypen ohi ja rakentaa agentille selkeä työnkulku, lähteet, rajat ja lopputulos.</p>
+</div>
+</a>
+<a class="post-card" href="/blog/tekoaly-ei-ole-hakukone/">
+<div class="post-thumb"><img alt="Tekoäly lakkasi olemasta hakukone. Useimmat eivät huomanneet." class="logo" decoding="async" height="1024" loading="lazy" src="/assets/logo-slogan.png" width="1536"/></div>
+<div>
+<div class="meta-row"><span>6.5.2026</span><span class="tag">LinkedIn</span></div>
+<h2>Tekoäly lakkasi olemasta hakukone. Useimmat eivät huomanneet.</h2>
+<p>AI-agentit eivät ole enää vain vastauskoneita. Hyvin rajattu agentti tekee tehtäviä, seuraa muutoksia ja poistaa toistuvaa kitkaa.</p>
+</div>
+</a>
+<a class="post-card" href="/blog/agentit-selvitystyo-workflow/">
+<div class="post-thumb"><img alt="Agentit tekevät monivaiheisesta selvitystyöstä 5 minuutin workflow’n" class="logo" decoding="async" height="1024" loading="lazy" src="/assets/logo-slogan.png" width="1536"/></div>
+<div>
+<div class="meta-row"><span>20.4.2026</span><span class="tag">LinkedIn</span></div>
+<h2>Agentit tekevät monivaiheisesta selvitystyöstä 5 minuutin workflow’n</h2>
+<p>Käytännön esimerkki siitä, miten tekoälyagentti muuttaa hitaan vero- ja datatyön nopeaksi, tarkistettavaksi workflowksi.</p>
+</div>
+</a>
+<a class="post-card" href="/blog/tekoalyagentit-arjessa/">
+<div class="post-thumb"><img alt="Tekoälyagentit eivät ole meille demoja. Ne ovat osa arkea." class="logo" decoding="async" height="1024" loading="lazy" src="/assets/logo-slogan.png" width="1536"/></div>
+<div>
+<div class="meta-row"><span>20.4.2026</span><span class="tag">LinkedIn</span></div>
+<h2>Tekoälyagentit eivät ole meille demoja. Ne ovat osa arkea.</h2>
+<p>AI Generationin käytännön oppeja OpenClaw- ja Hermes-agenteista, mallikerroksista, työkaluista ja luotettavuudesta.</p>
+</div>
+</a>
+</section>
 
-  <nav class="nav" aria-label="Päänavigaatio">
-    <div class="nav-container">
-      <a href="/" class="nav-logo" aria-label="AI Generation etusivu"><img src="/assets/logo-black.png" alt="AI Generation" class="nav-logo-img" width="120" height="28"></a>
-      <div class="nav-links">
-        <a href="/#services">Palvelut</a>
-        <a href="/#tools">EU-työkalut</a>
-        <a href="/blog/" aria-current="page">Blogi</a>
-        <a href="/#products">Tuotteet</a>
-        <a href="/#about">Meistä</a>
-        <a href="/#contact">Yhteystiedot</a>
-      </div>
-      <div class="nav-language" aria-label="Kielivalinta"><span class="nav-language-label">Kieli</span><a href="/blog/" class="nav-lang" hreflang="fi" aria-current="page">FI</a><a href="/en/blog/" class="nav-lang" hreflang="en">EN</a></div>
-    </div>
-  </nav>
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="tag">Aigen Blogi</div>
-      <h1>AI-agentit, automaatio ja oikea työ yrityksen arjessa.</h1>
-      <p>Julkaistuja kirjoituksia siitä, miten AI-agentit muuttuvat demoista käyttökelpoisiksi työnkuluiksi: veroihin, raportointiin, tiedonhakuun, kilpailijaseurantaan ja luotettavuuden rakentamiseen.</p>
-    </div>
-  </header>
-
-  <main class="blog-list">
-    <section class="posts" aria-label="Blogikirjoitukset">
-      <a class="post-card" href="/blog/chatgpt-work-kirjautuu-ilman-salasanaa/"><div class="post-thumb"><img src="/assets/blog/chatgpt-work-kirjautuminen.png" alt="Agentti kirjautuu. Mallin ei tarvitse nähdä salasanaa." width="1536" height="1024" fetchpriority="high" decoding="async"></div><div><div class="meta-row"><span>26.8.2026</span><span class="tag">Tekoälyagentit</span><span class="tag">ChatGPT Work</span></div><h2>Agentti kirjautuu. Mallin ei tarvitse nähdä salasanaa.</h2><p>ChatGPT Work osaa nyt kirjautua sivuille ilman, että malli näkee tunnuksia. Raja on itse ominaisuus.</p></div></a>
-      <a class="post-card" href="/blog/mallit-kehittyvat-tekstin-tunnistaa/"><div class="post-thumb"><img src="/assets/blog/mallit-kehittyvat-teksti-paljastaa.png" alt="Liian valmis teksti paljastaa itsensä" width="1402" height="1122" fetchpriority="high" decoding="async"></div><div><div class="meta-row"><span>19.8.2026</span><span class="tag">Kirjoittaminen</span><span class="tag">Tekoälyagentit</span></div><h2>Liian valmis teksti paljastaa itsensä</h2><p>Mallit kirjoittavat sujuvammin kuin ennen. Samalla niiden äänen oppii huomaamaan nopeammin.</p></div></a>
-      <a class="post-card" href="/blog/grok-bot-tekoalyagentti-tyokaverina/"><div class="post-thumb"><img src="/assets/blog/ai-agenttien-muistikerros.png" alt="Grok Bot tekee tekoälyagentista työkaverin" width="1672" height="941" fetchpriority="high" decoding="async"></div><div><div class="meta-row"><span>16.8.2026</span><span class="tag">Tekoälyagentit</span><span class="tag">Grok Bot</span></div><h2>Grok Bot tekee tekoälyagentista työkaverin</h2><p>Mitä tapahtuu, kun agentille annetaan chat-ikkunan sijaan oma tietokone ja oikea työtehtävä?</p></div></a>
-      <a class="post-card" href="/blog/ai-agenttien-suurin-ongelma-on-muisti/">
-        <div class="post-thumb"><img class="" src="/assets/blog/ai-agenttien-muistikerros.png" alt="AI-agenttien suurin ongelma ei ole älykkyys. Se on muisti." width="1672" height="941" fetchpriority="high" decoding="async"></div>
-        <div>
-          <div class="meta-row"><span>22.6.2026</span><span class="tag">LinkedIn</span></div>
-          <h2>AI-agenttien suurin ongelma ei ole älykkyys. Se on muisti.</h2>
-          <p>AI-agenttien käytännön pullonkaula ei ole enää pelkkä älykkyys, vaan nopea, luotettava ja käyttäjän korjattavissa oleva muistikerros.</p>
-        </div>
-      </a>
-      <a class="post-card" href="/blog/tekoalyn-suurin-riski-huono-johtaminen/">
-        <div class="post-thumb"><img class="portrait" src="/assets/blog/tekoalyn-riski-huono-johtaminen.png" alt="Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen." width="1024" height="1536" fetchpriority="high" decoding="async"></div>
-        <div>
-          <div class="meta-row"><span>14.6.2026</span><span class="tag">LinkedIn</span></div>
-          <h2>Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.</h2>
-          <p>Tekoälyn suurin riski ei ole vain hallusinointi, vaan se, että organisaatiot käyttävät sitä kuin vastauskonetta eivätkä johda sen tekemää työtä.</p>
-        </div>
-      </a>
-      <a class="post-card" href="/blog/tekoaly-muuttaa-omalle-koneelle/">
-        <div class="post-thumb"><img class="" src="/assets/blog/rtx-spark-paikallinen-tekoaly.png" alt="Tekoäly muuttaa omalle koneellesi" width="1672" height="941" loading="lazy" decoding="async"></div>
-        <div>
-          <div class="meta-row"><span>10.6.2026</span><span class="tag">Blogi</span></div>
-          <h2>Tekoäly muuttaa omalle koneellesi</h2>
-          <p>Paikallinen tekoäly tuo suuret mallit lähemmäs yrityksen omaa dataa, kustannuksia ja arjen työnkulkuja.</p>
-        </div>
-      </a>
-      <a class="post-card" href="/blog/vakuutusten-kilpailutus-ai-agentilla/">
-        <div class="post-thumb"><img class="" src="/assets/blog/vakuutusten-kilpailutus-ai-agentilla.png" alt="Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse" width="1536" height="1024" loading="lazy" decoding="async"></div>
-        <div>
-          <div class="meta-row"><span>3.6.2026</span><span class="tag">LinkedIn</span></div>
-          <h2>Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse</h2>
-          <p>Käytännön esimerkki siitä, miten AI-agentti muutti viisi vakuutustarjousta ja ehdot yhdeksi selkeäksi vertailuksi.</p>
-        </div>
-      </a>
-      <a class="post-card" href="/blog/ai-agentti-veroilmoitus/">
-        <div class="post-thumb"><img class="" src="/assets/blog/veroilmoitus-ai-agentti.jpg" alt="Annoimme AI-agentin tehdä yrityksen veroilmoituksen" width="1536" height="1024" loading="lazy" decoding="async"></div>
-        <div>
-          <div class="meta-row"><span>25.5.2026</span><span class="tag">LinkedIn</span></div>
-          <h2>Annoimme AI-agentin tehdä yrityksen veroilmoituksen</h2>
-          <p>Mitä tapahtuu, kun AI-agentti viedään oikeaan viranomaislomakkeeseen, kirjanpidon lukuihin ja monivaiheiseen back office -työhön.</p>
-        </div>
-      </a>
-      <a class="post-card" href="/blog/agenttityossa-workflow-ratkaisee/">
-        <div class="post-thumb"><img class="" src="/assets/blog/agenttityo-workflow.jpg" alt="Mallivertailu on helppo tarina. Agenttityössä workflow ratkaisee." width="1536" height="1024" loading="lazy" decoding="async"></div>
-        <div>
-          <div class="meta-row"><span>22.5.2026</span><span class="tag">LinkedIn</span></div>
-          <h2>Mallivertailu on helppo tarina. Agenttityössä workflow ratkaisee.</h2>
-          <p>Miksi yrityksen kannattaa katsoa mallihypen ohi ja rakentaa agentille selkeä työnkulku, lähteet, rajat ja lopputulos.</p>
-        </div>
-      </a>
-      <a class="post-card" href="/blog/tekoaly-ei-ole-hakukone/">
-        <div class="post-thumb"><img class="logo" src="/assets/logo-slogan.png" alt="Tekoäly lakkasi olemasta hakukone. Useimmat eivät huomanneet." width="1536" height="1024" loading="lazy" decoding="async"></div>
-        <div>
-          <div class="meta-row"><span>6.5.2026</span><span class="tag">LinkedIn</span></div>
-          <h2>Tekoäly lakkasi olemasta hakukone. Useimmat eivät huomanneet.</h2>
-          <p>AI-agentit eivät ole enää vain vastauskoneita. Hyvin rajattu agentti tekee tehtäviä, seuraa muutoksia ja poistaa toistuvaa kitkaa.</p>
-        </div>
-      </a>
-      <a class="post-card" href="/blog/agentit-selvitystyo-workflow/">
-        <div class="post-thumb"><img class="logo" src="/assets/logo-slogan.png" alt="Agentit tekevät monivaiheisesta selvitystyöstä 5 minuutin workflow’n" width="1536" height="1024" loading="lazy" decoding="async"></div>
-        <div>
-          <div class="meta-row"><span>20.4.2026</span><span class="tag">LinkedIn</span></div>
-          <h2>Agentit tekevät monivaiheisesta selvitystyöstä 5 minuutin workflow’n</h2>
-          <p>Käytännön esimerkki siitä, miten tekoälyagentti muuttaa hitaan vero- ja datatyön nopeaksi, tarkistettavaksi workflowksi.</p>
-        </div>
-      </a>
-      <a class="post-card" href="/blog/tekoalyagentit-arjessa/">
-        <div class="post-thumb"><img class="logo" src="/assets/logo-slogan.png" alt="Tekoälyagentit eivät ole meille demoja. Ne ovat osa arkea." width="1536" height="1024" loading="lazy" decoding="async"></div>
-        <div>
-          <div class="meta-row"><span>20.4.2026</span><span class="tag">LinkedIn</span></div>
-          <h2>Tekoälyagentit eivät ole meille demoja. Ne ovat osa arkea.</h2>
-          <p>AI Generationin käytännön oppeja OpenClaw- ja Hermes-agenteista, mallikerroksista, työkaluista ja luotettavuudesta.</p>
-        </div>
-      </a>
-    </section>
-
-    <aside class="aside">
-      <h2>Mistä nämä tekstit tulevat?</h2>
-      <p>Nämä ovat AI Generation Oy:n julkaistuja LinkedIn-sisältöjä, nostettuna blogiin pysyväksi hakukoneystävälliseksi sisällöksi kuvien, metadatan, canonical-linkkien ja schema-merkintöjen kanssa.</p>
-      <p style="margin-top:0.8rem;"><a href="/#contact">Kysy, miten sama tehdään omalle yritykselle.</a></p>
-    </aside>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <img src="/assets/logo-black.png" alt="AI Generation" class="footer-logo-img" width="120" height="28" loading="lazy">
-      <span>© 2026 AI Generation Oy · Aigen Blogi</span>
-    </div>
-  </footer>
+</main>
+<footer class="site-footer">
+<div class="footer-content">
+<img alt="AI Generation" class="footer-logo-img" height="28" loading="lazy" src="/assets/logo-black.png" width="120"/>
+<span>© 2026 AI Generation Oy · Aigen Blogi</span>
+</div>
+</footer>
 </body>
 </html>

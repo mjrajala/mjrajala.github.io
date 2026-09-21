@@ -275,3 +275,5 @@
 /* Fixed vector arrows retain link colors without platform emoji substitution. */
 .arrow-icon{display:inline-block;width:18px;height:18px;flex-shrink:0;vertical-align:-2px}
 .nav-contact .arrow-icon{margin-inline-start:8px}
+
+.process-top > .arrow-icon{width:23px;height:23px}

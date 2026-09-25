@@ -81,7 +81,7 @@
   </url>
   <url>
     <loc>https://aigen.fi/en/blog/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -271,4 +271,5 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url><loc>https://aigen.fi/en/blog/tesla-grok-streetlight-report/</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

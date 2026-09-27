@@ -281,19 +281,9 @@ function renderArticle(post, posts) {
   <script defer src="/assets/aigen-preview.js"></script>
 
   <meta name="google-site-verification" content="-WtFkMpIXZlK3wpWNQvvrmWk1nLpZdkneqXFo_pVtn0">
-  <!-- Google tag (gtag.js) -->
-<script>
-    if (["aigen.fi", "www.aigen.fi"].includes(location.hostname)) {
-    const analytics = document.createElement("script");
-    analytics.async = true;
-    analytics.src = "https://www.googletagmanager.com/gtag/js?id=G-YFF8RBFBP3";
-    document.head.appendChild(analytics);
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "G-YFF8RBFBP3");
-    }
-  </script>
+  <!-- Analytics loads only after consent. -->
+<link rel="stylesheet" href="/assets/cookie-consent.css">
+<script defer src="/assets/cookie-consent.js"></script>
 </head>
 <body class="aigen-preview blog-article-page">
 ${renderNav(`/blog/${slug}/`)}
@@ -410,19 +400,9 @@ function renderIndex(posts) {
   <script defer src="/assets/aigen-preview.js"></script>
 
   <meta name="google-site-verification" content="-WtFkMpIXZlK3wpWNQvvrmWk1nLpZdkneqXFo_pVtn0">
-  <!-- Google tag (gtag.js) -->
-<script>
-    if (["aigen.fi", "www.aigen.fi"].includes(location.hostname)) {
-    const analytics = document.createElement("script");
-    analytics.async = true;
-    analytics.src = "https://www.googletagmanager.com/gtag/js?id=G-YFF8RBFBP3";
-    document.head.appendChild(analytics);
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "G-YFF8RBFBP3");
-    }
-  </script>
+  <!-- Analytics loads only after consent. -->
+<link rel="stylesheet" href="/assets/cookie-consent.css">
+<script defer src="/assets/cookie-consent.js"></script>
 </head>
 <body class="aigen-preview blog-index-page">
 ${renderNav("/blog/")}

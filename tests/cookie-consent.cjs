@@ -29,8 +29,14 @@ if (process.argv.includes('--static')) process.exit(0);
     const context = await browser.newContext({ viewport });
     const requests = [];
     const errors = [];
+    const unloadAttempts = [];
     context.on('request', request => { if (ga.test(request.url())) requests.push(request.url()); });
-    context.on('page', page => page.on('pageerror', error => errors.push(error.message)));
+    context.on('page', page => {
+      page.on('pageerror', error => errors.push(error.message));
+      page.on('console', message => {
+        if (message.text().startsWith('CONSENT_STUB_UNLOAD ')) unloadAttempts.push(JSON.parse(message.text().slice(20)));
+      });
+    });
     await context.route('**/*', async route => {
       const url = new URL(route.request().url());
       if (url.hostname === 'www.googletagmanager.com') {
@@ -39,15 +45,31 @@ if (process.argv.includes('--static')) process.exit(0);
             document.cookie = '_ga=stub; Path=/; Domain=aigen.fi; SameSite=Lax';
             document.cookie = '_ga_YFF8RBFBP3=stub; Path=/; SameSite=Lax';
             fetch('https://www.google-analytics.com/g/collect?test=1');
-          }` });
+          }
+          // Model the real Google runtime: capture references while accepted,
+          // then try sending from pagehide without respecting ga-disable.
+          const cachedFetch = window.fetch.bind(window);
+          const cachedBeacon = navigator.sendBeacon.bind(navigator);
+          const pending = new XMLHttpRequest();
+          pending.open('POST', 'https://region1.google-analytics.com/g/collect?cached=xhr');
+          const cachedSend = pending.send.bind(pending);
+          window.addEventListener('pagehide', () => {
+            console.info('CONSENT_STUB_UNLOAD ' + JSON.stringify({ disabled: window['ga-disable-G-YFF8RBFBP3'], choice: localStorage.getItem('aigen.analytics-consent.v1') }));
+            cachedFetch(new Request('https://region1.google-analytics.com/g/collect?cached=fetch', { method: 'POST', body: 'test', keepalive: true })).catch(() => {});
+            cachedBeacon(new URL('https://www.google-analytics.com/g/collect?cached=beacon'), 'test');
+            cachedSend('test');
+          });` });
       }
       if (ga.test(url.href)) return route.fulfill({ status: 204, body: '' });
       if (!['aigen.fi', 'www.aigen.fi'].includes(url.hostname)) return route.abort();
+      if (url.pathname.startsWith('/consent-test-probe')) {
+        return route.fulfill({ status: 200, body: route.request().postData() || 'ok' });
+      }
       const file = path.join(root, decodeURIComponent(url.pathname), url.pathname.endsWith('/') ? 'index.html' : '');
       if (!file.startsWith(root + path.sep) || !fs.existsSync(file)) return route.fulfill({ status: 404, body: '' });
       return route.fulfill({ path: file });
     });
-    return { context, requests, errors, page: await context.newPage() };
+    return { context, requests, errors, unloadAttempts, page: await context.newPage() };
   }
   async function off(s) {
     assert.equal(await s.page.locator('#aigen-analytics').count(), 0);
@@ -111,6 +133,7 @@ if (process.argv.includes('--static')) process.exit(0);
         const before = requests.length;
         await Promise.all([page.waitForEvent('load'), reject.click()]);
         await off(s);
+        assert(s.unloadAttempts.some(attempt => attempt.disabled && attempt.choice === 'rejected'), 'Regression did not attempt cached transports during withdrawal');
         assert.equal((await context.cookies()).filter(c => c.name === '_gid').length, 0);
         assert.equal(requests.length, before);
         await page.reload();
@@ -142,5 +165,25 @@ if (process.argv.includes('--static')) process.exit(0);
     assert(await blocked.page.locator('#cookie-consent').isVisible());
     await blocked.context.close();
     console.log('PASS blocked storage fails closed');
+    const unrelated = await setup();
+    await unrelated.page.goto('https://aigen.fi/');
+    await unrelated.page.locator('[data-choice="rejected"]').click();
+    assert.deepEqual(await unrelated.page.evaluate(async () => {
+      const fetched = await fetch(new Request('/consent-test-probe/fetch', { method: 'POST', body: 'fetch preserved' }));
+      const xhrText = await new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/consent-test-probe/xhr');
+        xhr.onload = () => resolve(xhr.responseText);
+        xhr.onerror = reject;
+        xhr.send('xhr preserved');
+      });
+      return [fetched.status, await fetched.text(), xhrText];
+    }), [200, 'fetch preserved', 'xhr preserved']);
+    const beaconRequest = unrelated.page.waitForRequest(request => request.url().endsWith('/consent-test-probe/beacon'));
+    assert(await unrelated.page.evaluate(() => navigator.sendBeacon('/consent-test-probe/beacon', 'beacon preserved')));
+    assert.equal((await beaconRequest).postData(), 'beacon preserved');
+    assert.equal(unrelated.requests.length, 0);
+    await unrelated.context.close();
+    console.log('PASS unrelated fetch/XHR/beacon preserve native requests and responses after rejection');
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; });

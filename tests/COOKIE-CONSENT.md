@@ -9,11 +9,11 @@ Goal: GA starts only after explicit acceptance across FI/EN pages.
 - [x] Check JavaScript syntax, HTML coverage and diff whitespace.
 - [x] Run Playwright browser checks and inspect screenshots.
 
-Current: Verified in main exec using Playwright with Chrome on 2026-09-27; all checks pass.
+Current: Main exec verified the transport-guard fix on 2026-09-27. The full expanded stub regression and LOCAL real-Google diagnostic both pass for FI/EN desktop and mobile.
 Blocked: None. Main exec ran the browser suite because the worker sandbox prevents browser launch.
-Next: Main handles commit/publishing separately; implementation is ready for review.
+Next: Main handles publishing the fix and verifying the deployed site. Worker changes are paused.
 
-Verified results:
+Confirmed results after the transport-guard fix:
 - PASS static coverage: all 53 FI/EN HTML pages use the shared consent gate.
 - PASS fresh visit: no GA script, requests or GA cookies on all 53 pages.
 - PASS FI/EN desktop and 320px mobile: fresh, reject, accept, reload and withdrawal.
@@ -22,7 +22,13 @@ Verified results:
 - Visually inspected all four FI/EN desktop/mobile screenshots; copy and controls fit and match the site.
 - PASS JavaScript syntax checks and `git diff --check`.
 
-These browser results use the intercepted GA stub described below, not real Google Analytics.
+The full regression above uses the intercepted GA stub described below. Main also
+confirmed PASS for the LOCAL real-Google diagnostic across FI/EN desktop/mobile:
+local site files were served under the production hostname, the actual Google tag
+was downloaded and executed after acceptance, and there were zero GA transport
+calls after withdrawal. Analytics collection requests were fulfilled locally;
+no measurement events were sent to Google. This verifies the fix locally with the
+real Google runtime; the deployed fix still awaits main's live verification.
 Screenshots and browser logs in `artifacts/` are ignored by Git and must not be committed.
 
 ```sh
@@ -51,3 +57,10 @@ paths. Withdrawal sets the GA disable flag before cleanup and reload, which
 unloads the existing Google runtime. Settings remain available on every page.
 
 This worker has not committed or published changes. Main handles those actions separately.
+
+Transport regression added after live diagnostics: the GA stub caches fetch,
+sendBeacon and an already-open XHR send method while consent is accepted, then
+invokes all three during pagehide even after rejection. The suite requires zero
+new GA requests on withdrawal and verifies that the unload attempt occurred.
+Separate probes verify that unrelated fetch/XHR/beacon requests and responses
+retain their native behavior after rejection. Main confirmed all of these regression checks PASS, including unrelated transport behavior.

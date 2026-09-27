@@ -15,6 +15,45 @@
     } catch (_) { return null; }
   }
 
+  // Install before GA can cache transport references. Its delayed/pagehide
+  // events can bypass ga-disable, so consent is checked again at send time.
+  function blockedAnalyticsRequest(input) {
+    let hostname;
+    try {
+      hostname = new URL(input instanceof Request ? input.url : input, location.href).hostname;
+    } catch (_) { return false; }
+    const analytics = /(^|\.)(google-analytics\.com|googletagmanager\.com|analytics\.google\.com)$/.test(hostname)
+      || hostname === 'stats.g.doubleclick.net';
+    return analytics && (window[disabled] || choice !== 'accepted' || readChoice() !== 'accepted');
+  }
+  const nativeFetch = window.fetch;
+  window.fetch = function (...args) {
+    if (blockedAnalyticsRequest(args[0])) return Promise.resolve(new Response(null, { status: 204 }));
+    return Reflect.apply(nativeFetch, this, args);
+  };
+  const nativeBeacon = navigator.sendBeacon;
+  navigator.sendBeacon = function (...args) {
+    // Report success without sending, so GA does not retry through a fallback.
+    if (blockedAnalyticsRequest(args[0])) return true;
+    return Reflect.apply(nativeBeacon, this, args);
+  };
+  const xhrUrls = new WeakMap();
+  const nativeOpen = XMLHttpRequest.prototype.open;
+  const nativeSend = XMLHttpRequest.prototype.send;
+  const nativeAbort = XMLHttpRequest.prototype.abort;
+  XMLHttpRequest.prototype.open = function (...args) {
+    const result = Reflect.apply(nativeOpen, this, args);
+    xhrUrls.set(this, args[1]);
+    return result;
+  };
+  XMLHttpRequest.prototype.send = function (...args) {
+    if (blockedAnalyticsRequest(xhrUrls.get(this))) {
+      Reflect.apply(nativeAbort, this, []);
+      return;
+    }
+    return Reflect.apply(nativeSend, this, args);
+  };
+
   function clearCookies() {
     const domains = ['', location.hostname];
     const parts = location.hostname.split('.');

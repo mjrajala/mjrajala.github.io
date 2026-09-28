@@ -1,17 +1,25 @@
 # Cookie consent verification
 
-Task: Aigen.fi consent gate
-Goal: GA starts only after explicit acceptance across FI/EN pages.
+Task: Compact nonmodal cookie consent banner
+Goal: Keep analytics safeguards intact while making the FI/EN banner compact and nonmodal.
 
-- [x] Replace all 53 HTML loaders and both blog-generator loaders.
-- [x] Add shared FI/EN consent UI, saved choice and settings button.
-- [x] Disable GA, remove first-party GA cookies and reload on withdrawal.
-- [x] Check JavaScript syntax, HTML coverage and diff whitespace.
-- [x] Run Playwright browser checks and inspect screenshots.
+- [x] Replace the modal dialog with a labelled region and visually hidden heading.
+- [x] Shorten FI/EN copy; keep equal side-by-side 44px Reject/Accept buttons.
+- [x] Remove fresh status, backdrop, focus trap and initial focus movement.
+- [x] Hide settings while open; preserve saved status and failed-save errors on reopening.
+- [x] Adapt regression tests for 320px, 390px and 1440px in both languages.
+- [x] Check JavaScript syntax, static coverage and diff whitespace.
+- [ ] Run the updated browser suite and inspect all six current screenshots.
 
-Current: Main exec verified the transport-guard fix on 2026-09-27. The full expanded stub regression and LOCAL real-Google diagnostic both pass for FI/EN desktop and mobile.
-Blocked: None. Main exec ran the browser suite because the worker sandbox prevents browser launch.
-Next: Main handles publishing the fix and verifying the deployed site. Worker changes are paused.
+Current (2026-09-28): UI and regression changes are ready for browser verification.
+Blocked: Chrome launch aborts with SIGABRT inside the worker sandbox. No current
+browser assertions have run, and existing screenshots are from the previous UI.
+Next: Main runs the command below, then inspect `artifacts/consent-{fi,en}-{320,390,1440}.png`.
+Fresh-banner height assertions are <=180px at 320px and <=150px at 390px/desktop.
+Reopened status and storage errors remain visible and may increase banner height.
+No commit, push or deployment is authorized for this task.
+
+Historical verification of the prior modal UI (not evidence for the new layout):
 
 Confirmed results after the transport-guard fix:
 - PASS static coverage: all 53 FI/EN HTML pages use the shared consent gate.
@@ -41,9 +49,10 @@ Static coverage only: add `--static`.
 
 The suite routes the production hostname to this checkout, so the production-only
 analytics guard is exercised without deploying. It checks all 53 pages fresh,
-then FI/EN desktop and 320px mobile fresh/reject/accept/reload/withdraw flows,
-keyboard focus, equal button styling, dialog viewport bounds, cross-tab withdrawal
-and blocked storage. It writes screenshots into `artifacts/`.
+then FI/EN 1440px, 390px and 320px fresh/reject/accept/reload/withdraw flows,
+no initial focus steal, keyboard exit in both directions, page interaction while open,
+equal button styling, height/viewport bounds, cross-tab withdrawal and blocked
+storage with persistent error messages on reopening. It writes screenshots into `artifacts/`.
 
 Google requests are intercepted; a deterministic GA stub creates cookies and a
 collection request after opt-in. This verifies the gate without sending test

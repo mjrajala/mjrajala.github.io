@@ -24,6 +24,7 @@ for (const file of pages) {
 console.log(`PASS static coverage: ${pages.length} HTML pages`);
 if (process.argv.includes('--static')) process.exit(0);
 (async () => {
+  fs.mkdirSync(path.join(root, 'artifacts'), { recursive: true });
   const browser = await chromium.launch({ headless: true, channel: process.env.PLAYWRIGHT_CHANNEL || 'chrome' });
   async function setup(viewport = { width: 1440, height: 1000 }) {
     const context = await browser.newContext({ viewport });
@@ -89,8 +90,8 @@ if (process.argv.includes('--static')) process.exit(0);
     await all.context.close();
     console.log(`PASS fresh/no GA across ${pages.length} pages`);
     for (const locale of ['fi', 'en']) {
-      for (const mobile of [false, true]) {
-        const s = await setup(mobile ? { width: 320, height: 568 } : undefined);
+      for (const width of [1440, 390, 320]) {
+        const s = await setup({ width, height: width === 1440 ? 1000 : 844 });
         const { page, context, requests } = s;
         await page.goto('https://aigen.fi/' + (locale === 'en' ? 'en/' : ''));
         const dialog = page.locator('#cookie-consent');
@@ -99,27 +100,58 @@ if (process.argv.includes('--static')) process.exit(0);
         assert.equal(await page.locator('html').getAttribute('lang'), locale);
         await off(s);
         assert.equal(requests.length, 0);
-        assert(await reject.evaluate(el => el === document.activeElement));
+        assert(await dialog.evaluate(el => !el.contains(document.activeElement)), 'Fresh banner must not steal focus');
+        assert(!(await page.locator('.consent-settings').isVisible()));
+        assert(!(await page.locator('#consent-status').isVisible()));
+        assert.equal(await dialog.getAttribute('aria-modal'), null);
+        assert.equal(await page.locator(':modal').count(), 0);
+        assert.equal(await page.locator('#consent-title').textContent(), locale === 'en' ? 'Analytics cookies' : 'Analytiikkaevästeet');
+        // A real page control remains focusable and clickable while consent is open.
+        await page.evaluate(() => {
+          const button = document.createElement('button');
+          button.id = 'page-interaction-probe';
+          button.textContent = 'Page control';
+          button.style.cssText = 'position:fixed;top:0;left:0;z-index:200';
+          button.onclick = () => button.dataset.clicked = 'yes';
+          document.body.prepend(button);
+        });
+        await page.locator('#page-interaction-probe').click();
+        assert.equal(await page.locator('#page-interaction-probe').getAttribute('data-clicked'), 'yes');
+        assert(await dialog.isVisible());
+        await page.locator('#page-interaction-probe').evaluate(el => el.remove());
         const styles = await page.locator('[data-choice]').evaluateAll(els => els.map(el => {
           const s = getComputedStyle(el); return [s.backgroundColor, s.color, s.fontSize, el.offsetHeight, el.offsetWidth];
         }));
         assert.deepEqual(styles[0], styles[1]);
-        for (const key of ['Tab', 'Shift+Tab']) {
-          for (let i = 0; i < 8; i++) {
-            await page.keyboard.press(key);
-            assert(await dialog.evaluate(el => el.contains(document.activeElement)));
-          }
-        }
+        assert(styles[0][3] >= 44);
+        const rejectBox = await reject.boundingBox();
+        const acceptBox = await accept.boundingBox();
+        assert.equal(rejectBox.y, acceptBox.y);
+        await reject.focus();
+        await page.keyboard.press('Shift+Tab');
+        assert(await dialog.evaluate(el => !el.contains(document.activeElement)), 'Backward tab must leave banner');
+        await accept.focus();
+        await page.keyboard.press('Tab');
+        assert(await dialog.evaluate(el => !el.contains(document.activeElement)), 'Forward tab must leave banner');
         const box = await dialog.boundingBox();
         const vp = page.viewportSize();
         assert(box.x >= 0 && box.y >= 0 && box.x + box.width <= vp.width && box.y + box.height <= vp.height);
-        await page.screenshot({ path: path.join(root, `artifacts/consent-${locale}-${mobile ? 'mobile' : 'desktop'}.png`) });
+        assert(box.height <= (width === 320 ? 180 : 150), `Banner too tall: ${locale} ${width}: ${box.height}`);
+        assert(await dialog.evaluate(el => el.scrollHeight <= el.clientHeight), 'Banner must not scroll');
+        assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+        console.log(`Layout ${locale} ${width}: ${box.height}px`);
+        await page.screenshot({ path: path.join(root, `artifacts/consent-${locale}-${width}.png`) });
         await reject.click();
         assert.equal(await page.evaluate(k => localStorage.getItem(k), key), 'rejected');
         await page.reload();
         assert(!(await dialog.isVisible()));
         await off(s);
         assert.equal(requests.length, 0);
+        await page.locator('.consent-settings').click();
+        assert((await page.locator('#consent-status').textContent()).includes(locale === 'en' ? 'off' : 'ei ole'));
+        assert(!(await page.locator('.consent-settings').isVisible()));
+        await page.locator('.consent-close').click();
+        assert(await page.locator('.consent-settings').isVisible());
         await page.locator('.consent-settings').click();
         await accept.click();
         await page.waitForFunction(() => document.cookie.includes('_ga='));
@@ -130,6 +162,7 @@ if (process.argv.includes('--static')) process.exit(0);
         assert.equal(requests.filter(url => url.includes('gtag/js')).length, 2);
         await context.addCookies([{ name: '_gid', value: 'legacy', domain: '.aigen.fi', path: '/' }]);
         await page.locator('.consent-settings').click();
+        assert((await page.locator('#consent-status').textContent()).includes(locale === 'en' ? 'is on' : 'on käytössä'));
         const before = requests.length;
         await Promise.all([page.waitForEvent('load'), reject.click()]);
         await off(s);
@@ -141,7 +174,7 @@ if (process.argv.includes('--static')) process.exit(0);
         assert.equal(requests.length, before);
         assert.deepEqual(s.errors, []);
         await context.close();
-        console.log(`PASS ${locale} ${mobile ? 'mobile' : 'desktop'}: fresh/reject/accept/reload/withdraw/keyboard/layout`);
+        console.log(`PASS ${locale} ${width}: fresh/reject/accept/reload/withdraw/keyboard/layout`);
       }
     }
     const s = await setup();
@@ -156,15 +189,23 @@ if (process.argv.includes('--static')) process.exit(0);
     assert.equal(await other.locator('#aigen-analytics').count(), 0);
     await s.context.close();
     console.log('PASS cross-tab withdrawal');
-    const blocked = await setup();
-    await blocked.context.addInitScript(() => { Storage.prototype.setItem = () => { throw new Error('Storage blocked'); }; });
-    await blocked.page.goto('https://aigen.fi/');
-    await blocked.page.locator('[data-choice="accepted"]').click();
-    await off(blocked);
-    assert.equal(blocked.requests.length, 0);
-    assert(await blocked.page.locator('#cookie-consent').isVisible());
-    await blocked.context.close();
-    console.log('PASS blocked storage fails closed');
+    for (const locale of ['fi', 'en']) {
+      const blocked = await setup({ width: 320, height: 568 });
+      await blocked.context.addInitScript(() => { Storage.prototype.setItem = () => { throw new Error('Storage blocked'); }; });
+      await blocked.page.goto('https://aigen.fi/' + (locale === 'en' ? 'en/' : ''));
+      await blocked.page.locator('[data-choice="accepted"]').click();
+      await off(blocked);
+      assert.equal(blocked.requests.length, 0);
+      assert(await blocked.page.locator('#cookie-consent').isVisible());
+      const errorText = await blocked.page.locator('#consent-status').textContent();
+      assert(errorText.includes(locale === 'en' ? 'could not save' : 'Selain ei voinut'));
+      await blocked.page.locator('.consent-close').click();
+      await blocked.page.locator('.consent-settings').click();
+      assert.equal(await blocked.page.locator('#consent-status').textContent(), errorText);
+      assert(await blocked.page.locator('#consent-status').isVisible());
+      await blocked.context.close();
+      console.log(`PASS ${locale} blocked storage fails closed and error survives reopening`);
+    }
     const unrelated = await setup();
     await unrelated.page.goto('https://aigen.fi/');
     await unrelated.page.locator('[data-choice="rejected"]').click();

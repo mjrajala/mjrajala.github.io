@@ -107,27 +107,27 @@
   const en = document.documentElement.lang.startsWith('en');
   const copy = en ? {
     title: 'Analytics cookies',
-    body: 'With your permission, we use Google Analytics to see how this site is used. It sets cookies in your browser. You can use the site without analytics and change your choice in Cookie settings at any time.',
-    accept: 'Accept analytics', reject: 'Reject analytics', settings: 'Cookie settings',
+    body: 'May we use Google Analytics cookies to measure site usage? You can change your choice in Cookie settings.',
+    accept: 'Accept', reject: 'Reject', settings: 'Cookie settings',
     accepted: 'Analytics is on. Reject analytics to withdraw your consent.',
-    rejected: 'Analytics is off.', undecided: 'Analytics is off until you accept.',
-    error: 'Your browser could not save your choice. Analytics will stay off. You can close this window and use the site.', close: 'Close'
+    rejected: 'Analytics is off.', undecided: '',
+    error: 'Your browser could not save your choice. Analytics will stay off. You can close this banner and use the site.', close: 'Close'
   } : {
     title: 'Analytiikkaevästeet',
-    body: 'Käytämme luvallasi Google Analyticsia sivuston käytön mittaamiseen. Se tallentaa evästeitä selaimeesi. Voit käyttää sivustoa ilman analytiikkaa ja muuttaa valintaasi milloin tahansa Evästeasetuksista.',
-    accept: 'Hyväksy analytiikka', reject: 'Hylkää analytiikka', settings: 'Evästeasetukset',
+    body: 'Saammeko mitata sivuston käyttöä Google Analytics -evästeillä? Voit muuttaa valintaasi evästeasetuksista.',
+    accept: 'Hyväksy', reject: 'Hylkää', settings: 'Evästeasetukset',
     accepted: 'Analytiikka on käytössä. Voit perua suostumuksesi hylkäämällä analytiikan.',
-    rejected: 'Analytiikka ei ole käytössä.', undecided: 'Analytiikka ei käynnisty ilman lupaasi.',
-    error: 'Selain ei voinut tallentaa valintaasi. Analytiikka pysyy pois käytöstä. Voit sulkea ikkunan ja käyttää sivustoa.', close: 'Sulje'
+    rejected: 'Analytiikka ei ole käytössä.', undecided: '',
+    error: 'Selain ei voinut tallentaa valintaasi. Analytiikka pysyy pois käytöstä. Voit sulkea ilmoituksen ja käyttää sivustoa.', close: 'Sulje'
   };
   const settings = document.createElement('button');
   settings.type = 'button';
   settings.className = 'consent-settings';
   settings.textContent = copy.settings;
-  settings.setAttribute('aria-haspopup', 'dialog');
   settings.setAttribute('aria-controls', 'cookie-consent');
-  const dialog = document.createElement('dialog');
+  const dialog = document.createElement('section');
   dialog.id = 'cookie-consent';
+  dialog.hidden = true;
   dialog.setAttribute('aria-labelledby', 'consent-title');
   dialog.setAttribute('aria-describedby', 'consent-description consent-status');
   dialog.innerHTML = `<h2 id="consent-title"></h2><p id="consent-description"></p><p id="consent-status" role="status"></p><div class="consent-actions"><button type="button" data-choice="rejected"></button><button type="button" data-choice="accepted"></button></div><button type="button" class="consent-close"></button>`;
@@ -138,24 +138,31 @@
   dialog.querySelector('.consent-close').textContent = copy.close;
   document.body.append(settings, dialog);
   const status = dialog.querySelector('#consent-status');
-  function refresh() { status.textContent = choice ? copy[choice] : copy.undecided; }
-  function open() { refresh(); if (!dialog.open) dialog.showModal(); }
-  function close() { dialog.close(); settings.focus({ preventScroll: true }); }
+  function refresh() {
+    // Keep a failed-save message when settings are reopened without a choice.
+    if (choice || status.textContent !== copy.error) {
+      status.textContent = choice ? copy[choice] : copy.undecided;
+    }
+    status.hidden = !status.textContent;
+    dialog.querySelector('.consent-close').hidden = !status.textContent;
+  }
+  function open() {
+    const fromSettings = document.activeElement === settings;
+    refresh();
+    dialog.hidden = false;
+    settings.hidden = true;
+    if (fromSettings) dialog.querySelector('[data-choice="rejected"]').focus({ preventScroll: true });
+  }
+  function close() {
+    const restoreFocus = dialog.contains(document.activeElement);
+    dialog.hidden = true;
+    settings.hidden = false;
+    if (restoreFocus) settings.focus({ preventScroll: true });
+  }
   settings.addEventListener('click', open);
   dialog.querySelector('.consent-close').addEventListener('click', close);
-  dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
   dialog.addEventListener('keydown', event => {
-    if (event.key !== 'Tab') return;
-    const buttons = [...dialog.querySelectorAll('button:not([disabled])')];
-    const first = buttons[0];
-    const last = buttons[buttons.length - 1];
-    if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
-    }
+    if (event.key === 'Escape') { event.preventDefault(); close(); }
   });
   dialog.querySelectorAll('[data-choice]').forEach(button => {
     button.addEventListener('click', () => {
@@ -175,6 +182,7 @@
         choice = null;
         stopAnalytics();
         status.textContent = copy.error;
+        refresh();
         // Do not reload into an older accepted choice if storage is unavailable.
         return;
       }

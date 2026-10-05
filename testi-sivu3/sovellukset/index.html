@@ -20,7 +20,7 @@
   <div class="preview-strip">
     <div class="wrap">
       <span><b>Esikatselu 3</b> · testiversio</span>
-      <a href="/">Nykyinen etusivu <span aria-hidden="true">↗</span></a>
+      <a href="/" data-live-escape>Nykyinen live-sivu <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 
@@ -29,16 +29,15 @@
       <a class="logo" href="/testi-sivu3/"><img src="/assets/logo-black.png" alt="Aigen – etusivu" width="136" height="32"></a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="paavalikko">Valikko</button>
       <nav id="paavalikko" class="main-nav" aria-label="Päänavigaatio">
-        <a href="/testi-sivu3/sovellukset/" aria-current="page">Sovellukset</a>
-        <a href="/testi-sivu3/#raataloity">Räätälöity kehitys</a>
-        <a href="/oppaat/">Oppaat</a>
-        <a class="nav-cta" href="/testi-sivu3/#yhteys">Ota yhteyttä</a>
+        <a href="/testi-sivu3/sovellukset/" aria-current="page">Sovellukset</a><a href="/testi-sivu3/raataloity-kehitys/">Räätälöity kehitys</a><a href="/testi-sivu3/oppaat/">Oppaat</a><a href="/testi-sivu3/blog/">Blogi</a><a href="/testi-sivu3/yritys/">Yritys</a>
+        <a class="lang-switch" href="/testi-sivu3/en/apps/" hreflang="en" lang="en" aria-label="In English">EN</a>
+        <a class="nav-cta" href="/testi-sivu3/yritys/#yhteys">Ota yhteyttä</a>
       </nav>
     </div>
   </header>
 
   <main id="sisalto" tabindex="-1">
-    <div class="wrap" id="katalogi">
+<div class="wrap" id="katalogi">
       <div class="page-head">
         <nav class="breadcrumb" aria-label="Murupolku">
           <ol>
@@ -72,11 +71,11 @@
           <ul>
             <li><a href="/testi-sivu3/sovellukset/ilmoo/">Ilmoo</a> – sisäinen ilmoituskanava (saatavilla)</li>
             <li><a href="/testi-sivu3/sovellukset/aigen-cbam/">Aigen CBAM</a> – CBAM-raportoinnin valmistelu (saatavilla)</li>
-            <li><a href="https://draftpad.aigen.fi/">Draftpad</a> – tekstien luonnostelu ja yhteistyö (saatavilla)</li>
-            <li><a href="/tuotteet/tasapay/">TasaPay</a> – palkka-avoimuuden raportointi (tulossa)</li>
-            <li><a href="/tuotteet/gpsrdocs/">GPSRdocs</a> – tuoteturvallisuuden dokumentaatio (tulossa)</li>
-            <li><a href="https://spawnpad.gg/">Spawnpad</a> – selainpelit (peli)</li>
-            <li><a href="https://clawspam.com/">ClawSpam</a> – sosiaalinen verkosto AI-agenteille (beta)</li>
+            <li><a href="/testi-sivu3/sovellukset/draftpad/">Draftpad</a> – tekstien luonnostelu ja yhteistyö (saatavilla)</li>
+            <li><a href="/testi-sivu3/sovellukset/tasapay/">TasaPay</a> – palkka-avoimuuden raportointi (tulossa)</li>
+            <li><a href="/testi-sivu3/sovellukset/gpsrdocs/">GPSRdocs</a> – tuoteturvallisuuden dokumentaatio (tulossa)</li>
+            <li><a href="/testi-sivu3/sovellukset/spawnpad/">Spawnpad</a> – selainpelit (pelit ja kokeilut)</li>
+            <li><a href="/testi-sivu3/sovellukset/clawspam/">ClawSpam</a> – sosiaalinen verkosto AI-agenteille (beta, pelit ja kokeilut)</li>
           </ul>
         </div>
       </noscript>
@@ -103,7 +102,7 @@
 
         <section aria-labelledby="tulokset-otsikko">
           <div class="results-bar">
-            <h2 id="tulokset-otsikko"><span id="tulos-maara" aria-live="polite">Ladataan…</span></h2>
+            <h2 id="tulokset-otsikko"><span id="tulos-maara" aria-live="polite">7 sovellusta</span></h2>
             <div class="results-tools">
               <button class="button filters-open" id="avaa-suodattimet" type="button" aria-controls="suodattimet" aria-expanded="false">Rajaa <span class="badge" id="suodatin-maara" hidden></span></button>
               <label class="sort"><span>Järjestys</span>
@@ -129,7 +128,7 @@
             <p>Kokeile toista sanaa tai tyhjennä rajaukset. Jos sopivaa sovellusta ei ole, voimme rakentaa sen teille.</p>
             <div class="actions">
               <button class="button button-primary" type="button" data-reset>Tyhjennä haku ja rajaukset</button>
-              <a class="button" href="/testi-sivu3/#raataloity">Räätälöity kehitys</a>
+              <a class="button" href="/testi-sivu3/raataloity-kehitys/">Räätälöity kehitys</a>
             </div>
           </div>
 
@@ -140,7 +139,7 @@
               <h2 id="custom-title">Etkö löytänyt sopivaa?</h2>
               <p>Rakennamme ohjelmiston tai tekoälyautomaation yrityksenne omaan työnkulkuun.</p>
             </div>
-            <a class="button button-primary" href="/testi-sivu3/#raataloity">Räätälöity kehitys</a>
+            <a class="button button-primary" href="/testi-sivu3/raataloity-kehitys/">Räätälöity kehitys</a>
           </aside>
         </section>
       </div>
@@ -148,15 +147,40 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap footer-grid">
-      <img src="/assets/logo-black.png" alt="AI Generation" width="102" height="24">
-      <nav aria-label="Alatunniste">
-        <a href="/testi-sivu3/">Etusivu</a>
-        <a href="/oppaat/">Oppaat</a>
-        <a href="/blog/">Blogi</a>
-        <a href="/testi-sivu3/#yhteys">Ota yhteyttä</a>
-      </nav>
-      <p class="copy">© 2026 AI Generation Oy</p>
+    <div class="wrap">
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <img src="/assets/logo-black.png" alt="AI Generation" width="102" height="24">
+          <p>Suomalainen ohjelmistoyritys. Sovelluksia ja räätälöityä automaatiota yrityksille Suomessa ja Euroopassa.</p>
+          <p><a href="mailto:contact@aigen.fi">contact@aigen.fi</a><br><a href="https://www.linkedin.com/company/ai-generation-oy/" rel="noopener">LinkedIn</a></p>
+        </div>
+        <nav aria-label="Sovellukset">
+          <h2>Sovellukset</h2>
+          <ul>
+            <li><a href="/testi-sivu3/sovellukset/ilmoo/">Ilmoo</a></li>
+            <li><a href="/testi-sivu3/sovellukset/aigen-cbam/">Aigen CBAM</a></li>
+            <li><a href="/testi-sivu3/sovellukset/">Kaikki sovellukset</a></li>
+            <li><a href="/testi-sivu3/sovellukset/?kohde=muut">Pelit ja kokeilut</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Oppaat">
+          <h2><a href="/testi-sivu3/oppaat/">Oppaat</a></h2>
+          <ul><li><a href="/testi-sivu3/oppaat/ai-act-pk-yritys/">EU AI Act</a></li><li><a href="/testi-sivu3/oppaat/palkka-avoimuusdirektiivi/">Palkka-avoimuus</a></li><li><a href="/testi-sivu3/oppaat/cbam-raportointi/">CBAM-raportointi</a></li><li><a href="/testi-sivu3/oppaat/whistleblowing-kanava/">Whistleblowing-kanava</a></li><li><a href="/testi-sivu3/oppaat/tekoalyagentti-yritykselle/">Tekoälyagentti yritykselle</a></li><li><a href="/testi-sivu3/oppaat/tekoalyautomaatio-pk-yrityksille/">Tekoälyautomaatio pk-yrityksille</a></li></ul>
+        </nav>
+        <nav aria-label="Yritys">
+          <h2>Yritys</h2>
+          <ul>
+            <li><a href="/testi-sivu3/raataloity-kehitys/">Räätälöity kehitys</a></li>
+            <li><a href="/testi-sivu3/blog/">Blogi</a></li>
+            <li><a href="/testi-sivu3/yritys/">Meistä</a></li>
+            <li><a href="/testi-sivu3/yritys/#yhteys">Ota yhteyttä</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="copy">© 2026 AI Generation Oy</p>
+        <a href="/testi-sivu3/en/apps/" hreflang="en" lang="en">In English</a>
+      </div>
     </div>
   </footer>
 </body>

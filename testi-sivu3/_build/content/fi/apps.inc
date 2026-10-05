@@ -1,0 +1,108 @@
+<!--meta {"title": "Sovellukset – Aigen | Esikatselu 3", "description": "Aigenin sovellukset yrityksille: hae tehtävän mukaan ja vertaa käyttötarkoitusta, tilaa ja hintaa.", "scripts": ["catalog.js"]} -->
+    <div class="wrap" id="katalogi">
+      <div class="page-head">
+        <nav class="breadcrumb" aria-label="Murupolku">
+          <ol>
+            <li><a href="{{url:home}}">Etusivu</a></li>
+            <li><span aria-current="page">Sovellukset</span></li>
+          </ol>
+        </nav>
+        <h1>Sovellukset</h1>
+        <p class="lead">Etsi sen mukaan, mitä haluat hoitaa. Sovelluksen nimeä ei tarvitse tietää.</p>
+
+        <div class="catalog-controls">
+          <div class="audience" role="group" aria-label="Näytä sovellukset">
+            <button type="button" data-audience="yritykset" aria-pressed="true">Yrityksille <span class="n" data-audience-count></span></button>
+            <button type="button" data-audience="muut" aria-pressed="false">Pelit ja kokeilut <span class="n" data-audience-count></span></button>
+          </div>
+
+          <form id="haku" class="catalog-search" role="search">
+            <label class="visually-hidden" for="haku-kentta">Hae sovelluksia</label>
+            <div class="search-row">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+              <input id="haku-kentta" type="search" name="q" placeholder="Hae tehtävällä tai nimellä" autocomplete="off" enterkeyhint="search" aria-describedby="tulos-maara">
+              <button class="clear" id="haku-tyhjenna" type="button" aria-label="Tyhjennä haku" hidden>×</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <noscript>
+        <div class="noscript-list">
+          <p>Haku ja suodattimet tarvitsevat JavaScriptin. Tässä kaikki sovellukset:</p>
+          <ul>
+            <li><a href="{{url:app-ilmoo}}">Ilmoo</a> – sisäinen ilmoituskanava (saatavilla)</li>
+            <li><a href="{{url:app-aigen-cbam}}">Aigen CBAM</a> – CBAM-raportoinnin valmistelu (saatavilla)</li>
+            <li><a href="{{url:app-draftpad}}">Draftpad</a> – tekstien luonnostelu ja yhteistyö (saatavilla)</li>
+            <li><a href="{{url:app-tasapay}}">TasaPay</a> – palkka-avoimuuden raportointi (tulossa)</li>
+            <li><a href="{{url:app-gpsrdocs}}">GPSRdocs</a> – tuoteturvallisuuden dokumentaatio (tulossa)</li>
+            <li><a href="{{url:app-spawnpad}}">Spawnpad</a> – selainpelit (pelit ja kokeilut)</li>
+            <li><a href="{{url:app-clawspam}}">ClawSpam</a> – sosiaalinen verkosto AI-agenteille (beta, pelit ja kokeilut)</li>
+          </ul>
+        </div>
+      </noscript>
+
+      <div class="catalog-body">
+        <aside class="filters" id="suodattimet" aria-labelledby="suodattimet-otsikko">
+          <div class="filters-head">
+            <h2 id="suodattimet-otsikko">Rajaa sovelluksia</h2>
+            <button class="icon-button" id="sulje-suodattimet" type="button" aria-label="Sulje rajaukset">×</button>
+          </div>
+          <fieldset>
+            <legend>Tehtävä</legend>
+            <div id="tehtava-valinnat"></div>
+          </fieldset>
+          <fieldset>
+            <legend>Tila</legend>
+            <div id="tila-valinnat"></div>
+          </fieldset>
+          <div class="filters-foot">
+            <button class="text-button" type="button" data-reset>Tyhjennä kaikki</button>
+            <button class="button button-primary" id="nayta-tulokset" type="button">Näytä sovellukset</button>
+          </div>
+        </aside>
+
+        <section aria-labelledby="tulokset-otsikko">
+          <div class="results-bar">
+            <h2 id="tulokset-otsikko"><span id="tulos-maara" aria-live="polite">7 sovellusta</span></h2>
+            <div class="results-tools">
+              <button class="button filters-open" id="avaa-suodattimet" type="button" aria-controls="suodattimet" aria-expanded="false">Rajaa <span class="badge" id="suodatin-maara" hidden></span></button>
+              <label class="sort"><span>Järjestys</span>
+                <select id="jarjestys">
+                  <option value="suositellut">Suositellut</option>
+                  <option value="nimi">Nimi A–Ö</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="active-wrap" hidden>
+            <ul id="aktiiviset" aria-label="Valitut rajaukset"></ul>
+            <button class="text-button" type="button" data-reset>Tyhjennä kaikki</button>
+          </div>
+          <p class="other-hits" id="muut-osumat" hidden><button type="button"></button></p>
+
+          <ul class="app-grid" id="sovellukset"></ul>
+
+          <div class="empty" id="tyhja" hidden>
+            <h3>Ei osumia</h3>
+            <p id="tyhja-teksti"></p>
+            <p>Kokeile toista sanaa tai tyhjennä rajaukset. Jos sopivaa sovellusta ei ole, voimme rakentaa sen teille.</p>
+            <div class="actions">
+              <button class="button button-primary" type="button" data-reset>Tyhjennä haku ja rajaukset</button>
+              <a class="button" href="{{url:custom}}">Räätälöity kehitys</a>
+            </div>
+          </div>
+
+          <div class="more"><button class="button" id="nayta-lisaa" type="button" hidden>Näytä lisää</button></div>
+
+          <aside class="catalog-custom" aria-labelledby="custom-title">
+            <div>
+              <h2 id="custom-title">Etkö löytänyt sopivaa?</h2>
+              <p>Rakennamme ohjelmiston tai tekoälyautomaation yrityksenne omaan työnkulkuun.</p>
+            </div>
+            <a class="button button-primary" href="{{url:custom}}">Räätälöity kehitys</a>
+          </aside>
+        </section>
+      </div>
+    </div>

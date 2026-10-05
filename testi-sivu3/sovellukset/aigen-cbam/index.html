@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Aigen CBAM – CBAM-raportoinnin valmistelu | Aigen – Esikatselu 3</title>
-  <meta name="description" content="Aigen CBAM kokoaa tuonti-, toimittaja- ja päästötiedot ja valmistelee vuosi-ilmoituksen aineiston. 39 €/kk + alv, 30 päivän kokeilu.">
+  <meta name="description" content="Aigen CBAM kokoaa tuonti-, toimittaja- ja päästötiedot yhteen ja valmistelee vuosi-ilmoituksen aineiston. 39 €/kk + alv, 30 päivän kokeilu.">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
   <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
   <script>document.documentElement.className = "js";</script>
@@ -19,7 +19,7 @@
   <div class="preview-strip">
     <div class="wrap">
       <span><b>Esikatselu 3</b> · testiversio</span>
-      <a href="/">Nykyinen etusivu <span aria-hidden="true">↗</span></a>
+      <a href="/tuotteet/cbam-tool/" data-live-escape>Nykyinen live-sivu <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 
@@ -28,34 +28,25 @@
       <a class="logo" href="/testi-sivu3/"><img src="/assets/logo-black.png" alt="Aigen – etusivu" width="136" height="32"></a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="paavalikko">Valikko</button>
       <nav id="paavalikko" class="main-nav" aria-label="Päänavigaatio">
-        <a href="/testi-sivu3/sovellukset/" aria-current="true">Sovellukset</a>
-        <a href="/testi-sivu3/#raataloity">Räätälöity kehitys</a>
-        <a href="/oppaat/">Oppaat</a>
-        <a class="nav-cta" href="/testi-sivu3/#yhteys">Ota yhteyttä</a>
+        <a href="/testi-sivu3/sovellukset/" aria-current="true">Sovellukset</a><a href="/testi-sivu3/raataloity-kehitys/">Räätälöity kehitys</a><a href="/testi-sivu3/oppaat/">Oppaat</a><a href="/testi-sivu3/blog/">Blogi</a><a href="/testi-sivu3/yritys/">Yritys</a>
+        <a class="lang-switch" href="/testi-sivu3/en/apps/aigen-cbam/" hreflang="en" lang="en" aria-label="In English">EN</a>
+        <a class="nav-cta" href="/testi-sivu3/yritys/#yhteys">Ota yhteyttä</a>
       </nav>
     </div>
   </header>
 
   <main id="sisalto" tabindex="-1">
-    <section class="app-hero wrap" aria-labelledby="app-title">
-      <nav class="breadcrumb" aria-label="Murupolku">
-        <ol>
-          <li><a href="/testi-sivu3/">Etusivu</a></li>
-          <li><a href="/testi-sivu3/sovellukset/">Sovellukset</a></li>
-          <li><span aria-current="page">Aigen CBAM</span></li>
-        </ol>
-      </nav>
+<section class="app-hero wrap" aria-labelledby="app-title">
+      <nav class="breadcrumb" aria-label="Murupolku"><ol><li><a href="/testi-sivu3/">Etusivu</a></li><li><a href="/testi-sivu3/sovellukset/">Sovellukset</a></li><li><span aria-current="page">Aigen CBAM</span></li></ol></nav>
       <div class="app-hero-grid">
         <div>
           <div class="app-id">
             <img src="/testi-sivu3/assets/kuvakkeet/aigen-cbam.png" alt="" width="64" height="64">
-            <div>
-              <p>CBAM-raportoinnin valmistelu</p>
-              <span class="status-badge status-badge-saatavilla">Saatavilla</span>
-            </div>
+            <div><p>CBAM-raportoinnin valmistelu · Asetus (EU) 2023/956</p><span class="status-badge status-badge-saatavilla">Saatavilla</span></div>
           </div>
           <h1 id="app-title">Aigen CBAM</h1>
-          <p class="lead">Kokoaa tuonti-, toimittaja- ja päästötiedot yhteen ja valmistelee CBAM-vuosi-ilmoituksen aineiston. Ilmoituksen toimitat itse.</p>
+          <p class="lead">Kaikki CBAM-tiedot yhdessä paikassa. Raportointi hallintaan.</p>
+          <p class="lead-2">CBAM-työkalu auttaa kokoamaan tuonti-, toimittaja- ja päästödatan yhteen paikkaan, jotta raportointi ei jää hajanaisten tiedostojen, sähköpostien ja yksittäisten ihmisten muistin varaan.</p>
           <div class="tags" aria-label="Luokat ja kielet">
             <a href="/testi-sivu3/sovellukset/?tehtava=raportointi">Raportointi ja talous</a>
             <a href="/testi-sivu3/sovellukset/?tehtava=velvoitteet">Lakisääteiset velvoitteet</a>
@@ -66,7 +57,7 @@
             <p>Sisältää 3 käyttäjää. 30 päivän ilmainen kokeilu, tilin luominen on maksutonta.</p>
             <div class="actions">
               <a class="button button-primary" href="https://cbam.fi/sign-up">Luo yritystili <span aria-hidden="true">↗</span></a>
-              <a class="button" href="/tuotteet/cbam-tool/#cbam-video-heading">Katso esittelyvideo</a>
+              <a class="button" href="#video">Katso esittelyvideo</a>
             </div>
           </div>
         </div>
@@ -87,95 +78,122 @@
               <p class="handoff"><b>Sinä</b> toimitat ilmoituksen EU:n CBAM-rekisteriin.</p>
             </div>
           </div>
-          <figcaption>Periaatekuva tiedon kulusta. Sovelluksen näkymät näet <a href="/tuotteet/cbam-tool/#cbam-video-heading">esittelyvideolta</a>.</figcaption>
+          <figcaption>Periaatekuva tiedon kulusta. Sovelluksen näkymät näet <a href="#video">esittelyvideolta</a>.</figcaption>
         </figure>
       </div>
     </section>
 
     <nav class="on-page" aria-label="Tällä sivulla">
-      <div class="wrap">
-        <ul>
-          <li><a href="#kenelle">Kenelle</a></li>
-          <li><a href="#kaytto">Mihin se auttaa</a></li>
-          <li><a href="#ominaisuudet">Ominaisuudet</a></li>
-          <li><a href="#hinta">Hinta</a></li>
-          <li><a href="#aloitus">Näin aloitat</a></li>
-        </ul>
-      </div>
+      <div class="wrap"><ul>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#mika-cbam">Mikä CBAM on</a></li>
+        <li><a href="#ominaisuudet">Ominaisuudet</a></li>
+        <li><a href="#kenelle">Kenelle</a></li>
+        <li><a href="#hinta">Hinta</a></li>
+        <li><a href="#ukk">Usein kysyttyä</a></li>
+        <li><a href="#aloitus">Näin aloitat</a></li>
+      </ul></div>
     </nav>
 
-    <section class="detail-section" id="kenelle" aria-labelledby="kenelle-title">
+    <section class="detail-section" id="video" aria-labelledby="video-title">
       <div class="wrap detail-grid">
-        <h2 id="kenelle-title">Kenelle Aigen CBAM on tarkoitettu?</h2>
-        <div class="prose">
-          <p>Yrityksille, jotka tuovat CBAM:n piiriin kuuluvia tavaroita EU:n ulkopuolelta ja tarvitsevat käytännöllisen tavan hallita raportoinnin dataa, vastuita ja puutteita ennen määräaikoja. Velvoite ei koske kaikkia maahantuojia.</p>
-          <p class="note">Palvelu on tarkoitettu yrityksille Suomessa ja tuetuilla EU:n ALV-alueilla.</p>
-          <ul class="who-list">
-            <li><b>Tuonti ja hankinta</b>Seuraa toimittajilta tarvittavia tietoja ja huomaa puutteet ajoissa.</li>
-            <li><b>Talous ja compliance</b>Kokoaa raportointiin tarvittavat tiedot yhdeksi tarkistettavaksi kokonaisuudeksi.</li>
-            <li><b>Tilitoimistot</b>Hallitsevat useita asiakasyrityksiä yhdellä käyttäjätilillä.</li>
-          </ul>
+        <div>
+          <h2 id="video-title">Katso, miten Aigen CBAM toimii</h2>
+          <p class="side-note" id="video-note">Video on suomeksi. YouTube-soitin avautuu vasta painikkeesta.</p>
+        </div>
+        <div>
+          <div class="video" data-video-id="jxG4TfzwtwQ" data-video-title="Aigen CBAM – esittely">
+            <button type="button" aria-describedby="video-note" hidden><span class="play" aria-hidden="true">▶</span> Näytä video</button>
+            <noscript><p>Katso video YouTubessa: <a href="https://www.youtube.com/watch?v=jxG4TfzwtwQ">Aigen CBAM</a></p></noscript>
+          </div>
+          <p class="note"><a href="https://www.youtube.com/watch?v=jxG4TfzwtwQ">Katso video YouTubessa <span aria-hidden="true">↗</span></a></p>
         </div>
       </div>
     </section>
 
-    <section class="detail-section" id="kaytto" aria-labelledby="kaytto-title">
+    <section class="detail-section" id="mika-cbam" aria-labelledby="mika-title">
       <div class="wrap detail-grid">
-        <h2 id="kaytto-title">Mihin Aigen CBAM auttaa?</h2>
+        <h2 id="mika-title">Mitä CBAM tarkoittaa?</h2>
         <div class="prose">
-          <p>CBAM on EU:n hiilirajamekanismi. Sen piiriin kuuluvien tavaroiden maahantuojan pitää raportoida, paljonko tavaroiden valmistuksessa syntyi päästöjä. Pysyvä vaihe alkoi 1.1.2026, ja ilmoitus tehdään kerran vuodessa.</p>
-          <p>Raportointiin tarvitaan tuonti-, tuote-, toimittaja- ja päästötietoja, jotka ovat yleensä eri tiedostoissa ja järjestelmissä. Aigen CBAM kokoaa ne yhteen pitkin vuotta, joten vuosi-ilmoitusta ei tarvitse aloittaa tiedon etsimisestä.</p>
+          <p>CBAM (Carbon Border Adjustment Mechanism) on EU:n hiilirajamekanismi. EU-sääntely velvoittaa sen soveltamisalaan kuuluvia maahantuojia raportoimaan tiettyjen EU:n ulkopuolelta tuotujen tavaroiden valmistuksessa syntyvät päästöt.</p>
+          <p>Kyse on sääntelyvelvoitteesta, ei vapaaehtoisesta vastuullisuusraportista. Velvoite ei koske kaikkia maahantuojia.</p>
+          <p>Tavoitteena on yhtenäistää EU:ssa valmistettujen tavaroiden ja tuontitavaroiden hiilikustannuksia sekä vähentää hiilivuotoa eli tuotannon ja päästöjen siirtymistä EU:n ulkopuolelle.</p>
+          <h3>Miksi rakensimme Aigen CBAMin?</h3>
+          <p>Tuontitiedot, toimittajien vastaukset ja päästötiedot ovat usein eri tiedostoissa ja järjestelmissä. Rakensimme CBAM-työkalun kokoamaan ne yhteen, vähentämään käsin tehtävää tiedonkeruuta ja ohjaamaan raportoinnin valmistelua.</p>
+          <p>Haluamme tehdä valmistelusta helpommin lähestyttävää myös pienemmille yrityksille. Työkalu auttaa valmistelemaan ilmoitusaineiston, mutta toimitat ilmoituksen itse EU:n CBAM-rekisteriin.</p>
+          <h3>Hajanaisesta datasta selkeään prosessiin</h3>
+          <ol class="steps">
+            <li><strong>Tuontitiedot</strong> Tuotteet ja toimittajat</li>
+            <li><strong>Päästötiedot</strong> Keruu ja puutteiden tarkistus</li>
+            <li><strong>Raportoinnin valmistelu</strong> Toistettava prosessi</li>
+          </ol>
+          <p class="note">Työkalu kattaa toimittaja- ja tuotetiedot, tietopuutteet ja raportointiriskit sekä toistettavan prosessin.</p>
+          <p>Lue lisää <a href="/testi-sivu3/oppaat/cbam-raportointi/">CBAM-raportoinnin oppaasta</a> ja blogikirjoituksesta <a href="/testi-sivu3/blog/aigen-cbam-avattu/">Aigen CBAM on avattu</a>.</p>
         </div>
       </div>
     </section>
 
     <section class="detail-section" id="ominaisuudet" aria-labelledby="ominaisuudet-title">
       <div class="wrap detail-grid">
-        <h2 id="ominaisuudet-title">Ominaisuudet</h2>
         <div>
-          <div class="feature-groups">
-            <section aria-labelledby="f1">
-              <h3 id="f1">Tuontitiedot</h3>
-              <ul class="ticks">
-                <li>Tuontirekisteri: CN-koodit, massat, alkuperämaat, tuontipäivät ja tulliviitteet</li>
-                <li>Tuonti CSV- tai Excel-tiedostosta, sarakkeet kohdistetaan oikeisiin kenttiin</li>
-                <li>Tarkistuslista puuttuvista tiedoista</li>
-              </ul>
-            </section>
-            <section aria-labelledby="f2">
-              <h3 id="f2">Päästöt ja todistukset</h3>
-              <ul class="ticks">
-                <li>Päästöt ja todistustarve toteutuneilla tiedoilla tai oletusarvoilla</li>
-                <li>Ilmaisten päästöoikeuksien vaiheittainen poistuminen huomioidaan</li>
-                <li>50 tonnin vuosittaisen kynnysarvon seuranta</li>
-                <li>Hallussa olevat todistukset verrattuna ennustettuun tarpeeseen</li>
-              </ul>
-            </section>
-            <section aria-labelledby="f3">
-              <h3 id="f3">Toimittajat</h3>
-              <ul class="ticks">
-                <li>Kutsulinkki päästötietojen toimittamiseen, toimittaja ei tarvitse tunnusta</li>
-                <li>Tarkistat ja hyväksyt tiedot itse ja liität ne oikeaan tuontierään</li>
-              </ul>
-            </section>
-            <section aria-labelledby="f4">
-              <h3 id="f4">Ilmoitus ja jäljitettävyys</h3>
-              <ul class="ticks">
-                <li>Vuosi-ilmoituksen aineisto XML- tai ZIP-muodossa</li>
-                <li>Muutoshistoria ja asiakirjat tuontierän yhteydessä</li>
-                <li>Useita yrityksiä yhdellä käyttäjätilillä</li>
-                <li>AI-avustaja ja CN-koodihaku suomeksi ja englanniksi</li>
-              </ul>
-            </section>
+          <h2 id="ominaisuudet-title">Mitä CBAM-työkalulla voi tehdä?</h2>
+          <p class="side-note">Vuosi-ilmoituksen valmisteluun.</p>
+        </div>
+        <div>
+          <div class="feature-groups numbered">
+            <section aria-labelledby="c1"><span class="num">01</span><h3 id="c1">Puuttuvat tiedot näkyviin</h3><ul class="ticks">
+              <li>Tarkistuslista näyttää, mitä tietoja vielä puuttuu.</li>
+              <li>AI-avustaja auttaa alustan käytössä, CBAM-kysymyksissä, lomakkeiden täyttämisessä ja tuontien käsittelyssä.</li>
+              <li>Käyttöliittymä ja CN-koodihaku toimivat suomeksi ja englanniksi.</li></ul></section>
+            <section aria-labelledby="c2"><span class="num">02</span><h3 id="c2">Tuontirekisteri ja aineiston tuonti</h3><ul class="ticks">
+              <li>Tuontirekisteriin tallennetaan CN-koodit, massat, alkuperämaat, tuontipäivät ja tulliviitteet.</li>
+              <li>Tuo aineisto CSV- tai Excel-tiedostosta ja kohdista sarakkeet oikeisiin kenttiin. AI auttaa aineiston siistimisessä.</li></ul></section>
+            <section aria-labelledby="c3"><span class="num">03</span><h3 id="c3">Päästöt, kynnysarvo ja todistukset</h3><ul class="ticks">
+              <li>Laske päästöt ja todistustarve toteutuneilla päästötiedoilla tai oletusarvoilla. Laskenta ottaa huomioon ilmaisten päästöoikeuksien vaiheittaisen poistumisen.</li>
+              <li>Seuraa 50 tonnin vuosittaista kynnysarvoa niiden tavaroiden osalta, joita kyseinen kynnysarvo koskee.</li>
+              <li>Vertaa hallussa olevia CBAM-todistuksia ennustettuun tarpeeseen.</li></ul></section>
+            <section aria-labelledby="c4"><span class="num">04</span><h3 id="c4">Päästötiedot suoraan toimittajalta</h3><ul class="ticks">
+              <li>Lähetä toimittajalle kutsulinkki päästötietojen toimittamiseen. Toimittaja ei tarvitse omaa käyttäjätiliä.</li>
+              <li>Tarkista ja hyväksy toimittajan tiedot itse ja liitä ne oikeaan tuontierään.</li></ul></section>
+            <section aria-labelledby="c5"><span class="num">05</span><h3 id="c5">Vuosi-ilmoituksen valmistelu</h3><ul class="ticks">
+              <li>Valmistele vuosi-ilmoituksen tiedot ja vie aineisto XML- tai ZIP-muodossa EU:n CBAM-rekisteriin toimittamista varten.</li>
+              <li>Työkalu valmistelee ilmoitusaineiston. Sinä toimitat ilmoituksen EU:n CBAM-rekisteriin.</li></ul></section>
+            <section aria-labelledby="c6"><span class="num">06</span><h3 id="c6">Jäljitettävyys ja useat yritykset</h3><ul class="ticks">
+              <li>Muutoshistoriasta näet, kuka muutti mitä. Voit liittää asiakirjat tuontierään.</li>
+              <li>Hallitse useita yrityksiä yhdellä käyttäjätilillä, esimerkiksi tilitoimiston asiakkaita.</li></ul></section>
           </div>
-          <div class="limits">
-            <h3>Mitä Aigen CBAM ei tee</h3>
+          <div class="limits" id="rajaukset">
+            <h3>Mitä alusta ei tee?</h3>
             <ul>
-              <li>Se ei lähetä ilmoitusta puolestasi. Toimitat ilmoituksen itse EU:n CBAM-rekisteriin.</li>
-              <li>CBAM-todistuksia ei voi ostaa sovelluksen kautta.</li>
-              <li>Se ei korvaa kirjanpito-ohjelmistoa.</li>
+              <li>Toimitat valmistellun ilmoitusaineiston itse EU:n CBAM-rekisteriin.</li>
+              <li>Todistuksia ei voi ostaa alustan kautta.</li>
+              <li>Aigen CBAM ei korvaa kirjanpito-ohjelmistoa.</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section" id="kenelle" aria-labelledby="kenelle-title">
+      <div class="wrap detail-grid">
+        <h2 id="kenelle-title">Kenelle ratkaisu sopii?</h2>
+        <div class="prose">
+          <p>CBAM-työkalu sopii yrityksille, jotka tuovat CBAM:n piirissä olevia tuotteita ja tarvitsevat käytännöllisen tavan hallita raportoinnin dataa, vastuita ja puutteita ennen määräaikoja.</p>
+          <ul class="who-list">
+            <li><b>Tuonti ja hankinta</b>Seuraa toimittajilta tarvittavia tietoja ja tunnista puutteet ajoissa.</li>
+            <li><b>Talous ja compliance</b>Kokoaa raportointiin tarvittavat tiedot rakenteiseksi kokonaisuudeksi.</li>
+            <li><b>Johto</b>Saa näkymän valmistelun tilanteeseen ja raportointiin liittyviin riskeihin.</li>
+          </ul>
+          <h3>Miksi CBAM hajoaa käytännössä?</h3>
+          <p>Raportointi vaatii tuonti-, tuote-, toimittaja- ja päästötietoja, jotka eivät yleensä sijaitse samassa järjestelmässä. Ilman selkeää prosessia jokainen raportointijakso alkaa tiedon etsimisellä ja manuaalisella tarkistamisella.</p>
+          <h3>Miten CBAM-työkalu auttaa?</h3>
+          <ul>
+            <li>Kokoaa toimittaja- ja tuotekohtaiset tiedot yhteen.</li>
+            <li>Seuraa puuttuvia päästötietoja ja avoimia tehtäviä.</li>
+            <li>Rakentaa raportoinnista toistettavan prosessin.</li>
+            <li>Vähentää viime hetken manuaalista koontia.</li>
+          </ul>
+          <p class="note">Palvelu on tarkoitettu yrityksille Suomessa ja tuetuilla EU:n ALV-alueilla (cbam.fi).</p>
         </div>
       </div>
     </section>
@@ -198,6 +216,17 @@
       </div>
     </section>
 
+    <section class="detail-section" id="ukk" aria-labelledby="ukk-title">
+      <div class="wrap detail-grid">
+        <h2 id="ukk-title">Usein kysyttyä</h2>
+        <div class="faq">
+          <details class="faq-item"><summary>Kenelle CBAM-työkalu sopii?</summary><p>Yrityksille, jotka tuovat CBAM:n piirissä olevia tuotteita tai vastaavat toimittaja- ja päästödatan hallinnasta.</p></details>
+          <details class="faq-item"><summary>Laskeeko työkalu päästöt?</summary><p>Kyllä. CBAM-työkalu laskee päästöt ja todistustarpeen toteutuneilla päästötiedoilla tai oletusarvoilla ja huomioi ilmaisten päästöoikeuksien vaiheittaisen poistumisen. Tarkistat tiedot ja toimitat ilmoituksen itse EU:n CBAM-rekisteriin.</p></details>
+          <details class="faq-item"><summary>Mitä vuoden 2026 pysyvä vaihe tarkoittaa?</summary><p>CBAM:n pysyvä vaihe alkoi 1.1.2026. Kokoa tuonti- ja päästötiedot pitkin vuotta, jotta tiedot ovat valmiina vuosi-ilmoitusta varten.</p></details>
+        </div>
+      </div>
+    </section>
+
     <section class="detail-section" id="aloitus" aria-labelledby="aloitus-title">
       <div class="wrap detail-grid">
         <h2 id="aloitus-title">Näin aloitat</h2>
@@ -209,7 +238,7 @@
           </ol>
           <div class="actions start-cta">
             <a class="button button-primary" href="https://cbam.fi/sign-up">Luo yritystili <span aria-hidden="true">↗</span></a>
-            <a class="arrow-link" href="/cbam-raportointi/">Lue CBAM-opas</a>
+            <a class="arrow-link" href="/testi-sivu3/oppaat/cbam-raportointi/">Lue CBAM-opas</a>
           </div>
         </div>
       </div>
@@ -226,21 +255,46 @@
           <h2 id="custom-title">Tarvitsetteko jotain muuta?</h2>
           <p>Rakennamme ohjelmiston tai tekoälyautomaation yrityksenne omaan työnkulkuun.</p>
         </div>
-        <a class="button button-primary" href="/testi-sivu3/#raataloity">Räätälöity kehitys</a>
+        <a class="button button-primary" href="/testi-sivu3/raataloity-kehitys/">Räätälöity kehitys</a>
       </aside>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap footer-grid">
-      <img src="/assets/logo-black.png" alt="AI Generation" width="102" height="24">
-      <nav aria-label="Alatunniste">
-        <a href="/testi-sivu3/">Etusivu</a>
-        <a href="/testi-sivu3/sovellukset/">Sovellukset</a>
-        <a href="/oppaat/">Oppaat</a>
-        <a href="/testi-sivu3/#yhteys">Ota yhteyttä</a>
-      </nav>
-      <p class="copy">© 2026 AI Generation Oy</p>
+    <div class="wrap">
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <img src="/assets/logo-black.png" alt="AI Generation" width="102" height="24">
+          <p>Suomalainen ohjelmistoyritys. Sovelluksia ja räätälöityä automaatiota yrityksille Suomessa ja Euroopassa.</p>
+          <p><a href="mailto:contact@aigen.fi">contact@aigen.fi</a><br><a href="https://www.linkedin.com/company/ai-generation-oy/" rel="noopener">LinkedIn</a></p>
+        </div>
+        <nav aria-label="Sovellukset">
+          <h2>Sovellukset</h2>
+          <ul>
+            <li><a href="/testi-sivu3/sovellukset/ilmoo/">Ilmoo</a></li>
+            <li><a href="/testi-sivu3/sovellukset/aigen-cbam/">Aigen CBAM</a></li>
+            <li><a href="/testi-sivu3/sovellukset/">Kaikki sovellukset</a></li>
+            <li><a href="/testi-sivu3/sovellukset/?kohde=muut">Pelit ja kokeilut</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Oppaat">
+          <h2><a href="/testi-sivu3/oppaat/">Oppaat</a></h2>
+          <ul><li><a href="/testi-sivu3/oppaat/ai-act-pk-yritys/">EU AI Act</a></li><li><a href="/testi-sivu3/oppaat/palkka-avoimuusdirektiivi/">Palkka-avoimuus</a></li><li><a href="/testi-sivu3/oppaat/cbam-raportointi/">CBAM-raportointi</a></li><li><a href="/testi-sivu3/oppaat/whistleblowing-kanava/">Whistleblowing-kanava</a></li><li><a href="/testi-sivu3/oppaat/tekoalyagentti-yritykselle/">Tekoälyagentti yritykselle</a></li><li><a href="/testi-sivu3/oppaat/tekoalyautomaatio-pk-yrityksille/">Tekoälyautomaatio pk-yrityksille</a></li></ul>
+        </nav>
+        <nav aria-label="Yritys">
+          <h2>Yritys</h2>
+          <ul>
+            <li><a href="/testi-sivu3/raataloity-kehitys/">Räätälöity kehitys</a></li>
+            <li><a href="/testi-sivu3/blog/">Blogi</a></li>
+            <li><a href="/testi-sivu3/yritys/">Meistä</a></li>
+            <li><a href="/testi-sivu3/yritys/#yhteys">Ota yhteyttä</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="copy">© 2026 AI Generation Oy</p>
+        <a href="/testi-sivu3/en/apps/aigen-cbam/" hreflang="en" lang="en">In English</a>
+      </div>
     </div>
   </footer>
 </body>

@@ -1,0 +1,1011 @@
+{
+ "pages": {
+  "app-aigen-cbam": {
+   "fi": "/testi-sivu3/sovellukset/aigen-cbam/",
+   "en": "/testi-sivu3/en/apps/aigen-cbam/"
+  },
+  "app-clawspam": {
+   "fi": "/testi-sivu3/sovellukset/clawspam/",
+   "en": "/testi-sivu3/en/apps/clawspam/"
+  },
+  "app-draftpad": {
+   "fi": "/testi-sivu3/sovellukset/draftpad/",
+   "en": "/testi-sivu3/en/apps/draftpad/"
+  },
+  "app-gpsrdocs": {
+   "fi": "/testi-sivu3/sovellukset/gpsrdocs/",
+   "en": "/testi-sivu3/en/apps/gpsrdocs/"
+  },
+  "app-ilmoo": {
+   "fi": "/testi-sivu3/sovellukset/ilmoo/",
+   "en": "/testi-sivu3/en/apps/ilmoo/"
+  },
+  "app-spawnpad": {
+   "fi": "/testi-sivu3/sovellukset/spawnpad/",
+   "en": "/testi-sivu3/en/apps/spawnpad/"
+  },
+  "app-tasapay": {
+   "fi": "/testi-sivu3/sovellukset/tasapay/",
+   "en": "/testi-sivu3/en/apps/tasapay/"
+  },
+  "apps": {
+   "fi": "/testi-sivu3/sovellukset/",
+   "en": "/testi-sivu3/en/apps/"
+  },
+  "blog": {
+   "fi": "/testi-sivu3/blog/",
+   "en": "/testi-sivu3/en/blog/"
+  },
+  "company": {
+   "fi": "/testi-sivu3/yritys/",
+   "en": "/testi-sivu3/en/company/"
+  },
+  "custom": {
+   "fi": "/testi-sivu3/raataloity-kehitys/",
+   "en": "/testi-sivu3/en/custom-development/"
+  },
+  "guide-agent": {
+   "fi": "/testi-sivu3/oppaat/tekoalyagentti-yritykselle/",
+   "en": "/testi-sivu3/en/guides/ai-agent-for-business/"
+  },
+  "guide-aiact": {
+   "fi": "/testi-sivu3/oppaat/ai-act-pk-yritys/",
+   "en": "/testi-sivu3/en/guides/ai-act-for-smes/"
+  },
+  "guide-auto": {
+   "fi": "/testi-sivu3/oppaat/tekoalyautomaatio-pk-yrityksille/",
+   "en": "/testi-sivu3/en/guides/ai-automation-for-smes/"
+  },
+  "guide-cbam": {
+   "fi": "/testi-sivu3/oppaat/cbam-raportointi/",
+   "en": "/testi-sivu3/en/guides/cbam-reporting/"
+  },
+  "guide-pay": {
+   "fi": "/testi-sivu3/oppaat/palkka-avoimuusdirektiivi/",
+   "en": "/testi-sivu3/en/guides/pay-transparency-directive/"
+  },
+  "guide-wb": {
+   "fi": "/testi-sivu3/oppaat/whistleblowing-kanava/",
+   "en": "/testi-sivu3/en/guides/whistleblowing-channel/"
+  },
+  "guides": {
+   "fi": "/testi-sivu3/oppaat/",
+   "en": "/testi-sivu3/en/guides/"
+  },
+  "home": {
+   "fi": "/testi-sivu3/",
+   "en": "/testi-sivu3/en/"
+  },
+  "post-agentit-selvitystyo-workflow": {
+   "fi": "/testi-sivu3/blog/agentit-selvitystyo-workflow/",
+   "en": "/testi-sivu3/en/blog/agents-turn-research-into-five-minute-workflows/"
+  },
+  "post-agenttityossa-workflow-ratkaisee": {
+   "fi": "/testi-sivu3/blog/agenttityossa-workflow-ratkaisee/",
+   "en": "/testi-sivu3/en/blog/workflow-decides-agent-work/"
+  },
+  "post-ai-agentti-veroilmoitus": {
+   "fi": "/testi-sivu3/blog/ai-agentti-veroilmoitus/",
+   "en": "/testi-sivu3/en/blog/ai-agent-company-tax-return/"
+  },
+  "post-ai-agenttien-suurin-ongelma-on-muisti": {
+   "fi": "/testi-sivu3/blog/ai-agenttien-suurin-ongelma-on-muisti/",
+   "en": "/testi-sivu3/en/blog/ai-agents-biggest-problem-is-memory/"
+  },
+  "post-aigen-cbam-avattu": {
+   "fi": "/testi-sivu3/blog/aigen-cbam-avattu/",
+   "en": "/testi-sivu3/en/blog/aigen-cbam-launched/"
+  },
+  "post-chatgpt-work-kirjautuu-ilman-salasanaa": {
+   "fi": "/testi-sivu3/blog/chatgpt-work-kirjautuu-ilman-salasanaa/",
+   "en": "/testi-sivu3/en/blog/chatgpt-work-signs-in-without-seeing-passwords/"
+  },
+  "post-grok-bot-tekoalyagentti-tyokaverina": {
+   "fi": "/testi-sivu3/blog/grok-bot-tekoalyagentti-tyokaverina/",
+   "en": "/testi-sivu3/en/blog/grok-bot-ai-agent-as-coworker/"
+  },
+  "post-mallit-kehittyvat-tekstin-tunnistaa": {
+   "fi": "/testi-sivu3/blog/mallit-kehittyvat-tekstin-tunnistaa/",
+   "en": "/testi-sivu3/en/blog/models-get-better-writing-gets-easier-to-spot/"
+  },
+  "post-tekoaly-ei-ole-hakukone": {
+   "fi": "/testi-sivu3/blog/tekoaly-ei-ole-hakukone/",
+   "en": "/testi-sivu3/en/blog/ai-stopped-being-a-search-engine/"
+  },
+  "post-tekoaly-muuttaa-omalle-koneelle": {
+   "fi": "/testi-sivu3/blog/tekoaly-muuttaa-omalle-koneelle/",
+   "en": "/testi-sivu3/en/blog/ai-is-moving-onto-your-own-computer/"
+  },
+  "post-tekoalyagentit-arjessa": {
+   "fi": "/testi-sivu3/blog/tekoalyagentit-arjessa/",
+   "en": "/testi-sivu3/en/blog/ai-agents-in-daily-work/"
+  },
+  "post-tekoalyn-suurin-riski-huono-johtaminen": {
+   "fi": "/testi-sivu3/blog/tekoalyn-suurin-riski-huono-johtaminen/",
+   "en": "/testi-sivu3/en/blog/ai-biggest-risk-bad-management/"
+  },
+  "post-teslan-grok-katulamppujen-vikailmoitus": {
+   "fi": "/testi-sivu3/blog/teslan-grok-katulamppujen-vikailmoitus/",
+   "en": "/testi-sivu3/en/blog/tesla-grok-streetlight-report/"
+  },
+  "post-vakuutusten-kilpailutus-ai-agentilla": {
+   "fi": "/testi-sivu3/blog/vakuutusten-kilpailutus-ai-agentilla/",
+   "en": "/testi-sivu3/en/blog/insurance-tendering-ai-agent/"
+  }
+ },
+ "live_sources": {
+  "home": {
+   "fi": "/",
+   "en": "/en/"
+  },
+  "guides": {
+   "fi": "/oppaat/",
+   "en": "/en/guides/"
+  },
+  "blog": {
+   "fi": "/blog/",
+   "en": "/en/blog/"
+  },
+  "app-ilmoo": {
+   "fi": "/tuotteet/ilmoita/",
+   "en": "/en/products/ilmoita/"
+  },
+  "app-aigen-cbam": {
+   "fi": "/tuotteet/cbam-tool/",
+   "en": "/en/products/cbam-tool/"
+  },
+  "app-tasapay": {
+   "fi": "/tuotteet/tasapay/",
+   "en": "/en/products/tasapay/"
+  },
+  "app-gpsrdocs": {
+   "fi": "/tuotteet/gpsrdocs/",
+   "en": "/en/products/gpsrdocs/"
+  },
+  "guide-aiact": {
+   "fi": "/ai-act-pk-yritys/",
+   "en": "/en/ai-act-for-smes/"
+  },
+  "guide-pay": {
+   "fi": "/palkka-avoimuusdirektiivi/",
+   "en": "/en/pay-transparency-directive/"
+  },
+  "guide-cbam": {
+   "fi": "/cbam-raportointi/",
+   "en": "/en/cbam-reporting/"
+  },
+  "guide-wb": {
+   "fi": "/whistleblowing-kanava/",
+   "en": "/en/whistleblowing-channel/"
+  },
+  "guide-agent": {
+   "fi": "/tekoalyagentti-yritykselle/",
+   "en": "/en/ai-agent-for-business/"
+  },
+  "guide-auto": {
+   "fi": "/tekoalyautomaatio-pk-yrityksille/",
+   "en": "/en/ai-automation-for-smes/"
+  },
+  "post-agentit-selvitystyo-workflow": {
+   "fi": "/blog/agentit-selvitystyo-workflow/",
+   "en": "/en/blog/agents-turn-research-into-five-minute-workflows/"
+  },
+  "post-agenttityossa-workflow-ratkaisee": {
+   "fi": "/blog/agenttityossa-workflow-ratkaisee/",
+   "en": "/en/blog/workflow-decides-agent-work/"
+  },
+  "post-ai-agentti-veroilmoitus": {
+   "fi": "/blog/ai-agentti-veroilmoitus/",
+   "en": "/en/blog/ai-agent-company-tax-return/"
+  },
+  "post-ai-agenttien-suurin-ongelma-on-muisti": {
+   "fi": "/blog/ai-agenttien-suurin-ongelma-on-muisti/",
+   "en": "/en/blog/ai-agents-biggest-problem-is-memory/"
+  },
+  "post-aigen-cbam-avattu": {
+   "fi": "/blog/aigen-cbam-avattu/",
+   "en": "/en/blog/aigen-cbam-launched/"
+  },
+  "post-chatgpt-work-kirjautuu-ilman-salasanaa": {
+   "fi": "/blog/chatgpt-work-kirjautuu-ilman-salasanaa/",
+   "en": "/en/blog/chatgpt-work-signs-in-without-seeing-passwords/"
+  },
+  "post-grok-bot-tekoalyagentti-tyokaverina": {
+   "fi": "/blog/grok-bot-tekoalyagentti-tyokaverina/",
+   "en": "/en/blog/grok-bot-ai-agent-as-coworker/"
+  },
+  "post-mallit-kehittyvat-tekstin-tunnistaa": {
+   "fi": "/blog/mallit-kehittyvat-tekstin-tunnistaa/",
+   "en": "/en/blog/models-get-better-writing-gets-easier-to-spot/"
+  },
+  "post-tekoaly-ei-ole-hakukone": {
+   "fi": "/blog/tekoaly-ei-ole-hakukone/",
+   "en": "/en/blog/ai-stopped-being-a-search-engine/"
+  },
+  "post-tekoaly-muuttaa-omalle-koneelle": {
+   "fi": "/blog/tekoaly-muuttaa-omalle-koneelle/",
+   "en": "/en/blog/ai-is-moving-onto-your-own-computer/"
+  },
+  "post-tekoalyagentit-arjessa": {
+   "fi": "/blog/tekoalyagentit-arjessa/",
+   "en": "/en/blog/ai-agents-in-daily-work/"
+  },
+  "post-tekoalyn-suurin-riski-huono-johtaminen": {
+   "fi": "/blog/tekoalyn-suurin-riski-huono-johtaminen/",
+   "en": "/en/blog/ai-biggest-risk-bad-management/"
+  },
+  "post-teslan-grok-katulamppujen-vikailmoitus": {
+   "fi": "/blog/teslan-grok-katulamppujen-vikailmoitus/",
+   "en": "/en/blog/tesla-grok-streetlight-report/"
+  },
+  "post-vakuutusten-kilpailutus-ai-agentilla": {
+   "fi": "/blog/vakuutusten-kilpailutus-ai-agentilla/",
+   "en": "/en/blog/insurance-tendering-ai-agent/"
+  }
+ },
+ "aliases": {
+  "/testi-sivu3/tuotteet/ilmoita/": "/testi-sivu3/sovellukset/ilmoo/",
+  "/testi-sivu3/en/products/ilmoita/": "/testi-sivu3/en/apps/ilmoo/",
+  "/testi-sivu3/tuotteet/cbam-tool/": "/testi-sivu3/sovellukset/aigen-cbam/",
+  "/testi-sivu3/en/products/cbam-tool/": "/testi-sivu3/en/apps/aigen-cbam/",
+  "/testi-sivu3/tuotteet/tasapay/": "/testi-sivu3/sovellukset/tasapay/",
+  "/testi-sivu3/en/products/tasapay/": "/testi-sivu3/en/apps/tasapay/",
+  "/testi-sivu3/tuotteet/gpsrdocs/": "/testi-sivu3/sovellukset/gpsrdocs/",
+  "/testi-sivu3/en/products/gpsrdocs/": "/testi-sivu3/en/apps/gpsrdocs/",
+  "/testi-sivu3/ai-act-pk-yritys/": "/testi-sivu3/oppaat/ai-act-pk-yritys/",
+  "/testi-sivu3/en/ai-act-for-smes/": "/testi-sivu3/en/guides/ai-act-for-smes/",
+  "/testi-sivu3/palkka-avoimuusdirektiivi/": "/testi-sivu3/oppaat/palkka-avoimuusdirektiivi/",
+  "/testi-sivu3/en/pay-transparency-directive/": "/testi-sivu3/en/guides/pay-transparency-directive/",
+  "/testi-sivu3/cbam-raportointi/": "/testi-sivu3/oppaat/cbam-raportointi/",
+  "/testi-sivu3/en/cbam-reporting/": "/testi-sivu3/en/guides/cbam-reporting/",
+  "/testi-sivu3/whistleblowing-kanava/": "/testi-sivu3/oppaat/whistleblowing-kanava/",
+  "/testi-sivu3/en/whistleblowing-channel/": "/testi-sivu3/en/guides/whistleblowing-channel/",
+  "/testi-sivu3/tekoalyagentti-yritykselle/": "/testi-sivu3/oppaat/tekoalyagentti-yritykselle/",
+  "/testi-sivu3/en/ai-agent-for-business/": "/testi-sivu3/en/guides/ai-agent-for-business/",
+  "/testi-sivu3/tekoalyautomaatio-pk-yrityksille/": "/testi-sivu3/oppaat/tekoalyautomaatio-pk-yrityksille/",
+  "/testi-sivu3/en/ai-automation-for-smes/": "/testi-sivu3/en/guides/ai-automation-for-smes/"
+ },
+ "shared_assets": [
+  "/assets/blog/agenttityo-workflow.jpg",
+  "/assets/blog/ai-agenttien-muistikerros.png",
+  "/assets/blog/chatgpt-work-kirjautuminen.png",
+  "/assets/blog/mallit-kehittyvat-teksti-paljastaa.png",
+  "/assets/blog/rtx-spark-paikallinen-tekoaly.png",
+  "/assets/blog/tekoalyn-riski-huono-johtaminen.png",
+  "/assets/blog/teslan-grok-katulamppujen-vikailmoitus.webp",
+  "/assets/blog/vakuutusten-kilpailutus-ai-agentilla.png",
+  "/assets/blog/veroilmoitus-ai-agentti.jpg",
+  "/assets/cbam-logo.png",
+  "/assets/logo-slogan.png"
+ ],
+ "link_rewrites": [
+  [
+   "guide-pay",
+   "/tuotteet/tasapay/",
+   "/testi-sivu3/sovellukset/tasapay/"
+  ],
+  [
+   "guide-cbam",
+   "/tuotteet/cbam-tool/",
+   "/testi-sivu3/sovellukset/aigen-cbam/"
+  ],
+  [
+   "guide-wb",
+   "/tuotteet/ilmoita/",
+   "/testi-sivu3/sovellukset/ilmoo/"
+  ],
+  [
+   "guide-agent",
+   "/tekoalyautomaatio-pk-yrityksille/",
+   "/testi-sivu3/oppaat/tekoalyautomaatio-pk-yrityksille/"
+  ],
+  [
+   "guide-agent",
+   "/blog/",
+   "/testi-sivu3/blog/"
+  ],
+  [
+   "guide-auto",
+   "/tekoalyagentti-yritykselle/",
+   "/testi-sivu3/oppaat/tekoalyagentti-yritykselle/"
+  ],
+  [
+   "guide-auto",
+   "/blog/",
+   "/testi-sivu3/blog/"
+  ],
+  [
+   "post-aigen-cbam-avattu",
+   "/tuotteet/cbam-tool/",
+   "/testi-sivu3/sovellukset/aigen-cbam/"
+  ],
+  [
+   "post-teslan-grok-katulamppujen-vikailmoitus",
+   "/blog/",
+   "/testi-sivu3/blog/"
+  ],
+  [
+   "guide-pay",
+   "/en/products/tasapay/",
+   "/testi-sivu3/en/apps/tasapay/"
+  ],
+  [
+   "guide-cbam",
+   "/en/products/cbam-tool/",
+   "/testi-sivu3/en/apps/aigen-cbam/"
+  ],
+  [
+   "guide-wb",
+   "/en/products/ilmoita/",
+   "/testi-sivu3/en/apps/ilmoo/"
+  ],
+  [
+   "guide-agent",
+   "/en/ai-automation-for-smes/",
+   "/testi-sivu3/en/guides/ai-automation-for-smes/"
+  ],
+  [
+   "guide-agent",
+   "/en/blog/",
+   "/testi-sivu3/en/blog/"
+  ],
+  [
+   "guide-auto",
+   "/en/ai-agent-for-business/",
+   "/testi-sivu3/en/guides/ai-agent-for-business/"
+  ],
+  [
+   "guide-auto",
+   "/en/blog/",
+   "/testi-sivu3/en/blog/"
+  ],
+  [
+   "post-aigen-cbam-avattu",
+   "/en/products/cbam-tool/",
+   "/testi-sivu3/en/apps/aigen-cbam/"
+  ],
+  [
+   "post-teslan-grok-katulamppujen-vikailmoitus",
+   "/en/blog/",
+   "/testi-sivu3/en/blog/"
+  ]
+ ],
+ "blog_pairs": [
+  {
+   "key": "post-agentit-selvitystyo-workflow",
+   "fi": "agentit-selvitystyo-workflow",
+   "en": "agents-turn-research-into-five-minute-workflows"
+  },
+  {
+   "key": "post-agenttityossa-workflow-ratkaisee",
+   "fi": "agenttityossa-workflow-ratkaisee",
+   "en": "workflow-decides-agent-work"
+  },
+  {
+   "key": "post-ai-agentti-veroilmoitus",
+   "fi": "ai-agentti-veroilmoitus",
+   "en": "ai-agent-company-tax-return"
+  },
+  {
+   "key": "post-ai-agenttien-suurin-ongelma-on-muisti",
+   "fi": "ai-agenttien-suurin-ongelma-on-muisti",
+   "en": "ai-agents-biggest-problem-is-memory"
+  },
+  {
+   "key": "post-aigen-cbam-avattu",
+   "fi": "aigen-cbam-avattu",
+   "en": "aigen-cbam-launched"
+  },
+  {
+   "key": "post-chatgpt-work-kirjautuu-ilman-salasanaa",
+   "fi": "chatgpt-work-kirjautuu-ilman-salasanaa",
+   "en": "chatgpt-work-signs-in-without-seeing-passwords"
+  },
+  {
+   "key": "post-grok-bot-tekoalyagentti-tyokaverina",
+   "fi": "grok-bot-tekoalyagentti-tyokaverina",
+   "en": "grok-bot-ai-agent-as-coworker"
+  },
+  {
+   "key": "post-mallit-kehittyvat-tekstin-tunnistaa",
+   "fi": "mallit-kehittyvat-tekstin-tunnistaa",
+   "en": "models-get-better-writing-gets-easier-to-spot"
+  },
+  {
+   "key": "post-tekoaly-ei-ole-hakukone",
+   "fi": "tekoaly-ei-ole-hakukone",
+   "en": "ai-stopped-being-a-search-engine"
+  },
+  {
+   "key": "post-tekoaly-muuttaa-omalle-koneelle",
+   "fi": "tekoaly-muuttaa-omalle-koneelle",
+   "en": "ai-is-moving-onto-your-own-computer"
+  },
+  {
+   "key": "post-tekoalyagentit-arjessa",
+   "fi": "tekoalyagentit-arjessa",
+   "en": "ai-agents-in-daily-work"
+  },
+  {
+   "key": "post-tekoalyn-suurin-riski-huono-johtaminen",
+   "fi": "tekoalyn-suurin-riski-huono-johtaminen",
+   "en": "ai-biggest-risk-bad-management"
+  },
+  {
+   "key": "post-teslan-grok-katulamppujen-vikailmoitus",
+   "fi": "teslan-grok-katulamppujen-vikailmoitus",
+   "en": "tesla-grok-streetlight-report"
+  },
+  {
+   "key": "post-vakuutusten-kilpailutus-ai-agentilla",
+   "fi": "vakuutusten-kilpailutus-ai-agentilla",
+   "en": "insurance-tendering-ai-agent"
+  }
+ ],
+ "posts": {
+  "post-agentit-selvitystyo-workflow:fi": {
+   "src": "/blog/agentit-selvitystyo-workflow/",
+   "published": "2026-04-20",
+   "modified": "2026-05-22",
+   "date_text": "20.4.2026",
+   "tags": [
+    "AI-agentit"
+   ],
+   "image": {
+    "src": "/assets/logo-slogan.png",
+    "alt": "Agentit tekevät monivaiheisesta selvitystyöstä 5 minuutin workflow’n",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-agentit-selvitystyo-workflow:en": {
+   "src": "/en/blog/agents-turn-research-into-five-minute-workflows/",
+   "published": "2026-04-20",
+   "modified": "2026-06-03",
+   "date_text": "20.4.2026",
+   "tags": [
+    "AI agents"
+   ],
+   "image": {
+    "src": "/assets/logo-slogan.png",
+    "alt": "Agents turn multi-step research into a five-minute workflow",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-agenttityossa-workflow-ratkaisee:fi": {
+   "src": "/blog/agenttityossa-workflow-ratkaisee/",
+   "published": "2026-05-22",
+   "modified": "2026-05-22",
+   "date_text": "22.5.2026",
+   "tags": [
+    "tekoäly",
+    "agentit",
+    "workflow",
+    "orchestration"
+   ],
+   "image": {
+    "src": "/assets/blog/agenttityo-workflow.jpg",
+    "alt": "Mallivertailu on helppo tarina. Agenttityössä workflow ratkaisee.",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-agenttityossa-workflow-ratkaisee:en": {
+   "src": "/en/blog/workflow-decides-agent-work/",
+   "published": "2026-05-22",
+   "modified": "2026-06-03",
+   "date_text": "22.5.2026",
+   "tags": [
+    "AI",
+    "agents",
+    "workflow"
+   ],
+   "image": {
+    "src": "/assets/blog/agenttityo-workflow.jpg",
+    "alt": "Model comparisons are an easy story. In agent work, workflow decides.",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-ai-agentti-veroilmoitus:fi": {
+   "src": "/blog/ai-agentti-veroilmoitus/",
+   "published": "2026-05-25",
+   "modified": "2026-05-25",
+   "date_text": "25.5.2026",
+   "tags": [
+    "AI",
+    "Agentit",
+    "Tekoäly",
+    "Automaatio"
+   ],
+   "image": {
+    "src": "/assets/blog/veroilmoitus-ai-agentti.jpg",
+    "alt": "Annoimme AI-agentin tehdä yrityksen veroilmoituksen",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-ai-agentti-veroilmoitus:en": {
+   "src": "/en/blog/ai-agent-company-tax-return/",
+   "published": "2026-05-25",
+   "modified": "2026-06-03",
+   "date_text": "25.5.2026",
+   "tags": [
+    "AI",
+    "agents",
+    "automation"
+   ],
+   "image": {
+    "src": "/assets/blog/veroilmoitus-ai-agentti.jpg",
+    "alt": "We let an AI agent prepare a company tax return",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-ai-agenttien-suurin-ongelma-on-muisti:fi": {
+   "src": "/blog/ai-agenttien-suurin-ongelma-on-muisti/",
+   "published": "2026-06-22",
+   "modified": "2026-06-22",
+   "date_text": "22.6.2026",
+   "tags": [
+    "AI-agentit",
+    "muisti",
+    "OpenClaw",
+    "Hermes"
+   ],
+   "image": {
+    "src": "/assets/blog/ai-agenttien-muistikerros.png",
+    "alt": "AI-agenttien suurin ongelma ei ole älykkyys. Se on muisti.",
+    "w": "1672",
+    "h": "941"
+   },
+   "caption": ""
+  },
+  "post-ai-agenttien-suurin-ongelma-on-muisti:en": {
+   "src": "/en/blog/ai-agents-biggest-problem-is-memory/",
+   "published": "2026-06-22",
+   "modified": "2026-06-22",
+   "date_text": "22 Jun 2026",
+   "tags": [
+    "AI agents",
+    "memory",
+    "OpenClaw",
+    "Hermes"
+   ],
+   "image": {
+    "src": "/assets/blog/ai-agenttien-muistikerros.png",
+    "alt": "AI agents' biggest problem is not intelligence. It is memory.",
+    "w": "1672",
+    "h": "941"
+   },
+   "caption": ""
+  },
+  "post-aigen-cbam-avattu:fi": {
+   "src": "/blog/aigen-cbam-avattu/",
+   "published": "2026-09-18",
+   "modified": "2026-09-19",
+   "date_text": "18.9.2026 · Päivitetty 19.9.2026",
+   "tags": [
+    "CBAM",
+    "Maahantuonti"
+   ],
+   "image": {
+    "src": "/assets/cbam-logo.png",
+    "alt": "Aigen CBAM",
+    "w": "512",
+    "h": "512"
+   },
+   "caption": ""
+  },
+  "post-aigen-cbam-avattu:en": {
+   "src": "/en/blog/aigen-cbam-launched/",
+   "published": "2026-09-18",
+   "modified": "2026-09-19",
+   "date_text": "18 September 2026 · Updated 19 September 2026",
+   "tags": [
+    "CBAM",
+    "Imports"
+   ],
+   "image": {
+    "src": "/assets/cbam-logo.png",
+    "alt": "Aigen CBAM",
+    "w": "512",
+    "h": "512"
+   },
+   "caption": ""
+  },
+  "post-chatgpt-work-kirjautuu-ilman-salasanaa:fi": {
+   "src": "/blog/chatgpt-work-kirjautuu-ilman-salasanaa/",
+   "published": "2026-08-26",
+   "modified": "",
+   "date_text": "26.8.2026",
+   "tags": [
+    "Tekoälyagentit",
+    "ChatGPT Work"
+   ],
+   "image": {
+    "src": "/assets/blog/chatgpt-work-kirjautuminen.png?v=7b8803e",
+    "alt": "Kannettava, jonka näytöllä kirjautumislomake ja suojattu salasana",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-chatgpt-work-kirjautuu-ilman-salasanaa:en": {
+   "src": "/en/blog/chatgpt-work-signs-in-without-seeing-passwords/",
+   "published": "2026-08-26",
+   "modified": "",
+   "date_text": "26 Aug 2026",
+   "tags": [
+    "AI agents",
+    "ChatGPT Work"
+   ],
+   "image": {
+    "src": "/assets/blog/chatgpt-work-kirjautuminen.png?v=7b8803e",
+    "alt": "Laptop showing a login form with the password hidden from the agent",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-grok-bot-tekoalyagentti-tyokaverina:fi": {
+   "src": "/blog/grok-bot-tekoalyagentti-tyokaverina/",
+   "published": "2026-08-16",
+   "modified": "",
+   "date_text": "16.8.2026",
+   "tags": [
+    "Tekoälyagentit",
+    "Grok Bot"
+   ],
+   "image": {
+    "src": "/assets/blog/ai-agenttien-muistikerros.png",
+    "alt": "Tekoälyagentin työ ja muisti",
+    "w": "1672",
+    "h": "941"
+   },
+   "caption": ""
+  },
+  "post-grok-bot-tekoalyagentti-tyokaverina:en": {
+   "src": "/en/blog/grok-bot-ai-agent-as-coworker/",
+   "published": "2026-08-16",
+   "modified": "",
+   "date_text": "16 Aug 2026",
+   "tags": [
+    "AI agents",
+    "Grok Bot"
+   ],
+   "image": {
+    "src": "/assets/blog/ai-agenttien-muistikerros.png",
+    "alt": "AI agent work and memory",
+    "w": "1672",
+    "h": "941"
+   },
+   "caption": ""
+  },
+  "post-mallit-kehittyvat-tekstin-tunnistaa:fi": {
+   "src": "/blog/mallit-kehittyvat-tekstin-tunnistaa/",
+   "published": "2026-08-19",
+   "modified": "",
+   "date_text": "19.8.2026",
+   "tags": [
+    "Kirjoittaminen",
+    "Tekoälyagentit"
+   ],
+   "image": {
+    "src": "/assets/blog/mallit-kehittyvat-teksti-paljastaa.png",
+    "alt": "Muokattu tekstiluonnos työpöydällä",
+    "w": "1402",
+    "h": "1122"
+   },
+   "caption": ""
+  },
+  "post-mallit-kehittyvat-tekstin-tunnistaa:en": {
+   "src": "/en/blog/models-get-better-writing-gets-easier-to-spot/",
+   "published": "2026-08-19",
+   "modified": "",
+   "date_text": "19 Aug 2026",
+   "tags": [
+    "Writing",
+    "AI agents"
+   ],
+   "image": {
+    "src": "/assets/blog/mallit-kehittyvat-teksti-paljastaa.png",
+    "alt": "Edited draft on a writing desk",
+    "w": "1402",
+    "h": "1122"
+   },
+   "caption": ""
+  },
+  "post-tekoaly-ei-ole-hakukone:fi": {
+   "src": "/blog/tekoaly-ei-ole-hakukone/",
+   "published": "2026-05-06",
+   "modified": "2026-05-06",
+   "date_text": "6.5.2026",
+   "tags": [
+    "AI",
+    "AIagentit",
+    "automaatio",
+    "yrittäjyys"
+   ],
+   "image": {
+    "src": "/assets/logo-slogan.png",
+    "alt": "Tekoäly lakkasi olemasta hakukone. Useimmat eivät huomanneet.",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-tekoaly-ei-ole-hakukone:en": {
+   "src": "/en/blog/ai-stopped-being-a-search-engine/",
+   "published": "2026-05-06",
+   "modified": "2026-06-03",
+   "date_text": "6.5.2026",
+   "tags": [
+    "AI",
+    "AI agents",
+    "automation"
+   ],
+   "image": {
+    "src": "/assets/logo-slogan.png",
+    "alt": "AI stopped being a search engine. Most people did not notice.",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-tekoaly-muuttaa-omalle-koneelle:fi": {
+   "src": "/blog/tekoaly-muuttaa-omalle-koneelle/",
+   "published": "2026-06-10",
+   "modified": "2026-06-10",
+   "date_text": "10.6.2026",
+   "tags": [
+    "paikallinen tekoäly",
+    "AI-agentit",
+    "Nvidia",
+    "yritykset"
+   ],
+   "image": {
+    "src": "/assets/blog/rtx-spark-paikallinen-tekoaly.png",
+    "alt": "Paikallinen tekoäly kannettavalla tietokoneella",
+    "w": "1672",
+    "h": "941"
+   },
+   "caption": ""
+  },
+  "post-tekoaly-muuttaa-omalle-koneelle:en": {
+   "src": "/en/blog/ai-is-moving-onto-your-own-computer/",
+   "published": "2026-06-10",
+   "modified": "2026-06-10",
+   "date_text": "10.6.2026",
+   "tags": [
+    "local AI",
+    "AI agents",
+    "Nvidia",
+    "business"
+   ],
+   "image": {
+    "src": "/assets/blog/rtx-spark-paikallinen-tekoaly.png",
+    "alt": "Local AI running on a laptop",
+    "w": "1672",
+    "h": "941"
+   },
+   "caption": ""
+  },
+  "post-tekoalyagentit-arjessa:fi": {
+   "src": "/blog/tekoalyagentit-arjessa/",
+   "published": "2026-04-20",
+   "modified": "2026-04-20",
+   "date_text": "20.4.2026",
+   "tags": [
+    "AI-agentit"
+   ],
+   "image": {
+    "src": "/assets/logo-slogan.png",
+    "alt": "Tekoälyagentit eivät ole meille demoja. Ne ovat osa arkea.",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-tekoalyagentit-arjessa:en": {
+   "src": "/en/blog/ai-agents-in-daily-work/",
+   "published": "2026-04-20",
+   "modified": "2026-06-03",
+   "date_text": "20.4.2026",
+   "tags": [
+    "AI agents"
+   ],
+   "image": {
+    "src": "/assets/logo-slogan.png",
+    "alt": "AI agents are not demos for us. They are part of daily work.",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-tekoalyn-suurin-riski-huono-johtaminen:fi": {
+   "src": "/blog/tekoalyn-suurin-riski-huono-johtaminen/",
+   "published": "2026-06-14",
+   "modified": "2026-06-14",
+   "date_text": "14.6.2026",
+   "tags": [
+    "tekoäly",
+    "AI",
+    "agentit",
+    "työelämä"
+   ],
+   "image": {
+    "src": "/assets/blog/tekoalyn-riski-huono-johtaminen.png",
+    "alt": "Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.",
+    "w": "1024",
+    "h": "1536"
+   },
+   "caption": ""
+  },
+  "post-tekoalyn-suurin-riski-huono-johtaminen:en": {
+   "src": "/en/blog/ai-biggest-risk-bad-management/",
+   "published": "2026-06-14",
+   "modified": "2026-06-14",
+   "date_text": "14.6.2026",
+   "tags": [
+    "AI",
+    "AI agents",
+    "workflow",
+    "management"
+   ],
+   "image": {
+    "src": "/assets/blog/tekoalyn-riski-huono-johtaminen.png",
+    "alt": "AI agent workflows shown as managed work across development, marketing and reporting.",
+    "w": "1024",
+    "h": "1536"
+   },
+   "caption": ""
+  },
+  "post-teslan-grok-katulamppujen-vikailmoitus:fi": {
+   "src": "/blog/teslan-grok-katulamppujen-vikailmoitus/",
+   "published": "2026-09-25",
+   "modified": "2026-09-25",
+   "date_text": "25.9.2026",
+   "tags": [
+    "Tekoälyagentit",
+    "Grok"
+   ],
+   "image": {
+    "src": "/assets/blog/teslan-grok-katulamppujen-vikailmoitus.webp",
+    "alt": "Kuvitus: auton tuulilasista näkyvä katu hämärässä, kaksi pimeää katuvalaisinta ja kojelaudan karttanäyttö.",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": "Tekoälyllä tuotettu kuvituskuva."
+  },
+  "post-teslan-grok-katulamppujen-vikailmoitus:en": {
+   "src": "/en/blog/tesla-grok-streetlight-report/",
+   "published": "2026-09-25",
+   "modified": "2026-09-25",
+   "date_text": "25 September 2026",
+   "tags": [
+    "AI agents",
+    "Grok"
+   ],
+   "image": {
+    "src": "/assets/blog/teslan-grok-katulamppujen-vikailmoitus.webp",
+    "alt": "Illustration: a street at dawn seen through a car windshield, two unlit streetlights and a map on the dashboard screen.",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": "AI-generated illustration."
+  },
+  "post-vakuutusten-kilpailutus-ai-agentilla:fi": {
+   "src": "/blog/vakuutusten-kilpailutus-ai-agentilla/",
+   "published": "2026-06-03",
+   "modified": "2026-06-03",
+   "date_text": "3.6.2026",
+   "tags": [
+    "tekoäly",
+    "automaatio",
+    "AIagentit",
+    "AI-agentit"
+   ],
+   "image": {
+    "src": "/assets/blog/vakuutusten-kilpailutus-ai-agentilla.png",
+    "alt": "Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  },
+  "post-vakuutusten-kilpailutus-ai-agentilla:en": {
+   "src": "/en/blog/insurance-tendering-ai-agent/",
+   "published": "2026-06-03",
+   "modified": "2026-06-03",
+   "date_text": "3.6.2026",
+   "tags": [
+    "AI",
+    "automation",
+    "AI agents"
+   ],
+   "image": {
+    "src": "/assets/blog/vakuutusten-kilpailutus-ai-agentilla.png",
+    "alt": "I tendered insurance from five companies and did not open a single offer myself",
+    "w": "1536",
+    "h": "1024"
+   },
+   "caption": ""
+  }
+ },
+ "written": {
+  "/testi-sivu3/": "testi-sivu3/index.html",
+  "/testi-sivu3/sovellukset/": "testi-sivu3/sovellukset/index.html",
+  "/testi-sivu3/raataloity-kehitys/": "testi-sivu3/raataloity-kehitys/index.html",
+  "/testi-sivu3/yritys/": "testi-sivu3/yritys/index.html",
+  "/testi-sivu3/sovellukset/ilmoo/": "testi-sivu3/sovellukset/ilmoo/index.html",
+  "/testi-sivu3/sovellukset/aigen-cbam/": "testi-sivu3/sovellukset/aigen-cbam/index.html",
+  "/testi-sivu3/sovellukset/draftpad/": "testi-sivu3/sovellukset/draftpad/index.html",
+  "/testi-sivu3/sovellukset/tasapay/": "testi-sivu3/sovellukset/tasapay/index.html",
+  "/testi-sivu3/sovellukset/gpsrdocs/": "testi-sivu3/sovellukset/gpsrdocs/index.html",
+  "/testi-sivu3/sovellukset/spawnpad/": "testi-sivu3/sovellukset/spawnpad/index.html",
+  "/testi-sivu3/sovellukset/clawspam/": "testi-sivu3/sovellukset/clawspam/index.html",
+  "/testi-sivu3/oppaat/": "testi-sivu3/oppaat/index.html",
+  "/testi-sivu3/oppaat/ai-act-pk-yritys/": "testi-sivu3/oppaat/ai-act-pk-yritys/index.html",
+  "/testi-sivu3/oppaat/palkka-avoimuusdirektiivi/": "testi-sivu3/oppaat/palkka-avoimuusdirektiivi/index.html",
+  "/testi-sivu3/oppaat/cbam-raportointi/": "testi-sivu3/oppaat/cbam-raportointi/index.html",
+  "/testi-sivu3/oppaat/whistleblowing-kanava/": "testi-sivu3/oppaat/whistleblowing-kanava/index.html",
+  "/testi-sivu3/oppaat/tekoalyagentti-yritykselle/": "testi-sivu3/oppaat/tekoalyagentti-yritykselle/index.html",
+  "/testi-sivu3/oppaat/tekoalyautomaatio-pk-yrityksille/": "testi-sivu3/oppaat/tekoalyautomaatio-pk-yrityksille/index.html",
+  "/testi-sivu3/blog/": "testi-sivu3/blog/index.html",
+  "/testi-sivu3/blog/agentit-selvitystyo-workflow/": "testi-sivu3/blog/agentit-selvitystyo-workflow/index.html",
+  "/testi-sivu3/blog/agenttityossa-workflow-ratkaisee/": "testi-sivu3/blog/agenttityossa-workflow-ratkaisee/index.html",
+  "/testi-sivu3/blog/ai-agentti-veroilmoitus/": "testi-sivu3/blog/ai-agentti-veroilmoitus/index.html",
+  "/testi-sivu3/blog/ai-agenttien-suurin-ongelma-on-muisti/": "testi-sivu3/blog/ai-agenttien-suurin-ongelma-on-muisti/index.html",
+  "/testi-sivu3/blog/aigen-cbam-avattu/": "testi-sivu3/blog/aigen-cbam-avattu/index.html",
+  "/testi-sivu3/blog/chatgpt-work-kirjautuu-ilman-salasanaa/": "testi-sivu3/blog/chatgpt-work-kirjautuu-ilman-salasanaa/index.html",
+  "/testi-sivu3/blog/grok-bot-tekoalyagentti-tyokaverina/": "testi-sivu3/blog/grok-bot-tekoalyagentti-tyokaverina/index.html",
+  "/testi-sivu3/blog/mallit-kehittyvat-tekstin-tunnistaa/": "testi-sivu3/blog/mallit-kehittyvat-tekstin-tunnistaa/index.html",
+  "/testi-sivu3/blog/tekoaly-ei-ole-hakukone/": "testi-sivu3/blog/tekoaly-ei-ole-hakukone/index.html",
+  "/testi-sivu3/blog/tekoaly-muuttaa-omalle-koneelle/": "testi-sivu3/blog/tekoaly-muuttaa-omalle-koneelle/index.html",
+  "/testi-sivu3/blog/tekoalyagentit-arjessa/": "testi-sivu3/blog/tekoalyagentit-arjessa/index.html",
+  "/testi-sivu3/blog/tekoalyn-suurin-riski-huono-johtaminen/": "testi-sivu3/blog/tekoalyn-suurin-riski-huono-johtaminen/index.html",
+  "/testi-sivu3/blog/teslan-grok-katulamppujen-vikailmoitus/": "testi-sivu3/blog/teslan-grok-katulamppujen-vikailmoitus/index.html",
+  "/testi-sivu3/blog/vakuutusten-kilpailutus-ai-agentilla/": "testi-sivu3/blog/vakuutusten-kilpailutus-ai-agentilla/index.html",
+  "/testi-sivu3/en/": "testi-sivu3/en/index.html",
+  "/testi-sivu3/en/apps/": "testi-sivu3/en/apps/index.html",
+  "/testi-sivu3/en/custom-development/": "testi-sivu3/en/custom-development/index.html",
+  "/testi-sivu3/en/company/": "testi-sivu3/en/company/index.html",
+  "/testi-sivu3/en/apps/ilmoo/": "testi-sivu3/en/apps/ilmoo/index.html",
+  "/testi-sivu3/en/apps/aigen-cbam/": "testi-sivu3/en/apps/aigen-cbam/index.html",
+  "/testi-sivu3/en/apps/draftpad/": "testi-sivu3/en/apps/draftpad/index.html",
+  "/testi-sivu3/en/apps/tasapay/": "testi-sivu3/en/apps/tasapay/index.html",
+  "/testi-sivu3/en/apps/gpsrdocs/": "testi-sivu3/en/apps/gpsrdocs/index.html",
+  "/testi-sivu3/en/apps/spawnpad/": "testi-sivu3/en/apps/spawnpad/index.html",
+  "/testi-sivu3/en/apps/clawspam/": "testi-sivu3/en/apps/clawspam/index.html",
+  "/testi-sivu3/en/guides/": "testi-sivu3/en/guides/index.html",
+  "/testi-sivu3/en/guides/ai-act-for-smes/": "testi-sivu3/en/guides/ai-act-for-smes/index.html",
+  "/testi-sivu3/en/guides/pay-transparency-directive/": "testi-sivu3/en/guides/pay-transparency-directive/index.html",
+  "/testi-sivu3/en/guides/cbam-reporting/": "testi-sivu3/en/guides/cbam-reporting/index.html",
+  "/testi-sivu3/en/guides/whistleblowing-channel/": "testi-sivu3/en/guides/whistleblowing-channel/index.html",
+  "/testi-sivu3/en/guides/ai-agent-for-business/": "testi-sivu3/en/guides/ai-agent-for-business/index.html",
+  "/testi-sivu3/en/guides/ai-automation-for-smes/": "testi-sivu3/en/guides/ai-automation-for-smes/index.html",
+  "/testi-sivu3/en/blog/": "testi-sivu3/en/blog/index.html",
+  "/testi-sivu3/en/blog/agents-turn-research-into-five-minute-workflows/": "testi-sivu3/en/blog/agents-turn-research-into-five-minute-workflows/index.html",
+  "/testi-sivu3/en/blog/workflow-decides-agent-work/": "testi-sivu3/en/blog/workflow-decides-agent-work/index.html",
+  "/testi-sivu3/en/blog/ai-agent-company-tax-return/": "testi-sivu3/en/blog/ai-agent-company-tax-return/index.html",
+  "/testi-sivu3/en/blog/ai-agents-biggest-problem-is-memory/": "testi-sivu3/en/blog/ai-agents-biggest-problem-is-memory/index.html",
+  "/testi-sivu3/en/blog/aigen-cbam-launched/": "testi-sivu3/en/blog/aigen-cbam-launched/index.html",
+  "/testi-sivu3/en/blog/chatgpt-work-signs-in-without-seeing-passwords/": "testi-sivu3/en/blog/chatgpt-work-signs-in-without-seeing-passwords/index.html",
+  "/testi-sivu3/en/blog/grok-bot-ai-agent-as-coworker/": "testi-sivu3/en/blog/grok-bot-ai-agent-as-coworker/index.html",
+  "/testi-sivu3/en/blog/models-get-better-writing-gets-easier-to-spot/": "testi-sivu3/en/blog/models-get-better-writing-gets-easier-to-spot/index.html",
+  "/testi-sivu3/en/blog/ai-stopped-being-a-search-engine/": "testi-sivu3/en/blog/ai-stopped-being-a-search-engine/index.html",
+  "/testi-sivu3/en/blog/ai-is-moving-onto-your-own-computer/": "testi-sivu3/en/blog/ai-is-moving-onto-your-own-computer/index.html",
+  "/testi-sivu3/en/blog/ai-agents-in-daily-work/": "testi-sivu3/en/blog/ai-agents-in-daily-work/index.html",
+  "/testi-sivu3/en/blog/ai-biggest-risk-bad-management/": "testi-sivu3/en/blog/ai-biggest-risk-bad-management/index.html",
+  "/testi-sivu3/en/blog/tesla-grok-streetlight-report/": "testi-sivu3/en/blog/tesla-grok-streetlight-report/index.html",
+  "/testi-sivu3/en/blog/insurance-tendering-ai-agent/": "testi-sivu3/en/blog/insurance-tendering-ai-agent/index.html"
+ }
+}

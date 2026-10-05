@@ -19,7 +19,7 @@
   <div class="preview-strip">
     <div class="wrap">
       <span><b>Esikatselu 3</b> · testiversio</span>
-      <a href="/">Nykyinen etusivu <span aria-hidden="true">↗</span></a>
+      <a href="/" data-live-escape>Nykyinen live-sivu <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 
@@ -28,17 +28,15 @@
       <a class="logo" href="/testi-sivu3/"><img src="/assets/logo-black.png" alt="Aigen – etusivu" width="136" height="32"></a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="paavalikko">Valikko</button>
       <nav id="paavalikko" class="main-nav" aria-label="Päänavigaatio">
-        <a href="/testi-sivu3/sovellukset/">Sovellukset</a>
-        <a href="/testi-sivu3/#raataloity">Räätälöity kehitys</a>
-        <a href="/oppaat/">Oppaat</a>
-        <a class="nav-cta" href="/testi-sivu3/#yhteys">Ota yhteyttä</a>
+        <a href="/testi-sivu3/sovellukset/">Sovellukset</a><a href="/testi-sivu3/raataloity-kehitys/">Räätälöity kehitys</a><a href="/testi-sivu3/oppaat/">Oppaat</a><a href="/testi-sivu3/blog/">Blogi</a><a href="/testi-sivu3/yritys/">Yritys</a>
+        <a class="lang-switch" href="/testi-sivu3/en/" hreflang="en" lang="en" aria-label="In English">EN</a>
+        <a class="nav-cta" href="/testi-sivu3/yritys/#yhteys">Ota yhteyttä</a>
       </nav>
     </div>
   </header>
 
   <main id="sisalto" tabindex="-1">
-
-    <section class="home-hero wrap" aria-labelledby="hero-title">
+<section class="home-hero wrap" aria-labelledby="hero-title">
       <div class="home-hero-grid">
         <div>
           <p class="kicker">AI Generation Oy · suomalainen ohjelmistoyritys</p>
@@ -92,44 +90,55 @@
       </div>
     </section>
 
-    <section class="custom" id="raataloity" aria-labelledby="custom-title">
+    <section class="paths" aria-labelledby="paths-title">
+      <div class="wrap">
+        <h2 id="paths-title" class="visually-hidden">Mitä Aigen tekee</h2>
+        <ul class="path-grid">
+          <li>
+            <p class="mini-kicker">Valmiit sovellukset</p>
+            <h3><a href="/testi-sivu3/sovellukset/">Sovellukset</a></h3>
+            <p>Otatte käyttöön itse, hinta näkyy etukäteen. Haku ja luokat auttavat, vaikka sovelluksen nimeä ei tietäisi.</p>
+          </li>
+          <li>
+            <p class="mini-kicker">Omaan tarpeeseen</p>
+            <h3><a href="/testi-sivu3/raataloity-kehitys/">Räätälöity kehitys</a></h3>
+            <p>Tekoälyagentit, automaatio ja ohjelmistot yrityksenne omaan dataan ja järjestelmiin. Aloitamme yhdestä työnkulusta.</p>
+          </li>
+          <li>
+            <p class="mini-kicker">Oppimateriaalit</p>
+            <h3><a href="/testi-sivu3/oppaat/">Oppaat ja blogi</a></h3>
+            <p>Oppaat EU-sääntelyyn, tekoälyagentteihin ja automaatioon sekä kirjoituksia agenttien käytöstä arjessa.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="custom-teaser" aria-labelledby="custom-title">
       <div class="wrap custom-grid">
         <div class="custom-intro">
           <p class="kicker">Räätälöity kehitys</p>
           <h2 id="custom-title">Etkö löydä sopivaa sovellusta? Rakennetaan se teille.</h2>
           <p>Kun valmis sovellus ei riitä, rakennamme ohjelmiston tai tekoälyautomaation yrityksenne omaan dataan ja järjestelmiin. Aloitamme yhdestä työnkulusta, joka toistuu joka viikko.</p>
           <div class="actions">
-            <a class="button button-primary" href="mailto:contact@aigen.fi?subject=R%C3%A4%C3%A4t%C3%A4l%C3%B6ity%20kehitys">Kerro työnkulusta</a>
-            <a class="arrow-link" href="/tekoalyautomaatio-pk-yrityksille/">Lue automaatio-opas</a>
+            <a class="button button-primary" href="/testi-sivu3/raataloity-kehitys/">Lue räätälöidystä kehityksestä</a>
+            <a class="arrow-link" href="mailto:contact@aigen.fi?subject=R%C3%A4%C3%A4t%C3%A4l%C3%B6ity%20kehitys">Kerro työnkulusta</a>
           </div>
         </div>
-        <div>
-          <ol class="pipeline" aria-label="Esimerkki yhdestä rajatusta työnkulusta">
-            <li><span>Data</span>Dokumentit, taulukot, järjestelmät</li>
-            <li><span>Agentti</span>Hakee, yhdistää ja luonnostelee</li>
-            <li class="human"><span>Ihminen</span>Tarkistaa poikkeamat ja hyväksyy</li>
-            <li><span>Valmis</span>Lopputulos ja loki siitä, mitä tehtiin</li>
-          </ol>
-          <div class="custom-cols">
-            <div>
-              <h3>Hyviä ensimmäisiä kohteita</h3>
-              <ul class="ticks">
-                <li>Raporttien koonti useasta lähteestä</li>
-                <li>Tarjouspyyntöjen ja dokumenttien esikäsittely</li>
-                <li>Asiakaspalvelun taustatyö</li>
-                <li>Toistuva compliance-dokumentointi</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Näin edetään</h3>
-              <ol class="steps">
-                <li>Rajataan työnkulku, jolla on selvä alku ja lopputulos.</li>
-                <li>Sovitaan, mitä dataa ja työkaluja automaatio saa käyttää ja missä ihminen hyväksyy.</li>
-                <li>Testataan oikealla datalla ja mitataan hyöty ennen laajentamista.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
+        <ol class="pipeline" aria-label="Esimerkki yhdestä rajatusta työnkulusta">
+          <li><span>Data</span>Dokumentit, taulukot, järjestelmät</li>
+          <li><span>Agentti</span>Hakee, yhdistää ja luonnostelee</li>
+          <li class="human"><span>Ihminen</span>Tarkistaa poikkeamat ja hyväksyy</li>
+          <li><span>Valmis</span>Lopputulos ja loki siitä, mitä tehtiin</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="learn" aria-labelledby="learn-title">
+      <div class="wrap">
+        <div class="related-head"><h2 id="learn-title">Oppaat yrityksille</h2><a class="arrow-link" href="/testi-sivu3/oppaat/">Kaikki oppaat</a></div>
+        <ul class="guide-grid"><li><a class="guide-card" href="/testi-sivu3/oppaat/ai-act-pk-yritys/"><span class="mini-kicker">EU-sääntely</span><strong>EU AI Act</strong><span>Riskiluokat, aikajana ja tarkistuslista yrityksen valmistautumiseen.</span></a></li><li><a class="guide-card" href="/testi-sivu3/oppaat/palkka-avoimuusdirektiivi/"><span class="mini-kicker">EU-sääntely</span><strong>Palkka-avoimuus</strong><span>Mitä palkka-avoimuus tarkoittaa työnantajalle ja miten siihen valmistaudutaan.</span></a></li><li><a class="guide-card" href="/testi-sivu3/oppaat/cbam-raportointi/"><span class="mini-kicker">EU-sääntely</span><strong>CBAM-raportointi</strong><span>Tuonti-, toimittaja- ja päästötietojen kokoaminen raportointia varten.</span></a></li><li><a class="guide-card" href="/testi-sivu3/oppaat/whistleblowing-kanava/"><span class="mini-kicker">EU-sääntely</span><strong>Whistleblowing-kanava</strong><span>Ilmoituskanavan luottamuksellisuus, vastuut ja ilmoitusten käsittely.</span></a></li><li><a class="guide-card" href="/testi-sivu3/oppaat/tekoalyagentti-yritykselle/"><span class="mini-kicker">Tekoälyagentit ja automaatio</span><strong>Tekoälyagentti yritykselle</strong><span>Miten agentti käyttää työkaluja sovituissa rajoissa ja ihmisen valvonnassa.</span></a></li><li><a class="guide-card" href="/testi-sivu3/oppaat/tekoalyautomaatio-pk-yrityksille/"><span class="mini-kicker">Tekoälyagentit ja automaatio</span><strong>Tekoälyautomaatio pk-yrityksille</strong><span>Työnkulun valinta ja datan valmistelu automaatiota varten.</span></a></li></ul>
+        <div class="related-head blog-head"><h2>Uusimmat blogikirjoitukset</h2><a class="arrow-link" href="/testi-sivu3/blog/">Kaikki kirjoitukset</a></div>
+        <ul class="post-mini-grid"><li><a class="post-mini" href="/testi-sivu3/blog/teslan-grok-katulamppujen-vikailmoitus/"><span>25.9.2026</span><strong>Vikailmoitus työmatkalla: katulampuista ilmoittaminen hoitui Teslan Grokilla</strong></a></li><li><a class="post-mini" href="/testi-sivu3/blog/aigen-cbam-avattu/"><span>18.9.2026</span><strong>Aigen CBAM on avattu: EU-velvoitteet ja sovelluksen ominaisuudet</strong></a></li><li><a class="post-mini" href="/testi-sivu3/blog/chatgpt-work-kirjautuu-ilman-salasanaa/"><span>26.8.2026</span><strong>Agentti kirjautuu. Mallin ei tarvitse nähdä salasanaa.</strong></a></li></ul>
       </div>
     </section>
 
@@ -140,12 +149,8 @@
         <div class="why-text">
           <p>Siksi teemme sovelluksia, jotka voi ottaa käyttöön ilman <span class="nowrap">IT-projektia</span> ja joiden hinnan näkee etukäteen. Kerromme myös, mitä ne eivät tee. Silloin tiedätte, mikä jää teidän hoidettavaksenne.</p>
           <p>Käytämme tekoälyagentteja omassa päivittäisessä työssämme. Samaa osaamista käytämme, kun rakennamme automaatiota asiakkaille.</p>
+          <p><a class="arrow-link" href="/testi-sivu3/yritys/">Lue lisää meistä</a></p>
         </div>
-        <dl class="company">
-          <div><dt>Yritys</dt><dd>AI Generation Oy</dd></div>
-          <div><dt>Sijainti</dt><dd>Helsinki</dd></div>
-          <div><dt>Asiakkaat</dt><dd>Suomessa ja Euroopassa</dd></div>
-        </dl>
       </div>
     </section>
 
@@ -167,15 +172,40 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap footer-grid">
-      <img src="/assets/logo-black.png" alt="AI Generation" width="102" height="24">
-      <nav aria-label="Alatunniste">
-        <a href="/testi-sivu3/sovellukset/">Sovellukset</a>
-        <a href="/oppaat/">Oppaat</a>
-        <a href="/blog/">Blogi</a>
-        <a href="/en/" hreflang="en" lang="en">In English</a>
-      </nav>
-      <p class="copy">© 2026 AI Generation Oy</p>
+    <div class="wrap">
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <img src="/assets/logo-black.png" alt="AI Generation" width="102" height="24">
+          <p>Suomalainen ohjelmistoyritys. Sovelluksia ja räätälöityä automaatiota yrityksille Suomessa ja Euroopassa.</p>
+          <p><a href="mailto:contact@aigen.fi">contact@aigen.fi</a><br><a href="https://www.linkedin.com/company/ai-generation-oy/" rel="noopener">LinkedIn</a></p>
+        </div>
+        <nav aria-label="Sovellukset">
+          <h2>Sovellukset</h2>
+          <ul>
+            <li><a href="/testi-sivu3/sovellukset/ilmoo/">Ilmoo</a></li>
+            <li><a href="/testi-sivu3/sovellukset/aigen-cbam/">Aigen CBAM</a></li>
+            <li><a href="/testi-sivu3/sovellukset/">Kaikki sovellukset</a></li>
+            <li><a href="/testi-sivu3/sovellukset/?kohde=muut">Pelit ja kokeilut</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Oppaat">
+          <h2><a href="/testi-sivu3/oppaat/">Oppaat</a></h2>
+          <ul><li><a href="/testi-sivu3/oppaat/ai-act-pk-yritys/">EU AI Act</a></li><li><a href="/testi-sivu3/oppaat/palkka-avoimuusdirektiivi/">Palkka-avoimuus</a></li><li><a href="/testi-sivu3/oppaat/cbam-raportointi/">CBAM-raportointi</a></li><li><a href="/testi-sivu3/oppaat/whistleblowing-kanava/">Whistleblowing-kanava</a></li><li><a href="/testi-sivu3/oppaat/tekoalyagentti-yritykselle/">Tekoälyagentti yritykselle</a></li><li><a href="/testi-sivu3/oppaat/tekoalyautomaatio-pk-yrityksille/">Tekoälyautomaatio pk-yrityksille</a></li></ul>
+        </nav>
+        <nav aria-label="Yritys">
+          <h2>Yritys</h2>
+          <ul>
+            <li><a href="/testi-sivu3/raataloity-kehitys/">Räätälöity kehitys</a></li>
+            <li><a href="/testi-sivu3/blog/">Blogi</a></li>
+            <li><a href="/testi-sivu3/yritys/">Meistä</a></li>
+            <li><a href="/testi-sivu3/yritys/#yhteys">Ota yhteyttä</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="copy">© 2026 AI Generation Oy</p>
+        <a href="/testi-sivu3/en/" hreflang="en" lang="en">In English</a>
+      </div>
     </div>
   </footer>
 </body>

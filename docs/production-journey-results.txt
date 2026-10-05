@@ -1,0 +1,90 @@
+PASS J1 fi hero search → own-language catalog  → "http://127.0.0.1:8768/sovellukset/?q=ilmoituskanava"
+PASS J1 fi first result Ilmoo  → ["Ilmoo"]
+PASS J1 fi card → fi detail  → "http://127.0.0.1:8768/sovellukset/ilmoo/"
+PASS J1 fi primary CTA
+PASS J1 fi related apps stay in language  → ["/sovellukset/aigen-cbam/","/sovellukset/tasapay/","/sovellukset/gpsrdocs/"]
+PASS J1 fi back restores search
+PASS J1 fi breadcrumb home
+PASS J1 fi no console errors  → []
+PASS J1 en hero search → own-language catalog  → "http://127.0.0.1:8768/en/apps/?q=whistleblowing"
+PASS J1 en first result Ilmoo  → ["Ilmoo"]
+PASS J1 en card → en detail  → "http://127.0.0.1:8768/en/apps/ilmoo/"
+PASS J1 en primary CTA
+PASS J1 en related apps stay in language  → ["/en/apps/aigen-cbam/","/en/apps/tasapay/","/en/apps/gpsrdocs/"]
+PASS J1 en back restores search
+PASS J1 en breadcrumb home
+PASS J1 en no console errors  → []
+PASS J2 fi chip filters catalog  → ["Aigen CBAM","TasaPay"]
+PASS J2 fi detail tag → category  → ["Ilmoo","Aigen CBAM","TasaPay","GPSRdocs"]
+PASS J2 en chip filters catalog  → ["Aigen CBAM","TasaPay"]
+PASS J2 en detail tag → category  → ["Ilmoo","Aigen CBAM","TasaPay","GPSRdocs"]
+PASS J3 fi business default 5, no games
+PASS J3 fi search "päästöjen"  → ["Aigen CBAM"]
+PASS J3 fi search "paastot"  → ["Aigen CBAM"]
+PASS J3 fi search "whistleblowing"  → ["Ilmoo"]
+PASS J3 fi search "palkkaerot"  → ["TasaPay"]
+PASS J3 fi games hidden from business + empty state
+PASS J3 fi switch to Pelit ja kokeilut  → "http://127.0.0.1:8768/sovellukset/?q=peli&kohde=muut"
+PASS J3 fi combined filters  → "http://127.0.0.1:8768/sovellukset/?tehtava=velvoitteet&tila=saatavilla"
+PASS J3 fi query+filters → empty
+PASS J3 fi reset  → "http://127.0.0.1:8768/sovellukset/"
+PASS J3 fi sort A–Ö  → ["Aigen CBAM","Draftpad","GPSRdocs","Ilmoo","TasaPay"]
+PASS J3 fi tulossa cards say so, no start CTA
+PASS J3 en business default 5
+PASS J3 en search "emissions" → CBAM (EN text)
+PASS J3 en does not match Finnish-only words
+PASS J3 en other audience URL localized  → "http://127.0.0.1:8768/en/apps/?q=game&audience=other"
+PASS J3 en status param localized + coming apps  → "http://127.0.0.1:8768/en/apps/?status=coming"
+PASS J3 en cards link to EN details  → ["/en/apps/tasapay/","/en/apps/gpsrdocs/"]
+PASS J3 en no console errors  → []
+PASS J4 typing filters
+PASS J4 Escape clears
+PASS J4 arrow keys keep focus
+PASS J5 fi filter dialog
+PASS J5 fi live apply count  → "Näytä 2 sovellusta"
+PASS J5 fi focus trapped
+PASS J5 fi Escape returns focus
+PASS J5 fi menu shows lang switch
+PASS J5 fi switch goes to counterpart catalog  → "http://127.0.0.1:8768/en/apps/"
+PASS J5 en filter dialog
+PASS J5 en live apply count  → "Show 2 apps"
+PASS J5 en focus trapped
+PASS J5 en Escape returns focus
+PASS J5 en menu shows lang switch
+PASS J5 en switch goes to counterpart catalog  → "http://127.0.0.1:8768/sovellukset/"
+PASS J6 /blog/aigen-cbam-avattu/ ⇄ /en/blog/aigen-cbam-launched/
+PASS J6 /oppaat/ai-act-pk-yritys/ ⇄ /en/guides/ai-act-for-smes/
+PASS J6 /sovellukset/tasapay/ ⇄ /en/apps/tasapay/
+PASS J6 /raataloity-kehitys/ ⇄ /en/custom-development/
+PASS J6 /yritys/ ⇄ /en/company/
+PASS J7 guide → related app (Ilmoo)
+PASS J7 TOC anchor scrolls below sticky header  → 84
+PASS J7 blog topic filter  → {"total":14,"shown":4}
+PASS J7 blog filter reset
+PASS J7 article next step → CBAM app
+PASS J7 related posts stay in preview  → ["/blog/","/blog/teslan-grok-katulamppujen-vikailmoitus/","/blog/chatgpt-work-kirjautuu-ilman-salasanaa/","/blog/mallit-kehittyvat-tekstin-tunnistaa/"]
+PASS J7 back to blog index
+PASS J7 no console errors  → []
+PASS J8 alias /tuotteet/ilmoita/  → "http://127.0.0.1:8768/sovellukset/ilmoo/"
+PASS J8 alias /en/products/cbam-tool/#capabilities  → "http://127.0.0.1:8768/en/apps/aigen-cbam/#features"
+PASS J8 alias /tuotteet/cbam-tool/#cbam-video-heading  → "http://127.0.0.1:8768/sovellukset/aigen-cbam/#video"
+PASS J8 alias /ai-act-pk-yritys/#tarkistuslista  → "http://127.0.0.1:8768/oppaat/ai-act-pk-yritys/#tarkistuslista"
+PASS J8 alias /en/whistleblowing-channel/  → "http://127.0.0.1:8768/en/guides/whistleblowing-channel/"
+PASS J9 no youtube request before click
+PASS J9 click inserts youtube-nocookie iframe
+PASS J10 fi fixture business count 40  → "40 sovellusta"
+PASS J10 fi 24 cards + show more 16
+PASS J10 fi show more → 40, focus moved
+PASS J10 fi worst search render < 50 ms  → "21.1 ms"
+PASS J10 fi games separate (10)
+PASS J10 en fixture business count 40  → "40 apps"
+PASS J10 en 24 cards + show more 16
+PASS J10 en show more → 40, focus moved
+PASS J10 en worst search render < 50 ms  → "26.9 ms"
+PASS J10 en games separate (10)
+PASS J11 direct load /en/blog/tesla-grok-streetlight-report/
+PASS J11 direct load /oppaat/tekoalyautomaatio-pk-yrityksille/
+PASS J11 direct load /en/apps/clawspam/
+PASS J11 direct load /sovellukset/gpsrdocs/
+
+88/88 passed

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fi" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>Tekoälyautomaatio pk-yrityksille | Aigen</title>
+  <meta name="description" content="Käytännön opas tekoälyautomaatioon pk-yrityksille: prosessit, integraatiot, riskit ja ensimmäinen järkevä pilotti.">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
+  <script>document.documentElement.className = "js";</script>
+  <link rel="stylesheet" href="/assets/catalog-site/site.css">
+  <script defer src="/assets/catalog-site/apps.js"></script>
+  <script defer src="/assets/catalog-site/ui.js"></script>
+  <link rel="canonical" href="https://aigen.fi/oppaat/tekoalyautomaatio-pk-yrityksille/">
+  <link rel="alternate" hreflang="fi" href="https://aigen.fi/oppaat/tekoalyautomaatio-pk-yrityksille/">
+  <link rel="alternate" hreflang="en" href="https://aigen.fi/en/guides/ai-automation-for-smes/">
+  <link rel="alternate" hreflang="x-default" href="https://aigen.fi/oppaat/tekoalyautomaatio-pk-yrityksille/">
+  <meta property="og:title" content="Tekoälyautomaatio pk-yrityksille | Aigen">
+  <meta property="og:description" content="Käytännön opas tekoälyautomaatioon pk-yrityksille: prosessit, integraatiot, riskit ja ensimmäinen järkevä pilotti.">
+  <meta property="og:url" content="https://aigen.fi/oppaat/tekoalyautomaatio-pk-yrityksille/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Organization", "@id": "https://aigen.fi/#organization", "name": "AI Generation Oy", "url": "https://aigen.fi/", "email": "contact@aigen.fi"}, {"@context": "https://schema.org", "@type": "WebSite", "@id": "https://aigen.fi/#website", "name": "Aigen", "url": "https://aigen.fi/", "inLanguage": ["fi", "en"], "publisher": {"@id": "https://aigen.fi/#organization"}}]</script>
+</head>
+<body>
+  <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
+
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo" href="/"><img src="/assets/logo-black.png" alt="Aigen – etusivu" width="136" height="32"></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="paavalikko">Valikko</button>
+      <nav id="paavalikko" class="main-nav" aria-label="Päänavigaatio">
+        <a href="/sovellukset/">Sovellukset</a><a href="/raataloity-kehitys/">Räätälöity kehitys</a><a href="/oppaat/" aria-current="true">Oppaat</a><a href="/blog/">Blogi</a><a href="/yritys/">Yritys</a>
+        <a class="lang-switch" href="/en/guides/ai-automation-for-smes/" hreflang="en" lang="en" aria-label="In English">EN</a>
+        <a class="nav-cta" href="/yritys/#yhteys">Ota yhteyttä</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="sisalto" tabindex="-1">
+    <article class="doc">
+      <header class="doc-hero">
+        <div class="wrap doc-hero-grid">
+          <div>
+            <nav class="breadcrumb" aria-label="Murupolku"><ol><li><a href="/">Etusivu</a></li><li><a href="/oppaat/">Oppaat</a></li><li><span aria-current="page">Tekoälyautomaatio pk-yrityksille</span></li></ol></nav>
+            <p class="kicker">Tekoälyautomaatio pk-yrityksille</p>
+            <h1>Tekoälyautomaatio alkaa yhdestä työnkulusta.</h1>
+            <p class="lead">Hyvä automaatio ei yritä korvata koko organisaatiota kerralla. Se rajaa yhden toistuvan, mitattavan ja tarkistettavan työnkulun, jonka hyöty voidaan osoittaa käytännössä.</p>
+
+            <div class="actions"><a class="button button-primary" href="mailto:contact@aigen.fi">Ehdota työnkulkua</a><a class="button" href="/oppaat/tekoalyagentti-yritykselle/">Lue AI-agenteista</a></div>
+          </div>
+          <aside class="doc-summary" aria-labelledby="summary-title"><h2 id="summary-title">Hyvä ensimmäinen kohde</h2><p>Valitse työ, jossa on selkeä alku, selkeä lopputulos ja ihminen, joka voi tarkistaa poikkeamat. Raporttien koonti, tarjouspyyntöjen esikäsittely, asiakaspalvelun taustatyö ja compliance-dokumentointi ovat parempia avauksia kuin "automatisoidaan kaikki".</p></aside>
+        </div>
+      </header>
+      <div class="wrap doc-layout">
+        <div class="doc-side"><nav class="doc-toc" aria-label="Tällä sivulla"><details data-open-wide><summary class="mini-kicker">Tällä sivulla <span aria-hidden="true">(5)</span></summary><ol><li><a href="#mita-tekoalyautomaatio-oikeasti-tekee">Mitä tekoälyautomaatio oikeasti tekee?</a></li><li><a href="#paata-ennen-rakentamista">Päätä ennen rakentamista</a></li><li><a href="#aigenin-toteutusmalli">Aigenin toteutusmalli</a></li><li><a href="#tyypilliset-ensimmaiset-tyonkulut">Tyypilliset ensimmäiset työnkulut</a></li><li><a href="#seuraava-askel">Seuraava askel</a></li></ol></details></nav><aside class="mini-app mini-custom"><p class="mini-kicker">Räätälöity kehitys</p><p>Rakennamme tekoälyautomaation yrityksenne omaan työnkulkuun ja dataan.</p><a class="arrow-link" href="/raataloity-kehitys/">Räätälöity kehitys</a></aside></div>
+        <div class="doc-body prose">
+<section>
+
+<h2 id="mita-tekoalyautomaatio-oikeasti-tekee">Mitä tekoälyautomaatio oikeasti tekee?</h2>
+<div class="cards">
+<div class="card"><h3>Yhdistää tiedot</h3><p>Kerää ja yhdistää tietoa useista järjestelmistä ilman käsin kopiointia.</p></div>
+<div class="card"><h3>Luonnostelee tuotokset</h3><p>Valmistelee vastauksia, raportteja ja päätöspohjia niin, että lähteet jäävät tarkistettaviksi.</p></div>
+<div class="card"><h3>Nostaa poikkeamat</h3><p>Tunnistaa puuttuvat tiedot, kirjaa tekemisen ja vie epäselvät tapaukset ihmiselle.</p></div>
+</div>
+
+</section>
+<section>
+<div class="cards">
+<div class="card"><h2 id="paata-ennen-rakentamista">Päätä ennen rakentamista</h2><ul><li>Mikä työnkulku automatisoidaan ensin.</li><li>Mistä data tulee ja kuka omistaa lopputuloksen.</li><li>Missä kohdassa tarvitaan ihmisen hyväksyntä.</li><li>Miten hyöty mitataan: aika, laatu, läpimeno tai riskin pienentyminen.</li></ul></div>
+<div class="card"><h2 id="aigenin-toteutusmalli">Aigenin toteutusmalli</h2><p>Valitsemme yhden rajatun työnkulun, sovimme automaatiolle työkalut, rajat ja tarkistuspisteet, ja testaamme toteutusta oikealla datalla ennen laajentamista.</p><p>Näin automaatio ei jää demoksi, vaan muuttuu arjen tuotantotyöksi.</p></div>
+</div>
+</section>
+<section>
+<div class="cards">
+<div>
+<h2 id="tyypilliset-ensimmaiset-tyonkulut">Tyypilliset ensimmäiset työnkulut</h2>
+<div class="faq">
+<details class="faq-item"><summary>Raporttien koonti</summary><p>Automaatio hakee datan, tarkistaa puutteet ja valmistelee luonnoksen tarkistettavaksi.</p></details>
+<details class="faq-item"><summary>Tarjouspyyntöjen esikäsittely</summary><p>Työnkulku poimii olennaiset tiedot ja nostaa puuttuvat asiat esiin ennen ihmisen työaikaa.</p></details>
+<details class="faq-item"><summary>Compliance-dokumentointi</summary><p>Automaatio pitää toistuvan dokumentointityön rakenteisena, lokitettuna ja helpommin hyväksyttävänä.</p></details>
+</div>
+</div>
+<aside class="card"><h2 id="seuraava-askel">Seuraava askel</h2><p>Valitse yksi toistuva työnkulku, jonka lopputulos on helppo tarkistaa ja jonka nykyinen käsityö ärsyttää tarpeeksi, että hyöty voidaan mitata.</p><div class="actions"><a class="button button-primary" href="mailto:contact@aigen.fi">Ota yhteyttä</a><a class="button" href="/blog/">Lue blogia</a></div></aside>
+</div>
+</section>
+        </div>
+      </div>
+    </article>
+    <section class="more-guides" aria-labelledby="more-title">
+      <div class="wrap">
+        <div class="related-head"><h2 id="more-title">Muut oppaat</h2><a class="arrow-link" href="/oppaat/">Kaikki oppaat</a></div>
+        <ul class="guide-grid"><li><a class="guide-card" href="/oppaat/tekoalyagentti-yritykselle/"><span class="mini-kicker">Tekoälyagentit ja automaatio</span><strong>Tekoälyagentti yritykselle</strong><span>Miten agentti käyttää työkaluja sovituissa rajoissa ja ihmisen valvonnassa.</span></a></li><li><a class="guide-card" href="/oppaat/ai-act-pk-yritys/"><span class="mini-kicker">EU-sääntely</span><strong>EU AI Act</strong><span>Riskiluokat, aikajana ja tarkistuslista yrityksen valmistautumiseen.</span></a></li><li><a class="guide-card" href="/oppaat/palkka-avoimuusdirektiivi/"><span class="mini-kicker">EU-sääntely</span><strong>Palkka-avoimuus</strong><span>Mitä palkka-avoimuus tarkoittaa työnantajalle ja miten siihen valmistaudutaan.</span></a></li></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <img src="/assets/logo-black.png" alt="AI Generation" width="102" height="24">
+          <p>Suomalainen ohjelmistoyritys. Sovelluksia ja räätälöityä automaatiota yrityksille Suomessa ja Euroopassa.</p>
+          <p><a href="mailto:contact@aigen.fi">contact@aigen.fi</a><br><a href="https://www.linkedin.com/company/ai-generation-oy/" rel="noopener">LinkedIn</a></p>
+        </div>
+        <nav aria-label="Sovellukset">
+          <h2>Sovellukset</h2>
+          <ul>
+            <li><a href="/sovellukset/ilmoo/">Ilmoo</a></li>
+            <li><a href="/sovellukset/aigen-cbam/">Aigen CBAM</a></li>
+            <li><a href="/sovellukset/">Kaikki sovellukset</a></li>
+            <li><a href="/sovellukset/?kohde=muut">Pelit ja kokeilut</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Oppaat">
+          <h2><a href="/oppaat/">Oppaat</a></h2>
+          <ul><li><a href="/oppaat/ai-act-pk-yritys/">EU AI Act</a></li><li><a href="/oppaat/palkka-avoimuusdirektiivi/">Palkka-avoimuus</a></li><li><a href="/oppaat/cbam-raportointi/">CBAM-raportointi</a></li><li><a href="/oppaat/whistleblowing-kanava/">Whistleblowing-kanava</a></li><li><a href="/oppaat/tekoalyagentti-yritykselle/">Tekoälyagentti yritykselle</a></li><li><a href="/oppaat/tekoalyautomaatio-pk-yrityksille/">Tekoälyautomaatio pk-yrityksille</a></li></ul>
+        </nav>
+        <nav aria-label="Yritys">
+          <h2>Yritys</h2>
+          <ul>
+            <li><a href="/raataloity-kehitys/">Räätälöity kehitys</a></li>
+            <li><a href="/blog/">Blogi</a></li>
+            <li><a href="/yritys/">Meistä</a></li>
+            <li><a href="/yritys/#yhteys">Ota yhteyttä</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="copy">© 2026 AI Generation Oy</p>
+        <a href="/en/guides/ai-automation-for-smes/" hreflang="en" lang="en">In English</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

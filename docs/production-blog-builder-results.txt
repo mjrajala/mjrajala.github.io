@@ -1,0 +1,4 @@
+Built 2 posts in production catalog layout; 67 canonical sitemap URLs.
+Built 2 posts in production catalog layout; 67 canonical sitemap URLs.
+Built 9 posts in production catalog layout; 67 canonical sitemap URLs.
+PASS: isolated ingestion, existing/new/draft posts, approved shell, manual posts, escaping, dates/author, sitemap, idempotence, failure-before-write, worktree unchanged

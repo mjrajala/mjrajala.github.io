@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /testi-sivu/
+Disallow: /testi-sivu2/
+Disallow: /testi-sivu3/
+Disallow: /blog/artikkeli-pohja/
+Disallow: /scripts/
+Disallow: /docs/
+Disallow: /tests/
 
 Sitemap: https://aigen.fi/sitemap.xml

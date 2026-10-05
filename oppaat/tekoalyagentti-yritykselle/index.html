@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="fi" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>AI-agentti yritykselle | Aigen</title>
+  <meta name="description" content="Mitä AI-agentti tekee yrityksessä, milloin se kannattaa rakentaa ja miten käyttöönotto tehdään hallitusti.">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
+  <script>document.documentElement.className = "js";</script>
+  <link rel="stylesheet" href="/assets/catalog-site/site.css">
+  <script defer src="/assets/catalog-site/apps.js"></script>
+  <script defer src="/assets/catalog-site/ui.js"></script>
+  <link rel="canonical" href="https://aigen.fi/oppaat/tekoalyagentti-yritykselle/">
+  <link rel="alternate" hreflang="fi" href="https://aigen.fi/oppaat/tekoalyagentti-yritykselle/">
+  <link rel="alternate" hreflang="en" href="https://aigen.fi/en/guides/ai-agent-for-business/">
+  <link rel="alternate" hreflang="x-default" href="https://aigen.fi/oppaat/tekoalyagentti-yritykselle/">
+  <meta property="og:title" content="AI-agentti yritykselle | Aigen">
+  <meta property="og:description" content="Mitä AI-agentti tekee yrityksessä, milloin se kannattaa rakentaa ja miten käyttöönotto tehdään hallitusti.">
+  <meta property="og:url" content="https://aigen.fi/oppaat/tekoalyagentti-yritykselle/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Organization", "@id": "https://aigen.fi/#organization", "name": "AI Generation Oy", "url": "https://aigen.fi/", "email": "contact@aigen.fi"}, {"@context": "https://schema.org", "@type": "WebSite", "@id": "https://aigen.fi/#website", "name": "Aigen", "url": "https://aigen.fi/", "inLanguage": ["fi", "en"], "publisher": {"@id": "https://aigen.fi/#organization"}}, {"@context": "https://schema.org", "@type": "Article", "headline": "AI-agentti yritykselle", "author": {"@type": "Organization", "name": "AI Generation Oy"}, "publisher": {"@type": "Organization", "name": "AI Generation Oy"}, "mainEntityOfPage": "https://aigen.fi/oppaat/tekoalyagentti-yritykselle/", "url": "https://aigen.fi/oppaat/tekoalyagentti-yritykselle/", "inLanguage": "fi"}]</script>
+</head>
+<body>
+  <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
+
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo" href="/"><img src="/assets/logo-black.png" alt="Aigen – etusivu" width="136" height="32"></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="paavalikko">Valikko</button>
+      <nav id="paavalikko" class="main-nav" aria-label="Päänavigaatio">
+        <a href="/sovellukset/">Sovellukset</a><a href="/raataloity-kehitys/">Räätälöity kehitys</a><a href="/oppaat/" aria-current="true">Oppaat</a><a href="/blog/">Blogi</a><a href="/yritys/">Yritys</a>
+        <a class="lang-switch" href="/en/guides/ai-agent-for-business/" hreflang="en" lang="en" aria-label="In English">EN</a>
+        <a class="nav-cta" href="/yritys/#yhteys">Ota yhteyttä</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="sisalto" tabindex="-1">
+    <article class="doc">
+      <header class="doc-hero">
+        <div class="wrap doc-hero-grid">
+          <div>
+            <nav class="breadcrumb" aria-label="Murupolku"><ol><li><a href="/">Etusivu</a></li><li><a href="/oppaat/">Oppaat</a></li><li><span aria-current="page">Tekoälyagentti yritykselle</span></li></ol></nav>
+            <p class="kicker">AI-agentit yrityksille</p>
+            <h1>AI-agentti tekee rajattua työtä, ei vain vastaa kysymyksiin.</h1>
+            <p class="lead">Hyvin rakennettu agentti lukee taustatiedot, käyttää sovittuja työkaluja, valmistelee päätöksiä ja jättää tarkistettavan jäljen siitä, mitä se teki ja millä perusteella.</p>
+
+            <div class="actions">
+<a class="button button-primary" href="mailto:contact@aigen.fi">Kysy käyttötapauksesta</a>
+<a class="button" href="/oppaat/tekoalyautomaatio-pk-yrityksille/">Lue automaatiosta</a>
+</div>
+          </div>
+          <aside class="doc-summary" aria-labelledby="summary-title"><h2 id="summary-title">Hyvä ensimmäinen käyttökohde</h2><ul>
+<li>Toistuva työ, jossa on selkeä alku ja lopputulos.</li>
+<li>Data ja työkalut, joiden käyttöoikeudet voidaan rajata.</li>
+<li>Ihminen, joka tarkistaa poikkeamat ennen laajempaa käyttöönottoa.</li>
+</ul></aside>
+        </div>
+      </header>
+      <div class="wrap doc-layout">
+        <div class="doc-side"><nav class="doc-toc" aria-label="Tällä sivulla"><details data-open-wide><summary class="mini-kicker">Tällä sivulla <span aria-hidden="true">(5)</span></summary><ol><li><a href="#mita-ai-agentti-oikeasti-tekee">Mitä AI-agentti oikeasti tekee?</a></li><li><a href="#ennen-rakentamista-paatetaan-rajat">Ennen rakentamista päätetään rajat</a></li><li><a href="#aigenin-toteutusmalli">Aigenin toteutusmalli</a></li><li><a href="#tyypillisia-ensimmaisia-agentteja">Tyypillisiä ensimmäisiä agentteja</a></li><li><a href="#seuraava-vaihe">Seuraava vaihe</a></li></ol></details></nav><aside class="mini-app mini-custom"><p class="mini-kicker">Räätälöity kehitys</p><p>Rakennamme tekoälyautomaation yrityksenne omaan työnkulkuun ja dataan.</p><a class="arrow-link" href="/raataloity-kehitys/">Räätälöity kehitys</a></aside></div>
+        <div class="doc-body prose">
+<section>
+
+<h2 id="mita-ai-agentti-oikeasti-tekee">Mitä AI-agentti oikeasti tekee?</h2>
+<p class="intro">Agentti on järkevä silloin, kun pelkkä chatbot tai yksittäinen integraatio ei riitä. Se hoitaa useamman vaiheen työnkulun sovituissa rajoissa ja nostaa epäselvät tilanteet ihmiselle.</p>
+<div class="cards">
+<div class="card">
+<h3>Hakee ja yhdistää tietoa</h3>
+<p>Agentti lukee ohjeita, dokumentteja, taulukoita ja järjestelmätietoa ilman että työntekijän pitää siirtää kaikkea käsin keskusteluun.</p>
+</div>
+<div class="card">
+<h3>Käyttää työkaluja</h3>
+<p>Se voi täyttää lomakkeita, kutsua rajapintoja, päivittää järjestelmiä ja valmistella vastauksia vain sille annetuilla oikeuksilla.</p>
+</div>
+<div class="card">
+<h3>Jättää audit trailin</h3>
+<p>Hyvä toteutus kertoo, mitä agentti teki, mitä dataa se käytti ja missä kohdassa ihminen hyväksyi tai korjasi lopputuloksen.</p>
+</div>
+</div>
+
+</section>
+<section>
+<div class="cards">
+<div class="card">
+<h2 id="ennen-rakentamista-paatetaan-rajat">Ennen rakentamista päätetään rajat</h2>
+<ul>
+<li>Mitä dataa agentti saa lukea ja mihin se saa kirjoittaa.</li>
+<li>Mitä se saa tehdä itsenäisesti ja missä tarvitaan hyväksyntä.</li>
+<li>Miten virheet, lokit, tietosuoja ja vastuut käsitellään.</li>
+<li>Miten hyöty mitataan: aika, läpimeno, laatu tai riskin pienentyminen.</li>
+</ul>
+</div>
+<div class="card">
+<h2 id="aigenin-toteutusmalli">Aigenin toteutusmalli</h2>
+<p>Valitsemme yhden rajatun työnkulun, sovimme agentille työkalut, rajat ja hyväksymiskohdat, ja testaamme toteutusta oikealla datalla ennen laajentamista.</p>
+<p>Näin agentti ei jää demoksi, joka näyttää hyvältä esityksessä mutta katoaa arjessa.</p>
+</div>
+</div>
+</section>
+<section>
+<div class="cards">
+<div>
+<h2 id="tyypillisia-ensimmaisia-agentteja">Tyypillisiä ensimmäisiä agentteja</h2>
+<div class="faq">
+<details class="faq-item">
+<summary>Tarjouspyyntöjen ja dokumenttien esikäsittely</summary>
+<p>Agentti kerää olennaiset tiedot, tunnistaa puuttuvat kohdat ja valmistelee yhteenvedon ihmiselle.</p>
+</details>
+<details class="faq-item">
+<summary>Raporttien ja viranomaisaineistojen valmistelu</summary>
+<p>Agentti yhdistää dataa, tarkistaa sääntöjä vasten ja tekee luonnoksen, jonka vastuuhenkilö hyväksyy.</p>
+</details>
+<details class="faq-item">
+<summary>Asiakaspalvelun taustatyö</summary>
+<p>Agentti etsii sopimukset, historiat ja ohjeet valmiiksi, jotta ihminen voi vastata nopeammin ja täsmällisemmin.</p>
+</details>
+</div>
+</div>
+<aside class="card">
+<h2 id="seuraava-vaihe">Seuraava vaihe</h2>
+<p>Valitse yksi työnkulku, jossa manuaalinen työ toistuu viikoittain ja lopputulos on helppo tarkistaa. Siitä saadaan nopeasti selville, kannattaako agentti rakentaa tuotantoon.</p>
+<div class="actions">
+<a class="button button-primary" href="mailto:contact@aigen.fi">Ota yhteyttä</a>
+<a class="button" href="/blog/">Lue blogia</a>
+</div>
+</aside>
+</div>
+</section>
+        </div>
+      </div>
+    </article>
+    <section class="more-guides" aria-labelledby="more-title">
+      <div class="wrap">
+        <div class="related-head"><h2 id="more-title">Muut oppaat</h2><a class="arrow-link" href="/oppaat/">Kaikki oppaat</a></div>
+        <ul class="guide-grid"><li><a class="guide-card" href="/oppaat/tekoalyautomaatio-pk-yrityksille/"><span class="mini-kicker">Tekoälyagentit ja automaatio</span><strong>Tekoälyautomaatio pk-yrityksille</strong><span>Työnkulun valinta ja datan valmistelu automaatiota varten.</span></a></li><li><a class="guide-card" href="/oppaat/ai-act-pk-yritys/"><span class="mini-kicker">EU-sääntely</span><strong>EU AI Act</strong><span>Riskiluokat, aikajana ja tarkistuslista yrityksen valmistautumiseen.</span></a></li><li><a class="guide-card" href="/oppaat/palkka-avoimuusdirektiivi/"><span class="mini-kicker">EU-sääntely</span><strong>Palkka-avoimuus</strong><span>Mitä palkka-avoimuus tarkoittaa työnantajalle ja miten siihen valmistaudutaan.</span></a></li></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <img src="/assets/logo-black.png" alt="AI Generation" width="102" height="24">
+          <p>Suomalainen ohjelmistoyritys. Sovelluksia ja räätälöityä automaatiota yrityksille Suomessa ja Euroopassa.</p>
+          <p><a href="mailto:contact@aigen.fi">contact@aigen.fi</a><br><a href="https://www.linkedin.com/company/ai-generation-oy/" rel="noopener">LinkedIn</a></p>
+        </div>
+        <nav aria-label="Sovellukset">
+          <h2>Sovellukset</h2>
+          <ul>
+            <li><a href="/sovellukset/ilmoo/">Ilmoo</a></li>
+            <li><a href="/sovellukset/aigen-cbam/">Aigen CBAM</a></li>
+            <li><a href="/sovellukset/">Kaikki sovellukset</a></li>
+            <li><a href="/sovellukset/?kohde=muut">Pelit ja kokeilut</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Oppaat">
+          <h2><a href="/oppaat/">Oppaat</a></h2>
+          <ul><li><a href="/oppaat/ai-act-pk-yritys/">EU AI Act</a></li><li><a href="/oppaat/palkka-avoimuusdirektiivi/">Palkka-avoimuus</a></li><li><a href="/oppaat/cbam-raportointi/">CBAM-raportointi</a></li><li><a href="/oppaat/whistleblowing-kanava/">Whistleblowing-kanava</a></li><li><a href="/oppaat/tekoalyagentti-yritykselle/">Tekoälyagentti yritykselle</a></li><li><a href="/oppaat/tekoalyautomaatio-pk-yrityksille/">Tekoälyautomaatio pk-yrityksille</a></li></ul>
+        </nav>
+        <nav aria-label="Yritys">
+          <h2>Yritys</h2>
+          <ul>
+            <li><a href="/raataloity-kehitys/">Räätälöity kehitys</a></li>
+            <li><a href="/blog/">Blogi</a></li>
+            <li><a href="/yritys/">Meistä</a></li>
+            <li><a href="/yritys/#yhteys">Ota yhteyttä</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="copy">© 2026 AI Generation Oy</p>
+        <a href="/en/guides/ai-agent-for-business/" hreflang="en" lang="en">In English</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

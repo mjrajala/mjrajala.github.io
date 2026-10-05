@@ -1,0 +1,230 @@
+app-aigen-cbam:fi                              390   OK
+app-aigen-cbam:en                              390   OK
+app-clawspam:fi                                390   OK
+app-clawspam:en                                390   OK
+app-draftpad:fi                                390   OK
+app-draftpad:en                                390   OK
+app-gpsrdocs:fi                                390   OK
+app-gpsrdocs:en                                390   OK
+app-ilmoo:fi                                   390   OK
+app-ilmoo:en                                   390   OK
+app-spawnpad:fi                                390   OK
+app-spawnpad:en                                390   OK
+app-tasapay:fi                                 390   OK
+app-tasapay:en                                 390   OK
+apps:fi                                        390   OK
+apps:en                                        390   OK
+blog:fi                                        390   OK
+blog:en                                        390   OK
+company:fi                                     390   OK
+company:en                                     390   OK
+custom:fi                                      390   OK
+custom:en                                      390   OK
+guide-agent:fi                                 390   OK
+guide-agent:en                                 390   OK
+guide-aiact:fi                                 390   OK
+guide-aiact:en                                 390   OK
+guide-auto:fi                                  390   OK
+guide-auto:en                                  390   OK
+guide-cbam:fi                                  390   OK
+guide-cbam:en                                  390   OK
+guide-pay:fi                                   390   OK
+guide-pay:en                                   390   OK
+guide-wb:fi                                    390   OK
+guide-wb:en                                    390   OK
+guides:fi                                      390   OK
+guides:en                                      390   OK
+home:fi                                        390   OK
+home:en                                        390   OK
+post-agentit-selvitystyo-workflow:fi           390   OK
+post-agentit-selvitystyo-workflow:en           390   OK
+post-agenttityossa-workflow-ratkaisee:fi       390   OK
+post-agenttityossa-workflow-ratkaisee:en       390   OK
+post-ai-agentti-veroilmoitus:fi                390   OK
+post-ai-agentti-veroilmoitus:en                390   OK
+post-ai-agenttien-suurin-ongelma-on-muisti:fi  390   OK
+post-ai-agenttien-suurin-ongelma-on-muisti:en  390   OK
+post-aigen-cbam-avattu:fi                      390   OK
+post-aigen-cbam-avattu:en                      390   OK
+post-chatgpt-work-kirjautuu-ilman-salasanaa:fi 390   OK
+post-chatgpt-work-kirjautuu-ilman-salasanaa:en 390   OK
+post-grok-bot-tekoalyagentti-tyokaverina:fi    390   OK
+post-grok-bot-tekoalyagentti-tyokaverina:en    390   OK
+post-mallit-kehittyvat-tekstin-tunnistaa:fi    390   OK
+post-mallit-kehittyvat-tekstin-tunnistaa:en    390   OK
+post-tekoaly-ei-ole-hakukone:fi                390   OK
+post-tekoaly-ei-ole-hakukone:en                390   OK
+post-tekoaly-muuttaa-omalle-koneelle:fi        390   OK
+post-tekoaly-muuttaa-omalle-koneelle:en        390   OK
+post-tekoalyagentit-arjessa:fi                 390   OK
+post-tekoalyagentit-arjessa:en                 390   OK
+post-tekoalyn-suurin-riski-huono-johtaminen:fi 390   OK
+post-tekoalyn-suurin-riski-huono-johtaminen:en 390   OK
+post-teslan-grok-katulamppujen-vikailmoitus:fi 390   OK
+post-teslan-grok-katulamppujen-vikailmoitus:en 390   OK
+post-vakuutusten-kilpailutus-ai-agentilla:fi   390   OK
+post-vakuutusten-kilpailutus-ai-agentilla:en   390   OK
+app-aigen-cbam:fi                              1440  OK
+app-aigen-cbam:en                              1440  OK
+app-clawspam:fi                                1440  OK
+app-clawspam:en                                1440  OK
+app-draftpad:fi                                1440  OK
+app-draftpad:en                                1440  OK
+app-gpsrdocs:fi                                1440  OK
+app-gpsrdocs:en                                1440  OK
+app-ilmoo:fi                                   1440  OK
+app-ilmoo:en                                   1440  OK
+app-spawnpad:fi                                1440  OK
+app-spawnpad:en                                1440  OK
+app-tasapay:fi                                 1440  OK
+app-tasapay:en                                 1440  OK
+apps:fi                                        1440  OK
+apps:en                                        1440  OK
+blog:fi                                        1440  OK
+blog:en                                        1440  OK
+company:fi                                     1440  OK
+company:en                                     1440  OK
+custom:fi                                      1440  OK
+custom:en                                      1440  OK
+guide-agent:fi                                 1440  OK
+guide-agent:en                                 1440  OK
+guide-aiact:fi                                 1440  OK
+guide-aiact:en                                 1440  OK
+guide-auto:fi                                  1440  OK
+guide-auto:en                                  1440  OK
+guide-cbam:fi                                  1440  OK
+guide-cbam:en                                  1440  OK
+guide-pay:fi                                   1440  OK
+guide-pay:en                                   1440  OK
+guide-wb:fi                                    1440  OK
+guide-wb:en                                    1440  OK
+guides:fi                                      1440  OK
+guides:en                                      1440  OK
+home:fi                                        1440  OK
+home:en                                        1440  OK
+post-agentit-selvitystyo-workflow:fi           1440  OK
+post-agentit-selvitystyo-workflow:en           1440  OK
+post-agenttityossa-workflow-ratkaisee:fi       1440  OK
+post-agenttityossa-workflow-ratkaisee:en       1440  OK
+post-ai-agentti-veroilmoitus:fi                1440  OK
+post-ai-agentti-veroilmoitus:en                1440  OK
+post-ai-agenttien-suurin-ongelma-on-muisti:fi  1440  OK
+post-ai-agenttien-suurin-ongelma-on-muisti:en  1440  OK
+post-aigen-cbam-avattu:fi                      1440  OK
+post-aigen-cbam-avattu:en                      1440  OK
+post-chatgpt-work-kirjautuu-ilman-salasanaa:fi 1440  OK
+post-chatgpt-work-kirjautuu-ilman-salasanaa:en 1440  OK
+post-grok-bot-tekoalyagentti-tyokaverina:fi    1440  OK
+post-grok-bot-tekoalyagentti-tyokaverina:en    1440  OK
+post-mallit-kehittyvat-tekstin-tunnistaa:fi    1440  OK
+post-mallit-kehittyvat-tekstin-tunnistaa:en    1440  OK
+post-tekoaly-ei-ole-hakukone:fi                1440  OK
+post-tekoaly-ei-ole-hakukone:en                1440  OK
+post-tekoaly-muuttaa-omalle-koneelle:fi        1440  OK
+post-tekoaly-muuttaa-omalle-koneelle:en        1440  OK
+post-tekoalyagentit-arjessa:fi                 1440  OK
+post-tekoalyagentit-arjessa:en                 1440  OK
+post-tekoalyn-suurin-riski-huono-johtaminen:fi 1440  OK
+post-tekoalyn-suurin-riski-huono-johtaminen:en 1440  OK
+post-teslan-grok-katulamppujen-vikailmoitus:fi 1440  OK
+post-teslan-grok-katulamppujen-vikailmoitus:en 1440  OK
+post-vakuutusten-kilpailutus-ai-agentilla:fi   1440  OK
+post-vakuutusten-kilpailutus-ai-agentilla:en   1440  OK
+app-ilmoo:fi                                   320   contrast=5.9 tabs=46 OK
+app-ilmoo:en                                   320   contrast=5.9 tabs=46 OK
+app-tasapay:fi                                 320   contrast=6.37 tabs=35 OK
+app-tasapay:en                                 320   contrast=6.37 tabs=35 OK
+apps:fi                                        320   contrast=6.37 tabs=33 OK
+apps:en                                        320   contrast=6.37 tabs=33 OK
+blog:fi                                        320   contrast=6.37 tabs=41 OK
+blog:en                                        320   contrast=6.37 tabs=41 OK
+company:fi                                     320   contrast=6.37 tabs=36 OK
+company:en                                     320   contrast=6.37 tabs=36 OK
+custom:fi                                      320   contrast=6.37 tabs=32 OK
+custom:en                                      320   contrast=6.37 tabs=32 OK
+guide-aiact:fi                                 320   contrast=5.9 tabs=46 OK
+guide-aiact:en                                 320   contrast=5.9 tabs=46 OK
+guide-cbam:fi                                  320   contrast=5.9 tabs=31 OK
+guide-cbam:en                                  320   contrast=5.9 tabs=31 OK
+guides:fi                                      320   contrast=6.37 tabs=29 OK
+guides:en                                      320   contrast=6.37 tabs=29 OK
+home:fi                                        320   contrast=6.37 tabs=51 OK
+home:en                                        320   contrast=6.37 tabs=51 OK
+post-aigen-cbam-avattu:fi                      320   contrast=5.9 tabs=38 OK
+post-aigen-cbam-avattu:en                      320   contrast=5.9 tabs=38 OK
+post-grok-bot-tekoalyagentti-tyokaverina:fi    320   contrast=5.9 tabs=32 OK
+post-grok-bot-tekoalyagentti-tyokaverina:en    320   contrast=5.9 tabs=32 OK
+app-ilmoo:fi                                   390   contrast=5.9 tabs=46 OK
+app-ilmoo:en                                   390   contrast=5.9 tabs=46 OK
+app-tasapay:fi                                 390   contrast=6.37 tabs=35 OK
+app-tasapay:en                                 390   contrast=6.37 tabs=35 OK
+apps:fi                                        390   contrast=6.37 tabs=33 OK
+apps:en                                        390   contrast=6.37 tabs=33 OK
+blog:fi                                        390   contrast=6.37 tabs=41 OK
+blog:en                                        390   contrast=6.37 tabs=41 OK
+company:fi                                     390   contrast=6.37 tabs=36 OK
+company:en                                     390   contrast=6.37 tabs=36 OK
+custom:fi                                      390   contrast=6.37 tabs=32 OK
+custom:en                                      390   contrast=6.37 tabs=32 OK
+guide-aiact:fi                                 390   contrast=5.9 tabs=46 OK
+guide-aiact:en                                 390   contrast=5.9 tabs=46 OK
+guide-cbam:fi                                  390   contrast=5.9 tabs=31 OK
+guide-cbam:en                                  390   contrast=5.9 tabs=31 OK
+guides:fi                                      390   contrast=6.37 tabs=29 OK
+guides:en                                      390   contrast=6.37 tabs=29 OK
+home:fi                                        390   contrast=6.37 tabs=51 OK
+home:en                                        390   contrast=6.37 tabs=51 OK
+post-aigen-cbam-avattu:fi                      390   contrast=5.9 tabs=38 OK
+post-aigen-cbam-avattu:en                      390   contrast=5.9 tabs=38 OK
+post-grok-bot-tekoalyagentti-tyokaverina:fi    390   contrast=5.9 tabs=32 OK
+post-grok-bot-tekoalyagentti-tyokaverina:en    390   contrast=5.9 tabs=32 OK
+app-ilmoo:fi                                   768   contrast=5.9 tabs=46 OK
+app-ilmoo:en                                   768   contrast=5.9 tabs=46 OK
+app-tasapay:fi                                 768   contrast=6.37 tabs=35 OK
+app-tasapay:en                                 768   contrast=6.37 tabs=35 OK
+apps:fi                                        768   contrast=6.37 tabs=33 OK
+apps:en                                        768   contrast=6.37 tabs=33 OK
+blog:fi                                        768   contrast=6.37 tabs=41 OK
+blog:en                                        768   contrast=6.37 tabs=41 OK
+company:fi                                     768   contrast=6.37 tabs=36 OK
+company:en                                     768   contrast=6.37 tabs=36 OK
+custom:fi                                      768   contrast=6.37 tabs=32 OK
+custom:en                                      768   contrast=6.37 tabs=32 OK
+guide-aiact:fi                                 768   contrast=5.9 tabs=46 OK
+guide-aiact:en                                 768   contrast=5.9 tabs=46 OK
+guide-cbam:fi                                  768   contrast=5.9 tabs=31 OK
+guide-cbam:en                                  768   contrast=5.9 tabs=31 OK
+guides:fi                                      768   contrast=6.37 tabs=29 OK
+guides:en                                      768   contrast=6.37 tabs=29 OK
+home:fi                                        768   contrast=6.37 tabs=51 OK
+home:en                                        768   contrast=6.37 tabs=51 OK
+post-aigen-cbam-avattu:fi                      768   contrast=5.9 tabs=38 OK
+post-aigen-cbam-avattu:en                      768   contrast=5.9 tabs=38 OK
+post-grok-bot-tekoalyagentti-tyokaverina:fi    768   contrast=5.9 tabs=32 OK
+post-grok-bot-tekoalyagentti-tyokaverina:en    768   contrast=5.9 tabs=32 OK
+app-ilmoo:fi                                   1440  contrast=5.9 tabs=52 OK
+app-ilmoo:en                                   1440  contrast=5.9 tabs=52 OK
+app-tasapay:fi                                 1440  contrast=6.37 tabs=41 OK
+app-tasapay:en                                 1440  contrast=6.37 tabs=41 OK
+apps:fi                                        1440  contrast=6.37 tabs=42 OK
+apps:en                                        1440  contrast=6.37 tabs=42 OK
+blog:fi                                        1440  contrast=6.37 tabs=47 OK
+blog:en                                        1440  contrast=6.37 tabs=47 OK
+company:fi                                     1440  contrast=6.37 tabs=42 OK
+company:en                                     1440  contrast=6.37 tabs=42 OK
+custom:fi                                      1440  contrast=6.37 tabs=38 OK
+custom:en                                      1440  contrast=6.37 tabs=38 OK
+guide-aiact:fi                                 1440  contrast=5.9 tabs=61 OK
+guide-aiact:en                                 1440  contrast=5.9 tabs=61 OK
+guide-cbam:fi                                  1440  contrast=5.9 tabs=41 OK
+guide-cbam:en                                  1440  contrast=5.9 tabs=40 OK
+guides:fi                                      1440  contrast=6.37 tabs=35 OK
+guides:en                                      1440  contrast=6.37 tabs=35 OK
+home:fi                                        1440  contrast=6.37 tabs=57 OK
+home:en                                        1440  contrast=6.37 tabs=57 OK
+post-aigen-cbam-avattu:fi                      1440  contrast=5.9 tabs=44 OK
+post-aigen-cbam-avattu:en                      1440  contrast=5.9 tabs=44 OK
+post-grok-bot-tekoalyagentti-tyokaverina:fi    1440  contrast=5.9 tabs=38 OK
+post-grok-bot-tekoalyagentti-tyokaverina:en    1440  contrast=5.9 tabs=38 OK
+
+Total issues: 0

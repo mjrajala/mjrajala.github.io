@@ -559,6 +559,28 @@ function build() {
         new Date(a.publishedAt || a.updatedAt || a.createdAt)
     );
 
+  if (fs.existsSync(path.join(root, "assets/catalog-site/.promotion-owned"))) {
+    const payload = posts.map(post => {
+      const image = post.imageUrl?.startsWith("/assets/") ? post.imageUrl : postImage(post);
+      const dimensions = imageMeta(image);
+      return {
+        route: `/blog/${postSlug(post)}/`, title: post.title,
+        description: descriptions[post.title] || excerpt(post),
+        body: renderContent(post) + '<div class="source-box"><strong>Lähde:</strong> AI Generation Oy:n julkaistu LinkedIn-päivitys Draftpadista. Sivun teksti on muokattu blogimuotoon samasta julkaistusta sisällöstä.</div>',
+        image, width: dimensions.width, height: dimensions.height,
+        published: isoDate(post.publishedAt || post.createdAt),
+        modified: isoDate(post.updatedAt || post.publishedAt || post.createdAt),
+        dateText: fiDate(post.publishedAt || post.createdAt),
+        tags: [...new Set([...(post.hashtags || []), "AI-agentit"])].slice(0, 4)
+      };
+    });
+    const output = execFileSync("python3", [path.join(__dirname, "render-catalog-blog.py")], {
+      input: JSON.stringify({root, posts: payload}), encoding: "utf8"
+    });
+    console.log(output.trim());
+    return;
+  }
+
   for (const post of posts) {
     const slug = postSlug(post);
     const dir = path.join(root, "blog", slug);

@@ -1,24 +1,55 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<link href="/favicon.ico" rel="icon" sizes="16x16 32x32 48x48 64x64"/>
-<link href="/favicon.png" rel="icon" sizes="192x192" type="image/png"/><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>The agent can log in. The model shouldn’t see the password. | Aigen Blog</title><meta content="ChatGPT Work can now sign into websites on web and mobile without ChatGPT seeing your username or password. Why the boundary matters more than the login." name="description"/><meta content="AI Generation Oy" name="author"/><meta content="index,follow,max-image-preview:large" name="robots"/>
-<link href="https://aigen.fi/en/blog/chatgpt-work-signs-in-without-seeing-passwords/" rel="canonical"/><link href="https://aigen.fi/blog/chatgpt-work-kirjautuu-ilman-salasanaa/" hreflang="fi" rel="alternate"/><link href="https://aigen.fi/en/blog/chatgpt-work-signs-in-without-seeing-passwords/" hreflang="en" rel="alternate"/><link href="https://aigen.fi/blog/chatgpt-work-kirjautuu-ilman-salasanaa/" hreflang="x-default" rel="alternate"/>
-<meta content="article" property="og:type"/><meta content="The agent can log in. The model shouldn’t see the password." property="og:title"/><meta content="ChatGPT Work can sign into sites without the model seeing credentials. The useful part is the boundary." property="og:description"/><meta content="https://aigen.fi/en/blog/chatgpt-work-signs-in-without-seeing-passwords/" property="og:url"/><meta content="https://aigen.fi/assets/blog/chatgpt-work-kirjautuminen.png?v=7b8803e" property="og:image"/><meta content="2026-08-26T20:20:00+03:00" property="article:published_time"/><meta content="summary_large_image" name="twitter:card"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"The agent can log in. The model shouldn’t see the password.","description":"ChatGPT Work can sign into websites without ChatGPT seeing credentials.","image":"https://aigen.fi/assets/blog/chatgpt-work-kirjautuminen.png?v=7b8803e","datePublished":"2026-08-26","inLanguage":"en-US","mainEntityOfPage":"https://aigen.fi/en/blog/chatgpt-work-signs-in-without-seeing-passwords/","author":{"@type":"Organization","name":"AI Generation Oy"},"publisher":{"@type":"Organization","name":"AI Generation Oy"}}</script>
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>The agent can log in. The model shouldn’t see the password. | Aigen Blog</title>
+  <meta name="description" content="ChatGPT Work can now sign into websites on web and mobile without ChatGPT seeing your username or password. Why the boundary matters more than the login.">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
+  <script>document.documentElement.className = "js";</script>
+  <link rel="stylesheet" href="/assets/catalog-site/site.css">
+  <script defer src="/assets/catalog-site/apps.js"></script>
+  <script defer src="/assets/catalog-site/ui.js"></script>
+  <link rel="canonical" href="https://aigen.fi/en/blog/chatgpt-work-signs-in-without-seeing-passwords/">
+  <link rel="alternate" hreflang="fi" href="https://aigen.fi/blog/chatgpt-work-kirjautuu-ilman-salasanaa/">
+  <link rel="alternate" hreflang="en" href="https://aigen.fi/en/blog/chatgpt-work-signs-in-without-seeing-passwords/">
+  <link rel="alternate" hreflang="x-default" href="https://aigen.fi/blog/chatgpt-work-kirjautuu-ilman-salasanaa/">
+  <meta property="og:title" content="The agent can log in. The model shouldn’t see the password. | Aigen Blog">
+  <meta property="og:description" content="ChatGPT Work can now sign into websites on web and mobile without ChatGPT seeing your username or password. Why the boundary matters more than the login.">
+  <meta property="og:url" content="https://aigen.fi/en/blog/chatgpt-work-signs-in-without-seeing-passwords/">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://aigen.fi/assets/blog/chatgpt-work-kirjautuminen.png?v=7b8803e">
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Organization", "@id": "https://aigen.fi/#organization", "name": "AI Generation Oy", "url": "https://aigen.fi/", "email": "contact@aigen.fi"}, {"@context": "https://schema.org", "@type": "WebSite", "@id": "https://aigen.fi/#website", "name": "Aigen", "url": "https://aigen.fi/", "inLanguage": ["fi", "en"], "publisher": {"@id": "https://aigen.fi/#organization"}}, {"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The agent can log in. The model shouldn’t see the password.", "url": "https://aigen.fi/en/blog/chatgpt-work-signs-in-without-seeing-passwords/", "mainEntityOfPage": "https://aigen.fi/en/blog/chatgpt-work-signs-in-without-seeing-passwords/", "datePublished": "2026-08-26", "dateModified": "", "inLanguage": "en", "publisher": {"@id": "https://aigen.fi/#organization"}, "author": {"@type": "Organization", "name": "AI Generation Oy"}, "image": "https://aigen.fi/assets/blog/chatgpt-work-kirjautuminen.png?v=7b8803e", "description": "ChatGPT Work can sign into websites without ChatGPT seeing credentials."}]</script>
+</head>
+<body>
+  <a class="skip-link" href="#sisalto">Skip to content</a>
 
-<meta content="-WtFkMpIXZlK3wpWNQvvrmWk1nLpZdkneqXFo_pVtn0" name="google-site-verification"/>
 
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo" href="/en/"><img src="/assets/logo-black.png" alt="Aigen – home" width="136" height="32"></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="paavalikko">Menu</button>
+      <nav id="paavalikko" class="main-nav" aria-label="Main navigation">
+        <a href="/en/apps/">Apps</a><a href="/en/custom-development/">Custom development</a><a href="/en/guides/">Guides</a><a href="/en/blog/" aria-current="true">Blog</a><a href="/en/company/">Company</a>
+        <a class="lang-switch" href="/blog/chatgpt-work-kirjautuu-ilman-salasanaa/" hreflang="fi" lang="fi" aria-label="Suomeksi">FI</a>
+        <a class="nav-cta" href="/en/company/#contact">Contact us</a>
+      </nav>
+    </div>
+  </header>
 
-<link href="/assets/aigen-preview.css" rel="stylesheet"/><link rel="stylesheet" href="/assets/cookie-consent.css">
-<script defer src="/assets/cookie-consent.js"></script><script defer="" src="/assets/aigen-preview.js"></script></head><body class="aigen-preview blog-article-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><nav aria-label="Main navigation" class="nav-container">
-<a class="nav-logo" href="/en/"><img alt="AI Generation" height="36" src="/assets/logo-black.png" width="152"/></a>
-<button aria-controls="main-nav" aria-expanded="false" class="menu-toggle" type="button">Menu <span aria-hidden="true">＋</span></button>
-<div class="nav-links" id="main-nav"><a href="/en/#products">Products</a><a href="/en/#services">Services</a><a href="/en/guides/">Guides</a><a href="/en/blog/">Blog</a><a href="/en/#about">About</a><a class="nav-contact" href="/en/#contact">Contact</a></div>
-<div aria-label="Language" class="nav-language"><a href="/blog/chatgpt-work-kirjautuu-ilman-salasanaa/" hreflang="fi" lang="fi">FI</a><span aria-hidden="true">/</span><a aria-current="page" href="/en/blog/chatgpt-work-signs-in-without-seeing-passwords/" hreflang="en" lang="en">EN</a></div></nav></header>
-
-<header class="blog-hero"><div class="wide"><div class="crumb"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a></div><div class="meta"><span class="tag">AI agents</span><span class="tag">ChatGPT Work</span>26 Aug 2026</div><h1>The agent can log in. The model shouldn’t see the password.</h1><p class="lead">ChatGPT Work can now sign into websites on web and mobile without ChatGPT seeing your username or password. Quiet change. Useful boundary.</p><img alt="Laptop showing a login form with the password hidden from the agent" height="1024" src="/assets/blog/chatgpt-work-kirjautuminen.png?v=7b8803e" width="1536"/></div></header>
-<main class="article" id="main" tabindex="-1">
+  <main id="sisalto" tabindex="-1">
+    <article class="post">
+      <header class="post-hero wrap-narrow">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/blog/">Blog</a></li></ol></nav>
+        <p class="post-meta"><time datetime="2026-08-26">26 Aug 2026</time></p>
+        <ul class="post-tags" aria-label="Topics"><li>AI agents</li><li>ChatGPT Work</li></ul>
+        <h1>The agent can log in. The model shouldn’t see the password.</h1>
+        <p class="lead">ChatGPT Work can now sign into websites on web and mobile without ChatGPT seeing your username or password. Quiet change. Useful boundary.</p>
+      </header>
+      <div class="wrap-figure"><figure class="post-figure"><img src="/assets/blog/chatgpt-work-kirjautuminen.png?v=7b8803e" alt="Laptop showing a login form with the password hidden from the agent" width="1536" height="1024"></figure></div>
+      <div class="wrap-narrow prose post-body">
 <p>On 26 August, OpenAI said ChatGPT Work can use its computer and browser to sign in. The username and password still do not go to the model.</p>
 <p>Until now, an agent could tell you what to do. The actual work sat behind a login: calendar, insurance, accounting, a permit portal. If the agent cannot get in, it stays a helper that writes a tidy set of instructions.</p>
 <h2>The job starts after the door opens</h2>
@@ -28,9 +59,58 @@
 <p>Login is not the story. The story is that the model does not see the credentials.</p>
 <p>An agent needs access to tools. Otherwise it talks about work instead of doing it. The model itself still should not see passwords. If it can, the risk stops being theoretical.</p>
 <p>That is the kind of agent we want to build at AI Generation. A request becomes a checked result. A person stays in charge. Sensitive credentials stay separate.</p>
-<div class="call"><strong>A sane first test:</strong> here is the task, this far you may go, leave the result for review. Not “run my company”.</div>
+<div class="callout"><strong>A sane first test:</strong> here is the task, this far you may go, leave the result for review. Not “run my company”.</div>
 <h2>This does not make an agent safe by default</h2>
 <p>Browser use is still browser use. A company still has to decide where the agent may go, what it may send, and where the work has to stop as a draft.</p>
 <p>ChatGPT Work moves AI from answering questions toward doing the job. The job description changes quietly. Draw the line now, not after something has already been submitted.</p>
 <div class="source"><strong>Sources:</strong> <a href="https://x.com/ChatGPT/status/2092366554965107164">ChatGPT’s post on X</a> and AI Generation Oy’s <a href="https://www.linkedin.com/feed/update/urn:li:activity:7498420060567347200/">LinkedIn post</a>. Checked on 26 August 2026.</div>
-</main><footer class="site-footer">© 2026 AI Generation Oy · Aigen Blog</footer></body></html>
+      </div>
+      <div class="wrap-narrow post-next"><aside class="mini-app mini-custom" aria-label="Next step"><p class="mini-kicker">Next step</p><p><strong>Guide: AI agent for business</strong><br>How an agent uses tools within agreed limits and human review.</p><a class="arrow-link" href="/en/guides/ai-agent-for-business/">Guide: AI agent for business</a></aside></div>
+    </article>
+    <section class="related-posts" aria-labelledby="related-title">
+      <div class="wrap">
+        <div class="related-head"><h2 id="related-title">More from the Aigen blog</h2><a class="arrow-link" href="/en/blog/">All articles</a></div>
+        <ul class="post-mini-grid"><li><a class="post-mini" href="/en/blog/tesla-grok-streetlight-report/"><span>25 September 2026</span><strong>Reporting faulty streetlights on the commute with Grok in a Tesla</strong></a></li><li><a class="post-mini" href="/en/blog/models-get-better-writing-gets-easier-to-spot/"><span>19 Aug 2026</span><strong>Copy that sounds finished gives itself away</strong></a></li><li><a class="post-mini" href="/en/blog/grok-bot-ai-agent-as-coworker/"><span>16 Aug 2026</span><strong>Grok Bot turns an AI agent into a coworker</strong></a></li></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <img src="/assets/logo-black.png" alt="AI Generation" width="102" height="24">
+          <p>A Finnish software company. Apps and custom automation for businesses in Finland and across Europe.</p>
+          <p><a href="mailto:contact@aigen.fi">contact@aigen.fi</a><br><a href="https://www.linkedin.com/company/ai-generation-oy/" rel="noopener">LinkedIn</a></p>
+        </div>
+        <nav aria-label="Apps">
+          <h2>Apps</h2>
+          <ul>
+            <li><a href="/en/apps/ilmoo/">Ilmoo</a></li>
+            <li><a href="/en/apps/aigen-cbam/">Aigen CBAM</a></li>
+            <li><a href="/en/apps/">All apps</a></li>
+            <li><a href="/en/apps/?audience=other">Games and experiments</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Guides">
+          <h2><a href="/en/guides/">Guides</a></h2>
+          <ul><li><a href="/en/guides/ai-act-for-smes/">EU AI Act</a></li><li><a href="/en/guides/pay-transparency-directive/">Pay transparency</a></li><li><a href="/en/guides/cbam-reporting/">CBAM reporting</a></li><li><a href="/en/guides/whistleblowing-channel/">Whistleblowing channel</a></li><li><a href="/en/guides/ai-agent-for-business/">AI agent for business</a></li><li><a href="/en/guides/ai-automation-for-smes/">AI automation for SMEs</a></li></ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2>Company</h2>
+          <ul>
+            <li><a href="/en/custom-development/">Custom development</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/company/">About us</a></li>
+            <li><a href="/en/company/#contact">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="copy">© 2026 AI Generation Oy</p>
+        <a href="/blog/chatgpt-work-kirjautuu-ilman-salasanaa/" hreflang="fi" lang="fi">Suomeksi</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

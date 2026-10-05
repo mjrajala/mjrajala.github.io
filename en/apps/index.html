@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>Apps – Aigen</title>
+  <meta name="description" content="Aigen apps for businesses: search by task and compare use case, status and price.">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
+  <script>document.documentElement.className = "js";</script>
+  <link rel="stylesheet" href="/assets/catalog-site/site.css">
+  <script defer src="/assets/catalog-site/apps.js"></script>
+  <script defer src="/assets/catalog-site/ui.js"></script>
+  <script defer src="/assets/catalog-site/catalog.js"></script>
+  <link rel="canonical" href="https://aigen.fi/en/apps/">
+  <link rel="alternate" hreflang="fi" href="https://aigen.fi/sovellukset/">
+  <link rel="alternate" hreflang="en" href="https://aigen.fi/en/apps/">
+  <link rel="alternate" hreflang="x-default" href="https://aigen.fi/sovellukset/">
+  <meta property="og:title" content="Apps – Aigen">
+  <meta property="og:description" content="Aigen apps for businesses: search by task and compare use case, status and price.">
+  <meta property="og:url" content="https://aigen.fi/en/apps/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Organization", "@id": "https://aigen.fi/#organization", "name": "AI Generation Oy", "url": "https://aigen.fi/", "email": "contact@aigen.fi"}, {"@context": "https://schema.org", "@type": "WebSite", "@id": "https://aigen.fi/#website", "name": "Aigen", "url": "https://aigen.fi/", "inLanguage": ["fi", "en"], "publisher": {"@id": "https://aigen.fi/#organization"}}]</script>
+</head>
+<body>
+  <a class="skip-link" href="#sisalto">Skip to content</a>
+
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo" href="/en/"><img src="/assets/logo-black.png" alt="Aigen – home" width="136" height="32"></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="paavalikko">Menu</button>
+      <nav id="paavalikko" class="main-nav" aria-label="Main navigation">
+        <a href="/en/apps/" aria-current="page">Apps</a><a href="/en/custom-development/">Custom development</a><a href="/en/guides/">Guides</a><a href="/en/blog/">Blog</a><a href="/en/company/">Company</a>
+        <a class="lang-switch" href="/sovellukset/" hreflang="fi" lang="fi" aria-label="Suomeksi">FI</a>
+        <a class="nav-cta" href="/en/company/#contact">Contact us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="sisalto" tabindex="-1">
+<div class="wrap" id="katalogi">
+      <div class="page-head">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/en/">Home</a></li>
+            <li><span aria-current="page">Apps</span></li>
+          </ol>
+        </nav>
+        <h1>Apps</h1>
+        <p class="lead">Search by what you need to get done. You don’t need to know the app’s name.</p>
+
+        <div class="catalog-controls">
+          <div class="audience" role="group" aria-label="Show apps">
+            <button type="button" data-audience="yritykset" aria-pressed="true">For business <span class="n" data-audience-count></span></button>
+            <button type="button" data-audience="muut" aria-pressed="false">Games and experiments <span class="n" data-audience-count></span></button>
+          </div>
+
+          <form id="haku" class="catalog-search" role="search">
+            <label class="visually-hidden" for="haku-kentta">Search apps</label>
+            <div class="search-row">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+              <input id="haku-kentta" type="search" name="q" placeholder="Search by task or name" autocomplete="off" enterkeyhint="search" aria-describedby="tulos-maara">
+              <button class="clear" id="haku-tyhjenna" type="button" aria-label="Clear search" hidden>×</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <noscript>
+        <div class="noscript-list">
+          <p>Search and filters need JavaScript. Here are all apps:</p>
+          <ul>
+            <li><a href="/en/apps/ilmoo/">Ilmoo</a> – internal whistleblowing channel (available)</li>
+            <li><a href="/en/apps/aigen-cbam/">Aigen CBAM</a> – CBAM reporting preparation (available)</li>
+            <li><a href="/en/apps/draftpad/">Draftpad</a> – drafting and collaboration (available)</li>
+            <li><a href="/en/apps/tasapay/">TasaPay</a> – pay transparency reporting (coming)</li>
+            <li><a href="/en/apps/gpsrdocs/">GPSRdocs</a> – product safety documentation (coming)</li>
+            <li><a href="/en/apps/spawnpad/">Spawnpad</a> – browser games (games and experiments)</li>
+            <li><a href="/en/apps/clawspam/">ClawSpam</a> – social network for AI agents (beta, games and experiments)</li>
+          </ul>
+        </div>
+      </noscript>
+
+      <div class="catalog-body">
+        <aside class="filters" id="suodattimet" aria-labelledby="suodattimet-otsikko">
+          <div class="filters-head">
+            <h2 id="suodattimet-otsikko">Filter apps</h2>
+            <button class="icon-button" id="sulje-suodattimet" type="button" aria-label="Close filters">×</button>
+          </div>
+          <fieldset>
+            <legend>Task</legend>
+            <div id="tehtava-valinnat"></div>
+          </fieldset>
+          <fieldset>
+            <legend>Status</legend>
+            <div id="tila-valinnat"></div>
+          </fieldset>
+          <div class="filters-foot">
+            <button class="text-button" type="button" data-reset>Clear all</button>
+            <button class="button button-primary" id="nayta-tulokset" type="button">Show apps</button>
+          </div>
+        </aside>
+
+        <section aria-labelledby="tulokset-otsikko">
+          <div class="results-bar">
+            <h2 id="tulokset-otsikko"><span id="tulos-maara" aria-live="polite">7 apps</span></h2>
+            <div class="results-tools">
+              <button class="button filters-open" id="avaa-suodattimet" type="button" aria-controls="suodattimet" aria-expanded="false">Filter <span class="badge" id="suodatin-maara" hidden></span></button>
+              <label class="sort"><span>Sort</span>
+                <select id="jarjestys">
+                  <option value="suositellut">Recommended</option>
+                  <option value="nimi">Name A–Z</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="active-wrap" hidden>
+            <ul id="aktiiviset" aria-label="Active filters"></ul>
+            <button class="text-button" type="button" data-reset>Clear all</button>
+          </div>
+          <p class="other-hits" id="muut-osumat" hidden><button type="button"></button></p>
+
+          <ul class="app-grid" id="sovellukset"></ul>
+
+          <div class="empty" id="tyhja" hidden>
+            <h3>No matches</h3>
+            <p id="tyhja-teksti"></p>
+            <p>Try another word or clear the filters. If no app fits, we can build one for you.</p>
+            <div class="actions">
+              <button class="button button-primary" type="button" data-reset>Clear search and filters</button>
+              <a class="button" href="/en/custom-development/">Custom development</a>
+            </div>
+          </div>
+
+          <div class="more"><button class="button" id="nayta-lisaa" type="button" hidden>Show more</button></div>
+
+          <aside class="catalog-custom" aria-labelledby="custom-title">
+            <div>
+              <h2 id="custom-title">Didn’t find what you need?</h2>
+              <p>We build software or AI automation around your own workflow.</p>
+            </div>
+            <a class="button button-primary" href="/en/custom-development/">Custom development</a>
+          </aside>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <img src="/assets/logo-black.png" alt="AI Generation" width="102" height="24">
+          <p>A Finnish software company. Apps and custom automation for businesses in Finland and across Europe.</p>
+          <p><a href="mailto:contact@aigen.fi">contact@aigen.fi</a><br><a href="https://www.linkedin.com/company/ai-generation-oy/" rel="noopener">LinkedIn</a></p>
+        </div>
+        <nav aria-label="Apps">
+          <h2>Apps</h2>
+          <ul>
+            <li><a href="/en/apps/ilmoo/">Ilmoo</a></li>
+            <li><a href="/en/apps/aigen-cbam/">Aigen CBAM</a></li>
+            <li><a href="/en/apps/">All apps</a></li>
+            <li><a href="/en/apps/?audience=other">Games and experiments</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Guides">
+          <h2><a href="/en/guides/">Guides</a></h2>
+          <ul><li><a href="/en/guides/ai-act-for-smes/">EU AI Act</a></li><li><a href="/en/guides/pay-transparency-directive/">Pay transparency</a></li><li><a href="/en/guides/cbam-reporting/">CBAM reporting</a></li><li><a href="/en/guides/whistleblowing-channel/">Whistleblowing channel</a></li><li><a href="/en/guides/ai-agent-for-business/">AI agent for business</a></li><li><a href="/en/guides/ai-automation-for-smes/">AI automation for SMEs</a></li></ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2>Company</h2>
+          <ul>
+            <li><a href="/en/custom-development/">Custom development</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
+            <li><a href="/en/company/">About us</a></li>
+            <li><a href="/en/company/#contact">Contact us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="copy">© 2026 AI Generation Oy</p>
+        <a href="/sovellukset/" hreflang="fi" lang="fi">Suomeksi</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

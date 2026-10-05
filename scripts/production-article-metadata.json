@@ -1,0 +1,760 @@
+{
+  "/tekoalyagentti-yritykselle/": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI-agentti yritykselle",
+    "author": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "mainEntityOfPage": "https://aigen.fi/tekoalyagentti-yritykselle/"
+  },
+  "/ai-act-pk-yritys/": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "EU AI Act yritykselle: käytännön opas 2026–2028",
+    "dateModified": "2026-08-16",
+    "inLanguage": "fi",
+    "author": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "mainEntityOfPage": "https://aigen.fi/ai-act-pk-yritys/"
+  },
+  "/blog/chatgpt-work-kirjautuu-ilman-salasanaa/": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Agentti kirjautuu. Mallin ei tarvitse nähdä salasanaa.",
+    "description": "ChatGPT Work voi kirjautua sivuille ilman, että ChatGPT näkee tunnuksia.",
+    "image": "https://aigen.fi/assets/blog/chatgpt-work-kirjautuminen.png?v=7b8803e",
+    "datePublished": "2026-08-26",
+    "inLanguage": "fi-FI",
+    "mainEntityOfPage": "https://aigen.fi/blog/chatgpt-work-kirjautuu-ilman-salasanaa/",
+    "author": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    }
+  },
+  "/blog/tekoaly-ei-ole-hakukone/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/blog/tekoaly-ei-ole-hakukone/#article",
+    "headline": "Tekoäly lakkasi olemasta hakukone. Useimmat eivät huomanneet.",
+    "description": "AI-agentit eivät ole enää vain vastauskoneita. Hyvin rajattu agentti tekee tehtäviä, seuraa muutoksia ja poistaa toistuvaa kitkaa.",
+    "image": [
+      "https://aigen.fi/assets/logo-slogan.png"
+    ],
+    "datePublished": "2026-05-06",
+    "dateModified": "2026-05-06",
+    "inLanguage": "fi-FI",
+    "isPartOf": {
+      "@id": "https://aigen.fi/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/blog/tekoaly-ei-ole-hakukone/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "AI, AIagentit, automaatio, yrittäjyys, tekoälyagentit, AI-agentit, agenttitekoäly, AI Generation Oy, Aigen, OpenClaw, Hermes",
+    "relatedLink": [
+      "https://aigen.fi/blog/vakuutusten-kilpailutus-ai-agentilla/",
+      "https://aigen.fi/blog/ai-agentti-veroilmoitus/",
+      "https://aigen.fi/blog/agenttityossa-workflow-ratkaisee/"
+    ]
+  },
+  "/blog/mallit-kehittyvat-tekstin-tunnistaa/": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Liian valmis teksti paljastaa itsensä",
+    "description": "Mallilta pyydetty teksti kuulostaa usein heti valmiilta. Asiakas oppii sen kaavan nopeammin kuin yritys.",
+    "image": "https://aigen.fi/assets/blog/mallit-kehittyvat-teksti-paljastaa.png",
+    "datePublished": "2026-08-19",
+    "inLanguage": "fi-FI",
+    "mainEntityOfPage": "https://aigen.fi/blog/mallit-kehittyvat-tekstin-tunnistaa/",
+    "author": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    }
+  },
+  "/blog/agentit-selvitystyo-workflow/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/blog/agentit-selvitystyo-workflow/#article",
+    "headline": "Agentit tekevät monivaiheisesta selvitystyöstä 5 minuutin workflow’n",
+    "description": "Käytännön esimerkki siitä, miten tekoälyagentti muuttaa hitaan vero- ja datatyön nopeaksi, tarkistettavaksi workflowksi.",
+    "image": [
+      "https://aigen.fi/assets/logo-slogan.png"
+    ],
+    "datePublished": "2026-04-20",
+    "dateModified": "2026-05-22",
+    "inLanguage": "fi-FI",
+    "isPartOf": {
+      "@id": "https://aigen.fi/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/blog/agentit-selvitystyo-workflow/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "tekoälyagentit, AI-agentit, agenttitekoäly, automaatio, AI Generation Oy, Aigen, OpenClaw, Hermes",
+    "relatedLink": [
+      "https://aigen.fi/blog/vakuutusten-kilpailutus-ai-agentilla/",
+      "https://aigen.fi/blog/ai-agentti-veroilmoitus/",
+      "https://aigen.fi/blog/agenttityossa-workflow-ratkaisee/"
+    ]
+  },
+  "/blog/grok-bot-tekoalyagentti-tyokaverina/": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Grok Bot tekee tekoälyagentista työkaverin",
+    "description": "Grok Bot käyttää omaa pilvitietokonetta ja tekee töitä verkkopalveluissa.",
+    "image": "https://aigen.fi/assets/blog/ai-agenttien-muistikerros.png",
+    "datePublished": "2026-08-16",
+    "inLanguage": "fi-FI",
+    "mainEntityOfPage": "https://aigen.fi/blog/grok-bot-tekoalyagentti-tyokaverina/",
+    "author": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    }
+  },
+  "/blog/agenttityossa-workflow-ratkaisee/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/blog/agenttityossa-workflow-ratkaisee/#article",
+    "headline": "Mallivertailu on helppo tarina. Agenttityössä workflow ratkaisee.",
+    "description": "Miksi yrityksen kannattaa katsoa mallihypen ohi ja rakentaa agentille selkeä työnkulku, lähteet, rajat ja lopputulos.",
+    "image": [
+      "https://aigen.fi/assets/blog/agenttityo-workflow.jpg"
+    ],
+    "datePublished": "2026-05-22",
+    "dateModified": "2026-05-22",
+    "inLanguage": "fi-FI",
+    "isPartOf": {
+      "@id": "https://aigen.fi/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/blog/agenttityossa-workflow-ratkaisee/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "tekoäly, agentit, workflow, orchestration, llm, tekoälyagentit, AI-agentit, agenttitekoäly, automaatio, AI Generation Oy, Aigen, OpenClaw, Hermes",
+    "relatedLink": [
+      "https://aigen.fi/blog/vakuutusten-kilpailutus-ai-agentilla/",
+      "https://aigen.fi/blog/ai-agentti-veroilmoitus/",
+      "https://aigen.fi/blog/tekoaly-ei-ole-hakukone/"
+    ]
+  },
+  "/blog/teslan-grok-katulamppujen-vikailmoitus/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/blog/teslan-grok-katulamppujen-vikailmoitus/#article",
+    "headline": "Vikailmoitus työmatkalla: katulampuista ilmoittaminen hoitui Teslan Grokilla",
+    "description": "Työntekijämme kertomus katulamppujen vikailmoituksesta avaa, miten havainto siirtyy agentin tehtäväksi ja mitä yrityskäyttö vaatii.",
+    "image": [
+      "https://aigen.fi/assets/blog/teslan-grok-katulamppujen-vikailmoitus.webp"
+    ],
+    "datePublished": "2026-09-25",
+    "dateModified": "2026-09-25",
+    "inLanguage": "fi-FI",
+    "isPartOf": {
+      "@id": "https://aigen.fi/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/blog/teslan-grok-katulamppujen-vikailmoitus/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "Tesla, Grok, tekoälyagentit, vikailmoitus",
+    "citation": [
+      "https://www.linkedin.com/posts/pari-pime%C3%A4%C3%A4-katulamppua-huomattiin-aamun-share-7509125050684559361-DiFd/"
+    ]
+  },
+  "/blog/artikkeli-pohja/": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Artikkelin pohja",
+    "author": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "mainEntityOfPage": "https://aigen.fi/blog/artikkeli-pohja/"
+  },
+  "/blog/tekoalyagentit-arjessa/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/blog/tekoalyagentit-arjessa/#article",
+    "headline": "Tekoälyagentit eivät ole meille demoja. Ne ovat osa arkea.",
+    "description": "AI Generationin käytännön oppeja OpenClaw- ja Hermes-agenteista, mallikerroksista, työkaluista ja luotettavuudesta.",
+    "image": [
+      "https://aigen.fi/assets/logo-slogan.png"
+    ],
+    "datePublished": "2026-04-20",
+    "dateModified": "2026-04-20",
+    "inLanguage": "fi-FI",
+    "isPartOf": {
+      "@id": "https://aigen.fi/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/blog/tekoalyagentit-arjessa/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "tekoälyagentit, AI-agentit, agenttitekoäly, automaatio, AI Generation Oy, Aigen, OpenClaw, Hermes",
+    "relatedLink": [
+      "https://aigen.fi/blog/vakuutusten-kilpailutus-ai-agentilla/",
+      "https://aigen.fi/blog/ai-agentti-veroilmoitus/",
+      "https://aigen.fi/blog/agenttityossa-workflow-ratkaisee/"
+    ]
+  },
+  "/blog/tekoalyn-suurin-riski-huono-johtaminen/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/blog/tekoalyn-suurin-riski-huono-johtaminen/#article",
+    "headline": "Tekoälyn suurin riski ei ole hallusinaatiot. Se on huono johtaminen.",
+    "description": "Tekoälyn suurin riski ei ole vain hallusinointi, vaan se, että organisaatiot käyttävät sitä kuin vastauskonetta eivätkä johda sen tekemää työtä.",
+    "image": [
+      "https://aigen.fi/assets/blog/tekoalyn-riski-huono-johtaminen.png"
+    ],
+    "datePublished": "2026-06-14",
+    "dateModified": "2026-06-14",
+    "inLanguage": "fi-FI",
+    "isPartOf": {
+      "@id": "https://aigen.fi/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/blog/tekoalyn-suurin-riski-huono-johtaminen/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "tekoäly, AI, agentit, työelämä, Aigen, tekoälyagentit, AI-agentit, agenttitekoäly, automaatio, AI Generation Oy, OpenClaw, Hermes",
+    "relatedLink": [
+      "https://aigen.fi/blog/tekoaly-muuttaa-omalle-koneelle/",
+      "https://aigen.fi/blog/vakuutusten-kilpailutus-ai-agentilla/",
+      "https://aigen.fi/blog/ai-agentti-veroilmoitus/"
+    ]
+  },
+  "/blog/ai-agentti-veroilmoitus/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/blog/ai-agentti-veroilmoitus/#article",
+    "headline": "Annoimme AI-agentin tehdä yrityksen veroilmoituksen",
+    "description": "Mitä tapahtuu, kun AI-agentti viedään oikeaan viranomaislomakkeeseen, kirjanpidon lukuihin ja monivaiheiseen back office -työhön.",
+    "image": [
+      "https://aigen.fi/assets/blog/veroilmoitus-ai-agentti.jpg"
+    ],
+    "datePublished": "2026-05-25",
+    "dateModified": "2026-05-25",
+    "inLanguage": "fi-FI",
+    "isPartOf": {
+      "@id": "https://aigen.fi/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/blog/ai-agentti-veroilmoitus/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "AI, Agentit, Tekoäly, Automaatio, tekoälyagentit, AI-agentit, agenttitekoäly, automaatio, AI Generation Oy, Aigen, OpenClaw, Hermes",
+    "relatedLink": [
+      "https://aigen.fi/blog/vakuutusten-kilpailutus-ai-agentilla/",
+      "https://aigen.fi/blog/agenttityossa-workflow-ratkaisee/",
+      "https://aigen.fi/blog/tekoaly-ei-ole-hakukone/"
+    ]
+  },
+  "/blog/ai-agenttien-suurin-ongelma-on-muisti/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/blog/ai-agenttien-suurin-ongelma-on-muisti/#article",
+    "headline": "AI-agenttien suurin ongelma ei ole älykkyys. Se on muisti.",
+    "description": "AI-agenttien käytännön pullonkaula ei ole enää pelkkä älykkyys, vaan nopea, luotettava ja käyttäjän korjattavissa oleva muistikerros.",
+    "image": [
+      "https://aigen.fi/assets/blog/ai-agenttien-muistikerros.png"
+    ],
+    "datePublished": "2026-06-22",
+    "dateModified": "2026-06-22",
+    "inLanguage": "fi-FI",
+    "isPartOf": {
+      "@id": "https://aigen.fi/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/blog/ai-agenttien-suurin-ongelma-on-muisti/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "AI-agentit, muisti, OpenClaw, Hermes",
+    "relatedLink": [
+      "https://aigen.fi/blog/tekoalyn-suurin-riski-huono-johtaminen/",
+      "https://aigen.fi/blog/tekoaly-muuttaa-omalle-koneelle/",
+      "https://aigen.fi/blog/agenttityossa-workflow-ratkaisee/"
+    ]
+  },
+  "/blog/aigen-cbam-avattu/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/blog/aigen-cbam-avattu/#article",
+    "headline": "Aigen CBAM on avattu: EU-velvoitteet ja sovelluksen ominaisuudet",
+    "description": "Mitä CBAM vaatii EU:ssa ja Suomessa, miksi rakensimme Aigen CBAM:n ja miten sen ominaisuudet auttavat vuosi-ilmoituksen valmistelussa.",
+    "image": [
+      "https://aigen.fi/assets/cbam-logo.png"
+    ],
+    "datePublished": "2026-09-18",
+    "dateModified": "2026-09-19",
+    "inLanguage": "fi-FI",
+    "isPartOf": {
+      "@id": "https://aigen.fi/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/blog/aigen-cbam-avattu/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "CBAM, maahantuonti, päästötiedot, vuosi-ilmoitus, Aigen CBAM",
+    "citation": [
+      "https://eur-lex.europa.eu/legal-content/FI/ALL/?uri=CELEX:32023R0956",
+      "https://eur-lex.europa.eu/legal-content/FI/TXT/?uri=CELEX:32025R2083",
+      "https://tulli.fi/hiilirajamekanismi",
+      "https://cbam.fi/blogi/cbam-eu-asetus-selitettyna",
+      "https://cbam.fi/blogi/miten-aigen-cbam-auttaa-cbam-velvoitteissa",
+      "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en",
+      "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry-and-reporting_en"
+    ]
+  },
+  "/blog/tekoaly-muuttaa-omalle-koneelle/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/blog/tekoaly-muuttaa-omalle-koneelle/#article",
+    "headline": "Tekoäly muuttaa omalle koneellesi",
+    "description": "Paikallinen tekoäly tuo suuret mallit lähemmäs yrityksen omaa dataa, kustannuksia ja arjen työnkulkuja.",
+    "image": [
+      "https://aigen.fi/assets/blog/rtx-spark-paikallinen-tekoaly.png"
+    ],
+    "datePublished": "2026-06-10",
+    "dateModified": "2026-06-10",
+    "inLanguage": "fi-FI",
+    "isPartOf": {
+      "@id": "https://aigen.fi/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/blog/tekoaly-muuttaa-omalle-koneelle/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "paikallinen tekoäly, tekoäly, AI-agentit, RTX Spark, Nvidia, avoimen lähdekoodin mallit, AI Generation Oy, Aigen",
+    "relatedLink": [
+      "https://aigen.fi/blog/vakuutusten-kilpailutus-ai-agentilla/",
+      "https://aigen.fi/blog/agenttityossa-workflow-ratkaisee/",
+      "https://aigen.fi/blog/tekoaly-ei-ole-hakukone/"
+    ]
+  },
+  "/blog/vakuutusten-kilpailutus-ai-agentilla/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/blog/vakuutusten-kilpailutus-ai-agentilla/#article",
+    "headline": "Kilpailutin vakuutukset viideltä yhtiöltä enkä avannut yhtäkään tarjousta itse",
+    "description": "Käytännön esimerkki siitä, miten AI-agentti muutti viisi vakuutustarjousta ja ehdot yhdeksi selkeäksi vertailuksi.",
+    "image": [
+      "https://aigen.fi/assets/blog/vakuutusten-kilpailutus-ai-agentilla.png"
+    ],
+    "datePublished": "2026-06-03",
+    "dateModified": "2026-06-03",
+    "inLanguage": "fi-FI",
+    "isPartOf": {
+      "@id": "https://aigen.fi/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/blog/vakuutusten-kilpailutus-ai-agentilla/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "tekoäly, automaatio, AIagentit, tekoälyagentit, AI-agentit, agenttitekoäly, AI Generation Oy, Aigen, OpenClaw, Hermes",
+    "relatedLink": [
+      "https://aigen.fi/blog/ai-agentti-veroilmoitus/",
+      "https://aigen.fi/blog/agenttityossa-workflow-ratkaisee/",
+      "https://aigen.fi/blog/tekoaly-ei-ole-hakukone/"
+    ]
+  },
+  "/en/ai-act-for-smes/": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "EU AI Act for SMEs: a practical guide for 2026–2028",
+    "dateModified": "2026-08-16",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "mainEntityOfPage": "https://aigen.fi/en/ai-act-for-smes/"
+  },
+  "/en/blog/ai-agents-in-daily-work/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/en/blog/ai-agents-in-daily-work/#article",
+    "headline": "AI agents are not demos for us. They are part of daily work.",
+    "description": "Practical lessons from AI Generation on OpenClaw and Hermes agents, model layers, tools and reliability.",
+    "image": [
+      "https://aigen.fi/assets/logo-slogan.png"
+    ],
+    "datePublished": "2026-04-20",
+    "dateModified": "2026-06-03",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@id": "https://aigen.fi/en/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/en/blog/ai-agents-in-daily-work/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "AI agents"
+  },
+  "/en/blog/ai-stopped-being-a-search-engine/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/en/blog/ai-stopped-being-a-search-engine/#article",
+    "headline": "AI stopped being a search engine. Most people did not notice.",
+    "description": "AI agents are no longer just answer machines. A well-scoped agent performs tasks, follows changes and removes repeated friction.",
+    "image": [
+      "https://aigen.fi/assets/logo-slogan.png"
+    ],
+    "datePublished": "2026-05-06",
+    "dateModified": "2026-06-03",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@id": "https://aigen.fi/en/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/en/blog/ai-stopped-being-a-search-engine/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "AI, AI agents, automation"
+  },
+  "/en/blog/tesla-grok-streetlight-report/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/en/blog/tesla-grok-streetlight-report/#article",
+    "headline": "Reporting faulty streetlights on the commute with Grok in a Tesla",
+    "description": "Our employee’s account of reporting faulty streetlights shows how an observation becomes an agent’s task and what businesses need to make it work.",
+    "image": [
+      "https://aigen.fi/assets/blog/teslan-grok-katulamppujen-vikailmoitus.webp"
+    ],
+    "datePublished": "2026-09-25",
+    "dateModified": "2026-09-25",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@id": "https://aigen.fi/en/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/en/blog/tesla-grok-streetlight-report/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "Tesla, Grok, AI agents, fault reporting",
+    "citation": [
+      "https://www.linkedin.com/posts/pari-pime%C3%A4%C3%A4-katulamppua-huomattiin-aamun-share-7509125050684559361-DiFd/"
+    ]
+  },
+  "/en/blog/aigen-cbam-launched/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/en/blog/aigen-cbam-launched/#article",
+    "headline": "Aigen CBAM is live: EU requirements and app features",
+    "description": "What CBAM requires in the EU and Finland, why we built Aigen CBAM, and how its features help importers prepare the annual declaration.",
+    "image": [
+      "https://aigen.fi/assets/cbam-logo.png"
+    ],
+    "datePublished": "2026-09-18",
+    "dateModified": "2026-09-19",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@id": "https://aigen.fi/en/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/en/blog/aigen-cbam-launched/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "CBAM, imports, emissions data, annual declaration, Aigen CBAM",
+    "citation": [
+      "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32023R0956",
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R2083",
+      "https://tulli.fi/hiilirajamekanismi",
+      "https://cbam.fi/blog/cbam-eu-regulation-explained",
+      "https://cbam.fi/blog/how-aigen-cbam-helps-with-cbam-requirements",
+      "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en",
+      "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry-and-reporting_en"
+    ]
+  },
+  "/en/blog/workflow-decides-agent-work/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/en/blog/workflow-decides-agent-work/#article",
+    "headline": "Model comparisons are an easy story. In agent work, workflow decides.",
+    "description": "Why companies should look past model hype and build agents around clear workflows, sources, limits and outputs.",
+    "image": [
+      "https://aigen.fi/assets/blog/agenttityo-workflow.jpg"
+    ],
+    "datePublished": "2026-05-22",
+    "dateModified": "2026-06-03",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@id": "https://aigen.fi/en/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/en/blog/workflow-decides-agent-work/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "AI, agents, workflow"
+  },
+  "/en/blog/ai-agent-company-tax-return/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/en/blog/ai-agent-company-tax-return/#article",
+    "headline": "We let an AI agent prepare a company tax return",
+    "description": "What happens when an AI agent is taken into a real authority form, accounting figures and multi-step back-office work.",
+    "image": [
+      "https://aigen.fi/assets/blog/veroilmoitus-ai-agentti.jpg"
+    ],
+    "datePublished": "2026-05-25",
+    "dateModified": "2026-06-03",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@id": "https://aigen.fi/en/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/en/blog/ai-agent-company-tax-return/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "AI, agents, automation"
+  },
+  "/en/blog/ai-agents-biggest-problem-is-memory/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/en/blog/ai-agents-biggest-problem-is-memory/#article",
+    "headline": "AI agents' biggest problem is not intelligence. It is memory.",
+    "description": "The practical bottleneck for AI agents is no longer just intelligence. It is a fast, reliable and user-editable memory layer.",
+    "image": [
+      "https://aigen.fi/assets/blog/ai-agenttien-muistikerros.png"
+    ],
+    "datePublished": "2026-06-22",
+    "dateModified": "2026-06-22",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@id": "https://aigen.fi/en/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/en/blog/ai-agents-biggest-problem-is-memory/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "AI agents, memory, OpenClaw, Hermes",
+    "relatedLink": [
+      "https://aigen.fi/en/blog/ai-biggest-risk-bad-management/",
+      "https://aigen.fi/en/blog/ai-is-moving-onto-your-own-computer/",
+      "https://aigen.fi/en/blog/workflow-decides-agent-work/"
+    ]
+  },
+  "/en/blog/insurance-tendering-ai-agent/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/en/blog/insurance-tendering-ai-agent/#article",
+    "headline": "I tendered insurance from five companies and did not open a single offer myself",
+    "description": "A practical example of how an AI agent turned five insurance offers and policy terms into one clear comparison.",
+    "image": [
+      "https://aigen.fi/assets/blog/vakuutusten-kilpailutus-ai-agentilla.png"
+    ],
+    "datePublished": "2026-06-03",
+    "dateModified": "2026-06-03",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@id": "https://aigen.fi/en/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/en/blog/insurance-tendering-ai-agent/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "AI, automation, AI agents"
+  },
+  "/en/blog/ai-is-moving-onto-your-own-computer/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/en/blog/ai-is-moving-onto-your-own-computer/#article",
+    "headline": "AI is moving onto your own computer",
+    "description": "Local AI brings large models closer to a company's own data, costs and everyday workflows.",
+    "image": [
+      "https://aigen.fi/assets/blog/rtx-spark-paikallinen-tekoaly.png"
+    ],
+    "datePublished": "2026-06-10",
+    "dateModified": "2026-06-10",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@id": "https://aigen.fi/en/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/en/blog/ai-is-moving-onto-your-own-computer/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "local AI, AI agents, RTX Spark, Nvidia, open source models, AI Generation Oy, Aigen",
+    "relatedLink": [
+      "https://aigen.fi/en/blog/insurance-tendering-ai-agent/",
+      "https://aigen.fi/en/blog/workflow-decides-agent-work/",
+      "https://aigen.fi/en/blog/ai-stopped-being-a-search-engine/"
+    ]
+  },
+  "/en/blog/grok-bot-ai-agent-as-coworker/": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Grok Bot turns an AI agent into a coworker",
+    "description": "Grok Bot uses its own cloud computer and works across web apps.",
+    "image": "https://aigen.fi/assets/blog/ai-agenttien-muistikerros.png",
+    "datePublished": "2026-08-16",
+    "inLanguage": "en-US",
+    "mainEntityOfPage": "https://aigen.fi/en/blog/grok-bot-ai-agent-as-coworker/",
+    "author": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    }
+  },
+  "/en/blog/ai-biggest-risk-bad-management/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/en/blog/ai-biggest-risk-bad-management/#article",
+    "headline": "AI's biggest risk is not hallucinations. It is bad management.",
+    "description": "AI's biggest risk is not only hallucination, but using it like an answer machine instead of managing the work it does.",
+    "image": [
+      "https://aigen.fi/assets/blog/tekoalyn-riski-huono-johtaminen.png"
+    ],
+    "datePublished": "2026-06-14",
+    "dateModified": "2026-06-14",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@id": "https://aigen.fi/en/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/en/blog/ai-biggest-risk-bad-management/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "AI, AI agents, hallucinations, automation, agent workflows, AI Generation Oy, Aigen",
+    "relatedLink": [
+      "https://aigen.fi/en/blog/ai-is-moving-onto-your-own-computer/",
+      "https://aigen.fi/en/blog/insurance-tendering-ai-agent/",
+      "https://aigen.fi/en/blog/workflow-decides-agent-work/"
+    ]
+  },
+  "/en/blog/models-get-better-writing-gets-easier-to-spot/": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Copy that sounds finished gives itself away",
+    "description": "Ask a model for copy and it often sounds finished at once. Customers learn that pattern faster than the company does.",
+    "image": "https://aigen.fi/assets/blog/mallit-kehittyvat-teksti-paljastaa.png",
+    "datePublished": "2026-08-19",
+    "inLanguage": "en-US",
+    "mainEntityOfPage": "https://aigen.fi/en/blog/models-get-better-writing-gets-easier-to-spot/",
+    "author": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    }
+  },
+  "/en/blog/agents-turn-research-into-five-minute-workflows/": {
+    "@type": "BlogPosting",
+    "@id": "https://aigen.fi/en/blog/agents-turn-research-into-five-minute-workflows/#article",
+    "headline": "Agents turn multi-step research into a five-minute workflow",
+    "description": "A practical example of how an AI agent turns slow tax and data work into a fast, reviewable workflow.",
+    "image": [
+      "https://aigen.fi/assets/logo-slogan.png"
+    ],
+    "datePublished": "2026-04-20",
+    "dateModified": "2026-06-03",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@id": "https://aigen.fi/en/blog/#blog"
+    },
+    "mainEntityOfPage": "https://aigen.fi/en/blog/agents-turn-research-into-five-minute-workflows/",
+    "author": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "publisher": {
+      "@id": "https://aigen.fi/#organization"
+    },
+    "keywords": "AI agents"
+  },
+  "/en/blog/chatgpt-work-signs-in-without-seeing-passwords/": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The agent can log in. The model shouldn’t see the password.",
+    "description": "ChatGPT Work can sign into websites without ChatGPT seeing credentials.",
+    "image": "https://aigen.fi/assets/blog/chatgpt-work-kirjautuminen.png?v=7b8803e",
+    "datePublished": "2026-08-26",
+    "inLanguage": "en-US",
+    "mainEntityOfPage": "https://aigen.fi/en/blog/chatgpt-work-signs-in-without-seeing-passwords/",
+    "author": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Generation Oy"
+    }
+  }
+}

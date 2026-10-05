@@ -277,3 +277,23 @@
 .nav-contact .arrow-icon{margin-inline-start:8px}
 
 .process-top > .arrow-icon{width:23px;height:23px}
+
+/* Equal prominence for the two launched services. */
+.live-products,.guide-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.live-product{display:flex;flex-direction:column;padding:32px 0;border-top:1px solid var(--ink)}
+.live-product:nth-child(n){border-left:0;padding-left:0;padding-right:0}
+.live-product h3{font-size:clamp(2rem,3vw,2.8rem)}
+.live-product p{max-width:480px;margin-bottom:28px;font-size:17px}
+.launched-badge{color:var(--ink);background:var(--accent);padding:5px 10px;align-self:flex-start}
+.product-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;margin-top:auto}
+.launch-note{min-height:380px;justify-content:center}
+.launch-note .eyebrow{position:static;margin-bottom:28px}
+.launch-note p{max-width:340px}
+.launch-links{display:flex;flex-wrap:wrap;gap:12px 28px}
+.launch-links .text-link{margin-top:12px}
+.other-products{padding-block:56px}
+.upcoming-product{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-size:14px}
+.upcoming-product span{text-transform:uppercase;font-size:10px;letter-spacing:.12em}
+.directory-intro{padding-block:76px 64px}
+.guide-directory .card:nth-child(n){border-left:0;padding-left:0}
+@media(max-width:650px){.live-products,.guide-directory{grid-template-columns:1fr;gap:8px}.launch-note{min-height:0}.directory-intro{padding-block:48px}.product-actions{align-items:flex-start;flex-direction:column}.other-products{padding-block:40px}}

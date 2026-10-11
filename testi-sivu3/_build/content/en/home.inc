@@ -34,6 +34,13 @@
           </div>
           <ul class="featured-list">
             <li class="feat">
+              <img src="/testi-sivu3/assets/kuvakkeet/aigen-campus.svg" alt="" width="52" height="52">
+              <p class="use">AI skills for your whole team</p>
+              <h3><a href="{{url:app-aigen-campus}}">Aigen Campus</a></h3>
+              <p class="sum">Practical training, a final exam, certificates and a skills register. Includes a free AI policy builder.</p>
+              <p class="price"><b>€99</b> /year + VAT · 10 users</p>
+            </li>
+            <li class="feat">
               <img src="/testi-sivu3/assets/kuvakkeet/ilmoo.svg" alt="" width="52" height="52">
               <p class="use">Internal whistleblowing channel</p>
               <h3><a href="{{url:app-ilmoo}}">Ilmoo</a></h3>
@@ -46,13 +53,6 @@
               <h3><a href="{{url:app-aigen-cbam}}">Aigen CBAM</a></h3>
               <p class="sum">For importers: import, supplier and emissions data in one place, and the annual declaration data prepared.</p>
               <p class="price"><b>€39</b> /month + VAT · First month free</p>
-            </li>
-            <li class="feat">
-              <img src="/testi-sivu3/assets/kuvakkeet/aigen-campus.svg" alt="" width="52" height="52">
-              <p class="use">AI skills for your whole team</p>
-              <h3><a href="{{url:app-aigen-campus}}">Aigen Campus</a></h3>
-              <p class="sum">Practical training, a final exam, certificates and a skills register. Includes a free AI policy builder.</p>
-              <p class="price"><b>€99</b> /year + VAT · 10 users</p>
             </li>
           </ul>
           <a class="all-apps" href="{{url:apps}}">All apps <span class="mono"><span data-count-audience="">8</span> →</span></a>

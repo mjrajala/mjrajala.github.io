@@ -34,6 +34,13 @@
           </div>
           <ul class="featured-list">
             <li class="feat">
+              <img src="/testi-sivu3/assets/kuvakkeet/aigen-campus.svg" alt="" width="52" height="52">
+              <p class="use">Tekoälytaidot koko henkilöstölle</p>
+              <h3><a href="{{url:app-aigen-campus}}">Aigen Campus</a></h3>
+              <p class="sum">Käytännönläheinen koulutus, loppukoe, todistukset ja osaamisrekisteri. Mukana maksuton tekoälyohjeistuksen laatija.</p>
+              <p class="price"><b>99 €</b> /vuosi + alv · 10 käyttäjää</p>
+            </li>
+            <li class="feat">
               <img src="/testi-sivu3/assets/kuvakkeet/ilmoo.svg" alt="" width="52" height="52">
               <p class="use">Sisäinen ilmoituskanava</p>
               <h3><a href="{{url:app-ilmoo}}">Ilmoo</a></h3>
@@ -46,13 +53,6 @@
               <h3><a href="{{url:app-aigen-cbam}}">Aigen CBAM</a></h3>
               <p class="sum">Maahantuojalle: tuonti-, toimittaja- ja päästötiedot yhteen ja vuosi-ilmoituksen aineisto valmiiksi.</p>
               <p class="price"><b>39 €</b> /kk + alv · 1. kuukausi ilmaiseksi</p>
-            </li>
-            <li class="feat">
-              <img src="/testi-sivu3/assets/kuvakkeet/aigen-campus.svg" alt="" width="52" height="52">
-              <p class="use">Tekoälytaidot koko henkilöstölle</p>
-              <h3><a href="{{url:app-aigen-campus}}">Aigen Campus</a></h3>
-              <p class="sum">Käytännönläheinen koulutus, loppukoe, todistukset ja osaamisrekisteri. Mukana maksuton tekoälyohjeistuksen laatija.</p>
-              <p class="price"><b>99 €</b> /vuosi + alv · 10 käyttäjää</p>
             </li>
           </ul>
           <a class="all-apps" href="{{url:apps}}">Kaikki sovellukset <span class="mono"><span data-count-audience="">8</span> kpl →</span></a>

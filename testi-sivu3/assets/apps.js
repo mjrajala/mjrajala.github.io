@@ -44,7 +44,7 @@ window.AIGEN_CATALOG = {
       icon: "/testi-sivu3/assets/kuvakkeet/ilmoo.svg",
       path: { fi: "/testi-sivu3/sovellukset/ilmoo/", en: "/testi-sivu3/en/apps/ilmoo/" },
       site: "https://ilmoo.fi/",
-      featured: 1,
+      featured: 2,
       fi: {
         useCase: "Sisäinen ilmoituskanava",
         summary: "Henkilöstö voi ilmoittaa väärinkäytöksistä kirjallisesti ja nimettömästi, ja käsittelijät näkevät lain määräajat.",
@@ -67,7 +67,7 @@ window.AIGEN_CATALOG = {
       icon: "/testi-sivu3/assets/kuvakkeet/aigen-cbam.png",
       path: { fi: "/testi-sivu3/sovellukset/aigen-cbam/", en: "/testi-sivu3/en/apps/aigen-cbam/" },
       site: "https://cbam.fi/",
-      featured: 2,
+      featured: 3,
       fi: {
         useCase: "CBAM-raportoinnin valmistelu",
         summary: "Kokoaa tuonti-, toimittaja- ja päästötiedot yhteen ja valmistelee vuosi-ilmoituksen aineiston.",
@@ -90,7 +90,7 @@ window.AIGEN_CATALOG = {
       icon: "/testi-sivu3/assets/kuvakkeet/aigen-campus.svg",
       path: { fi: "/testi-sivu3/sovellukset/aigen-campus/", en: "/testi-sivu3/en/apps/aigen-campus/" },
       site: "https://campus.aigen.fi",
-      featured: 3,
+      featured: 1,
       fi: {
         useCase: "Tekoälytaidot koko henkilöstölle",
         summary: "Käytännönläheinen koulutus, loppukoe, varmennettavat todistukset ja osaamisrekisteri. Mukana maksuton tekoälyohjeistuksen laatija.",

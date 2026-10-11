@@ -57,7 +57,7 @@ for key, langs in REPORT['pages'].items():
   if key=='home':
    mapping={'contact':'/yritys/#yhteys','services':'/raataloity-kehitys/','about':'/yritys/','products':'/sovellukset/','tools':'/sovellukset/','other-products':'/sovellukset/'} if lang=='fi' else {'contact':'/en/company/#contact','services':'/en/custom-development/','about':'/en/company/','products':'/en/apps/','tools':'/en/apps/','other-products':'/en/apps/'}
    metadata+='\n  <script>(function(){var m='+json.dumps(mapping)+';function go(){var h=location.hash.slice(1);if(m[h])location.replace(m[h].split("#")[0]+location.search+(m[h].includes("#")?"#"+m[h].split("#")[1]:""));}go();window.addEventListener("hashchange",go);})();</script>'
-  html=html.replace('</head>',metadata+'\n</head>')
+  html=html.replace('</head>',metadata+'\n  <link rel="stylesheet" href="/assets/cookie-consent.css">\n  <script defer src="/assets/cookie-consent.js"></script>\n</head>')
   dst=ROOT/url.lstrip('/')/'index.html'; dst.parent.mkdir(parents=True,exist_ok=True); dst.write_text(html)
 for oldurl,target in REPORT['aliases'].items():
  html=route((PREVIEW/oldurl.removeprefix('/testi-sivu3/')/'index.html').read_text())

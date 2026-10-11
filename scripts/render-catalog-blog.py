@@ -89,7 +89,7 @@ for post in posts:
   span=doc.new_tag('span');span.string=other['dateText'];strong=doc.new_tag('strong');strong.string=other['title'];a.extend([span,strong]);li.append(a);related.append(li)
   if len(related.select(':scope > li'))==3:break
  html=str(doc)
- if re.search(r'testi-sivu|cookie-consent|aigen-preview\.(css|js)',html):raise ValueError('Legacy layout/preview reference in '+route)
+ if re.search(r'testi-sivu|aigen-preview\.(css|js)',html):raise ValueError('Legacy layout/preview reference in '+route)
  outputs[file]=re.sub(r'\n{2,}', '\n', html).strip()+'\n';existing[route]=card(dict(post,published=published_day))
 # Sort all cards together; keep every manually maintained card.
 items=sorted(existing.values(),key=lambda li:li.select_one('time')['datetime'],reverse=True);listing.clear()

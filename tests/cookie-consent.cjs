@@ -8,17 +8,15 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const root = path.resolve(__dirname, '..');
 const key = 'aigen.analytics-consent.v1';
 const ga = /googletagmanager\.com|google-analytics\.com/;
-function htmlFiles(dir) {
-  return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
-    if (entry.name.startsWith('.') || ['node_modules', 'artifacts'].includes(entry.name)) return [];
-    const file = path.join(dir, entry.name);
-    return entry.isDirectory() ? htmlFiles(file) : file.endsWith('.html') ? [file] : [];
-  });
-}
-const pages = htmlFiles(root).filter(file => /<html\b/i.test(fs.readFileSync(file, 'utf8')));
+// Production canonical pages; previews and redirect aliases have separate shells.
+const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+const pages = [...sitemap.matchAll(/<loc>https:\/\/aigen\.fi\/([^<]*)<\/loc>/g)]
+  .map(([, route]) => path.join(root, route, 'index.html'));
+assert(pages.length > 0, 'Canonical coverage must not be empty');
 for (const file of pages) {
   const html = fs.readFileSync(file, 'utf8');
   assert.equal((html.match(/src="\/assets\/cookie-consent.js"/g) || []).length, 1, file);
+  assert.equal((html.match(/href="\/assets\/cookie-consent.css"/g) || []).length, 1, file);
   assert(!/googletagmanager|google-analytics|\bgtag\(/.test(html), file);
 }
 console.log(`PASS static coverage: ${pages.length} HTML pages`);

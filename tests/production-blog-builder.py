@@ -12,6 +12,7 @@ def article(p):
   for obj in objects:
    if obj.get('@type')=='BlogPosting':return obj
 before=hashes(ROOT)
+baseline_urls={e.text for e in ET.parse(ROOT/'sitemap.xml').getroot().iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
 with tempfile.TemporaryDirectory(prefix='aigen-blog-fixture-',dir='/private/tmp') as directory:
  copy=Path(directory)/'site';shutil.copytree(ROOT,copy,ignore=shutil.ignore_patterns('.git'))
  existing=json.loads((copy/'blog/linkedin-posts.json').read_text())[0]
@@ -42,7 +43,10 @@ with tempfile.TemporaryDirectory(prefix='aigen-blog-fixture-',dir='/private/tmp'
  assert len(page.select('.post-body li'))==2;assert page.select_one('.menu-button') and page.select_one('.footer')
  assert page.select_one('.lang-switch')['href']=='/en/blog/';assert not page.find('link',hreflang='en')
  assert {x['hreflang'] for x in page.find_all('link',rel='alternate')}=={'fi','x-default'}
- html=str(page);assert not any(x in html for x in ['testi-sivu','cookie-consent','aigen-preview.css'])
+ html=str(page);assert not any(x in html for x in ['testi-sivu','aigen-preview.css'])
+ for consent_page in [page,soup(existing_path),soup(copy/'blog/index.html')]:
+  assert len(consent_page.select('script[src="/assets/cookie-consent.js"][defer]'))==1
+  assert len(consent_page.select('link[rel="stylesheet"][href="/assets/cookie-consent.css"]'))==1
  new_schema=article(copy/'blog'/existing['slug']/'index.html')
  assert soup(existing_path).select_one('figcaption').text=='Existing meaningful caption'
  assert new_schema['datePublished']==original_schema['datePublished'];assert new_schema['author']==original_schema['author']
@@ -51,7 +55,7 @@ with tempfile.TemporaryDirectory(prefix='aigen-blog-fixture-',dir='/private/tmp'
  assert cards==original_card_urls|{'/blog/fixture-production-published/'}
  assert not (copy/'blog/fixture-draft').exists()
  urls={e.text for e in ET.parse(copy/'sitemap.xml').getroot().iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
- assert len(urls)==67;assert 'https://aigen.fi/blog/fixture-production-published/' in urls
+ assert urls==baseline_urls|{'https://aigen.fi/blog/fixture-production-published/'};assert 'https://aigen.fi/blog/fixture-production-published/' in urls
  for url in urls:
   d=soup(copy/url.removeprefix('https://aigen.fi/').rstrip('/')/'index.html')
   assert d.find('link',rel='canonical')['href']==url

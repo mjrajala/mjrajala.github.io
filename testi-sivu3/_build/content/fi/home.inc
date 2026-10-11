@@ -45,7 +45,7 @@
               <p class="use">CBAM-raportoinnin valmistelu</p>
               <h3><a href="{{url:app-aigen-cbam}}">Aigen CBAM</a></h3>
               <p class="sum">Maahantuojalle: tuonti-, toimittaja- ja päästötiedot yhteen ja vuosi-ilmoituksen aineisto valmiiksi.</p>
-              <p class="price"><b>39 €</b> /kk + alv · 30 päivän kokeilu</p>
+              <p class="price"><b>39 €</b> /kk + alv · 1. kuukausi ilmaiseksi</p>
             </li>
           </ul>
           <a class="all-apps" href="{{url:apps}}">Kaikki sovellukset <span class="mono"><span data-count-audience="">7</span> kpl →</span></a>

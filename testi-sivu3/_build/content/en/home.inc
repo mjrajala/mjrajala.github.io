@@ -45,7 +45,7 @@
               <p class="use">CBAM reporting preparation</p>
               <h3><a href="{{url:app-aigen-cbam}}">Aigen CBAM</a></h3>
               <p class="sum">For importers: import, supplier and emissions data in one place, and the annual declaration data prepared.</p>
-              <p class="price"><b>€39</b> /month + VAT · 30-day trial</p>
+              <p class="price"><b>€39</b> /month + VAT · First month free</p>
             </li>
           </ul>
           <a class="all-apps" href="{{url:apps}}">All apps <span class="mono"><span data-count-audience="">7</span> →</span></a>

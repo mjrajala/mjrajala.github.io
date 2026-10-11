@@ -71,13 +71,13 @@ window.AIGEN_CATALOG = {
       fi: {
         useCase: "CBAM-raportoinnin valmistelu",
         summary: "Kokoaa tuonti-, toimittaja- ja päästötiedot yhteen ja valmistelee vuosi-ilmoituksen aineiston.",
-        price: { amount: "39 €", unit: "/kk + alv", note: "30 päivän kokeilu" },
+        price: { amount: "39 €", unit: "/kk + alv", note: "1. kuukausi ilmaiseksi" },
         keywords: "cbam hiilirajamekanismi päästöt päästöraportointi maahantuonti tuonti maahantuoja tulli cn-koodi vuosi-ilmoitus 2023/956 ympäristö vastuullisuus toimittajat"
       },
       en: {
         useCase: "CBAM reporting preparation",
         summary: "Brings import, supplier and emissions data together and prepares the annual declaration data.",
-        price: { amount: "€39", unit: "/month + VAT", note: "30-day trial" },
+        price: { amount: "€39", unit: "/month + VAT", note: "First month free" },
         keywords: "cbam carbon border adjustment mechanism emissions reporting imports importer customs cn code annual declaration 2023/956 environment sustainability suppliers"
       }
     },

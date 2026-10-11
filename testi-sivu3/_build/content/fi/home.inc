@@ -37,7 +37,7 @@
               <img src="/testi-sivu3/assets/kuvakkeet/aigen-campus.svg" alt="" width="52" height="52">
               <p class="use">Tekoälytaidot koko henkilöstölle</p>
               <h3><a href="{{url:app-aigen-campus}}">Aigen Campus</a></h3>
-              <p class="sum">Käytännönläheinen koulutus, loppukoe, todistukset ja osaamisrekisteri. Mukana maksuton tekoälyohjeistuksen laatija.</p>
+              <p class="sum">Käytännönläheinen koulutus, loppukoe, todistukset ja osaamisrekisteri. Tekoälyohjeistuksen laatiminen ja moduulin 1. osio ovat käytettävissä ilmaiseksi.</p>
               <p class="price"><b>99 €</b> /vuosi + alv · 10 käyttäjää</p>
             </li>
             <li class="feat">

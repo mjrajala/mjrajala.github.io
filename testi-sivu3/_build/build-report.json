@@ -131,6 +131,10 @@
   "post-vakuutusten-kilpailutus-ai-agentilla": {
    "fi": "/testi-sivu3/blog/vakuutusten-kilpailutus-ai-agentilla/",
    "en": "/testi-sivu3/en/blog/insurance-tendering-ai-agent/"
+  },
+  "app-aigen-campus": {
+   "fi": "/testi-sivu3/sovellukset/aigen-campus/",
+   "en": "/testi-sivu3/en/apps/aigen-campus/"
   }
  },
  "live_sources": {
@@ -1006,6 +1010,8 @@
   "/testi-sivu3/en/blog/ai-agents-in-daily-work/": "testi-sivu3/en/blog/ai-agents-in-daily-work/index.html",
   "/testi-sivu3/en/blog/ai-biggest-risk-bad-management/": "testi-sivu3/en/blog/ai-biggest-risk-bad-management/index.html",
   "/testi-sivu3/en/blog/tesla-grok-streetlight-report/": "testi-sivu3/en/blog/tesla-grok-streetlight-report/index.html",
-  "/testi-sivu3/en/blog/insurance-tendering-ai-agent/": "testi-sivu3/en/blog/insurance-tendering-ai-agent/index.html"
+  "/testi-sivu3/en/blog/insurance-tendering-ai-agent/": "testi-sivu3/en/blog/insurance-tendering-ai-agent/index.html",
+  "/testi-sivu3/sovellukset/aigen-campus/": "testi-sivu3/sovellukset/aigen-campus/index.html",
+  "/testi-sivu3/en/apps/aigen-campus/": "testi-sivu3/en/apps/aigen-campus/index.html"
  }
 }

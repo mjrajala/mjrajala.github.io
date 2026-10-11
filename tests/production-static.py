@@ -9,8 +9,20 @@ r=json.loads((ROOT/'testi-sivu3/_build/build-report.json').read_text())
 route=lambda u:u.replace('/testi-sivu3/','/')
 canonical={route(u) for pair in r['pages'].values() for u in pair.values()}
 aliases={route(a):route(t) for a,t in r['aliases'].items()}
+# Discover later production pages independently of the sitemap/preview snapshot.
+post_preview={}
+for file in ROOT.rglob('index.html'):
+ if file.relative_to(ROOT).parts[0] in ['testi-sivu','testi-sivu2','testi-sivu3','scripts','tests','docs','artifacts']: continue
+ path='/'+str(file.parent.relative_to(ROOT)).strip('.')+'/'
+ if path=='//': path='/'
+ if path in canonical or path in aliases: continue
+ doc=BeautifulSoup(file.read_text(),'html.parser')
+ link=doc.find('link',rel='canonical');robots=doc.find('meta',attrs={'name':'robots'})
+ if link and link.get('href')=='https://aigen.fi'+path and robots and robots.get('content')=='index,follow': post_preview[path]=doc
+
 pages={u:BeautifulSoup((ROOT/u.lstrip('/')/'index.html').read_text(),'html.parser') for u in canonical|aliases.keys()}
-errors=[]; counts={'canonical':len(canonical),'aliases':len(aliases),'references':0,'fragments':0,'article_dates':0}
+pages.update(post_preview)
+errors=[]; counts={'canonical':len(canonical)+len(post_preview),'aliases':len(aliases),'references':0,'fragments':0,'article_dates':0}
 def check(ok,msg):
  if not ok: errors.append(msg)
 for u,s in pages.items():
@@ -25,7 +37,15 @@ for u,s in pages.items():
   continue
  check(not re.search(r'preview|esikatselu|testi-sivu',str(s.head),re.I),u+' preview metadata')
  check(not s.select('.preview-strip,[data-live-escape]'),u+' preview UI')
- pair=next(p for p in r['pages'].values() if u in map(route,p.values()))
+ pair=next((p for p in r['pages'].values() if u in map(route,p.values())),None)
+ if pair is None:
+  # Later pages must have a complete, reciprocal FI/EN canonical pair.
+  pair={lang:s.find('link',rel='alternate',hreflang=lang)['href'].removeprefix('https://aigen.fi') for lang in ['fi','en']}
+  for lang,path in pair.items():
+   check(path in canonical or path in post_preview,u+' alternate not production canonical '+path)
+   if path in pages:
+    check(pages[path].html['lang']==lang,u+' alternate language '+lang)
+    check(pages[path].find('link',rel='alternate',hreflang=s.html['lang'])['href']=='https://aigen.fi'+u,u+' reciprocal alternate '+lang)
  for lang,url in dict(pair,**{'x-default':pair['fi']}).items():
   check(s.find('link',rel='alternate',hreflang=lang)['href']=='https://aigen.fi'+route(url),u+' hreflang '+lang)
  check(s.select_one('.lang-switch')['href']==route(pair['fi' if s.html['lang']=='en' else 'en']),u+' language switch')
@@ -45,11 +65,16 @@ for u,s in pages.items():
  for script in s.find_all('script',type='application/ld+json'):
   for obj in json.loads(script.text):
    if obj['@type']=='BlogPosting':
-    key=next(k for k,pair in r['pages'].items() if u in map(route,pair.values()));post=r['posts'][key+':'+s.html['lang']]
+    key=next((k for k,pair in r['pages'].items() if u in map(route,pair.values())),None)
+    if key is None:
+     for field in ['datePublished','dateModified']: check(bool(re.fullmatch(r'\d{4}-\d{2}-\d{2}(?:T.*)?',obj.get(field,''))),u+' '+field)
+     counts['article_dates']+=1
+     continue
+    post=r['posts'][key+':'+s.html['lang']]
     old=json.loads((ROOT/'scripts/production-article-metadata.json').read_text()).get(post['src'],{})
     for field,default in [('datePublished','published'),('dateModified','modified')]:check(obj[field]==old.get(field,post[default]),u+' '+field)
     counts['article_dates']+=1
-check({x.text for x in ET.parse(ROOT/'sitemap.xml').getroot().iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}=={'https://aigen.fi'+u for u in canonical},'sitemap exact canonical set')
+check({x.text for x in ET.parse(ROOT/'sitemap.xml').getroot().iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}=={'https://aigen.fi'+u for u in canonical|post_preview.keys()},'sitemap exact canonical set')
 for f in (ROOT/'assets/catalog-site').rglob('*'):
  if f.suffix in ['.js','.css']:
   check('/testi-sivu' not in f.read_text(),str(f)+' preview path')

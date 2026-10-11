@@ -25,7 +25,7 @@ CONTENT = HERE / "content"
 # --------------------------------------------------------------------------------------------
 # Site map: every page key exists in FI and EN. key -> {lang: path}
 # --------------------------------------------------------------------------------------------
-APP_IDS = ["ilmoo", "aigen-cbam", "draftpad", "tasapay", "gpsrdocs", "spawnpad", "clawspam"]
+APP_IDS = ["ilmoo", "aigen-cbam", "aigen-campus", "draftpad", "tasapay", "gpsrdocs", "spawnpad", "clawspam"]
 
 GUIDES = [  # key, fi source slug, en source slug, related app, group
     ("aiact", "ai-act-pk-yritys", "ai-act-for-smes", None, "eu"),

@@ -20,7 +20,7 @@
             <ul>
               <li><a href="{{url:apps}}?tehtava=velvoitteet">Lakisääteiset velvoitteet <span class="n" data-count-category="velvoitteet">4</span></a></li>
               <li><a href="{{url:apps}}?tehtava=raportointi">Raportointi ja talous <span class="n" data-count-category="raportointi">2</span></a></li>
-              <li><a href="{{url:apps}}?tehtava=henkilosto">Henkilöstö ja työyhteisö <span class="n" data-count-category="henkilosto">2</span></a></li>
+              <li><a href="{{url:apps}}?tehtava=henkilosto">Henkilöstö ja työyhteisö <span class="n" data-count-category="henkilosto">3</span></a></li>
               <li><a href="{{url:apps}}?tehtava=tyo">Työn organisointi <span class="n" data-count-category="tyo">1</span></a></li>
               <li><a href="{{url:apps}}?tehtava=viestinta">Viestintä ja markkinointi <span class="n" data-count-category="viestinta">1</span></a></li>
             </ul>
@@ -47,8 +47,15 @@
               <p class="sum">Maahantuojalle: tuonti-, toimittaja- ja päästötiedot yhteen ja vuosi-ilmoituksen aineisto valmiiksi.</p>
               <p class="price"><b>39 €</b> /kk + alv · 1. kuukausi ilmaiseksi</p>
             </li>
+            <li class="feat">
+              <img src="/testi-sivu3/assets/kuvakkeet/aigen-campus.svg" alt="" width="52" height="52">
+              <p class="use">Tekoälytaidot koko henkilöstölle</p>
+              <h3><a href="{{url:app-aigen-campus}}">Aigen Campus</a></h3>
+              <p class="sum">Käytännönläheinen koulutus, loppukoe, todistukset ja osaamisrekisteri. Mukana maksuton tekoälyohjeistuksen laatija.</p>
+              <p class="price"><b>99 €</b> /vuosi + alv · 10 käyttäjää</p>
+            </li>
           </ul>
-          <a class="all-apps" href="{{url:apps}}">Kaikki sovellukset <span class="mono"><span data-count-audience="">7</span> kpl →</span></a>
+          <a class="all-apps" href="{{url:apps}}">Kaikki sovellukset <span class="mono"><span data-count-audience="">8</span> kpl →</span></a>
         </aside>
       </div>
     </section>

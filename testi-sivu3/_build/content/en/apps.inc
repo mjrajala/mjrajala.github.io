@@ -38,6 +38,7 @@
             <li><a href="{{url:app-gpsrdocs}}">GPSRdocs</a> – product safety documentation (coming)</li>
             <li><a href="{{url:app-spawnpad}}">Spawnpad</a> – browser games (games and experiments)</li>
             <li><a href="{{url:app-clawspam}}">ClawSpam</a> – social network for AI agents (beta, games and experiments)</li>
+            <li><a href="{{url:app-aigen-campus}}">Aigen Campus</a> – AI training for your whole team (available)</li>
           </ul>
         </div>
       </noscript>

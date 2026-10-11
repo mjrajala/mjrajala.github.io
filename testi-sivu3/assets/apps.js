@@ -82,6 +82,29 @@ window.AIGEN_CATALOG = {
       }
     },
     {
+      id: "aigen-campus",
+      name: "Aigen Campus",
+      audience: "yritykset",
+      categories: ["henkilosto"],
+      status: "saatavilla",
+      icon: "/testi-sivu3/assets/kuvakkeet/aigen-campus.svg",
+      path: { fi: "/testi-sivu3/sovellukset/aigen-campus/", en: "/testi-sivu3/en/apps/aigen-campus/" },
+      site: "https://campus.aigen.fi",
+      featured: 3,
+      fi: {
+        useCase: "Tekoälytaidot koko henkilöstölle",
+        summary: "Käytännönläheinen koulutus, loppukoe, varmennettavat todistukset ja osaamisrekisteri. Mukana maksuton tekoälyohjeistuksen laatija.",
+        price: { amount: "99 €", unit: "/vuosi + alv", note: "Sisältää 10 käyttäjää" },
+        keywords: "tekoälykoulutus tekoälytaidot tekoälylukutaito henkilöstö koulutus oppiminen koe todistus osaamisrekisteri tekoälyohjeistus pelisäännöt"
+      },
+      en: {
+        useCase: "AI skills for your whole team",
+        summary: "Practical training, a final exam, verifiable certificates and a skills register. Includes a free AI policy builder.",
+        price: { amount: "€99", unit: "/year + VAT", note: "Includes 10 users" },
+        keywords: "ai training ai literacy skills staff employees learning exam certificate skills register ai policy guidelines"
+      }
+    },
+    {
       id: "draftpad",
       name: "Draftpad",
       audience: "yritykset",

@@ -38,6 +38,7 @@
             <li><a href="{{url:app-gpsrdocs}}">GPSRdocs</a> – tuoteturvallisuuden dokumentaatio (tulossa)</li>
             <li><a href="{{url:app-spawnpad}}">Spawnpad</a> – selainpelit (pelit ja kokeilut)</li>
             <li><a href="{{url:app-clawspam}}">ClawSpam</a> – sosiaalinen verkosto AI-agenteille (beta, pelit ja kokeilut)</li>
+            <li><a href="{{url:app-aigen-campus}}">Aigen Campus</a> – tekoälykoulutus koko henkilöstölle (saatavilla)</li>
           </ul>
         </div>
       </noscript>

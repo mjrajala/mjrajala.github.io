@@ -20,7 +20,7 @@
             <ul>
               <li><a href="{{url:apps}}?task=obligations">Legal obligations <span class="n" data-count-category="velvoitteet">4</span></a></li>
               <li><a href="{{url:apps}}?task=reporting">Reporting and finance <span class="n" data-count-category="raportointi">2</span></a></li>
-              <li><a href="{{url:apps}}?task=people">People and workplace <span class="n" data-count-category="henkilosto">2</span></a></li>
+              <li><a href="{{url:apps}}?task=people">People and workplace <span class="n" data-count-category="henkilosto">3</span></a></li>
               <li><a href="{{url:apps}}?task=work">Organising work <span class="n" data-count-category="tyo">1</span></a></li>
               <li><a href="{{url:apps}}?task=communication">Communication and marketing <span class="n" data-count-category="viestinta">1</span></a></li>
             </ul>
@@ -47,8 +47,15 @@
               <p class="sum">For importers: import, supplier and emissions data in one place, and the annual declaration data prepared.</p>
               <p class="price"><b>€39</b> /month + VAT · First month free</p>
             </li>
+            <li class="feat">
+              <img src="/testi-sivu3/assets/kuvakkeet/aigen-campus.svg" alt="" width="52" height="52">
+              <p class="use">AI skills for your whole team</p>
+              <h3><a href="{{url:app-aigen-campus}}">Aigen Campus</a></h3>
+              <p class="sum">Practical training, a final exam, certificates and a skills register. Includes a free AI policy builder.</p>
+              <p class="price"><b>€99</b> /year + VAT · 10 users</p>
+            </li>
           </ul>
-          <a class="all-apps" href="{{url:apps}}">All apps <span class="mono"><span data-count-audience="">7</span> →</span></a>
+          <a class="all-apps" href="{{url:apps}}">All apps <span class="mono"><span data-count-audience="">8</span> →</span></a>
         </aside>
       </div>
     </section>

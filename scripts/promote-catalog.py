@@ -3,6 +3,7 @@
 import hashlib, json, re, shutil
 from pathlib import Path
 from xml.sax.saxutils import escape
+from xml.etree import ElementTree as ET
 from html import escape as html_escape
 ROOT = Path(__file__).resolve().parents[1]
 PREVIEW = ROOT / 'testi-sivu3'
@@ -10,45 +11,6 @@ REPORT = json.loads((PREVIEW / '_build/build-report.json').read_text())
 ORIGINAL = json.loads((ROOT / 'scripts/production-article-metadata.json').read_text())
 BASE = 'https://aigen.fi'
 def route(s): return s.replace('/testi-sivu3/sovellukset/ilmoo/ilmoo-demo-kasittelija.jpg', '/assets/catalog-site/media/ilmoo-demo-kasittelija.jpg').replace('/testi-sivu3/assets/', '/assets/catalog-site/').replace('/testi-sivu3/', '/')
-def campus_home(html, lang):
- """Keep Campus training separate from the app catalog on production homes."""
- copy = {
-  'fi': ('Tekoälytaidot koko henkilöstölle',
-         'Käytännönläheistä tekoälykoulutusta: lyhyet videot, harjoitukset ja loppukoe. Todistus ja ajantasainen osaamisrekisteri auttavat seuraamaan henkilöstön osaamista.',
-         'Tutustu Campukseen', 'Maksuton työkalu', 'Yrityksen tekoälypelisäännöt',
-         'Campuksen tekoälyohjeistuksen laatijalla teette yrityksellenne yhteiset pelisäännöt tekoälyn käyttöön.'),
-  'en': ('AI skills for your whole team',
-         'Practical AI training with short videos, exercises and a final exam. Certificates and an up-to-date skills register help you track your team’s progress.',
-         'Explore Campus', 'Free tool', 'AI guidelines for your company',
-         'Use the Campus AI policy builder to set shared guidelines for how your company uses AI.')
- }[lang]
- title, body, cta, tool, policy, policy_body = copy
- section = f'''    <section class="custom-teaser campus-teaser" aria-labelledby="campus-title">
-      <div class="wrap custom-grid">
-        <div class="custom-intro">
-          <p class="kicker">Aigen Campus</p>
-          <h2 id="campus-title">{title}</h2>
-          <p>{body}</p>
-          <div class="actions">
-            <a class="button button-primary" href="https://campus.aigen.fi">{cta}</a>
-          </div>
-        </div>
-        <div class="custom-intro">
-          <p class="kicker">{tool}</p>
-          <h3>{policy}</h3>
-          <p>{policy_body}</p>
-        </div>
-      </div>
-    </section>
-
-'''
- marker = '    <section class="paths"'
- if html.count(marker) != 1: raise ValueError('Homepage paths section missing or duplicated')
- html = html.replace(marker, section + marker)
- marker = '        <a class="lang-switch"'
- if html.count(marker) != 1: raise ValueError('Homepage language switch missing or duplicated')
- return html.replace(marker, '        <a href="https://campus.aigen.fi">Campus</a>\n' + marker)
-
 def digest(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 protected = {p: digest(p) for p in ROOT.rglob('*') if p.is_file() and (p.relative_to(ROOT).parts[0] in ['testi-sivu','testi-sivu2','testi-sivu3'] or (p.relative_to(ROOT).parts[0]=='assets' and 'catalog-site' not in p.relative_to(ROOT).parts) or p.name in ['CNAME','.nojekyll','google70926c4b93226e56.html'])}
 assets = ROOT / 'assets/catalog-site'
@@ -94,7 +56,6 @@ for key, langs in REPORT['pages'].items():
   if post and post.get('image',{}).get('src'): metadata+=f'\n  <meta property="og:image" content="{BASE+route(post["image"]["src"])}">'
   metadata+='\n  <script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False).replace('</','<\\/')+'</script>'
   if key=='home':
-   html=campus_home(html, lang)
    mapping={'contact':'/yritys/#yhteys','services':'/raataloity-kehitys/','about':'/yritys/','products':'/sovellukset/','tools':'/sovellukset/','other-products':'/sovellukset/'} if lang=='fi' else {'contact':'/en/company/#contact','services':'/en/custom-development/','about':'/en/company/','products':'/en/apps/','tools':'/en/apps/','other-products':'/en/apps/'}
    metadata+='\n  <script>(function(){var m='+json.dumps(mapping)+';function go(){var h=location.hash.slice(1);if(m[h])location.replace(m[h].split("#")[0]+location.search+(m[h].includes("#")?"#"+m[h].split("#")[1]:""));}go();window.addEventListener("hashchange",go);})();</script>'
   html=html.replace('</head>',metadata+'\n  <link rel="stylesheet" href="/assets/cookie-consent.css">\n  <script defer src="/assets/cookie-consent.js"></script>\n</head>')
@@ -106,8 +67,19 @@ for oldurl,target in REPORT['aliases'].items():
  html=re.sub(r'(<meta http-equiv="refresh"[^>]+>)',r'<noscript>\1</noscript>',html)
  html=html.replace('</head>',f'  <link rel="canonical" href="{BASE+route(target)}">\n</head>')
  dst=ROOT/route(oldurl).lstrip('/')/'index.html'; dst.parent.mkdir(parents=True,exist_ok=True); dst.write_text(html)
-urls=sorted(route(u) for langs in REPORT['pages'].values() for u in langs.values())
-xml='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>{escape(BASE+u)}</loc></url>\n' for u in urls)+'</urlset>\n'
+urls={route(u) for langs in REPORT['pages'].values() for u in langs.values()}
+# Keep canonical pages published after the preview snapshot (for example new guides).
+existing_sitemap=(ROOT/'sitemap.xml').read_text()
+existing_entries={re.search(r'<loc>(.*?)</loc>', entry).group(1): entry for entry in re.findall(r'<url>.*?</url>', existing_sitemap, re.S)}
+for loc in ET.parse(ROOT/'sitemap.xml').getroot().iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc'):
+ if not loc.text.startswith(BASE+'/'): continue
+ path=loc.text[len(BASE):]; file=ROOT/path.lstrip('/')/'index.html'
+ if file.is_file():
+  existing=file.read_text()
+  if f'<link rel="canonical" href="{loc.text}">' in existing and 'noindex' not in existing:
+   urls.add(path)
+urls=sorted(urls)
+xml='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join('  '+existing_entries.get(BASE+u, f'<url><loc>{escape(BASE+u)}</loc></url>')+'\n' for u in urls)+'</urlset>\n'
 (ROOT/'sitemap.xml').write_text(xml)
 (ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\nDisallow: /testi-sivu/\nDisallow: /testi-sivu2/\nDisallow: /testi-sivu3/\nDisallow: /blog/artikkeli-pohja/\nDisallow: /scripts/\nDisallow: /docs/\nDisallow: /tests/\n\nSitemap: https://aigen.fi/sitemap.xml\n')
 assert all(digest(p)==h for p,h in protected.items()), 'Protected file changed'

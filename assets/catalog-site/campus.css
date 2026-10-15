@@ -1,0 +1,142 @@
+/* Aigen Campus product page (FI). Loaded after site.css, scoped to body.campus-page.
+   Visual assets are the supplied campaign images; the page carries the narrative in HTML text. */
+.campus-page {
+  --cp-forest: #062a26;
+  --cp-forest-2: #0b3a34;
+  --cp-forest-line: #1f4a43;
+  --cp-deep: #0b4842;
+  --cp-deep-2: #12605a;
+  --cp-teal: #0d6150;
+  --cp-mint: #57e3b5;
+  --cp-mint-soft: #e3f2eb;
+  --cp-mint-line: #c4e2d5;
+  --cp-amber: #f4aa3e;
+  --cp-on-dark: #eef7f3;
+  --cp-on-dark-2: #a9c6bd;
+}
+
+/* Shared building blocks */
+.cp-kicker { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 12.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--cp-teal); }
+.cp-kicker::before { content: ""; width: 18px; height: 2px; border-radius: 2px; background: currentColor; flex-shrink: 0; }
+.cp-free { padding: 3px 10px; border-radius: 999px; background: var(--cp-deep); color: #fff; font-size: 11.5px; letter-spacing: .1em; }
+.cp-title { margin-top: 18px; max-width: 19ch; font-size: clamp(1.85rem, 3vw, 2.6rem); font-weight: 600; line-height: 1.05; letter-spacing: -.04em; text-wrap: balance; }
+.cp-text { max-width: 46ch; }
+.cp-text > p { margin-top: 18px; font-size: 17.5px; line-height: 1.62; color: var(--muted); }
+.cp-text > .cp-title + p { margin-top: 22px; }
+.cp-text .actions { margin-top: 30px; }
+
+.cp-figure { margin: 0; }
+.cp-figure img { display: block; width: 100%; height: auto; border-radius: clamp(16px, 1.8vw, 24px); background: var(--cp-forest-2); box-shadow: 0 1px 2px rgba(6, 42, 38, .08), 0 24px 56px -28px rgba(6, 42, 38, .5); }
+.cp-figure figcaption { margin-top: 14px; font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+.cp-tag { display: inline-block; margin-right: 6px; padding: 1px 8px; border-radius: 999px; font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; vertical-align: 1px; background: var(--cp-amber); color: #2a1a00; }
+
+.cp-section { padding-block: clamp(72px, 9vw, 132px); scroll-margin-top: calc(var(--header-h) + 50px); }
+.cp-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 560px); gap: clamp(40px, 6.5vw, 104px); align-items: center; }
+.cp-split.is-reverse { grid-template-columns: minmax(0, 560px) minmax(0, 1fr); }
+.cp-split.is-reverse > .cp-figure { order: -1; }
+.cp-split.is-portrait { grid-template-columns: minmax(0, 380px) minmax(0, 560px); justify-content: center; }
+
+.cp-facts-list { margin-top: 30px; border-top: 1px solid var(--line); }
+.cp-facts-list > div { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.cp-facts-list dt { font-size: 15.5px; font-weight: 600; }
+.cp-facts-list dd { margin: 0; font-size: 15.5px; line-height: 1.5; color: var(--muted); }
+
+/* Hero: title and intro side by side, the landscape campaign image as a wide cover below */
+.cp-hero { padding-block: clamp(20px, 3vw, 40px) clamp(56px, 7vw, 104px); }
+.cp-hero-head { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 24px clamp(40px, 6vw, 96px); align-items: end; }
+.cp-hero h1 { margin-top: 26px; font-size: clamp(3rem, 6.6vw, 6rem); font-weight: 600; line-height: .93; letter-spacing: -.055em; }
+.cp-hero .lead { max-width: 40ch; font-size: clamp(1.15rem, 1.6vw, 1.4rem); line-height: 1.45; letter-spacing: -.01em; color: var(--ink); }
+.cp-hero .actions { margin-top: 26px; }
+.cp-price-note { margin-top: 16px; max-width: 48ch; font-size: 15px; line-height: 1.5; color: var(--muted); }
+.cp-price-note b { font-weight: 600; color: var(--ink); white-space: nowrap; }
+.cp-cover { margin-top: clamp(36px, 4.5vw, 60px); }
+.cp-cover img { border-radius: clamp(18px, 2vw, 28px); }
+
+.cp-facts { margin-top: clamp(36px, 4vw, 56px); }
+.cp-facts dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+.cp-facts dl > div { padding: 20px 24px 4px 0; }
+.cp-facts dl > div + div { padding-left: 24px; border-left: 1px solid var(--line); }
+.cp-facts dt { font-size: clamp(1.6rem, 2.4vw, 2.1rem); font-weight: 600; line-height: 1.05; letter-spacing: -.035em; color: var(--cp-deep); }
+.cp-facts dd { margin: 8px 0 0; font-size: 15px; line-height: 1.45; color: var(--muted); }
+.cp-hero .tags { margin-top: 32px; }
+
+/* Campus buttons: the deep green of the product */
+.campus-page .button-primary { background: var(--cp-deep); border-color: var(--cp-deep); color: #fff; }
+.campus-page .button-primary:hover { background: var(--cp-deep-2); border-color: var(--cp-deep-2); }
+.campus-page .button-primary::after { content: "→"; }
+.campus-page .on-page a:hover { color: var(--cp-teal); }
+
+/* Dark band, matching the forest background of the campaign images */
+.cp-dark { background: var(--cp-forest); color: var(--cp-on-dark); }
+.cp-dark .cp-kicker { color: var(--cp-mint); }
+.cp-dark .cp-title { color: #fff; }
+.cp-dark .cp-text > p { color: var(--cp-on-dark-2); }
+.cp-dark .cp-figure img { background: var(--cp-forest-2); box-shadow: 0 0 0 1px var(--cp-forest-line), 0 30px 70px -36px rgba(0, 0, 0, .9); }
+.cp-dark .cp-figure figcaption { color: var(--cp-on-dark-2); }
+.cp-dark .button { border-color: var(--cp-on-dark); color: var(--cp-on-dark); }
+.cp-dark .button:hover { background: var(--cp-forest-2); }
+.cp-dark .button-primary { background: var(--cp-mint); border-color: var(--cp-mint); color: var(--cp-forest); }
+.cp-dark .button-primary:hover { background: #8af0cd; border-color: #8af0cd; }
+.cp-dark :focus-visible { outline-color: var(--cp-mint); }
+
+/* Mint band for the free AI policy builder */
+.cp-mint { background: var(--cp-mint-soft); }
+.cp-mint .cp-text > p { color: #3f4c44; }
+
+/* Pricing: the campaign image carries the big number, the text carries the terms */
+.cp-pricing .cp-text > .cp-price-line { color: var(--ink); }
+.cp-price-line b { font-weight: 600; white-space: nowrap; }
+.cp-list-title { margin-top: 30px; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--cp-teal); }
+.cp-pricing .ticks { margin-top: 10px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 28px; }
+.cp-pricing .ticks li::before { color: var(--cp-teal); }
+.cp-pricing .cp-text { max-width: 560px; }
+
+/* Closing: the story-format image beside the final call to action */
+.cp-closing .cp-split.is-portrait { grid-template-columns: minmax(0, 380px) minmax(0, 520px); }
+
+/* Further reading */
+.cp-reading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 24px clamp(40px, 6vw, 96px); padding-block: clamp(56px, 7vw, 96px) 8px; }
+.cp-reading h2 { font-size: clamp(1.4rem, 2.2vw, 1.9rem); font-weight: 600; letter-spacing: -.03em; line-height: 1.12; }
+.cp-reading-cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 48px; font-size: 16.5px; line-height: 1.55; }
+.cp-reading-cols > p a { font-size: 18px; font-weight: 600; letter-spacing: -.01em; }
+.cp-reading .note { font-size: 14.5px; color: var(--muted); }
+.cp-reading ul { margin-top: 8px; padding: 0; list-style: none; }
+.cp-reading li { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.cp-reading li:first-child { border-top: 1px solid var(--line); }
+
+@media (max-width: 1100px) {
+  .cp-split { grid-template-columns: minmax(0, 1fr) minmax(0, 460px); }
+  .cp-split.is-reverse { grid-template-columns: minmax(0, 460px) minmax(0, 1fr); }
+  .cp-pricing .ticks { grid-template-columns: 1fr; }
+  .cp-facts dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cp-facts dl > div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .cp-facts dl > div:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 16px; }
+  .cp-reading, .cp-reading-cols { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 899px) {
+  .cp-hero-head, .cp-split, .cp-split.is-reverse, .cp-split.is-portrait, .cp-closing .cp-split.is-portrait { grid-template-columns: minmax(0, 1fr); }
+  .cp-split.is-reverse > .cp-figure { order: 0; }
+  .cp-hero-head { gap: 22px; }
+  .cp-split { gap: 36px; }
+  .cp-split > .cp-figure { max-width: 560px; }
+  .cp-split.is-portrait > .cp-figure { order: 1; max-width: 340px; }
+  .cp-text, .cp-pricing .cp-text { max-width: 60ch; }
+  .cp-title { max-width: 20ch; }
+}
+
+@media (max-width: 640px) {
+  .cp-section { padding-block: 64px; }
+  .cp-hero { padding-bottom: 56px; }
+  .cp-hero h1 { margin-top: 20px; font-size: 3.1rem; }
+  .cp-hero .lead { font-size: 1.15rem; }
+  .cp-cover { max-width: 560px; }
+  .cp-text > p { font-size: 16.5px; }
+  .cp-title { font-size: 1.9rem; letter-spacing: -.035em; }
+  .cp-facts dl > div { padding-right: 12px; }
+  .cp-facts dl > div + div { padding-left: 14px; }
+  .cp-facts dl > div:nth-child(3) { padding-left: 0; }
+  .cp-facts dt { font-size: 1.5rem; }
+  .cp-facts dd { font-size: 14px; }
+  .cp-facts-list > div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}

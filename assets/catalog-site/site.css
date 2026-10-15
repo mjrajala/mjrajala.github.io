@@ -757,3 +757,42 @@ button, input, select { font: inherit; color: inherit; }
   .media-band h2 { letter-spacing: -.035em; }
 }
 .price-panel .actions { margin-top: 18px; }
+
+/* =============================================================================================
+   Studio launch pages: text-first hero and restrained promo imagery. Opt-in modifiers only, so
+   the wider image-led layout above (used by Campus) keeps its current rendering.
+   ============================================================================================= */
+.app-hero-grid.is-text-first { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: start; }
+.app-hero-grid.is-text-first .lead { max-width: 46ch; }
+@media (min-width: 1101px) { .app-hero-grid.is-text-first .buy { margin-top: 6px; } }
+@media (max-width: 1100px) { .app-hero-grid.is-text-first { grid-template-columns: 1fr; gap: 28px; } }
+
+/* Portrait promo graphics are shown whole: contained, never cropped, never full width. */
+.promo-figure { margin: 0; max-width: 380px; }
+.promo-figure img { display: block; width: 100%; height: auto; max-height: none; object-fit: contain; border-radius: 18px; border: 1px solid var(--line); background: var(--card); }
+.promo-figure figcaption { margin-top: 10px; font-size: 13px; line-height: 1.5; color: var(--muted); }
+
+.media-split.is-compact { grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.media-split.is-compact.is-reverse { grid-template-columns: minmax(0, 380px) minmax(0, 1fr); }
+.media-split.is-compact.is-reverse .promo-figure { order: -1; }
+.media-split.is-compact .promo-figure { justify-self: center; }
+@media (max-width: 899px) {
+  .media-split.is-compact, .media-split.is-compact.is-reverse { grid-template-columns: 1fr; gap: 24px; }
+  .media-split.is-compact.is-reverse .promo-figure { order: 0; }
+  .media-split.is-compact .promo-figure { justify-self: start; }
+}
+
+/* The calendar band keeps its dark editorial look at a calmer scale. */
+.media-band.is-compact { padding-block: clamp(44px, 5.5vw, 76px); }
+.media-band.is-compact .wrap { width: min(760px, 100% - 2 * var(--gutter)); }
+.media-band.is-compact h2 { margin-top: 14px; max-width: 24ch; font-size: clamp(1.6rem, 2.8vw, 2.2rem); line-height: 1.12; letter-spacing: -.035em; }
+.media-band.is-compact .media-band-lead { margin-top: 14px; font-size: 16.5px; }
+.media-band.is-compact .media-shot { margin-top: clamp(24px, 3vw, 36px); }
+.media-band.is-compact .media-shot img { border-radius: 12px; }
+@media (max-width: 899px) { .media-band.is-compact h2 { max-width: 24ch; } }
+
+/* Article figures: promo graphics centred at the same restrained width, screenshots capped. */
+.post-figure.is-promo { max-width: 380px; margin-inline: auto; }
+.post-figure.is-promo img { max-height: none; object-fit: contain; border-radius: 18px; background: var(--card); }
+.post-figure.is-inline { max-width: 600px; margin-inline: auto; }
+.post-figure.is-inline img { max-height: none; object-fit: contain; }

@@ -36,6 +36,31 @@ window.AIGEN_CATALOG = {
 
   apps: [
     {
+      id: "aigen-studio",
+      name: "Aigen Studio",
+      audience: "yritykset",
+      categories: ["tyo", "viestinta"],
+      status: "saatavilla",
+      icon: "/assets/catalog-site/kuvakkeet/aigen-studio.svg",
+      path: { fi: "/sovellukset/aigen-studio/", en: "/en/apps/aigen-studio/" },
+      site: "https://studio.aigen.fi/",
+      featured: 1,
+      fi: {
+        useCase: "Tekoälytyötila yrityksen arkeen",
+        summary: "Luo sisältöjä ja ladattavia dokumentteja, paranna verkkosivua ja julkaise eri kanaviin. Seuraa tuloksia samassa työtilassa.",
+        price: { amount: "29 €", unit: "/kk + alv", note: "Avaustarjous" },
+        language: "Suomeksi ja englanniksi",
+        keywords: "studio dokumentit esitykset tarjoukset laskentataulukot sisältö verkkosivut seo tekoälynäkyvyys some ajastus tiimi"
+      },
+      en: {
+        useCase: "An AI workspace for everyday business",
+        summary: "Create content and downloadable documents, improve your website and publish across channels. Track results in the same workspace.",
+        price: { amount: "€29", unit: "/month + VAT", note: "Launch offer" },
+        language: "In Finnish and English",
+        keywords: "studio documents presentations offers spreadsheets content website seo ai visibility social scheduling team"
+      }
+    },
+    {
       id: "ilmoo",
       name: "Ilmoo",
       audience: "yritykset",
@@ -44,7 +69,7 @@ window.AIGEN_CATALOG = {
       icon: "/assets/catalog-site/kuvakkeet/ilmoo.svg",
       path: { fi: "/sovellukset/ilmoo/", en: "/en/apps/ilmoo/" },
       site: "https://ilmoo.fi/",
-      featured: 2,
+      featured: 3,
       fi: {
         useCase: "Sisäinen ilmoituskanava",
         summary: "Henkilöstö voi ilmoittaa väärinkäytöksistä kirjallisesti ja nimettömästi, ja käsittelijät näkevät lain määräajat.",
@@ -67,7 +92,6 @@ window.AIGEN_CATALOG = {
       icon: "/assets/catalog-site/kuvakkeet/aigen-cbam.png",
       path: { fi: "/sovellukset/aigen-cbam/", en: "/en/apps/aigen-cbam/" },
       site: "https://cbam.fi/",
-      featured: 3,
       fi: {
         useCase: "CBAM-raportoinnin valmistelu",
         summary: "Kokoaa tuonti-, toimittaja- ja päästötiedot yhteen ja valmistelee vuosi-ilmoituksen aineiston.",
@@ -90,7 +114,7 @@ window.AIGEN_CATALOG = {
       icon: "/assets/catalog-site/kuvakkeet/aigen-campus.svg",
       path: { fi: "/sovellukset/aigen-campus/", en: "/en/apps/aigen-campus/" },
       site: "https://campus.aigen.fi",
-      featured: 1,
+      featured: 2,
       fi: {
         useCase: "Tekoälytaidot koko henkilöstölle",
         summary: "Käytännönläheinen koulutus, loppukoe, varmennettavat todistukset ja osaamisrekisteri. Tekoälyohjeistuksen laatiminen ja moduulin 1. osio ovat käytettävissä ilmaiseksi.",

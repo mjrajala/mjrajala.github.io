@@ -702,3 +702,58 @@ button, input, select { font: inherit; color: inherit; }
 .app-hero .lead-2 { margin-top: 10px; font-size: 16.5px; line-height: 1.55; color: var(--muted); max-width: 52ch; }
 .timeline .t-mark:empty { min-width: 18px; width: 18px; height: 18px; padding: 0; margin-top: 9px; }
 @media (max-width: 640px) { .timeline .t-mark:empty { left: 9px; top: 6px; } }
+
+/* =============================================================================================
+   Image-led product and launch pages (Aigen Studio, Aigen Campus): a dark editorial band and
+   alternating screenshot sections, so these pages lead with the product instead of feature boxes.
+   ============================================================================================= */
+.media-band { background: #1d1c18; color: #f6f5f0; padding-block: clamp(52px, 7vw, 104px); }
+/* Campus keeps its own deep green so the band matches the product it shows. */
+.media-band.is-forest { background: #0c231e; }
+.media-band.is-forest .media-kicker { color: #6fd7b4; }
+.media-kicker { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--amber); }
+.media-kicker::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+.media-band h2 { margin-top: 20px; max-width: 15ch; font-size: clamp(2.2rem, 5.6vw, 4.4rem); line-height: 1; letter-spacing: -.05em; font-weight: 600; color: #f6f5f0; }
+.media-band-lead { margin-top: 20px; max-width: 48ch; font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.5; color: #bdb9ac; }
+.media-shot { margin: clamp(30px, 4.5vw, 56px) 0 0; }
+.media-shot picture { display: block; }
+.media-shot img { width: 100%; border-radius: clamp(10px, 1.6vw, 20px); }
+.media-band figcaption { margin-top: 12px; font-size: 13.5px; color: #9c988c; }
+.media-band .actions { margin-top: clamp(24px, 3vw, 32px); }
+.media-band .button { border-color: #f6f5f0; color: #f6f5f0; }
+.media-band .button:hover { background: #2b2924; }
+.media-band .button-primary { background: #f6f5f0; color: #1d1c18; }
+.media-band .button-primary:hover { background: #fff; }
+.media-band :focus-visible { outline-color: var(--amber); }
+
+.media-section { padding-block: clamp(48px, 7vw, 92px); }
+.media-section + .media-section { padding-top: 0; }
+.media-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.media-split h2 { font-size: clamp(1.7rem, 3.2vw, 2.5rem); line-height: 1.07; letter-spacing: -.04em; }
+.media-split-text p { margin-top: 16px; font-size: 17px; line-height: 1.62; color: var(--muted); max-width: 44ch; }
+.media-split.is-reverse { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+.media-split.is-reverse .media-figure { order: -1; }
+.media-figure { margin: 0; }
+.media-figure img { width: 100%; border-radius: 16px; border: 1px solid var(--line); background: var(--card); }
+.media-figure figcaption { margin-top: 10px; font-size: 13px; color: var(--muted); }
+
+.media-facts { margin-top: 4px; border-top: 1px solid var(--line); }
+.media-facts > div { display: grid; grid-template-columns: minmax(0, 12rem) minmax(0, 1fr); gap: 4px 32px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.media-facts dt { font-size: 16.5px; font-weight: 600; }
+.media-facts dd { margin: 0; font-size: 16.5px; line-height: 1.6; color: var(--muted); }
+.media-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0; }
+.post-figure.is-card img { max-width: 760px; max-height: none; margin-inline: auto; object-fit: contain; border: 0; border-radius: 20px; background: transparent; }
+
+@media (max-width: 899px) {
+  .media-split { grid-template-columns: 1fr; gap: 24px; }
+  .media-split.is-reverse .media-figure { order: 0; }
+  .media-split-text p { max-width: 56ch; }
+  .media-band h2 { max-width: 18ch; }
+  .media-steps { grid-template-columns: 1fr; gap: 24px; }
+  .media-steps::before { content: none; }
+}
+@media (max-width: 640px) {
+  .media-facts > div { grid-template-columns: 1fr; padding: 14px 0; }
+  .media-band h2 { letter-spacing: -.035em; }
+}
+.price-panel .actions { margin-top: 18px; }

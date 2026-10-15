@@ -47,14 +47,14 @@ window.AIGEN_CATALOG = {
       featured: 1,
       fi: {
         useCase: "Tekoälytyötila yrityksen arkeen",
-        summary: "Luo sisältöjä ja ladattavia dokumentteja, paranna verkkosivua ja julkaise eri kanaviin. Seuraa tuloksia samassa työtilassa.",
+        summary: "Pyydä omin sanoin, hyväksy luonnos ja anna Studion julkaista. Dokumentit, verkkosivu ja somekanavat samassa työtilassa.",
         price: { amount: "29 €", unit: "/kk + alv", note: "Avaustarjous" },
         language: "Suomeksi ja englanniksi",
         keywords: "studio dokumentit esitykset tarjoukset laskentataulukot sisältö verkkosivut seo tekoälynäkyvyys some ajastus tiimi"
       },
       en: {
         useCase: "An AI workspace for everyday business",
-        summary: "Create content and downloadable documents, improve your website and publish across channels. Track results in the same workspace.",
+        summary: "Ask in your own words, approve the draft and let Studio publish. Documents, your website and social channels in one workspace.",
         price: { amount: "€29", unit: "/month + VAT", note: "Launch offer" },
         language: "In Finnish and English",
         keywords: "studio documents presentations offers spreadsheets content website seo ai visibility social scheduling team"

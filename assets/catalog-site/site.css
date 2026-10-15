@@ -784,8 +784,8 @@ button, input, select { font: inherit; color: inherit; }
 
 /* The calendar band keeps its dark editorial look at a calmer scale. */
 .media-band.is-compact { padding-block: clamp(44px, 5.5vw, 76px); }
-.media-band.is-compact .wrap { width: min(760px, 100% - 2 * var(--gutter)); }
-.media-band.is-compact h2 { margin-top: 14px; max-width: 24ch; font-size: clamp(1.6rem, 2.8vw, 2.2rem); line-height: 1.12; letter-spacing: -.035em; }
+.media-band.is-compact .wrap { width: min(540px, 100% - 2 * var(--gutter)); }
+.media-band.is-compact h2 { margin-top: 14px; max-width: 24ch; font-size: clamp(1.35rem, 2vw, 1.7rem); line-height: 1.12; letter-spacing: -.035em; }
 .media-band.is-compact .media-band-lead { margin-top: 14px; font-size: 16.5px; }
 .media-band.is-compact .media-shot { margin-top: clamp(24px, 3vw, 36px); }
 .media-band.is-compact .media-shot img { border-radius: 12px; }

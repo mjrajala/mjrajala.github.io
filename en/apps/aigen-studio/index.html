@@ -10,6 +10,7 @@
   <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
   <script>document.documentElement.className = "js";</script>
   <link rel="stylesheet" href="/assets/catalog-site/site.css?v=studio-compact-20261015b">
+  <link rel="stylesheet" href="/assets/catalog-site/studio.css?v=studio-campaign-20261015">
   <script defer src="/assets/catalog-site/apps.js"></script>
   <script defer src="/assets/catalog-site/ui.js"></script>
   <link rel="canonical" href="https://aigen.fi/en/apps/aigen-studio/">
@@ -27,7 +28,7 @@
   <link rel="stylesheet" href="/assets/cookie-consent.css">
   <script defer src="/assets/cookie-consent.js"></script>
 </head>
-<body>
+<body class="studio-page">
   <a class="skip-link" href="#sisalto">Skip to content</a>
 
 
@@ -44,141 +45,202 @@
   </header>
 
   <main id="sisalto" tabindex="-1">
-    <section class="app-hero wrap" aria-labelledby="app-title">
+    <section class="st-hero wrap" aria-labelledby="app-title">
       <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/apps/">Apps</a></li><li><span aria-current="page">Aigen Studio</span></li></ol></nav>
-      <div class="app-hero-grid is-text-first">
-        <div>
+      <div class="st-hero-grid">
+        <div class="st-hero-text">
           <div class="app-id">
             <img src="/assets/catalog-site/kuvakkeet/aigen-studio.svg" alt="" width="64" height="64">
             <div><p>An AI workspace for everyday business</p><span class="status-badge status-badge-saatavilla">Available</span></div>
           </div>
           <h1 id="app-title">Aigen Studio</h1>
-          <p class="lead">Ask in your own words: an offer, a presentation, a fix for your website or next week's posts. Studio drafts the work, you approve it.</p>
-          <p class="lead-2">One workspace for documents, your website and social channels, in English and Finnish. Nothing goes out without your approval.</p>
+          <p class="lead">Ask in your own words for an offer, a presentation, a fix for your website or next week's posts. Studio drafts the work, and you decide what goes out.</p>
+          <p class="lead-2">Documents, your website and your social channels share one workspace, in English and Finnish.</p>
+          <div class="actions"><a class="button button-primary" href="https://studio.aigen.fi/">Get started</a><a class="button" href="#pricing">See pricing</a></div>
+          <p class="st-price-note"><b>€29/month + VAT</b> as a launch offer. The rate stays the same while your subscription is active.</p>
           <div class="tags" aria-label="Categories"><a href="/en/apps/?task=work">Organising work</a><a href="/en/apps/?task=communication">Communication and marketing</a><span>In Finnish and English</span></div>
         </div>
-        <div class="buy">
-          <p class="buy-price"><b>€29</b><span>/month + VAT</span></p>
-          <p>A launch offer that stays in place while your subscription is active. The subscription includes a monthly usage allowance for AI work. See Studio for current pricing and usage limits.</p>
-          <div class="actions"><a class="button button-primary" href="https://studio.aigen.fi/">Get started</a><a class="button" href="/en/blog/aigen-studio-launched/">Read the launch post</a></div>
-        </div>
+        <figure class="st-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/hero-en-640.webp 640w, /assets/catalog-site/media/studio/hero-en-960.webp 960w, /assets/catalog-site/media/studio/hero-en-1280.webp 1280w" sizes="(max-width: 899px) min(560px, calc(100vw - 40px)), (max-width: 1100px) 460px, 580px">
+            <img src="/assets/catalog-site/media/studio/hero-en-960.jpg" width="960" height="960" alt="A bakery owner looks at a phone behind the counter. Image text: The AI workspace that gets the work done. Aigen does the work, you stay in control. Below, the request “Draft next week’s posts for all our channels” and the reply: 4 drafts for Facebook, Instagram, LinkedIn and X are ready and waiting for your approval." fetchpriority="high" decoding="async">
+          </picture>
+        </figure>
       </div>
     </section>
 
     <nav class="on-page" aria-label="On this page">
       <div class="wrap"><ul>
         <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#files">Files</a></li>
         <li><a href="#publishing">Publishing</a></li>
-        <li><a href="#sharing">Sharing a draft</a></li>
-        <li><a href="#calendar">Content calendar</a></li>
-        <li><a href="#files">Files and memories</a></li>
-        <li><a href="#website">Website and results</a></li>
+        <li><a href="#approval">Approval</a></li>
+        <li><a href="#website">Website</a></li>
         <li><a href="#pricing">Pricing</a></li>
       </ul></div>
     </nav>
 
-    <section class="detail-section" id="how-it-works" aria-labelledby="steps-title">
-      <div class="wrap detail-grid">
-        <h2 id="steps-title">Three steps, and two of them are yours</h2>
-        <div>
-          <ol class="timeline media-steps">
-            <li><span class="t-mark">1</span><h3>Ask in your own words</h3><p>Type what you need. Studio picks the right skill for the task itself, so you never choose a tool or a template.</p></li>
-            <li><span class="t-mark">2</span><h3>Read the draft and approve</h3><p>The work is shown to you before it goes anywhere. You can edit it or ask for another take.</p></li>
-            <li><span class="t-mark">3</span><h3>Publishing and results</h3><p>Approved posts go out on schedule, and reach and engagement collect in the same view.</p></li>
-          </ol>
+    <section class="st-section st-dark" id="how-it-works" aria-labelledby="steps-title">
+      <div class="wrap st-split is-portrait">
+        <div class="st-text">
+          <p class="st-kicker">How it works</p>
+          <h2 class="st-title" id="steps-title">You ask and approve. Studio does the work in between.</h2>
+          <p>Write the request the way you would to a colleague. Studio picks the right skill for the task itself, so there is no tool or template to hunt for.</p>
+          <p>Finished work shows up as a draft first. You can edit it, ask for another take or approve it. Approved posts go out on schedule, and reach and engagement collect in the same view.</p>
+          <div class="actions"><a class="button button-primary" href="https://studio.aigen.fi/">Get started</a></div>
         </div>
-      </div>
-    </section>
-
-    <section class="media-section" id="publishing" aria-labelledby="publishing-title">
-      <div class="wrap media-split is-compact">
-        <div class="media-split-text">
-          <h2 id="publishing-title">One draft, every channel</h2>
-          <p>Write the post yourself or ask Studio to write it. Facebook, Instagram, LinkedIn and X each get their own version, scheduled or published right away.</p>
-          <p>Every draft comes to you for approval. Earlier posts can be imported, so reach and engagement sit side by side in one view.</p>
-        </div>
-        <figure class="promo-figure">
-          <img src="/assets/catalog-site/media/aigen-studio-promo-kanavat.jpg" width="1080" height="1350" alt="The same café course announcement as four posts: Facebook, Instagram, LinkedIn and X, each with its own text and image." loading="lazy" decoding="async">
-          <figcaption>One draft, four channels. Example content, shown in the Finnish interface.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="media-section" id="sharing" aria-labelledby="sharing-title">
-      <div class="wrap media-split is-compact is-reverse">
-        <div class="media-split-text">
-          <h2 id="sharing-title">Share a draft by link, comments land in the text</h2>
-          <p>A draft can be shared as a link, with no account to create. The reader selects a passage and writes the comment right there, and can edit the text when you allow it.</p>
-          <p>Guests give a name as they comment, so you can see who asked for what. The link has an expiry time, and the feedback stays out of your email threads.</p>
-        </div>
-        <figure class="promo-figure">
-          <img src="/assets/catalog-site/media/aigen-studio-promo-asiakaskommentit.jpg" width="1080" height="1350" alt="A draft about a café baking course shared by link. Two highlighted passages are connected by lines to guest comments and replies." loading="lazy" decoding="async">
-          <figcaption>A shared draft: each comment stays attached to the passage it is about. Finnish interface.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="media-band is-compact" id="calendar" aria-labelledby="calendar-title">
-      <div class="wrap">
-        <p class="media-kicker">Content calendar</p>
-        <h2 id="calendar-title">Content, approval and publishing in one place</h2>
-        <p class="media-band-lead">A whole week of posts by channel, from draft to published.</p>
-        <figure class="media-shot">
+        <figure class="st-figure">
           <picture>
-            <source media="(max-width: 640px)" srcset="/assets/catalog-site/media/aigen-studio-kalenteri-mobiili.jpg" width="466" height="356">
-            <img src="/assets/catalog-site/media/aigen-studio-kalenteri.jpg" width="1072" height="506" alt="The content calendar week view for 12–18 October 2026. Each day lists post titles and channel labels for Facebook, Instagram, LinkedIn and X." loading="lazy" decoding="async">
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/steps-en-450.webp 450w, /assets/catalog-site/media/studio/steps-en-720.webp 720w, /assets/catalog-site/media/studio/steps-en-900.webp 900w" sizes="(max-width: 899px) min(380px, calc(100vw - 40px)), 380px">
+            <img src="/assets/catalog-site/media/studio/steps-en-720.jpg" width="720" height="1280" alt="A café owner behind the counter. Image text: No manuals, no setup, no tech skills. Three steps, and the first two are yours. 1. Ask in your own words, in Finnish or English, and Aigen picks the right skill by itself. 2. Approve with one click, nothing goes out without your yes. 3. It publishes and measures, real results come back to one page." loading="lazy" decoding="async">
           </picture>
-          <figcaption>A week in Aigen Studio. Example content, shown in the Finnish interface.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="detail-section" id="files" aria-labelledby="files-title">
-      <div class="wrap detail-grid">
-        <h2 id="files-title">Ask for a file, get a file</h2>
-        <div>
-          <p class="prose-lead">Presentations, documents, spreadsheets and offers come out of the conversation as files you can download. Studio writes them using your business details and picks the right skill for the task itself.</p>
-          <p class="prose-lead">What Studio learns about your business is saved as memories. A memory can be private or shared with the team, and you can delete it at any time.</p>
+    <section class="st-section" id="files" aria-labelledby="files-title">
+      <div class="wrap st-split">
+        <div class="st-text">
+          <p class="st-kicker">Files</p>
+          <h2 class="st-title" id="files-title">Ask for a file, get a file</h2>
+          <p>Presentations, documents, spreadsheets and offers come out of the conversation as files you can download. Studio writes them with your business details and in your voice, so you are not filling in a blank template by hand.</p>
+          <p>When Studio learns something about your business, such as new prices, it is saved as a memory. A memory can be private or shared with the team, and you can delete it at any time.</p>
         </div>
+        <figure class="st-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/files-en-640.webp 640w, /assets/catalog-site/media/studio/files-en-960.webp 960w, /assets/catalog-site/media/studio/files-en-1280.webp 1280w" sizes="(max-width: 899px) min(560px, calc(100vw - 40px)), (max-width: 1100px) 460px, 560px">
+            <img src="/assets/catalog-site/media/studio/files-en-960.jpg" width="960" height="960" alt="A florist arranging a bouquet. Image text: Real work, not just advice. Finished, downloadable files written in your brand voice. In the chat, the request “Make a price list PDF for our new services” gets the reply price-list.pdf, and spring 2026 prices are saved to memory. Next to it, the finished price list." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Example: a price list PDF for a florist. The business and prices are fictional.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="detail-section" id="website" aria-labelledby="website-title">
-      <div class="wrap detail-grid">
-        <h2 id="website-title">Website, results and team</h2>
-        <div>
-          <p class="prose-lead">Studio does not stop at publishing. It also watches what happens on your site and in the numbers.</p>
-          <dl class="media-facts">
-            <div><dt>Website review</dt><dd>Studio scores SEO, content and AI visibility. Every finding comes with a ready fix for you to approve.</dd></div>
-            <div><dt>Competitor tracking</dt><dd>A comparison shows where competitors are ahead of you on content and visibility.</dd></div>
-            <div><dt>Traffic analytics</dt><dd>Site traffic sits in the same view as the results of your posts.</dd></div>
-            <div><dt>Team and roles</dt><dd>The whole team can work in the same workspace with their own roles.</dd></div>
-            <div><dt>You decide</dt><dd>Approve changes yourself, or switch on autopilot once you trust the results. The action log shows what was done.</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section class="detail-section" id="pricing" aria-labelledby="pricing-title">
-      <div class="wrap detail-grid">
-        <h2 id="pricing-title">One subscription, every feature</h2>
-        <div class="price-panel">
-          <div>
-            <p class="buy-price"><b>€29</b><span>/month + VAT</span></p>
-            <p class="price-text">A launch offer. The rate stays the same while your subscription is active. The standard price later is €99/month + VAT.</p>
-            <div class="actions"><a class="button button-primary" href="https://studio.aigen.fi/">Get started</a></div>
+    <section class="st-section st-dark" id="publishing" aria-labelledby="pub-title">
+      <div class="wrap">
+        <div class="st-split is-reverse">
+          <div class="st-text">
+            <p class="st-kicker">Publishing</p>
+            <h2 class="st-title" id="pub-title">Write once, publish to four channels</h2>
+            <p>Write the post yourself or ask Studio to write it. Facebook, Instagram, LinkedIn and X each get their own take: one draft becomes a version in the right length and tone for each channel, and every version waits for your approval before it goes out.</p>
+            <p>Schedule a post or publish it right away. Earlier posts can be imported, so reach and engagement sit side by side in one view.</p>
           </div>
-          <ul class="ticks">
-            <li>The AI assistant, files and images.</li>
-            <li>Publishing to Facebook, Instagram, LinkedIn and X.</li>
-            <li>Scheduling, content calendar and approvals.</li>
-            <li>Results for your posts, earlier ones included.</li>
-            <li>Website reviews with ready-to-approve fixes.</li>
-            <li>Traffic analytics and competitor tracking.</li>
-            <li>Your whole team, with roles.</li>
-            <li>A monthly usage allowance for AI work is included.</li>
-          </ul>
+          <figure class="st-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/channels-en-640.webp 640w, /assets/catalog-site/media/studio/channels-en-960.webp 960w, /assets/catalog-site/media/studio/channels-en-1280.webp 1280w" sizes="(max-width: 899px) min(560px, calc(100vw - 40px)), (max-width: 1100px) 460px, 560px">
+            <img src="/assets/catalog-site/media/studio/channels-en-960.jpg" width="960" height="960" alt="From one draft to every channel. Each channel gets its own version in the right tone and length. A phone shows an Instagram post for a spring offer, surrounded by Facebook, LinkedIn and X versions of the same offer. At the bottom, the status “Waiting for your approval” and an Approve button." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Example post. The offer is fictional.</figcaption>
+        </figure>
         </div>
+        <div class="st-sub is-wide" id="calendar">
+          <div>
+            <h3>The whole week at a glance</h3>
+            <p>The content calendar shows posts by day and by channel, from draft to published.</p>
+          </div>
+          <figure class="st-figure">
+            <picture>
+              <source media="(max-width: 640px)" srcset="/assets/catalog-site/media/aigen-studio-kalenteri-mobiili.jpg" width="466" height="356">
+              <img src="/assets/catalog-site/media/aigen-studio-kalenteri.jpg" width="1072" height="506" alt="The content calendar week view for 12–18 October 2026. Each day lists post titles and channel labels for Facebook, Instagram, LinkedIn and X." loading="lazy" decoding="async">
+            </picture>
+            <figcaption>A week in Aigen Studio. Example content, shown in the Finnish interface.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="st-section st-mist" id="approval" aria-labelledby="ctrl-title">
+      <div class="wrap">
+        <div class="st-split">
+          <div class="st-text">
+            <p class="st-kicker">Approval</p>
+            <h2 class="st-title" id="ctrl-title">Nothing goes out without your approval</h2>
+            <p>Posts, website fixes and files collect in the Inbox and wait for your decision. Once you trust the results, you can switch on autopilot.</p>
+            <dl class="st-facts"><div><dt>Approve first</dt><dd>Every post and change waits until you approve it.</dd></div><div><dt>Autopilot</dt><dd>Switch it on once you trust the results.</dd></div><div><dt>Activity log</dt><dd>You can always see what Studio has done.</dd></div><div><dt>Team and roles</dt><dd>The whole team works in the same workspace with their own roles.</dd></div></dl>
+          </div>
+          <figure class="st-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/control-en-640.webp 640w, /assets/catalog-site/media/studio/control-en-960.webp 960w, /assets/catalog-site/media/studio/control-en-1280.webp 1280w" sizes="(max-width: 899px) min(560px, calc(100vw - 40px)), (max-width: 1100px) 460px, 560px">
+            <img src="/assets/catalog-site/media/studio/control-en-960.jpg" width="960" height="960" alt="You stay in control. Approve every change, or switch on autopilot when you trust the system. The Studio Inbox has three items waiting for approval: an Instagram post, a website fix for the services page meta description and an offer PDF. A switch offers Approve first or Autopilot, with the note: What Aigen does is logged where you can see it." loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        </div>
+        <div class="st-sub is-split" id="sharing">
+          <div>
+            <h3>Share a draft by link, comments land in the text</h3>
+            <p>A draft can be shared as a link, with no account to create. The reader selects a passage and writes the comment right there, and can edit the text when you allow it.</p>
+            <p>Guests give a name as they comment, so you can see who asked for what. The link has an expiry time, and the feedback stays out of your email threads.</p>
+          </div>
+          <figure class="st-figure">
+            <img src="/assets/catalog-site/media/aigen-studio-promo-asiakaskommentit.jpg" width="1080" height="1350" alt="A draft about a café baking course shared by link. Two highlighted passages are connected by lines to guest comments and replies." loading="lazy" decoding="async">
+            <figcaption>A shared draft: each comment stays attached to the passage it is about. Finnish interface.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="st-section" id="website" aria-labelledby="web-title">
+      <div class="wrap st-split is-reverse">
+        <div class="st-text">
+          <p class="st-kicker">Website</p>
+          <h2 class="st-title" id="web-title">Your website keeps getting better after launch</h2>
+          <p>Studio scores your site on SEO, content and AI visibility. Every finding comes with a ready fix that you approve or dismiss.</p>
+          <dl class="st-facts"><div><dt>Competitor tracking</dt><dd>A comparison shows where competitors are ahead of you on content and visibility.</dd></div><div><dt>Traffic analytics</dt><dd>Site traffic sits in the same view as the results of your posts.</dd></div></dl>
+        </div>
+        <figure class="st-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/website-en-640.webp 640w, /assets/catalog-site/media/studio/website-en-960.webp 960w, /assets/catalog-site/media/studio/website-en-1280.webp 1280w" sizes="(max-width: 899px) min(560px, calc(100vw - 40px)), (max-width: 1100px) 460px, 560px">
+            <img src="/assets/catalog-site/media/studio/website-en-960.jpg" width="960" height="960" alt="A builder sits on a job site holding a tablet. Image text: SEO, Content, AI visibility. A website that keeps improving. Every finding comes with a ready-to-approve fix. Finding: Services page has no meta description. Before: empty, search engines guess a snippet. Suggested fix: Renovations and repairs in Tampere. Free estimate within 24 hours, book online. Buttons Approve fix and Dismiss." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Example website finding. The business is fictional.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="st-section st-dark st-pricing" id="pricing" aria-labelledby="price-title">
+      <div class="wrap st-split is-reverse">
+        <div class="st-text">
+          <p class="st-kicker">Pricing</p>
+          <h2 class="st-title" id="price-title">The launch price stays as long as your subscription does</h2>
+          <p class="st-price-line"><b>€29/month + VAT</b> as a launch offer. The rate stays the same while your subscription is active. The standard price later is €99/month + VAT.</p>
+          <h3 class="st-list-title">Included</h3>
+          <ul class="ticks">
+              <li>The AI assistant, files and images</li>
+              <li>Publishing to Facebook, Instagram, LinkedIn and X</li>
+              <li>Scheduling, content calendar and approvals</li>
+              <li>Results for your posts, earlier ones included</li>
+              <li>Website reviews with ready-to-approve fixes</li>
+              <li>Traffic analytics and competitor tracking</li>
+              <li>Your whole team, with roles</li>
+              <li>A monthly usage allowance for AI work</li>
+          </ul>
+          <div class="actions"><a class="button button-primary" href="https://studio.aigen.fi/">Get started</a></div>
+          <p class="st-fineprint">See Studio for current pricing and usage limits.</p>
+        </div>
+        <figure class="st-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/pricing-en-640.webp 640w, /assets/catalog-site/media/studio/pricing-en-960.webp 960w, /assets/catalog-site/media/studio/pricing-en-1280.webp 1280w" sizes="(max-width: 899px) min(560px, calc(100vw - 40px)), (max-width: 1100px) 460px, 560px">
+            <img src="/assets/catalog-site/media/studio/pricing-en-960.jpg" width="960" height="960" alt="Launch offer. One plan, everything included. €29 per month plus VAT, standard price later €99. Includes the Aigen assistant, files and images, publishing to Facebook, Instagram, LinkedIn and X, website reviews with ready-to-approve fixes, and your whole team with roles. Join now and €29 stays your price for good." loading="lazy" decoding="async">
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <section class="st-closing wrap" aria-labelledby="close-title">
+      <figure class="st-figure">
+          <picture>
+            <source type="image/webp" media="(max-width: 640px)" srcset="/assets/catalog-site/media/studio/banner-en-crop-1120.webp" width="1120" height="400">
+            <source media="(max-width: 640px)" srcset="/assets/catalog-site/media/studio/banner-en-crop-1120.jpg" width="1120" height="400">
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/banner-en-1200.webp 1200w, /assets/catalog-site/media/studio/banner-en-1600.webp 1600w" sizes="(max-width: 1320px) calc(100vw - 2 * clamp(20px, 4.4vw, 64px)), 1240px">
+            <img src="/assets/catalog-site/media/studio/banner-en-1600.jpg" width="1600" height="400" alt="Aigen Studio: The AI workspace that gets the work done. Aigen does the work, you stay in control. Channels Facebook, Instagram, LinkedIn and X." loading="lazy" decoding="async">
+          </picture>
+        </figure>
+      <div class="st-closing-row">
+        <div>
+          <h2 id="close-title">Start with your first request</h2>
+          <p>Write what you need this week and see the draft before anything goes out.</p>
+        </div>
+        <div class="actions"><a class="button button-primary" href="https://studio.aigen.fi/">Get started</a><a class="button" href="/en/blog/aigen-studio-launched/">Read the launch post</a></div>
       </div>
     </section>
 

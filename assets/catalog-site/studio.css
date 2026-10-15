@@ -1,0 +1,153 @@
+/* Aigen Studio product pages (FI/EN). Loaded after site.css, scoped to body.studio-page.
+   Visual assets are the supplied campaign images; the page carries the narrative in HTML text. */
+.studio-page {
+  --st-night: #0f0e15;
+  --st-night-2: #1a1924;
+  --st-night-line: #2e2c3d;
+  --st-lilac: #cdc7f3;
+  --st-violet: #46446b;
+  --st-violet-2: #5b5888;
+  --st-mist: #eeecf2;
+  --st-on-dark: #f4f2f9;
+  --st-on-dark-2: #bcb8cc;
+}
+
+/* Shared building blocks */
+.st-kicker { display: flex; align-items: center; gap: 10px; font-size: 12.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--st-violet); }
+.st-kicker::before { content: ""; width: 18px; height: 2px; border-radius: 2px; background: currentColor; flex-shrink: 0; }
+.st-title { margin-top: 18px; max-width: 19ch; font-size: clamp(1.85rem, 3vw, 2.6rem); font-weight: 600; line-height: 1.04; letter-spacing: -.04em; }
+.st-text { max-width: 46ch; }
+.st-text > p { margin-top: 18px; font-size: 17.5px; line-height: 1.62; color: var(--muted); }
+.st-text > .st-title + p { margin-top: 22px; }
+.st-text .actions { margin-top: 30px; }
+
+.st-figure { margin: 0; }
+.st-figure img { width: 100%; height: auto; border-radius: clamp(16px, 1.8vw, 24px); background: var(--st-night-2); box-shadow: 0 1px 2px rgba(15, 14, 21, .08), 0 24px 56px -28px rgba(15, 14, 21, .45); }
+.st-figure figcaption { margin-top: 14px; font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+
+.st-section { padding-block: clamp(72px, 9vw, 132px); scroll-margin-top: calc(var(--header-h) + 50px); }
+.st-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 560px); gap: clamp(40px, 6.5vw, 104px); align-items: center; }
+.st-split.is-reverse { grid-template-columns: minmax(0, 560px) minmax(0, 1fr); }
+.st-split.is-reverse > .st-figure { order: -1; }
+.st-split.is-portrait { grid-template-columns: minmax(0, 400px) minmax(0, 560px); justify-content: center; }
+.st-split.is-portrait > .st-figure { order: -1; }
+
+.st-facts { margin-top: 30px; border-top: 1px solid var(--line); }
+.st-facts > div { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.st-facts dt { font-size: 16px; font-weight: 600; }
+.st-facts dd { margin: 4px 0 0; font-size: 16px; line-height: 1.55; color: var(--muted); }
+
+/* Hero */
+.st-hero { padding-block: clamp(20px, 3vw, 40px) clamp(64px, 8vw, 116px); }
+.st-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 580px); gap: clamp(40px, 6vw, 96px); align-items: center; }
+.st-hero h1 { margin-top: 26px; font-size: clamp(3rem, 6.4vw, 5.6rem); font-weight: 600; line-height: .95; letter-spacing: -.055em; }
+.st-hero .lead { margin-top: 24px; max-width: 34ch; font-size: clamp(1.2rem, 1.75vw, 1.5rem); line-height: 1.42; letter-spacing: -.01em; color: var(--ink); }
+.st-hero .lead-2 { margin-top: 16px; max-width: 46ch; font-size: 17px; line-height: 1.6; color: var(--muted); }
+.st-hero .actions { margin-top: 32px; }
+.st-hero .tags { margin-top: 28px; }
+.st-price-note { margin-top: 18px; font-size: 15px; color: var(--muted); }
+.st-price-note b { font-weight: 600; color: var(--ink); }
+.st-hero .st-figure img { border-radius: clamp(18px, 2vw, 28px); }
+
+/* Studio buttons: the violet of the product UI */
+.studio-page .button-primary { background: var(--st-violet); border-color: var(--st-violet); color: #fff; }
+.studio-page .button-primary:hover { background: var(--st-violet-2); border-color: var(--st-violet-2); }
+.studio-page .button-primary::after { content: "→"; }
+
+/* On-page navigation stays as in site.css; current section text colour only */
+.studio-page .on-page a:hover { color: var(--st-violet); }
+
+/* Dark band, matching the night background of the campaign images */
+.st-dark { background: var(--st-night); color: var(--st-on-dark); }
+.st-dark .st-kicker { color: var(--st-lilac); }
+.st-dark .st-title { color: #fff; }
+.st-dark .st-text > p, .st-dark .st-sub p { color: var(--st-on-dark-2); }
+.st-dark .st-figure img { background: var(--st-night-2); box-shadow: 0 0 0 1px var(--st-night-line), 0 30px 70px -36px rgba(0, 0, 0, .9); }
+.st-dark .st-figure figcaption { color: var(--st-on-dark-2); }
+.st-dark .button { border-color: var(--st-on-dark); color: var(--st-on-dark); }
+.st-dark .button:hover { background: var(--st-night-2); }
+.st-dark .button-primary { background: var(--st-lilac); border-color: var(--st-lilac); color: var(--st-night); }
+.st-dark .button-primary:hover { background: #fff; border-color: #fff; }
+.st-dark :focus-visible { outline-color: var(--st-lilac); }
+.st-dark .st-facts, .st-dark .st-facts > div { border-color: var(--st-night-line); }
+.st-dark .st-facts dt { color: #fff; }
+.st-dark .st-facts dd { color: var(--st-on-dark-2); }
+.st-dark .ticks li { border-color: var(--st-night-line); color: var(--st-on-dark); }
+.st-dark .ticks li::before { color: var(--st-lilac); }
+
+/* Soft lilac band for the approval story */
+.st-mist { background: var(--st-mist); }
+.st-mist .st-facts, .st-mist .st-facts > div { border-color: #d6d3e0; }
+
+/* Sub-blocks inside a section (calendar, link sharing) */
+.st-sub { margin-top: clamp(64px, 8vw, 112px); padding-top: clamp(40px, 5vw, 64px); border-top: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 50px); }
+.st-dark .st-sub { border-color: var(--st-night-line); }
+.st-sub h3 { font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 600; line-height: 1.12; letter-spacing: -.03em; max-width: 22ch; }
+.st-sub p { font-size: 16.5px; line-height: 1.6; color: var(--muted); max-width: 44ch; }
+.st-sub h3 + p { margin-top: 16px; }
+.st-sub p + p { margin-top: 14px; }
+.st-sub .st-figure img { border-radius: clamp(10px, 1.4vw, 16px); }
+.st-sub.is-wide, .st-sub.is-split { display: grid; gap: clamp(36px, 5vw, 80px); align-items: center; }
+.st-sub.is-wide { grid-template-columns: minmax(0, 1fr) minmax(0, 760px); }
+.st-sub.is-split { grid-template-columns: minmax(0, 1fr) minmax(0, 560px); }
+.st-sub.is-split .st-figure { width: min(100%, 360px); justify-self: center; }
+
+/* Pricing: the campaign image carries the big number, the text carries the terms */
+.st-pricing .st-text > .st-price-line { color: var(--st-on-dark); }
+.st-price-line b { font-weight: 600; color: #fff; white-space: nowrap; }
+.st-list-title { margin-top: 30px; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--st-lilac); }
+.st-pricing .ticks { margin-top: 10px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 28px; }
+.st-pricing .ticks li { font-size: 15px; }
+.st-pricing .st-text { max-width: 600px; }
+.st-pricing .st-fineprint { margin-top: 16px; font-size: 14px; color: var(--st-on-dark-2); }
+
+/* Closing banner */
+.st-closing { padding-block: clamp(72px, 9vw, 120px); }
+.st-closing .st-figure img { border-radius: clamp(14px, 1.6vw, 22px); box-shadow: 0 0 0 1px var(--line), 0 24px 56px -32px rgba(15, 14, 21, .35); }
+.st-closing-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px; margin-top: clamp(28px, 3.5vw, 44px); }
+.st-closing h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 600; line-height: 1.12; letter-spacing: -.03em; max-width: 24ch; }
+.st-closing p { margin-top: 8px; font-size: 16.5px; color: var(--muted); max-width: 52ch; }
+.st-closing .actions { margin-top: 0; }
+
+@media (max-width: 1100px) {
+  .st-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 460px); }
+  .st-split { grid-template-columns: minmax(0, 1fr) minmax(0, 460px); }
+  .st-split.is-reverse { grid-template-columns: minmax(0, 460px) minmax(0, 1fr); }
+  .st-sub.is-split { grid-template-columns: minmax(0, 1fr) minmax(0, 460px); }
+  .st-pricing .ticks { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 899px) {
+  .st-hero-grid, .st-split, .st-split.is-reverse, .st-split.is-portrait, .st-sub.is-wide, .st-sub.is-split { grid-template-columns: minmax(0, 1fr); }
+  .st-split.is-reverse > .st-figure, .st-split.is-portrait > .st-figure { order: 0; }
+  .st-hero-grid { gap: 40px; }
+  .st-hero .st-figure { max-width: 560px; }
+  .st-split { gap: 36px; }
+  .st-split > .st-figure { max-width: 560px; }
+  .st-split.is-portrait > .st-figure { max-width: 380px; }
+  .st-sub.is-split .st-figure { justify-self: start; width: min(100%, 400px); }
+  .st-sub { gap: 28px; }
+  .st-text, .st-pricing .st-text { max-width: 60ch; }
+  .st-title { max-width: 20ch; }
+}
+
+/* Phones: bring the campaign image up right after the call to action */
+@media (max-width: 899px) {
+  .st-hero-grid { gap: 0; }
+  .st-hero-text { display: contents; }
+  .st-hero .st-figure { order: 1; margin-top: 36px; }
+  .st-hero .lead-2, .st-hero .st-price-note, .st-hero .tags { order: 2; }
+  .st-hero .lead-2 { margin-top: 32px; }
+}
+
+@media (max-width: 640px) {
+  .st-section { padding-block: 64px; }
+  .st-hero { padding-bottom: 56px; }
+  .st-hero h1 { margin-top: 20px; font-size: 3.1rem; }
+  .st-hero .lead { font-size: 1.2rem; }
+  .st-text > p { font-size: 16.5px; }
+  .st-title { font-size: 1.9rem; letter-spacing: -.035em; }
+  .st-sub { margin-top: 56px; padding-top: 40px; }
+  .st-closing-row { align-items: stretch; }
+  .st-closing .actions { width: 100%; }
+}

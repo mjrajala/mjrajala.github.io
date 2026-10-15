@@ -10,6 +10,7 @@
   <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
   <script>document.documentElement.className = "js";</script>
   <link rel="stylesheet" href="/assets/catalog-site/site.css?v=studio-compact-20261015b">
+  <link rel="stylesheet" href="/assets/catalog-site/studio.css?v=studio-campaign-20261015">
   <script defer src="/assets/catalog-site/apps.js"></script>
   <script defer src="/assets/catalog-site/ui.js"></script>
   <link rel="canonical" href="https://aigen.fi/sovellukset/aigen-studio/">
@@ -27,7 +28,7 @@
   <link rel="stylesheet" href="/assets/cookie-consent.css">
   <script defer src="/assets/cookie-consent.js"></script>
 </head>
-<body>
+<body class="studio-page">
   <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
 
 
@@ -44,141 +45,202 @@
   </header>
 
   <main id="sisalto" tabindex="-1">
-    <section class="app-hero wrap" aria-labelledby="app-title">
+    <section class="st-hero wrap" aria-labelledby="app-title">
       <nav class="breadcrumb" aria-label="Murupolku"><ol><li><a href="/">Etusivu</a></li><li><a href="/sovellukset/">Sovellukset</a></li><li><span aria-current="page">Aigen Studio</span></li></ol></nav>
-      <div class="app-hero-grid is-text-first">
-        <div>
+      <div class="st-hero-grid">
+        <div class="st-hero-text">
           <div class="app-id">
             <img src="/assets/catalog-site/kuvakkeet/aigen-studio.svg" alt="" width="64" height="64">
             <div><p>Tekoälytyötila yrityksen arkeen</p><span class="status-badge status-badge-saatavilla">Saatavilla</span></div>
           </div>
           <h1 id="app-title">Aigen Studio</h1>
-          <p class="lead">Pyydä omin sanoin: tarjous, esitys, korjaus verkkosivulle tai ensi viikon julkaisut. Studio tekee luonnoksen, sinä hyväksyt.</p>
-          <p class="lead-2">Sama työtila hoitaa dokumentit, verkkosivun ja somekanavat suomeksi ja englanniksi. Mitään ei julkaista ilman hyväksyntääsi.</p>
+          <p class="lead">Pyydä omin sanoin tarjous, esitys, korjaus verkkosivulle tai ensi viikon julkaisut. Studio tekee luonnoksen, ja sinä päätät, mitä siitä lähtee eteenpäin.</p>
+          <p class="lead-2">Dokumentit, verkkosivu ja somekanavat ovat samassa työtilassa, suomeksi ja englanniksi.</p>
+          <div class="actions"><a class="button button-primary" href="https://studio.aigen.fi/">Aloita Studio</a><a class="button" href="#hinta">Katso hinta</a></div>
+          <p class="st-price-note"><b>29 € /kk + alv</b> avaustarjouksena. Hinta pysyy samana niin kauan kuin tilaus on voimassa.</p>
           <div class="tags" aria-label="Luokat"><a href="/sovellukset/?tehtava=tyo">Työn organisointi</a><a href="/sovellukset/?tehtava=viestinta">Viestintä ja markkinointi</a><span>Suomeksi ja englanniksi</span></div>
         </div>
-        <div class="buy">
-          <p class="buy-price"><b>29 €</b><span>/kk + alv</span></p>
-          <p>Avaustarjous, joka pysyy voimassa niin kauan kuin tilaus on aktiivinen. Tilaukseen sisältyy kuukausittainen käyttökiintiö tekoälytyölle. Katso ajantasainen hinta ja käyttörajat Studion sivulta.</p>
-          <div class="actions"><a class="button button-primary" href="https://studio.aigen.fi/">Aloita Studio</a><a class="button" href="/blog/aigen-studio-avattu/">Lue avauskirjoitus</a></div>
-        </div>
+        <figure class="st-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/hero-fi-640.webp 640w, /assets/catalog-site/media/studio/hero-fi-960.webp 960w, /assets/catalog-site/media/studio/hero-fi-1280.webp 1280w" sizes="(max-width: 899px) min(560px, calc(100vw - 40px)), (max-width: 1100px) 460px, 580px">
+            <img src="/assets/catalog-site/media/studio/hero-fi-960.jpg" width="960" height="960" alt="Leipomoyrittäjä katsoo puhelintaan tiskin ääressä. Kuvan teksti: Tekoälytyötila, joka saa työt tehtyä. Aigen tekee työt, sinä pidät ohjat käsissäsi. Alla pyyntö ”Luonnostele ensi viikon julkaisut kaikkiin kanaviimme” ja vastaus: neljä luonnosta Facebookiin, Instagramiin, LinkedIniin ja X:ään odottaa hyväksyntääsi." fetchpriority="high" decoding="async">
+          </picture>
+        </figure>
       </div>
     </section>
 
     <nav class="on-page" aria-label="Tällä sivulla">
       <div class="wrap"><ul>
         <li><a href="#nain-toimii">Näin se toimii</a></li>
+        <li><a href="#tiedostot">Tiedostot</a></li>
         <li><a href="#julkaisut">Julkaisut</a></li>
-        <li><a href="#kommentointi">Luonnoksen jakaminen</a></li>
-        <li><a href="#kalenteri">Sisältökalenteri</a></li>
-        <li><a href="#tiedostot">Tiedostot ja muistot</a></li>
-        <li><a href="#verkkosivut">Verkkosivut ja tulokset</a></li>
+        <li><a href="#hyvaksynta">Hyväksyntä</a></li>
+        <li><a href="#verkkosivut">Verkkosivut</a></li>
         <li><a href="#hinta">Hinta</a></li>
       </ul></div>
     </nav>
 
-    <section class="detail-section" id="nain-toimii" aria-labelledby="steps-title">
-      <div class="wrap detail-grid">
-        <h2 id="steps-title">Kolme vaihetta, joista kaksi on sinun</h2>
-        <div>
-          <ol class="timeline media-steps">
-            <li><span class="t-mark">1</span><h3>Pyydä omin sanoin</h3><p>Kirjoita, mitä tarvitset. Studio valitsee tehtävään sopivan taidon itse, eikä sinun tarvitse valita työkalua tai pohjaa.</p></li>
-            <li><span class="t-mark">2</span><h3>Katso luonnos ja hyväksy</h3><p>Työ tulee näkyviin ennen kuin se lähtee eteenpäin. Voit muokata sitä tai pyytää uuden version.</p></li>
-            <li><span class="t-mark">3</span><h3>Julkaisu ja tulokset</h3><p>Hyväksytyt julkaisut lähtevät kanaviin ajastuksen mukaan, ja tavoittavuus sekä reaktiot kertyvät samaan näkymään.</p></li>
-          </ol>
+    <section class="st-section st-dark" id="nain-toimii" aria-labelledby="steps-title">
+      <div class="wrap st-split is-portrait">
+        <div class="st-text">
+          <p class="st-kicker">Näin se toimii</p>
+          <h2 class="st-title" id="steps-title">Sinä pyydät ja hyväksyt. Studio tekee työn siinä välissä.</h2>
+          <p>Kirjoita pyyntö kuin kirjoittaisit sen työkaverille. Studio valitsee tehtävään sopivan taidon itse, joten työkalua tai pohjaa ei tarvitse etsiä.</p>
+          <p>Valmis työ tulee ensin luonnoksena näkyviin. Voit muokata sitä, pyytää uuden version tai hyväksyä sen. Hyväksytyt julkaisut lähtevät kanaviin ajastuksen mukaan, ja tavoittavuus ja reaktiot kertyvät samaan näkymään.</p>
+          <div class="actions"><a class="button button-primary" href="https://studio.aigen.fi/">Aloita Studio</a></div>
         </div>
-      </div>
-    </section>
-
-    <section class="media-section" id="julkaisut" aria-labelledby="julkaisut-title">
-      <div class="wrap media-split is-compact">
-        <div class="media-split-text">
-          <h2 id="julkaisut-title">Yhdestä luonnoksesta jokaiseen kanavaan</h2>
-          <p>Kirjoita julkaisu itse tai pyydä Studiota kirjoittamaan. Facebook, Instagram, LinkedIn ja X saavat kukin oman versionsa, ja julkaisun voi ajastaa tai lähettää heti.</p>
-          <p>Luonnos tulee aina hyväksyttäväksi. Aiemmat julkaisut voi tuoda mukaan, joten tavoittavuutta ja reaktioita voi vertailla samassa näkymässä.</p>
-        </div>
-        <figure class="promo-figure">
-          <img src="/assets/catalog-site/media/aigen-studio-promo-kanavat.jpg" width="1080" height="1350" alt="Sama kahvilan kurssi-ilmoitus neljänä versiona: Facebook, Instagram, LinkedIn ja X, kukin omalla tekstillään ja kuvallaan." loading="lazy" decoding="async">
-          <figcaption>Yksi luonnos, neljä kanavaa. Julkaisut ovat esimerkkiaineistoa.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="media-section" id="kommentointi" aria-labelledby="kommentointi-title">
-      <div class="wrap media-split is-compact is-reverse">
-        <div class="media-split-text">
-          <h2 id="kommentointi-title">Jaa luonnos linkillä, kommentit tulevat tekstiin</h2>
-          <p>Luonnoksen voi jakaa linkillä ilman tunnuksia. Lukija valitsee tekstistä kohdan ja kirjoittaa kommenttinsa juuri siihen, ja halutessasi hän voi myös muokata tekstiä.</p>
-          <p>Nimi kysytään kommentin yhteydessä, joten näet kuka ehdotti mitä. Linkille asetetaan voimassaolo, eikä palaute jää sähköpostiketjuun.</p>
-        </div>
-        <figure class="promo-figure">
-          <img src="/assets/catalog-site/media/aigen-studio-promo-asiakaskommentit.jpg" width="1080" height="1350" alt="Linkillä jaettu luonnos kahvilan korvapuustikurssista. Kaksi tekstikohtaa on korostettu, ja niistä lähtee viiva vieraiden kommentteihin ja vastauksiin." loading="lazy" decoding="async">
-          <figcaption>Jaettu luonnos: kommentti kiinnittyy valittuun kohtaan tekstissä.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="media-band is-compact" id="kalenteri" aria-labelledby="kalenteri-title">
-      <div class="wrap">
-        <p class="media-kicker">Sisältökalenteri</p>
-        <h2 id="kalenteri-title">Sisältö, hyväksyntä ja julkaisu yhdessä paikassa</h2>
-        <p class="media-band-lead">Koko viikon julkaisut kanavittain – luonnoksesta julkaistuun.</p>
-        <figure class="media-shot">
+        <figure class="st-figure">
           <picture>
-            <source media="(max-width: 640px)" srcset="/assets/catalog-site/media/aigen-studio-kalenteri-mobiili.jpg" width="466" height="356">
-            <img src="/assets/catalog-site/media/aigen-studio-kalenteri.jpg" width="1072" height="506" alt="Sisältökalenterin viikkonäkymä 12.–18.10.2026. Jokaisen päivän kohdalla näkyvät julkaisujen otsikot ja kanavamerkinnät Facebookille, Instagramille, LinkedInille ja X:lle." loading="lazy" decoding="async">
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/steps-fi-450.webp 450w, /assets/catalog-site/media/studio/steps-fi-720.webp 720w, /assets/catalog-site/media/studio/steps-fi-900.webp 900w" sizes="(max-width: 899px) min(380px, calc(100vw - 40px)), 380px">
+            <img src="/assets/catalog-site/media/studio/steps-fi-720.jpg" width="720" height="1280" alt="Kahvilayrittäjä tiskin takana. Kuvan teksti: Ei ohjekirjoja, ei asennuksia, ei teknistä osaamista. Kolme vaihetta, sinä hoidat kaksi ensimmäistä. 1. Pyydä omin sanoin, suomeksi tai englanniksi, ja Aigen valitsee oikean taidon itse. 2. Hyväksy yhdellä klikkauksella, mitään ei julkaista ilman hyväksyntääsi. 3. Se julkaisee ja mittaa, tulokset kertyvät yhdelle sivulle." loading="lazy" decoding="async">
           </picture>
-          <figcaption>Viikkonäkymä Aigen Studiosta. Julkaisut ovat esimerkkiaineistoa.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="detail-section" id="tiedostot" aria-labelledby="tiedostot-title">
-      <div class="wrap detail-grid">
-        <h2 id="tiedostot-title">Pyydä tiedosto, saat tiedoston</h2>
-        <div>
-          <p class="prose-lead">Esitykset, dokumentit, laskentataulukot ja tarjoukset syntyvät keskustelussa ja ovat ladattavissa. Studio kirjoittaa ne yrityksesi tiedoilla ja valitsee tehtävään sopivan taidon itse.</p>
-          <p class="prose-lead">Se, mitä Studio oppii yrityksestäsi, tallentuu muistoiksi. Muisto voi olla vain sinun tai koko tiimin, ja sen voi poistaa milloin tahansa.</p>
+    <section class="st-section" id="tiedostot" aria-labelledby="files-title">
+      <div class="wrap st-split">
+        <div class="st-text">
+          <p class="st-kicker">Tiedostot</p>
+          <h2 class="st-title" id="files-title">Pyydä tiedosto, saat tiedoston</h2>
+          <p>Esitykset, dokumentit, laskentataulukot ja tarjoukset syntyvät keskustelussa ladattaviksi tiedostoiksi. Studio kirjoittaa ne yrityksesi tiedoilla ja sävyllä, joten tyhjää pohjaa ei tarvitse täyttää käsin.</p>
+          <p>Kun Studio oppii yrityksestäsi jotain, esimerkiksi uudet hinnat, se tallentuu muistoksi. Muisto voi olla vain sinun tai koko tiimin, ja sen voi poistaa milloin tahansa.</p>
         </div>
+        <figure class="st-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/files-fi-640.webp 640w, /assets/catalog-site/media/studio/files-fi-960.webp 960w, /assets/catalog-site/media/studio/files-fi-1280.webp 1280w" sizes="(max-width: 899px) min(560px, calc(100vw - 40px)), (max-width: 1100px) 460px, 560px">
+            <img src="/assets/catalog-site/media/studio/files-fi-960.jpg" width="960" height="960" alt="Kukkakauppias sitoo kimppua. Kuvan teksti: Oikeaa työtä, ei pelkkiä neuvoja. Valmiita, ladattavia tiedostoja brändisi äänellä. Keskustelussa pyydetään ”Tee hinnasto-PDF uusista palveluistamme”, Studio vastaa tiedostolla hinnasto.pdf ja tallentaa kevään 2026 hinnat muistiin. Vieressä valmis hinnasto." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Esimerkki: hinnasto-PDF kukkakaupalle. Yritys ja hinnat ovat kuvitteellisia.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="detail-section" id="verkkosivut" aria-labelledby="verkkosivut-title">
-      <div class="wrap detail-grid">
-        <h2 id="verkkosivut-title">Verkkosivut, tulokset ja tiimi</h2>
-        <div>
-          <p class="prose-lead">Studio ei lopeta julkaisuun. Se katsoo myös, mitä sivustolla ja luvuissa tapahtuu.</p>
-          <dl class="media-facts">
-            <div><dt>Sivuston arvio</dt><dd>Studio pisteyttää hakukoneoptimoinnin, sisällön ja tekoälynäkyvyyden. Jokaiseen havaintoon tulee valmis korjaus hyväksyttäväksi.</dd></div>
-            <div><dt>Kilpailijaseuranta</dt><dd>Vertailu kertoo, missä kilpailijat ovat edellä sisällössä ja näkyvyydessä.</dd></div>
-            <div><dt>Kävijäanalytiikka</dt><dd>Sivuston kävijätiedot ovat samassa näkymässä julkaisujen tulosten kanssa.</dd></div>
-            <div><dt>Tiimi ja roolit</dt><dd>Koko tiimi voi työskennellä samassa työtilassa omilla rooleillaan.</dd></div>
-            <div><dt>Sinä päätät</dt><dd>Hyväksyt muutokset itse tai otat autopilotin käyttöön, kun luotat lopputulokseen. Toimintaloki näyttää, mitä on tehty.</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section class="detail-section" id="hinta" aria-labelledby="hinta-title">
-      <div class="wrap detail-grid">
-        <h2 id="hinta-title">Yksi tilaus, kaikki ominaisuudet</h2>
-        <div class="price-panel">
-          <div>
-            <p class="buy-price"><b>29 €</b><span>/kk + alv</span></p>
-            <p class="price-text">Avaustarjous. Hinta pysyy samana niin kauan kuin tilaus on voimassa. Normaalihinta on myöhemmin 99 € /kk + alv.</p>
-            <div class="actions"><a class="button button-primary" href="https://studio.aigen.fi/">Aloita Studio</a></div>
+    <section class="st-section st-dark" id="julkaisut" aria-labelledby="pub-title">
+      <div class="wrap">
+        <div class="st-split is-reverse">
+          <div class="st-text">
+            <p class="st-kicker">Julkaisut</p>
+            <h2 class="st-title" id="pub-title">Kirjoitat kerran, julkaiset neljään kanavaan</h2>
+            <p>Kirjoita julkaisu itse tai pyydä Studiota kirjoittamaan. Facebook, Instagram, LinkedIn ja X saavat kukin oman versionsa: samasta luonnoksesta syntyy jokaiselle kanavalle sopivan pituinen ja sävyinen teksti, ja jokainen versio odottaa hyväksyntääsi ennen kuin se lähtee.</p>
+            <p>Julkaisun voi ajastaa tai lähettää heti. Aiemmat julkaisut voi tuoda mukaan, joten tavoittavuutta ja reaktioita voi verrata samassa näkymässä.</p>
           </div>
-          <ul class="ticks">
-            <li>Tekoälyavustaja, tiedostot ja kuvat.</li>
-            <li>Julkaiseminen Facebookiin, Instagramiin, LinkedIniin ja X:ään.</li>
-            <li>Ajastus, sisältökalenteri ja hyväksynnät.</li>
-            <li>Julkaisujen tulokset, myös aiemmin julkaistujen.</li>
-            <li>Sivustokartoitukset ja valmiit korjausehdotukset.</li>
-            <li>Kävijäanalytiikka ja kilpailijaseuranta.</li>
-            <li>Koko tiimi omilla rooleillaan.</li>
-            <li>Kuukausittainen käyttökiintiö tekoälytyölle sisältyy hintaan.</li>
-          </ul>
+          <figure class="st-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/channels-fi-640.webp 640w, /assets/catalog-site/media/studio/channels-fi-960.webp 960w, /assets/catalog-site/media/studio/channels-fi-1280.webp 1280w" sizes="(max-width: 899px) min(560px, calc(100vw - 40px)), (max-width: 1100px) 460px, 560px">
+            <img src="/assets/catalog-site/media/studio/channels-fi-960.jpg" width="960" height="960" alt="Yhdestä luonnoksesta jokaiseen kanavaan. Jokainen kanava saa oman versionsa sille sopivalla sävyllä ja pituudella. Puhelimessa Instagram-julkaisu kevättarjouksesta, ympärillä saman tarjouksen Facebook-, LinkedIn- ja X-versiot. Alareunassa tila ”Odottaa hyväksyntääsi” ja Hyväksy-painike." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Esimerkkijulkaisu. Kuvitteellinen tarjous.</figcaption>
+        </figure>
         </div>
+        <div class="st-sub is-wide" id="kalenteri">
+          <div>
+            <h3>Koko viikko yhdellä silmäyksellä</h3>
+            <p>Sisältökalenteri näyttää julkaisut päivittäin ja kanavittain, luonnoksesta julkaistuun.</p>
+          </div>
+          <figure class="st-figure">
+            <picture>
+              <source media="(max-width: 640px)" srcset="/assets/catalog-site/media/aigen-studio-kalenteri-mobiili.jpg" width="466" height="356">
+              <img src="/assets/catalog-site/media/aigen-studio-kalenteri.jpg" width="1072" height="506" alt="Sisältökalenterin viikkonäkymä 12.–18.10.2026. Jokaisen päivän kohdalla näkyvät julkaisujen otsikot ja kanavamerkinnät Facebookille, Instagramille, LinkedInille ja X:lle." loading="lazy" decoding="async">
+            </picture>
+            <figcaption>Viikkonäkymä Aigen Studiosta. Julkaisut ovat esimerkkiaineistoa.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="st-section st-mist" id="hyvaksynta" aria-labelledby="ctrl-title">
+      <div class="wrap">
+        <div class="st-split">
+          <div class="st-text">
+            <p class="st-kicker">Hyväksyntä</p>
+            <h2 class="st-title" id="ctrl-title">Mitään ei julkaista ilman sinun hyväksyntääsi</h2>
+            <p>Julkaisut, sivustokorjaukset ja tiedostot kerääntyvät Saapuneet-näkymään odottamaan päätöstäsi. Kun luotat lopputulokseen, voit kytkeä autopilotin päälle.</p>
+            <dl class="st-facts"><div><dt>Hyväksyn ensin</dt><dd>Jokainen julkaisu ja muutos odottaa, kunnes hyväksyt sen.</dd></div><div><dt>Autopilotti</dt><dd>Kytke päälle, kun luotat lopputulokseen.</dd></div><div><dt>Toimintaloki</dt><dd>Näet aina, mitä Studio on tehnyt.</dd></div><div><dt>Tiimi ja roolit</dt><dd>Koko tiimi työskentelee samassa työtilassa omilla rooleillaan.</dd></div></dl>
+          </div>
+          <figure class="st-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/control-fi-640.webp 640w, /assets/catalog-site/media/studio/control-fi-960.webp 960w, /assets/catalog-site/media/studio/control-fi-1280.webp 1280w" sizes="(max-width: 899px) min(560px, calc(100vw - 40px)), (max-width: 1100px) 460px, 560px">
+            <img src="/assets/catalog-site/media/studio/control-fi-960.jpg" width="960" height="960" alt="Sinä pidät ohjat. Hyväksy jokainen muutos tai kytke autopilotti päälle, kun luottamus on syntynyt. Studion Saapuneet-näkymässä odottaa hyväksyntää kolme asiaa: Instagram-julkaisu, sivustokorjaus palvelusivun metakuvaukseen ja tarjous-PDF. Valintana Hyväksyn ensin tai Autopilotti, ja teksti: Näet aina, mitä Aigen on tehnyt." loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        </div>
+        <div class="st-sub is-split" id="kommentointi">
+          <div>
+            <h3>Jaa luonnos linkillä, kommentit tulevat tekstiin</h3>
+            <p>Luonnoksen voi jakaa linkillä ilman tunnuksia. Lukija valitsee tekstistä kohdan ja kirjoittaa kommenttinsa juuri siihen, ja halutessasi hän voi myös muokata tekstiä.</p>
+            <p>Nimi kysytään kommentin yhteydessä, joten näet kuka ehdotti mitä. Linkille asetetaan voimassaolo, eikä palaute jää sähköpostiketjuun.</p>
+          </div>
+          <figure class="st-figure">
+            <img src="/assets/catalog-site/media/aigen-studio-promo-asiakaskommentit.jpg" width="1080" height="1350" alt="Linkillä jaettu luonnos kahvilan korvapuustikurssista. Kaksi tekstikohtaa on korostettu, ja niistä lähtee viiva vieraiden kommentteihin ja vastauksiin." loading="lazy" decoding="async">
+            <figcaption>Jaettu luonnos: kommentti kiinnittyy valittuun kohtaan tekstissä.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="st-section" id="verkkosivut" aria-labelledby="web-title">
+      <div class="wrap st-split is-reverse">
+        <div class="st-text">
+          <p class="st-kicker">Verkkosivut</p>
+          <h2 class="st-title" id="web-title">Verkkosivu paranee myös julkaisun jälkeen</h2>
+          <p>Studio pisteyttää sivustosi hakukoneoptimoinnin, sisällön ja tekoälynäkyvyyden. Jokaisesta havainnosta tulee valmis korjaus, jonka hyväksyt tai ohitat.</p>
+          <dl class="st-facts"><div><dt>Kilpailijaseuranta</dt><dd>Vertailu kertoo, missä kilpailijat ovat edellä sisällössä ja näkyvyydessä.</dd></div><div><dt>Kävijäanalytiikka</dt><dd>Sivuston kävijätiedot ovat samassa näkymässä julkaisujen tulosten kanssa.</dd></div></dl>
+        </div>
+        <figure class="st-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/website-fi-640.webp 640w, /assets/catalog-site/media/studio/website-fi-960.webp 960w, /assets/catalog-site/media/studio/website-fi-1280.webp 1280w" sizes="(max-width: 899px) min(560px, calc(100vw - 40px)), (max-width: 1100px) 460px, 560px">
+            <img src="/assets/catalog-site/media/studio/website-fi-960.jpg" width="960" height="960" alt="Rakentaja istuu työmaalla tabletti kädessään. Kuvan teksti: SEO, Sisältö, Tekoälynäkyvyys. Verkkosivut, jotka paranevat jatkuvasti. Jokaiseen havaintoon saat valmiin korjauksen hyväksyttäväksesi. Havainto: Palvelusivulta puuttuu metakuvaus. Ennen: tyhjä, hakukone arvaa tekstin itse. Ehdotettu korjaus: Remontit ja korjaukset Tampereella. Ilmainen arvio 24 tunnissa, varaa verkossa. Painikkeet Hyväksy korjaus ja Ohita." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Esimerkki sivustohavainnosta. Yritys on kuvitteellinen.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="st-section st-dark st-pricing" id="hinta" aria-labelledby="price-title">
+      <div class="wrap st-split is-reverse">
+        <div class="st-text">
+          <p class="st-kicker">Hinta</p>
+          <h2 class="st-title" id="price-title">Avaushinta pysyy niin kauan kuin tilauksesi</h2>
+          <p class="st-price-line"><b>29 € /kk + alv</b> avaustarjouksena. Hinta pysyy samana niin kauan kuin tilaus on voimassa. Normaalihinta on myöhemmin 99 € /kk + alv.</p>
+          <h3 class="st-list-title">Tilaukseen sisältyy</h3>
+          <ul class="ticks">
+              <li>Tekoälyavustaja, tiedostot ja kuvat</li>
+              <li>Julkaiseminen Facebookiin, Instagramiin, LinkedIniin ja X:ään</li>
+              <li>Ajastus, sisältökalenteri ja hyväksynnät</li>
+              <li>Julkaisujen tulokset, myös aiemmin julkaistujen</li>
+              <li>Sivustokartoitukset ja valmiit korjausehdotukset</li>
+              <li>Kävijäanalytiikka ja kilpailijaseuranta</li>
+              <li>Koko tiimi omilla rooleillaan</li>
+              <li>Kuukausittainen käyttökiintiö tekoälytyölle</li>
+          </ul>
+          <div class="actions"><a class="button button-primary" href="https://studio.aigen.fi/">Aloita Studio</a></div>
+          <p class="st-fineprint">Katso ajantasainen hinta ja käyttörajat Studion sivulta.</p>
+        </div>
+        <figure class="st-figure">
+          <picture>
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/pricing-fi-640.webp 640w, /assets/catalog-site/media/studio/pricing-fi-960.webp 960w, /assets/catalog-site/media/studio/pricing-fi-1280.webp 1280w" sizes="(max-width: 899px) min(560px, calc(100vw - 40px)), (max-width: 1100px) 460px, 560px">
+            <img src="/assets/catalog-site/media/studio/pricing-fi-960.jpg" width="960" height="960" alt="Avajaistarjous. Yksi paketti, kaikki mukana. 29 € /kk + alv, normaalihinta myöhemmin 99 €. Mukana Aigen-assistentti, tiedostot ja kuvat, julkaiseminen Facebookiin, Instagramiin, LinkedIniin ja X:ään, sivustokartoitukset ja valmiit korjaukset sekä koko tiimi omilla rooleillaan. Liity nyt, niin 29 € pysyy hintanasi." loading="lazy" decoding="async">
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <section class="st-closing wrap" aria-labelledby="close-title">
+      <figure class="st-figure">
+          <picture>
+            <source type="image/webp" media="(max-width: 640px)" srcset="/assets/catalog-site/media/studio/banner-fi-crop-1120.webp" width="1120" height="400">
+            <source media="(max-width: 640px)" srcset="/assets/catalog-site/media/studio/banner-fi-crop-1120.jpg" width="1120" height="400">
+            <source type="image/webp" srcset="/assets/catalog-site/media/studio/banner-fi-1200.webp 1200w, /assets/catalog-site/media/studio/banner-fi-1600.webp 1600w" sizes="(max-width: 1320px) calc(100vw - 2 * clamp(20px, 4.4vw, 64px)), 1240px">
+            <img src="/assets/catalog-site/media/studio/banner-fi-1600.jpg" width="1600" height="400" alt="Aigen Studio: Tekoälytyötila, joka saa työt tehtyä. Aigen tekee työt, sinä pidät ohjat käsissäsi. Kanavat Facebook, Instagram, LinkedIn ja X." loading="lazy" decoding="async">
+          </picture>
+        </figure>
+      <div class="st-closing-row">
+        <div>
+          <h2 id="close-title">Aloita ensimmäisellä pyynnöllä</h2>
+          <p>Kirjoita, mitä tarvitset tällä viikolla, ja katso luonnos ennen kuin mitään lähtee eteenpäin.</p>
+        </div>
+        <div class="actions"><a class="button button-primary" href="https://studio.aigen.fi/">Aloita Studio</a><a class="button" href="/blog/aigen-studio-avattu/">Lue avauskirjoitus</a></div>
       </div>
     </section>
 

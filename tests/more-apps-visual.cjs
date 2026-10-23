@@ -45,20 +45,29 @@ async function run() {
       // actually fetched, and that URL must be cache-busted so a stale copy can't win.
       const delivery = await page.evaluate(() => {
         const link = [...document.querySelectorAll('link[rel=stylesheet]')].find(l => l.href.includes('catalog-site/site.css'));
+        // Chrome gives every CSSStyleRule an (empty) .cssRules now that nesting is supported,
+        // so collect selectorText first and only recurse when there are genuinely nested rules.
+        const walk = (list, out) => {
+          for (const r of list) {
+            if (r.selectorText) out.push(r.selectorText);
+            if (r.cssRules && r.cssRules.length) walk(r.cssRules, out);
+          }
+          return out;
+        };
         let rules = [];
         for (const ss of document.styleSheets) {
           if (!ss.href || !ss.href.includes('catalog-site/site.css')) continue;
-          try { rules = [...ss.cssRules].flatMap(r => r.cssRules ? [...r.cssRules].map(x => x.selectorText) : [r.selectorText]); } catch (e) { return { error: String(e) }; }
+          try { rules = walk(ss.cssRules, []); } catch (e) { return { error: String(e) }; }
         }
-        return { href: link ? link.getAttribute('href') : null, selectors: rules.filter(Boolean) };
+        return { href: link ? link.getAttribute('href') : null, ruleCount: rules.length, selectors: rules };
       });
       if (delivery.error) fail(`${lang}@${w}: cannot read delivered stylesheet (${delivery.error})`);
       if (!delivery.href || !/[?&]v=/.test(delivery.href)) fail(`${lang}@${w}: stylesheet link "${delivery.href}" has no ?v= cache buster — a stale cached copy will render the section unstyled`);
       else ok(`stylesheet link is cache-busted: ${delivery.href}`);
-      const needed = ['.more-apps', '.more-app-list', '.more-app-icon', '.more-app-name', '.more-app-description'];
-      const missing = needed.filter(s => !delivery.selectors.some(sel => sel.split(/[\s,>:]+/).includes(s.slice(1)) || sel.includes(s)));
+      const needed = ['.more-apps', '.more-app-list', '.more-app-icon', '.more-app-copy', '.more-app-name', '.more-app-label', '.more-app-description', '.app-monogram', '.status-badge-tulossa', '.status-badge-beta'];
+      const missing = needed.filter(s => !delivery.selectors.some(sel => sel.includes(s)));
       if (missing.length) fail(`${lang}@${w}: delivered stylesheet is missing rules for ${missing.join(', ')}`);
-      else ok(`delivered stylesheet carries all ${needed.length} section rule groups`);
+      else ok(`delivered stylesheet (${delivery.ruleCount} rules) carries all ${needed.length} section selectors`);
 
       const m = await page.evaluate(() => {
         const sec = document.querySelector('.more-apps');

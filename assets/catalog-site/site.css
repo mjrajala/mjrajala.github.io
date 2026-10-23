@@ -123,6 +123,23 @@ button, input, select { font: inherit; color: inherit; }
 .all-apps .mono { color: var(--lime); }
 .all-apps:focus-visible { outline-offset: 3px; }
 
+/* Quieter homepage links to the rest of the catalog. */
+.more-apps { padding-block: 0 36px; }
+.more-apps h2 { font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+.more-app-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 32px; }
+.more-app-list li { min-width: 0; border-top: 1px solid var(--line); }
+.more-app-list a { display: flex; align-items: center; gap: 12px; min-height: 80px; padding-block: 14px; text-decoration: none; }
+.more-app-list a:hover .more-app-name { text-decoration: underline; }
+.more-app-list img, .more-app-monogram { width: 28px; height: 28px; flex: 0 0 28px; border-radius: 6px; }
+.more-app-monogram { display: grid; place-items: center; background: var(--paper-2); color: var(--muted); font-size: 13px; font-weight: 600; }
+.more-app-copy { display: block; min-width: 0; flex: 1; }
+.more-app-name { display: block; font-size: 15px; font-weight: 600; line-height: 1.5; }
+.more-app-description { display: block; font-size: 13px; line-height: 1.5; color: var(--muted); margin-top: 2px; }
+.more-app-status { font-size: 11px; font-weight: 400; color: var(--muted); margin-left: 6px; white-space: nowrap; }
+.more-app-arrow { font-size: 14px; color: var(--muted); }
+@media (max-width: 899px) { .more-app-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; } }
+@media (max-width: 600px) { .more-app-list { grid-template-columns: minmax(0, 1fr); } .more-app-list a { min-height: 72px; } }
+
 /* Custom development */
 .custom { background: var(--card); border-block: 1px solid var(--line); padding-block: clamp(56px, 7vw, 104px); }
 .custom-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); }

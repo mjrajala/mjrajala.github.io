@@ -123,22 +123,29 @@ button, input, select { font: inherit; color: inherit; }
 .all-apps .mono { color: var(--lime); }
 .all-apps:focus-visible { outline-offset: 3px; }
 
-/* Quieter homepage links to the rest of the catalog. */
-.more-apps { padding-block: 0 36px; }
-.more-apps h2 { font-size: 16px; font-weight: 600; margin-bottom: 12px; }
-.more-app-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 32px; }
+/* Quieter homepage links to the rest of the catalog. Deliberately lighter than the
+   featured trio above it: no cards, no lift, just a hairline-ruled grid. Zero column
+   gap so the rules read as continuous lines across the full width; the rows breathe
+   through the link's own padding instead. */
+.more-apps { padding-block: 0 clamp(44px, 5.5vw, 76px); }
+.more-apps h2 { font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 10px; }
+.more-app-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
 .more-app-list li { min-width: 0; border-top: 1px solid var(--line); }
-.more-app-list a { display: flex; align-items: center; gap: 12px; min-height: 80px; padding-block: 14px; text-decoration: none; }
-.more-app-list a:hover .more-app-name { text-decoration: underline; }
-.more-app-list img, .more-app-monogram { width: 28px; height: 28px; flex: 0 0 28px; border-radius: 6px; }
-.more-app-monogram { display: grid; place-items: center; background: var(--paper-2); color: var(--muted); font-size: 13px; font-weight: 600; }
-.more-app-copy { display: block; min-width: 0; flex: 1; }
-.more-app-name { display: block; font-size: 15px; font-weight: 600; line-height: 1.5; }
-.more-app-description { display: block; font-size: 13px; line-height: 1.5; color: var(--muted); margin-top: 2px; }
-.more-app-status { font-size: 11px; font-weight: 400; color: var(--muted); margin-left: 6px; white-space: nowrap; }
-.more-app-arrow { font-size: 14px; color: var(--muted); }
-@media (max-width: 899px) { .more-app-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; } }
-@media (max-width: 600px) { .more-app-list { grid-template-columns: minmax(0, 1fr); } .more-app-list a { min-height: 72px; } }
+.more-app-list a { display: flex; align-items: center; gap: 14px; min-height: 76px; padding: 16px 28px 16px 0; text-decoration: none; }
+.more-app-icon { display: grid; place-items: center; flex: 0 0 36px; width: 36px; height: 36px; border-radius: 9px; overflow: hidden; transition: border-color .15s ease; }
+.more-app-icon img { width: 36px; height: 36px; }
+.more-app-icon.app-monogram { font-size: 15px; letter-spacing: 0; }
+.more-app-copy { min-width: 0; }
+.more-app-name { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: 15.5px; font-weight: 600; letter-spacing: -.01em; line-height: 1.3; }
+.more-app-description { display: block; margin-top: 3px; font-size: 13.5px; line-height: 1.4; color: var(--muted); transition: color .15s ease; }
+.more-apps .status-badge { padding: 2px 8px; font-size: 11px; font-weight: 600; }
+.more-apps .status-badge::before { width: 5px; height: 5px; }
+.more-apps .status-badge-tulossa::before { width: 4px; height: 4px; }
+.more-app-list a:hover .more-app-label { text-decoration: underline; text-decoration-thickness: 1px; }
+.more-app-list a:hover .more-app-description { color: var(--ink-2); }
+.more-app-list a:hover .app-monogram { border-color: var(--ink); }
+@media (max-width: 899px) { .more-app-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .more-app-list { grid-template-columns: minmax(0, 1fr); } .more-app-list a { min-height: 72px; padding-right: 0; } }
 
 /* Custom development */
 .custom { background: var(--card); border-block: 1px solid var(--line); padding-block: clamp(56px, 7vw, 104px); }

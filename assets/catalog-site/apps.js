@@ -69,7 +69,6 @@ window.AIGEN_CATALOG = {
       icon: "/assets/catalog-site/kuvakkeet/ilmoo.svg",
       path: { fi: "/sovellukset/ilmoo/", en: "/en/apps/ilmoo/" },
       site: "https://ilmoo.fi/",
-      featured: 3,
       fi: {
         useCase: "Sisäinen ilmoituskanava",
         summary: "Henkilöstö voi ilmoittaa väärinkäytöksistä kirjallisesti ja nimettömästi, ja käsittelijät näkevät lain määräajat.",
@@ -130,25 +129,26 @@ window.AIGEN_CATALOG = {
     },
     {
       id: "draftpad",
+      featured: 3,
       name: "Draftpad",
       audience: "yritykset",
       categories: ["tyo", "viestinta"],
       status: "saatavilla",
-      icon: null,
+      icon: "/assets/catalog-site/kuvakkeet/draftpad.svg",
       path: { fi: "/sovellukset/draftpad/", en: "/en/apps/draftpad/" },
       site: "https://draftpad.aigen.fi/",
       fi: {
         useCase: "Tekstien luonnostelu ja yhteistyö",
-        summary: "Tiimi ja omat AI-agentit luonnostelevat, kommentoivat ja versioivat tekstejä samassa työtilassa.",
-        price: null,
-        language: "Englanninkielinen",
+        summary: "Kirjoita uutiskirjeet, tarjoukset ja muut tekstit yhdessä. Kommentoi suoraan sanoihin, vertaile versioita ja hyväksy valmis teksti.",
+        price: { amount: "5 €", unit: "/ henkilö / kk + alv", note: "Team · Ilmainen yhdelle" },
+        language: "Suomi ja englanti",
         keywords: "kirjoittaminen teksti luonnos sisältö julkaisu some postaus kommentointi versiohistoria agentit api tiimi"
       },
       en: {
         useCase: "Drafting and collaboration",
-        summary: "Your team and your own AI agents draft, comment on and version texts in one workspace.",
-        price: null,
-        language: "In English",
+        summary: "Write newsletters, proposals and other texts together. Comment on exact words, compare versions and approve the text that is ready.",
+        price: { amount: "€5", unit: "/ person / month + VAT", note: "Team · Free for one" },
+        language: "Finnish and English",
         keywords: "writing text draft content publishing social post comments version history agents api team"
       }
     },

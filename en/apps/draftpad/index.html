@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow">
-  <title>Draftpad – drafting and collaboration | Aigen</title>
-  <meta name="description" content="Draftpad is a writing and collaboration workspace where people and their own AI agents develop ideas, drafts and versions together.">
+  <title>Draftpad – write and review any text together | Aigen</title>
+  <meta name="description" content="Draft newsletters, proposals, policies and social posts together. Comment on exact words, keep every version and approve the text that is ready. Start free.">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64">
   <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
   <script>document.documentElement.className = "js";</script>
@@ -16,15 +16,23 @@
   <link rel="alternate" hreflang="fi" href="https://aigen.fi/sovellukset/draftpad/">
   <link rel="alternate" hreflang="en" href="https://aigen.fi/en/apps/draftpad/">
   <link rel="alternate" hreflang="x-default" href="https://aigen.fi/sovellukset/draftpad/">
-  <meta property="og:title" content="Draftpad – drafting and collaboration | Aigen">
-  <meta property="og:description" content="Draftpad is a writing and collaboration workspace where people and their own AI agents develop ideas, drafts and versions together.">
+  <meta property="og:title" content="Draftpad – write and review any text together | Aigen">
+  <meta property="og:description" content="Draft newsletters, proposals, policies and social posts together. Comment on exact words, keep every version and approve the text that is ready. Start free.">
   <meta property="og:url" content="https://aigen.fi/en/apps/draftpad/">
   <meta property="og:type" content="website">
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Organization", "@id": "https://aigen.fi/#organization", "name": "AI Generation Oy", "url": "https://aigen.fi/", "email": "contact@aigen.fi"}, {"@context": "https://schema.org", "@type": "WebSite", "@id": "https://aigen.fi/#website", "name": "Aigen", "url": "https://aigen.fi/", "inLanguage": ["fi", "en"], "publisher": {"@id": "https://aigen.fi/#organization"}}]</script>
   <link rel="stylesheet" href="/assets/cookie-consent.css">
   <script defer src="/assets/cookie-consent.js"></script>
+  <link rel="stylesheet" href="/assets/catalog-site/draftpad.css">
+  <meta property="og:image" content="https://aigen.fi/assets/catalog-site/media/draftpad/og-en.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="Draftpad example showing a newsletter, a comment thread attached to selected words and an approved version.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Aigen Draftpad", "url": "https://aigen.fi/en/apps/draftpad/", "applicationCategory": "BusinessApplication", "operatingSystem": "Web browser", "description": "Draft newsletters, proposals, policies and social posts together. Comment on exact words, keep every version and approve the text that is ready. Start free.", "inLanguage": "en", "image": "https://aigen.fi/assets/catalog-site/media/draftpad/og-en.jpg", "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Team", "price": "5", "priceCurrency": "EUR", "description": "The first 20 people cost €5 per person per month. Additional people from the 21st seat cost €4 per person per month + VAT.", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "5", "priceCurrency": "EUR", "unitText": "person / month", "valueAddedTaxIncluded": false}}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What kinds of text can I write?", "acceptedAnswer": {"@type": "Answer", "text": "Newsletters, emails, proposals, reports, job ads, policies and social posts, for example. Start from a blank page or bring an existing draft for review."}}, {"@type": "Question", "name": "Does Draftpad publish the finished text?", "acceptedAnswer": {"@type": "Answer", "text": "No. Copy the approved text into your email tool, website or other service yourself. Draftpad does not automatically publish or send content."}}, {"@type": "Question", "name": "What is included for free?", "acceptedAnswer": {"@type": "Answer", "text": "Free includes one person and one workspace, unlimited drafts, versions and comments, a small AI allowance and versions for eight channels. No payment card is needed."}}, {"@type": "Question", "name": "How is Team pricing calculated?", "acceptedAnswer": {"@type": "Answer", "text": "The first 20 people cost €5 each per month. Additional people from the 21st seat cost €4 each. For example, 25 people cost €120 and 50 cost €220 per month. VAT is added."}}, {"@type": "Question", "name": "How does the team AI allowance work?", "acceptedAnswer": {"@type": "Answer", "text": "Team includes €1 of AI use per person each month. The allowance is pooled across the whole team."}}, {"@type": "Question", "name": "Do I need my own AI agent?", "acceptedAnswer": {"@type": "Answer", "text": "No. Write and review on your own or with colleagues. Connecting your own agents is optional."}}]}]</script>
 </head>
-<body>
+<body class="draftpad-page">
   <a class="skip-link" href="#sisalto">Skip to content</a>
 
 
@@ -41,70 +49,419 @@
   </header>
 
   <main id="sisalto" tabindex="-1">
-<section class="app-hero wrap" aria-labelledby="app-title">
-      <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/en/">Home</a></li><li><a href="/en/apps/">Apps</a></li><li><span aria-current="page">Draftpad</span></li></ol></nav>
-      <div class="app-hero-grid">
-        <div>
-          <div class="app-id">
-            <span class="app-monogram" aria-hidden="true">D</span>
-            <div><p>Drafting and collaboration</p><span class="status-badge status-badge-saatavilla">Available</span></div>
-          </div>
-          <h1 id="app-title">Draftpad</h1>
-          <p class="lead">A writing and collaboration workspace where people and agents can develop ideas, drafts and versions together.</p>
-          <div class="tags" aria-label="Categories and language">
-            <a href="/en/apps/?task=work">Organising work</a>
-            <a href="/en/apps/?task=communication">Communication and marketing</a>
-            <span>In English</span>
-          </div>
-          <div class="buy">
-            <p>Draftpad runs at its own address. No price is published on this site.</p>
-            <div class="actions">
-              <a class="button button-primary" href="https://draftpad.aigen.fi/">Open draftpad.aigen.fi <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em;flex-shrink:0"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
-            </div>
-          </div>
-        </div>
-        <aside class="doc-summary" aria-labelledby="summary-title">
-          <h2 id="summary-title">In short</h2>
-          <ul>
-            <li>Ideas, drafts, versions and comments in one workspace.</li>
-            <li>Bring your own agents through the API.</li>
-            <li>Shared review and publishing for the team.</li>
-          </ul>
-        </aside>
-      </div>
+ <section class="dp-hero wrap">
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+   <ol>
+    <li>
+     <a href="/en/">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="/en/apps/">
+      Apps
+     </a>
+    </li>
+    <li>
+     <span aria-current="page">
+      Draftpad
+     </span>
+    </li>
+   </ol>
+  </nav>
+  <div class="dp-hero-head">
+   <div>
+    <img alt="Aigen Draftpad" class="dp-logo" height="320" src="/assets/catalog-site/media/draftpad/logo.svg" width="1417"/>
+    <p class="dp-kicker">
+     Any text, written together
+    </p>
+    <h1 id="app-title">
+     Write it together.
+     <br/>
+     Approve the version that’s ready.
+    </h1>
+   </div>
+   <div class="dp-intro">
+    <p class="lead">
+     A newsletter, proposal, job ad or social post. Write the draft, invite comments on the exact words and agree on the version to use.
+    </p>
+    <div class="actions">
+     <a class="button button-primary" href="https://draftpad.aigen.fi/">
+      Start free
+      <span aria-hidden="true">
+       ↗
+      </span>
+     </a>
+     <a class="button" href="#pricing">
+      See pricing
+     </a>
+    </div>
+    <p class="dp-note">
+     Free for one person · No card needed
+    </p>
+   </div>
+  </div>
+  <figure class="dp-cover">
+   <img alt="Draftpad example showing a newsletter, a comment thread attached to selected words and an approved version." decoding="async" fetchpriority="high" height="810" sizes="(max-width: 1320px) calc(100vw - 40px), 1240px" src="/assets/catalog-site/media/draftpad/hero-en-1440.webp" srcset="/assets/catalog-site/media/draftpad/hero-en-640.webp 640w, /assets/catalog-site/media/draftpad/hero-en-960.webp 960w, /assets/catalog-site/media/draftpad/hero-en-1440.webp 1440w, /assets/catalog-site/media/draftpad/hero-en-1920.webp 1920w" width="1440"/>
+   <figcaption>
+    Images illustrate the product. Texts, people and comments are examples.
+   </figcaption>
+  </figure>
+ </section>
+ <nav aria-label="On this page" class="on-page">
+  <div class="wrap">
+   <ul>
+    <li>
+     <a href="#comments">
+      Comments
+     </a>
+    </li>
+    <li>
+     <a href="#versions">
+      Versions and AI
+     </a>
+    </li>
+    <li>
+     <a href="#channels">
+      Channel versions
+     </a>
+    </li>
+    <li>
+     <a href="#pricing">
+      Pricing
+     </a>
+    </li>
+    <li>
+     <a href="#faq">
+      Questions
+     </a>
+    </li>
+   </ul>
+  </div>
+ </nav>
+ <section class="dp-section dp-dark" id="comments">
+  <div class="wrap dp-split">
+   <div class="dp-text">
+    <p class="dp-kicker">
+     01 / Review together
+    </p>
+    <h2>
+     Put feedback next to the words it refers to.
+    </h2>
+    <p>
+     Highlight a passage and say what should change. Replies stay in the same thread. Resolve the comment when it is dealt with.
+    </p>
+    <p>
+     Ask AI to address open comments. Review its suggestions and approve the text yourself.
+    </p>
+   </div>
+   <figure>
+    <img alt="Put feedback next to the words it refers to." decoding="async" height="900" loading="lazy" sizes="(max-width: 899px) min(540px, calc(100vw - 40px)), 540px" src="/assets/catalog-site/media/draftpad/comments-en-720.webp" srcset="/assets/catalog-site/media/draftpad/comments-en-480.webp 480w, /assets/catalog-site/media/draftpad/comments-en-720.webp 720w, /assets/catalog-site/media/draftpad/comments-en-1080.webp 1080w" width="720"/>
+   </figure>
+  </div>
+ </section>
+ <section class="dp-section dp-paper" id="versions">
+  <div class="wrap dp-editorial">
+   <p class="dp-kicker">
+    From draft to approved text
+   </p>
+   <h2>
+    You can go back to an earlier version.
+   </h2>
+   <div>
+    <p>
+     Compare versions, see what changed and restore earlier text when needed. Drafts, comments and versions stay in one workspace.
+    </p>
+    <p>
+     AI can help with the first draft and revisions. You decide what stays.
+    </p>
+   </div>
+  </div>
+ </section>
+ <section class="dp-section" id="channels">
+  <div class="wrap dp-split dp-reverse">
+   <div class="dp-text">
+    <p class="dp-kicker">
+     02 / One message, different channels
+    </p>
+    <h2>
+     One draft. A version for each channel.
+    </h2>
+    <p>
+     Create versions for LinkedIn, Instagram, X, Facebook, Threads, TikTok, Google Business and your blog. Check the wording and each channel’s character limits.
+    </p>
+    <p>
+     The Team brand profile and Match our voice help adapt text to your company’s tone. Copy the finished text into your publishing tool.
+    </p>
+   </div>
+   <figure>
+    <img alt="One draft. A version for each channel." decoding="async" height="900" loading="lazy" sizes="(max-width: 899px) min(540px, calc(100vw - 40px)), 540px" src="/assets/catalog-site/media/draftpad/channels-en-720.webp" srcset="/assets/catalog-site/media/draftpad/channels-en-480.webp 480w, /assets/catalog-site/media/draftpad/channels-en-720.webp 720w, /assets/catalog-site/media/draftpad/channels-en-1080.webp 1080w" width="720"/>
+   </figure>
+  </div>
+ </section>
+ <section class="dp-section dp-paper" id="share">
+  <div class="wrap dp-split">
+   <div class="dp-text">
+    <p class="dp-kicker">
+     03 / Feedback beyond your team
+    </p>
+    <h2>
+     Send your client a link to comment.
+    </h2>
+    <p>
+     With Team, share a text by link and allow guest comments. Set an expiry date and review their feedback alongside your team’s comments.
+    </p>
+    <p>
+     Approvals, a calendar and images help you prepare content. Draftpad does not automatically publish or send texts.
+    </p>
+   </div>
+   <figure>
+    <img alt="Send your client a link to comment." decoding="async" height="900" loading="lazy" sizes="(max-width: 899px) min(540px, calc(100vw - 40px)), 540px" src="/assets/catalog-site/media/draftpad/share-en-720.webp" srcset="/assets/catalog-site/media/draftpad/share-en-480.webp 480w, /assets/catalog-site/media/draftpad/share-en-720.webp 720w, /assets/catalog-site/media/draftpad/share-en-1080.webp 1080w" width="720"/>
+   </figure>
+  </div>
+ </section>
+ <section class="dp-agents wrap">
+  <p class="dp-kicker">
+   Bring your own agents when useful
+  </p>
+  <h2>
+   Give an agent a defined task.
+  </h2>
+  <p>
+   Connect your own agent with a token and set its permissions. Agents can help draft and review; people review and approve the result.
+  </p>
+ </section>
+ <section class="dp-section dp-dark" id="pricing">
+  <div class="wrap">
+   <div class="dp-pricing-head">
+    <div>
+     <p class="dp-kicker">
+      Team &amp; Free
+     </p>
+     <h2 class="dp-section-title">
+      Start on your own. Bring your team.
+     </h2>
+     <p class="dp-pricing-intro">
+      Use Free for your own writing. Team adds shared review and sharing.
+     </p>
+    </div>
+    <figure>
+     <img alt="Free and Team plans with example team prices." decoding="async" height="900" loading="lazy" sizes="(max-width: 899px) min(420px, calc(100vw - 40px)), 340px" src="/assets/catalog-site/media/draftpad/pricing-en-720.webp" srcset="/assets/catalog-site/media/draftpad/pricing-en-480.webp 480w, /assets/catalog-site/media/draftpad/pricing-en-720.webp 720w, /assets/catalog-site/media/draftpad/pricing-en-1080.webp 1080w" width="720"/>
+    </figure>
+   </div>
+   <div class="dp-pricing-grid">
+    <section class="dp-plan">
+     <h3>
+      Free
+     </h3>
+     <p class="dp-amount">
+      €0
+     </p>
+     <p class="dp-unit">
+      Free for one person · No card needed
+     </p>
+     <ul>
+      <li>
+       1 person, 1 workspace
+      </li>
+      <li>
+       Unlimited drafts, versions and comments
+      </li>
+      <li>
+       A small monthly AI allowance
+      </li>
+      <li>
+       Versions for eight channels
+      </li>
+     </ul>
+     <div class="actions">
+      <a class="button button-primary" href="https://draftpad.aigen.fi/">
+       Start free
+       <span aria-hidden="true">
+        ↗
+       </span>
+      </a>
+     </div>
     </section>
+    <section class="dp-plan">
+     <h3>
+      Team
+     </h3>
+     <p class="dp-amount">
+      €5
+     </p>
+     <p class="dp-unit">
+      / person / month + VAT
+     </p>
+     <ul>
+      <li>
+       Your team and your own AI agents in one workspace
+      </li>
+      <li>
+       €1 of AI use / person / month, pooled across the team
+      </li>
+      <li>
+       Approvals, calendar and images
+      </li>
+      <li>
+       Share links with guest comments
+      </li>
+      <li>
+       Brand profile and Match our voice
+      </li>
+      <li>
+       Payment receipts
+      </li>
+     </ul>
+     <div class="actions">
+      <a class="button button-primary" href="https://draftpad.aigen.fi/">
+       Start free
+       <span aria-hidden="true">
+        ↗
+       </span>
+      </a>
+     </div>
+    </section>
+   </div>
+   <p class="dp-volume">
+    The first 20 people cost €5 per person per month. Additional people from the 21st seat cost €4 per person per month + VAT.
+   </p>
+   <p class="dp-kicker dp-example-label">
+    Examples / month + VAT
+   </p>
+   <dl class="dp-examples">
+    <div>
+     <dt>
+      3 people
+     </dt>
+     <dd>
+      15 €
+     </dd>
+    </div>
+    <div>
+     <dt>
+      25 people
+     </dt>
+     <dd>
+      120 €
+     </dd>
+    </div>
+    <div>
+     <dt>
+      50 people
+     </dt>
+     <dd>
+      220 €
+     </dd>
+    </div>
+   </dl>
+  </div>
+ </section>
+ <section class="dp-section wrap dp-faq" id="faq">
+  <h2>
+   Before your first draft
+  </h2>
+  <div>
+   <details>
+    <summary>
+     What kinds of text can I write?
+    </summary>
+    <p>
+     Newsletters, emails, proposals, reports, job ads, policies and social posts, for example. Start from a blank page or bring an existing draft for review.
+    </p>
+   </details>
+   <details>
+    <summary>
+     Does Draftpad publish the finished text?
+    </summary>
+    <p>
+     No. Copy the approved text into your email tool, website or other service yourself. Draftpad does not automatically publish or send content.
+    </p>
+   </details>
+   <details>
+    <summary>
+     What is included for free?
+    </summary>
+    <p>
+     Free includes one person and one workspace, unlimited drafts, versions and comments, a small AI allowance and versions for eight channels. No payment card is needed.
+    </p>
+   </details>
+   <details>
+    <summary>
+     How is Team pricing calculated?
+    </summary>
+    <p>
+     The first 20 people cost €5 each per month. Additional people from the 21st seat cost €4 each. For example, 25 people cost €120 and 50 cost €220 per month. VAT is added.
+    </p>
+   </details>
+   <details>
+    <summary>
+     How does the team AI allowance work?
+    </summary>
+    <p>
+     Team includes €1 of AI use per person each month. The allowance is pooled across the whole team.
+    </p>
+   </details>
+   <details>
+    <summary>
+     Do I need my own AI agent?
+    </summary>
+    <p>
+     No. Write and review on your own or with colleagues. Connecting your own agents is optional.
+    </p>
+   </details>
+  </div>
+ </section>
+ <section class="dp-closing dp-paper">
+  <div class="wrap">
+   <div>
+    <p class="dp-kicker">
+     Aigen Draftpad
+    </p>
+    <h2>
+     Start with your next text.
+    </h2>
+    <p>
+     Bring an unfinished draft and ask a colleague to comment.
+    </p>
+   </div>
+   <div class="actions">
+    <a class="button button-primary" href="https://draftpad.aigen.fi/">
+     Start free
+     <span aria-hidden="true">
+      ↗
+     </span>
+    </a>
+   </div>
+  </div>
+ </section>
+ <section aria-labelledby="related-title" class="related wrap">
+  <div class="related-head">
+   <h2 id="related-title">
+    Similar apps
+   </h2>
+   <a class="arrow-link" href="/en/apps/">
+    All apps
+   </a>
+  </div>
+  <ul class="app-grid" data-related="draftpad">
+  </ul>
+  <aside aria-labelledby="custom-title" class="catalog-custom">
+   <div>
+    <h2 id="custom-title">
+     Agents for your own workflow?
+    </h2>
+    <p>
+     We build an AI agent or automation around your own data and systems.
+    </p>
+   </div>
+   <a class="button button-primary" href="/en/custom-development/">
+    Custom development
+   </a>
+  </aside>
+ </section>
+</main>
 
-    <section class="detail-section" id="features" aria-labelledby="features-title">
-      <div class="wrap detail-grid">
-        <h2 id="features-title">What Draftpad is for</h2>
-        <div>
-          <p class="prose-lead">Draftpad is built for agentic writing workflows: people and user-owned agents can capture ideas, draft posts, review versions and leave precise feedback through the app or API endpoints.</p>
-          <div class="feature-groups">
-            <section aria-labelledby="d1"><h3 id="d1">Agent API</h3><p>Give your own agents endpoints for posts, ideas, comments, versions and workspace context.</p></section>
-            <section aria-labelledby="d2"><h3 id="d2">Multi-agent flow</h3><p>Let research, editing and review agents work beside your team without losing version history.</p></section>
-            <section aria-labelledby="d3"><h3 id="d3">Shared review</h3><p>Invite teammates to comment, approve, restore and publish from the same workspace.</p></section>
-            <section aria-labelledby="d4"><h3 id="d4">People and agents together</h3><p>Multi-user access, agent tokens, comments and version history stay in one shared record.</p></section>
-          </div>
-          <p class="note">Based on the draftpad.aigen.fi front page. Sign-in happens in Draftpad’s own service.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="related wrap" aria-labelledby="related-title">
-      <div class="related-head">
-        <h2 id="related-title">Similar apps</h2>
-        <a class="arrow-link" href="/en/apps/">All apps</a>
-      </div>
-      <ul class="app-grid" data-related="draftpad"></ul>
-      <aside class="catalog-custom" aria-labelledby="custom-title">
-        <div>
-          <h2 id="custom-title">Agents for your own workflow?</h2>
-          <p>We build an AI agent or automation around your own data and systems.</p>
-        </div>
-        <a class="button button-primary" href="/en/custom-development/">Custom development</a>
-      </aside>
-    </section>
-  </main>
 
   <footer class="footer">
     <div class="wrap">
